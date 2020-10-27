@@ -1,0 +1,50 @@
+
+<kt-portlet id="print_form">
+
+	<kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+		<div class="kt-form kt-margin-b-30">
+			<div class="">
+				<kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-obesity-personal-details [disableInput]="isPrint"   [formData]="formId"  #appObesityPersonalDetails></kt-obesity-personal-details>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Clinical Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-obesity-clinical-details [disableInput]="isPrint"   [formData]="formId" #appObesityClinicalDetails></kt-obesity-clinical-details>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Biochemical Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-obesity-biochemical [disableInput]="isPrint"   [formData]="formId" #appObesityBiochemical></kt-obesity-biochemical>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Medications'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-obesity-medication [disableInput]="isPrint"   [formData]="formId" #appObesityMedication></kt-obesity-medication>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Socioeconomic, Demographic and Behavioural Characteristcs'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-obesity-characteristics [disableInput]="isPrint"   [formData]="formId" #appObesityCharacteristics></kt-obesity-characteristics>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Family History'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-obesity-family-history [disableInput]="isPrint"   [formData]="formId" #appObesityFamilyHistory></kt-obesity-family-history>
+				</kt-portlet-body>
+            </div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet>

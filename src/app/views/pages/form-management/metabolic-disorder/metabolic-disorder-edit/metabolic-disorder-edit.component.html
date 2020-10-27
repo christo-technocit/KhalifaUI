@@ -1,0 +1,90 @@
+<kt-portlet>
+	<kt-portlet-header [title]="'Metabolic Disorder Form'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+		<ng-container ktPortletTools>
+			<a [routerLink]="[ formId ? '../../' : '../']"  class="btn btn-secondary kt-margin-r-10" mat-raised-button
+				matTooltip="Back to the forms list">
+				<i class="la la-arrow-left"></i>
+				<span class="kt-hidden-mobile">Back</span>
+			</a>
+			<!--<a href="javascript:;" class="btn btn-secondary kt-margin-r-10" (click)="reset()"-->
+				 <!--mat-raised-button matTooltip="Reset changes">-->
+				<!--<i class="la la-cog"></i>-->
+				<!--<span class="kt-hidden-mobile">Reset</span>-->
+			<!--</a>-->
+			<a href="javascript:;" class="btn btn-primary kt-margin-r-10" color="primary" (click)="onSubmit()"
+				mat-raised-button matTooltip="Save & Continue">
+				<i class="la la-save"></i>
+				<span class="kt-hidden-mobile">Save</span>
+			</a>
+		</ng-container>
+	</kt-portlet-header>
+
+	<kt-portlet-body>
+		<mat-tab-group [(selectedIndex)]="selectedTab">
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user"></i>
+					Participant Details
+				</ng-template>
+				<kt-participant-details [disableInput]="isPrint"   [formData]="formId"  #appParticipation></kt-participant-details>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user-md"></i>
+					Clinical Details
+				</ng-template>
+					<kt-clinical-details [disableInput]="isPrint"   [formData]="formId" #appClinical></kt-clinical-details>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-procedures"></i>
+					Biochemical Details
+				</ng-template>
+					<kt-biochemical [disableInput]="isPrint"   [formData]="formId" #appBiochemical></kt-biochemical>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user-shield"></i>
+					Life Style
+				</ng-template>
+					<kt-lifestyle-details [disableInput]="isPrint"   [formData]="formId" #appLifestyle></kt-lifestyle-details>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>
+					Medication
+				</ng-template>
+					<kt-medication-details [disableInput]="isPrint"   [formData]="formId" #appMedication></kt-medication-details>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-dna"></i>
+					Family History
+				</ng-template>
+					<kt-family-history-details [disableInput]="isPrint"   [formData]="formId" #appFamilyHistory></kt-family-history-details>
+			</mat-tab>
+			<mat-tab  >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+					Family Pedigree
+				</ng-template>
+					<kt-family-pedigree  [disableInput]="isPrint"   [formData]="formId"   #appFamilyPedigree></kt-family-pedigree>
+			</mat-tab>
+				<mat-tab  >
+                    <ng-template mat-tab-label>
+                        <i class="mat-tab-label-icon fa fa-procedures"></i>
+                        Biomechanics
+                    </ng-template>
+                        <kt-biomechanics-details [disableInput]="isPrint"   [formData]="formId" #appBiomechanics></kt-biomechanics-details>
+                </mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-file"></i>
+					Document Upload
+				</ng-template>
+				<kt-doc-upload  #appDocUpload></kt-doc-upload>
+			</mat-tab>
+
+		</mat-tab-group>
+	</kt-portlet-body>
+</kt-portlet>

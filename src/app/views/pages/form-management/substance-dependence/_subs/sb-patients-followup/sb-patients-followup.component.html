@@ -1,0 +1,72 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+            <div class="col-md-12 row">
+                <div class="col-md-4 form-group">
+                    <label>Are you currently on follow up management?</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="out_patient_healthy_diet" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div [hidden]="form.get('out_patient_healthy_diet').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, How often the follow up session?"  autocomplete="off"   formControlName="follow_up_session_specify" />
+                        <mat-hint>
+                            (per week / month)
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 form-group">
+                    <label>What is the treatment response?</label>
+                </div>
+                <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="out_patient_treatment_response" >
+                        <mat-radio-button  value="responder">Responder</mat-radio-button>
+                        <mat-radio-button  value="non_responder">Non-responder</mat-radio-button>
+                        <mat-radio-button  value="responder">Partial-responder</mat-radio-button>
+                        <mat-radio-button  value="relapse">Relapse</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 form-group">
+                    <label>Have you attended one of the following as part of the treatment?
+                    </label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="att_treat_how_long" >
+                        <mat-radio-button  value="programme"> Structured outpatients programme How Long</mat-radio-button>
+                        <mat-radio-button  value="counselling_session"> Counselling session Number of sessions</mat-radio-button>
+                        <mat-radio-button  value="group_session"> Group session How Many</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div *ngIf="form.get('att_treat_how_long').value == 'programme'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Structured outpatients, please specify"  autocomplete="off"   formControlName="att_treat_number_ses" />
+                    </mat-form-field>
+                </div>
+
+                <div *ngIf="form.get('att_treat_how_long').value == 'counselling_session'"
+                           class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If Counselling session, please specify"  autocomplete="off"   formControlName="att_treat" />
+                </mat-form-field>
+            </div>
+                <div *ngIf="form.get('att_treat_how_long').value == 'group_session'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Group session, please specify"  autocomplete="off"   formControlName="att_treat_how_many" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

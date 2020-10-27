@@ -1,0 +1,300 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>Microbiome Questionnaire</h5>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">1. Did you use antibiotics for the past 3 months?</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_Antibiotics">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">2. Have you taken prescribed probiotics from before?</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_Probiotics">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <P>3.	Dietary Fiber Intake Short Food Frequency Questionnaire (DFI-FFQ)
+                            On average, over the past year, how many serves have you consumed of the following?
+                            (a portion includes: a handful of grapes, an apple, an orange, two kiwifruits, a carrot, ½ cup spinach, a side salad, a slice of wholegrain bread, a handful of nuts, ¾ cup cooked legumes)
+                         </P>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Fruit  (Tinned / Fresh)</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_FibreIntake_Fruit">
+                            <mat-radio-button matInput  value="Rarely or Never">Rarely or Never</mat-radio-button>
+                            <mat-radio-button  matInput value="1-3 times a Month">1-3 times a Month</mat-radio-button>
+                            <mat-radio-button  matInput value="Once a Week">Once a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="2-4 times a Week">2-4 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="5-6 times a Week">5-6 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="1-2 times a  Day">1-2 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="3-4 times a  Day">3-4 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="5+ times a  Day">5+ times a  Day</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+  <!--          <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker"
+                       autocomplete="off"
+                       (click)="doaPicker.open()"
+                       placeholder="If yes, date of presentation to a hospital: (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker.open()" formControlName="ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="If yes, give details of the presentation and illness below:" autocomplete="off" formControlName="ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms_detail_of_illness" />
+                      
+             </mat-form-field>
+             </div>  
+             -->
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Vegetables (Tinned / Frozen)</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_FibreIntake_Vegetables">
+                            <mat-radio-button matInput  value="Rarely or Never">Rarely or Never</mat-radio-button>
+                            <mat-radio-button  matInput value="1-3 times a Month">1-3 times a Month</mat-radio-button>
+                            <mat-radio-button  matInput value="Once a Week">Once a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="2-4 times a Week">2-4 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="5-6 times a Week">5-6 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="1-2 times a  Day">1-2 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="3-4 times a  Day">3-4 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="5+ times a  Day">5+ times a  Day</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+        <!--    <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_other_symptoms').value == 'yes'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker2"
+                       autocomplete="off"
+                       (click)="doaPicker2.open()"
+                       placeholder="If yes, date of presentation to a hospital: (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker2.open()" formControlName="ES_5A_present_to_hospital_in_14_days_other_symptoms_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker2"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker2></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            <div class="col-md-2 form-group"  *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_other_symptoms').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="If yes, give details of the presentation and illness below:" autocomplete="off" formControlName="ES_5A_present_to_hospital_in_14_days_other_symptoms_detail_of_illness" />
+                      
+             </mat-form-field>
+             </div>  -->
+
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Wholemeal Breads (or Chapattis) and Cereal (like Weetabix)</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_FibreIntake_WholemealBreads">
+                            <mat-radio-button matInput  value="Rarely or Never">Rarely or Never</mat-radio-button>
+                            <mat-radio-button  matInput value="1-3 times a Month">1-3 times a Month</mat-radio-button>
+                            <mat-radio-button  matInput value="Once a Week">Once a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="2-4 times a Week">2-4 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="5-6 times a Week">5-6 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="1-2 times a  Day">1-2 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="3-4 times a  Day">3-4 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="5+ times a  Day">5+ times a  Day</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+<!--
+            <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker3"
+                       autocomplete="off"
+                       (click)="doaPicker3.open()"
+                       placeholder="If yes, date of presentation to a hospital:  (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker3.open()" formControlName="ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker3"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker3></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            <div class="col-md-2 form-group"  *ngIf="form.get('ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="If yes, give details of the presentation and illness below:" autocomplete="off" formControlName="ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms_detail_of_illness" />
+                      
+             </mat-form-field>
+             </div>
+             -->  
+
+             
+            </div>
+            
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Nuts and Seeds</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_FibreIntake_NutsSeeds">
+                            <mat-radio-button matInput  value="Rarely or Never">Rarely or Never</mat-radio-button>
+                            <mat-radio-button  matInput value="1-3 times a Month">1-3 times a Month</mat-radio-button>
+                            <mat-radio-button  matInput value="Once a Week">Once a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="2-4 times a Week">2-4 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="5-6 times a Week">5-6 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="1-2 times a  Day">1-2 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="3-4 times a  Day">3-4 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="5+ times a  Day">5+ times a  Day</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Legumes, Beans, peas and lentils</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_FibreIntake_LegumesBeansPeasLentils">
+                            <mat-radio-button matInput  value="Rarely or Never">Rarely or Never</mat-radio-button>
+                            <mat-radio-button  matInput value="1-3 times a Month">1-3 times a Month</mat-radio-button>
+                            <mat-radio-button  matInput value="Once a Week">Once a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="2-4 times a Week">2-4 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="5-6 times a Week">5-6 times a Week</mat-radio-button>
+                            <mat-radio-button  matInput value="1-2 times a  Day">1-2 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="3-4 times a  Day">3-4 times a Day</mat-radio-button>
+                            <mat-radio-button  matInput value="5+ times a  Day">5+ times a Day</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">4. Do You Excercise?</label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_Exercise">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Occasionally">Occasionally</mat-radio-button>
+                            <mat-radio-button  matInput value="Rarely">Rarely</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">5. Do you suffer any of the following long-standing conditions?</label>
+                    </div>
+                 </div>
+                <!--<div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="MQ_LongStandingSuffering">
+                            <mat-radio-button matInput  value="Hypertension">Hypertension</mat-radio-button>
+                            <mat-radio-button  matInput value="Cardiovascular Disease">Cardiovascular Disease</mat-radio-button>
+                            <mat-radio-button  matInput value="COPD">COPD</mat-radio-button>
+                            <mat-radio-button  matInput value="Asthma">Asthma</mat-radio-button>
+                            <mat-radio-button  matInput value="Others">Others</mat-radio-button>
+                            <mat-radio-button  matInput value="None">None</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+                <div class="col-md-2 form-group"  *ngIf="form.get('MQ_LongStandingSuffering').value == 'Others'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If Others, Specify:" autocomplete="off" formControlName="MQ_LongStandingSuffering_Specify" />
+                          
+                 </mat-form-field>
+                 </div> -->
+
+
+                 <div class="col-md-8 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="MQ_LongStandingSuffering_Hypertension">Hypertension</mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="MQ_LongStandingSuffering_CVD">Cardiovascular Disease </mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="MQ_LongStandingSuffering_COPD">COPD </mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="MQ_LongStandingSuffering_Asthma">Asthma </mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="MQ_LongStandingSuffering_Others">Others </mat-checkbox>
+                         <mat-checkbox class="lab-mar-right-15"   formControlName="MQ_LongStandingSuffering_None">None</mat-checkbox>
+                        <div class="col-md-12 row" [hidden]="!form.get('MQ_LongStandingSuffering_Others').value">
+                            <mat-form-field   class="mat-form-field-fluid">
+                                <input   type="text" matInput placeholder="If other, Please specify" formControlName="MQ_LongStandingSuffering_Specify" autocomplete="off"    />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </form>
+</div>

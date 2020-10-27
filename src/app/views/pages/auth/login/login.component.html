@@ -1,0 +1,37 @@
+
+<div class="kt-login__body">
+	<!--begin::Signin-->
+	<div class="kt-login__form">
+		<div class="kt-login__title">
+			<h3>Sign In</h3>
+
+			<div style="margin-top: 35px;">
+				<img width="250" src="./assets/media/logos/logo-dark.svg" alt="logo" />
+			</div>
+
+		</div>
+		<form class="kt-form" [formGroup]="loginForm" autocomplete="off">
+			<div class="form-group" style="margin-bottom: 25px !important;">
+				<mat-form-field>
+					<mat-label>Username</mat-label>
+					<input matInput type="text" placeholder="Username"  #userName required formControlName="email" autocomplete="doNotAutoComplete"/>
+				</mat-form-field>
+			</div>
+			<div class="form-group">
+				<mat-form-field>
+					<mat-label>Password</mat-label>
+					<input matInput type="password" placeholder="Password" formControlName="password" autocomplete="doNotAutoComplete"/>
+				</mat-form-field>
+			</div>
+			<div class="kt-login__actions ">
+				<button (click)="submit()"  [disabled]="!loginForm.valid"  [ngClass]="{'loader-bar': loading}" id="kt_login_signin_submit" class="btn loader-bar btn-primary btn-block btn-elevate kt-login__btn-primary">
+Login
+				</button>
+			</div>
+			<!--end::Action-->
+		</form>
+	</div>
+	<!--end::Signin-->
+
+</div>
+<!--end::Body-->

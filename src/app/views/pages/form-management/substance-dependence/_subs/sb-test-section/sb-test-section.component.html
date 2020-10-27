@@ -1,0 +1,206 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+
+            <div class="col-md-12 form-group">
+            <h6>Test preformed in admission or follow upsession</h6>
+            </div>
+            <div class="col-md-12 row">
+            <div class="col-md-4 form-group">
+                <label>Sample collected</label>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-radio-group formControlName="test_sample_collected" >
+                    <mat-radio-button  value="urine">Urine</mat-radio-button>
+                    <mat-radio-button  value="blood">Blood</mat-radio-button>
+                    <mat-radio-button  value="others">others</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div  [hidden]="form.get('test_sample_collected').value != 'others'"
+                   class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input placeholder="If Others, please specify" formControlName="test_sample_collected_spec" matInput  autocomplete="off"  />
+                </mat-form-field>
+            </div>
+            </div>
+            
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4">
+                    <label>Target drug</label>
+                </div>
+                <div class="col-md-4">
+                    <label>Result of last test	</label>
+                </div>
+                <div class="col-md-4">
+                    <label>Comments</label>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Amphetamines</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="amphetamines" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('amphetamines').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="amphetamines_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Barbiturates</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="barbiturates" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('barbiturates').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="barbiturates_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Benzodiazepines</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_benzodiazepines" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_benzodiazepines').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_benzodiazepines_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Cannabinoids</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_cannainoids" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_cannainoids').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_cannainoids_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Cocaine and metabolite</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_cocaine" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_cocaine').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_cocaine_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Methadone and metabolite	</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_methadone" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_methadone').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_methadone_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Phencyclidine</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_phencyclidine" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_phencyclidine').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_phencyclidine_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Propxyphene and metabolite	</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_propxyphene" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_propxyphene').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_propxyphene_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Opiate</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_opiate" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_opiate').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Comments"  formControlName="test_opiate_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-4">
+                    <label>Others</label>
+                    <div  >
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input  placeholder="Comments"  formControlName="test_target_drug_others"  matInput autocomplete="off"   />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <mat-radio-group formControlName="test_target_drug_others" >
+                        <mat-radio-button  value="positive">Positive</mat-radio-button>
+                        <mat-radio-button  value="negative">Negative</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4" [hidden]="!form.get('test_target_drug_others').value" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input  placeholder="Others"  formControlName="test_target_drug_others_com"  matInput autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

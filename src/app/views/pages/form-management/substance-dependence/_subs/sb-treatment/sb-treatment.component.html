@@ -1,0 +1,908 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+
+         <div class="col-md-12 row form-group">
+            <div class="col-md-4">
+                <label>Have you had any of the following for your addiction treatment?</label>
+            </div>
+            <div class="col-md-4">
+                <mat-radio-group formControlName="addiction_treatment" >
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+         </div>
+
+
+
+            <div class="col-md-12  row">
+                    <div class="col-md-4">
+                        <label>Prescribed Methadone</label>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_times" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_star"
+                                   autocomplete="off"
+                                   placeholder="Date started*"
+                                   (click)="sub_treat_prescribed_star.open()"
+                                   formControlName="sub_treat_prescribed_star" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_star"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_star></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_finis"
+                                   autocomplete="off"
+                                    placeholder="Date finished*"
+                                   (click)="sub_treat_prescribed_finis.open()"
+                                   formControlName="sub_treat_prescribed_finis" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_finis"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_finis></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_encoun" />
+                        </mat-form-field>
+                    </div>
+            </div>
+            <div class="col-md-12  row">
+                    <div class="col-md-4">
+                        <label>Prescribed oral Naltrexone, injection or implantation</label>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_Naltrexone_times" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_Naltrexone_star"
+                                   autocomplete="off"
+                                   placeholder="Date started*"
+                                   (click)="sub_treat_prescribed_Naltrexone_star.open()"
+                                   formControlName="sub_treat_prescribed_Naltrexone_star" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_Naltrexone_star"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_Naltrexone_star></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_Naltrexone_finis"
+                                   autocomplete="off"
+                                    placeholder="Date finished*"
+                                   (click)="sub_treat_prescribed_Naltrexone_finis.open()"
+                                   formControlName="sub_treat_prescribed_Naltrexone_finis" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_Naltrexone_finis"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_Naltrexone_finis></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_Naltrexone_encoun" />
+                        </mat-form-field>
+                    </div>
+            </div>
+            <div class="col-md-12  row">
+                    <div class="col-md-4">
+                        <label>Prescribed oral Buprenorphine (Subutex or Suboxone)</label>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_Buprenorphine_times" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_Buprenorphine_star"
+                                   autocomplete="off"
+                                   placeholder="Date started*"
+                                   (click)="sub_treat_prescribed_Buprenorphine_star.open()"
+                                   formControlName="sub_treat_prescribed_Buprenorphine_star" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_Buprenorphine_star"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_Buprenorphine_star></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_Buprenorphine_finis"
+                                   autocomplete="off"
+                                    placeholder="Date finished*"
+                                   (click)="sub_treat_prescribed_Buprenorphine_finis.open()"
+                                   formControlName="sub_treat_prescribed_Buprenorphine_finis" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_Buprenorphine_finis"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_Buprenorphine_finis></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_Buprenorphine_encoun" />
+                        </mat-form-field>
+                    </div>
+            </div>
+            <div class="col-md-12  row">
+                    <div class="col-md-4">
+                        <label>Inpatient detox</label>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_Inpatient_times" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_Inpatient_star"
+                                   autocomplete="off"
+                                   placeholder="Date started*"
+                                   (click)="sub_treat_prescribed_Inpatient_star.open()"
+                                   formControlName="sub_treat_prescribed_Inpatient_star" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_Inpatient_star"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_Inpatient_star></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_Inpatient_finis"
+                                   autocomplete="off"
+                                    placeholder="Date finished*"
+                                   (click)="sub_treat_prescribed_Inpatient_finis.open()"
+                                   formControlName="sub_treat_prescribed_Inpatient_finis" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_Inpatient_finis"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_Inpatient_finis></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_Inpatient_encoun" />
+                        </mat-form-field>
+                    </div>
+            </div>
+            <div class="col-md-12  row">
+                    <div class="col-md-4">
+                        <label>Inpatient or residential rehab (other than detox or oral Naltrexone/Buprenorphine)</label>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_rehab_times" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_rehab_star"
+                                   autocomplete="off"
+                                   placeholder="Date started*"
+                                   (click)="sub_treat_prescribed_rehab_star.open()"
+                                   formControlName="sub_treat_prescribed_rehab_star" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_rehab_star"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_rehab_star></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput [matDatepicker]="sub_treat_prescribed_rehab_finis"
+                                   autocomplete="off"
+                                    placeholder="Date finished*"
+                                   (click)="sub_treat_prescribed_rehab_finis.open()"
+                                   formControlName="sub_treat_prescribed_rehab_finis" />
+                            <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_rehab_finis"></mat-datepicker-toggle>
+                            <mat-datepicker #sub_treat_prescribed_rehab_finis></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_rehab_encoun" />
+                        </mat-form-field>
+                    </div>
+            </div>
+            <div class="col-md-12  row">
+                     <div class="col-md-4">
+                         <label>Outpatient detox	</label>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_outpatient_detox_times" />
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput [matDatepicker]="sub_treat_prescribed_outpatient_detox_star"
+                                    autocomplete="off"
+                                    placeholder="Date started*"
+                                    (click)="sub_treat_prescribed_outpatient_detox_star.open()"
+                                    formControlName="sub_treat_prescribed_outpatient_detox_star" />
+                             <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_outpatient_detox_star"></mat-datepicker-toggle>
+                             <mat-datepicker #sub_treat_prescribed_outpatient_detox_star></mat-datepicker>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput [matDatepicker]="sub_treat_prescribed_outpatient_detox_finis"
+                                    autocomplete="off"
+                                     placeholder="Date finished*"
+                                    (click)="sub_treat_prescribed_outpatient_detox_finis.open()"
+                                    formControlName="sub_treat_prescribed_outpatient_detox_finis" />
+                             <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_outpatient_detox_finis"></mat-datepicker-toggle>
+                             <mat-datepicker #sub_treat_prescribed_outpatient_detox_finis></mat-datepicker>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_outpatient_detox_encoun" />
+                         </mat-form-field>
+                     </div>
+             </div>
+            <div class="col-md-12  row">
+                     <div class="col-md-4">
+                         <label>Outpatient counselling</label>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_outpatient_counselling_times" />
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput [matDatepicker]="sub_treat_prescribed_outpatient_counselling_star"
+                                    autocomplete="off"
+                                    placeholder="Date started*"
+                                    (click)="sub_treat_prescribed_outpatient_counselling_star.open()"
+                                    formControlName="sub_treat_prescribed_outpatient_counselling_star" />
+                             <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_outpatient_counselling_star"></mat-datepicker-toggle>
+                             <mat-datepicker #sub_treat_prescribed_outpatient_counselling_star></mat-datepicker>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput [matDatepicker]="sub_treat_prescribed_outpatient_counselling_finis"
+                                    autocomplete="off"
+                                     placeholder="Date finished*"
+                                    (click)="sub_treat_prescribed_outpatient_counselling_finis.open()"
+                                    formControlName="sub_treat_prescribed_outpatient_counselling_finis" />
+                             <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_outpatient_counselling_finis"></mat-datepicker-toggle>
+                             <mat-datepicker #sub_treat_prescribed_outpatient_counselling_finis></mat-datepicker>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_outpatient_counselling_encoun" />
+                         </mat-form-field>
+                     </div>
+             </div>
+            <div class="col-md-12  row">
+                     <div class="col-md-4">
+                         <label>Self help groups</label>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput placeholder="No of times"  autocomplete="off"   formControlName="sub_treat_prescribed_self_help_group_times" />
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput [matDatepicker]="sub_treat_prescribed_self_help_group_star"
+                                    autocomplete="off"
+                                    placeholder="Date started*"
+                                    (click)="sub_treat_prescribed_self_help_group_star.open()"
+                                    formControlName="sub_treat_prescribed_self_help_group_star" />
+                             <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_self_help_group_star"></mat-datepicker-toggle>
+                             <mat-datepicker #sub_treat_prescribed_self_help_group_star></mat-datepicker>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput [matDatepicker]="sub_treat_prescribed_self_help_group_finis"
+                                    autocomplete="off"
+                                     placeholder="Date finished*"
+                                    (click)="sub_treat_prescribed_self_help_group_finis.open()"
+                                    formControlName="sub_treat_prescribed_self_help_group_finis" />
+                             <mat-datepicker-toggle matSuffix [for]="sub_treat_prescribed_self_help_group_finis"></mat-datepicker-toggle>
+                             <mat-datepicker #sub_treat_prescribed_self_help_group_finis></mat-datepicker>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-2 form-group">
+                         <mat-form-field class="mat-form-field-fluid">
+                             <input matInput placeholder="Problems encountered"  autocomplete="off"   formControlName="sub_treat_prescribed_self_help_group_encoun" />
+                         </mat-form-field>
+                     </div>
+             </div>
+
+            <h6 class="form-group">*Most recent treatment if more than once</h6>
+
+         <div class="col-md-12 row">
+             <div class="col-md-4 form-group">
+                 <label>Did you complete your treatment</label>
+             </div>
+             <div class="col-md-4 form-group">
+                 <mat-radio-group formControlName="sub_treatment_completed" >
+                     <mat-radio-button  value="yes">Yes</mat-radio-button>
+                     <mat-radio-button  value="no">No</mat-radio-button>
+                 </mat-radio-group>
+
+             </div>
+             <div class="col-md-4 form-group" [hidden]="form.get('sub_treatment_completed').value != 'no'" >
+
+             <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If No,Please specify"  autocomplete="off"   formControlName="sub_treatment_recent_specify" />
+                 </mat-form-field>
+             </div>
+         </div>
+         <div class="col-md-12 row">
+             <div class="col-md-4 form-group">
+                 <label>Have you experienced any laps/relapse
+                 </label>
+             </div>
+             <div class="col-md-4 form-group">
+                 <mat-radio-group formControlName="sub_treatment_relapse" >
+                     <mat-radio-button  value="yes">Yes</mat-radio-button>
+                     <mat-radio-button  value="no">No</mat-radio-button>
+                 </mat-radio-group>
+
+             </div>
+             <div class="col-md-4 form-group" [hidden]="form.get('sub_treatment_relapse').value != 'no'" >
+
+             <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If No,Please specify"  autocomplete="off"   formControlName="sub_treatment_relapse_specify" />
+                 </mat-form-field>
+             </div>
+         </div>
+
+            <h6 class="form-group">Relapse patients</h6>
+
+         <div class="col-md-12 row">
+             <div class="col-md-4 form-group">
+                 <label>Time period between relapse (previous treatment and current treatment)</label>
+             </div>
+             <div class="col-md-6 form-group">
+                 <mat-radio-group formControlName="relapse_period" >
+                     <mat-radio-button  value="days">Days</mat-radio-button>
+                     <mat-radio-button  value="weeks">Weeks</mat-radio-button>
+                     <mat-radio-button  value="months">Months</mat-radio-button>
+                     <mat-radio-button  value="years">Years</mat-radio-button>
+                 </mat-radio-group>
+             </div>
+         </div>
+         <div class="col-md-12 row">
+             <div class="col-md-4 form-group">
+                 <label>Current treatment readiness </label>
+             </div>
+             <div class="col-md-6 form-group">
+                 <mat-radio-group formControlName="current_treat_readiness" >
+                     <mat-radio-button  value="motivated">Patient highly motivated to receive treatment</mat-radio-button>
+                     <mat-radio-button  value="reasonably">Patient reasonably motivated to receive treatment</mat-radio-button>
+                     <mat-radio-button  value="little">Patient have little motivation to treatment</mat-radio-button>
+                 </mat-radio-group>
+             </div>
+         </div>
+         <div class="col-md-12 row">
+                <div class="col-md-4 form-group">
+                    <label>Is there Internal/ External High risk(s) for laps or relapse?</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="risk_of_relapse" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div class="col-md-4 form-group" [hidden]="form.get('risk_of_relapse').value != 'yes'" >
+
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, Please specify reasons"  autocomplete="off"   formControlName="risk_of_relapse_specify" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <h6 class="form-group">- What is the medication of maintenance</h6>
+            
+            <div class="col-md-12 row">
+                <div class="col-md-4 form-group"><label for="">Dependence Type</label></div>
+                <div class="col-md-4 form-group"><label ></label>Medication</div>
+                <div class="col-md-4 form-group"><label >Dose</label></div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">Opiate Dependence</div>
+                <div class="col-md-8 ">
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_methadon"  >Methadon</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_methadon').value && form.get('opiate_methadon').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_methadon_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_Clonide" > Clonide (Catapres)</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_Clonide').value && form.get('opiate_Clonide').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_Clonide_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_Bupemorphine" >Bupemorphine, Subutex</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_Bupemorphine').value && form.get('opiate_Bupemorphine').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_Bupemorphine_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_suboxon" >Bupermorphine, Naloxon (Suboxon)</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_suboxon').value && form.get('opiate_suboxon').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_suboxon_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_Naloxon" >Naloxon</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_Naloxon').value && form.get('opiate_Naloxon').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_Naloxon_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_Naltrexon" >Naltrexon Hydrochloride</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_Naltrexon').value && form.get('opiate_Naltrexon').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_Naltrexon_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_Naltrexon_xr" >Naltrexon XR (Vial)</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_Naltrexon_xr').value && form.get('opiate_Naltrexon_xr').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_Naltrexon_xr_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="opiate_LOFex" >LoFexidineHydrochlordie</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('opiate_LOFex').value && form.get('opiate_LOFex').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_LOFex_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-3 form-group">
+                            <mat-checkbox   formControlName="opiate_others" >Others</mat-checkbox>
+                        </div>
+                        <div [hidden]="!form.get('opiate_others').value && form.get('opiate_others').value != 'true'"  class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If others, please specify"  autocomplete="off"   formControlName="opiate_others_specify" />
+                            </mat-form-field>
+                            </div>
+                        <div  [hidden]="!form.get('opiate_others').value && form.get('opiate_others').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="opiate_others_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">Alcohol Dependence	</div>
+                <div class="col-md-8 ">
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="alcohol_acamprosate"  >Acamprosate Calcium	</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('alcohol_acamprosate').value && form.get('alcohol_acamprosate').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="alcohol_acamprosate_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="alcohol_disulfirm" > Disulfirm</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('alcohol_disulfirm').value && form.get('alcohol_disulfirm').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="alcohol_disulfirm_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="alcohol_naltrexon" >Naltrexon Hydrochloride</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('alcohol_naltrexon').value && form.get('alcohol_naltrexon').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="alcohol_naltrexon_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="alcohol_naltrexon_xr" >Naltrexon XR (Vial)</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('alcohol_naltrexon_xr').value && form.get('alcohol_naltrexon_xr').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="alcohol_naltrexon_xr_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">Benzodiazphine dependence</div>
+                <div class="col-md-8 ">
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="Benzodiazphine_flumazenil"  >Flumazenil(Romazicon</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('Benzodiazphine_flumazenil').value && form.get('Benzodiazphine_flumazenil').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="Benzodiazphine_flumazenil_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 row">
+                        <div class="col-md-3 form-group">
+                            <mat-checkbox   formControlName="Benzodiazphine_others" >Others</mat-checkbox>
+                        </div>
+                        <div [hidden]="!form.get('Benzodiazphine_others').value && form.get('Benzodiazphine_others').value != 'true'"  class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If others, please specify"  autocomplete="off"   formControlName="Benzodiazphine_others_specify" />
+                            </mat-form-field>
+                        </div>
+                        <div  [hidden]="!form.get('Benzodiazphine_others').value && form.get('Benzodiazphine_others').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="Benzodiazphine_others_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">Nicotine Dependence</div>
+                <div class="col-md-8 ">
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="nicotine_vaenicline"  >Vaenicline (Champix, Tartrate)</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('nicotine_vaenicline').value && form.get('nicotine_vaenicline').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="nicotine_vaenicline_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="nicotine_bupropion" > Bupropion</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('nicotine_bupropion').value && form.get('nicotine_bupropion').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="nicotine_bupropion_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="nicotine_nicotinnell" >Nicotinnell Patches</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('nicotine_nicotinnell').value && form.get('nicotine_nicotinnell').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="nicotine_nicotinnell_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 row">
+                        <div class="col-md-6 form-group">
+                            <mat-checkbox   formControlName="nicotine_nicotinnell_gum" >Nicotinnell Chewing Gum	</mat-checkbox>
+                        </div>
+                        <div  [hidden]="!form.get('nicotine_nicotinnell_gum').value && form.get('nicotine_nicotinnell_gum').value != 'true'" class="col-md-6 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Dose"  autocomplete="off"   formControlName="nicotine_nicotinnell_gum_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <h6 class="form-group">Other medication (cognitive, behavioural)</h6>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">
+                    <mat-checkbox   formControlName="other_medic_antipsycotic"  >Antipsycotic</mat-checkbox>
+                </div>
+                <div   class="col-md-8 ">
+                    <div class="col-md-12 row" [hidden]="!form.get('other_medic_antipsycotic').value && form.get('other_medic_antipsycotic').value != 'true'">
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Aripiprazole (Abilify) Dose"     formControlName="other_medic_Antipsycotic_abilify_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Olanzapine (Zebraxa) Dose"     formControlName="other_medic_Antipsycotic_zebraxa_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Quetiapine (Seriquol) Dose"     formControlName="other_medic_Antipsycotic_seriquol_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Risperidone (Risperdal) Dose"     formControlName="other_medic_Antipsycotic_risperdal_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Ziprasidone(Zeldox, Geodon) Dose"     formControlName="other_medic_Antipsycotic_ziprasidone_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Haloperidol (Haldol) Dose"     formControlName="other_medic_Antipsycotic_haldol_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Zuclopenthixol(Cisordinol, Clopixol, Acuphase) Dose"     formControlName="other_medic_Antipsycotic_zuclopenthixol_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Others"     formControlName="other_medic_Antipsycotic_others_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">
+                    <mat-checkbox   formControlName="other_medic_Antidepressants"  > Anti-depressants</mat-checkbox>
+                </div>
+                <div   class="col-md-8 ">
+                    <div class="col-md-12 row" [hidden]="!form.get('other_medic_Antidepressants').value && form.get('other_medic_Antidepressants').value != 'true'">
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Amitryptyline (Tryptizol, Elavil, Endep)"     formControlName="other_medic_Antidepressants_amitryptyline_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Clomiparamine (Anafranil) Dose"     formControlName="other_medic_Antidepressants_clomiparamine_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Fluoxetine (Prozac, Sarafem, Ladose & Fontex) Dose"     formControlName="other_medic_Antidepressants_fluxetine_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Venlafaxine (Effexor)"     formControlName="other_medic_Antidepressants_effexor_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Paroxetine (Seroxate) Dose"     formControlName="other_medic_Antidepressants_seroxate_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Escitalopram (Cireplex, Lexapro, Esipram) Dose"     formControlName="other_medic_Antidepressants_escitalopram_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Sertraline(Zoloft, Lustral) Dose"     formControlName="other_medic_Antidepressants_sertraline_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Mirtazapine (Remeron, Soltab) Dose"     formControlName="other_medic_Antidepressants_mirtazapine_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Bupropion Hydrochloride SR"     formControlName="other_medic_Antidepressants_bupropion_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Others"     formControlName="other_medic_Antidepressants_others_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Dose"     formControlName="other_medic_Antidepressants_others_dose"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">
+                    <mat-checkbox   formControlName="other_medic_central_nervous"  > Central nervous stimuli	</mat-checkbox>
+                </div>
+                <div   class="col-md-8 ">
+                    <div class="col-md-12 row" [hidden]="!form.get('other_medic_central_nervous').value && form.get('other_medic_central_nervous').value != 'true'">
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Atomoxetine (Strattera)"     formControlName="other_medic_central_nervous_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">
+                    <mat-checkbox   formControlName="other_medic_hypnotic_anxiolytics"  >Hypnotic & Anxiolytics</mat-checkbox>
+                </div>
+                <div   class="col-md-8 ">
+                    <div class="col-md-12 row" [hidden]="!form.get('other_medic_hypnotic_anxiolytics').value && form.get('other_medic_hypnotic_anxiolytics').value != 'true'">
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Zopiclone (Imovane) Dose"     formControlName="other_medic_hypnotic_anxiolytics_imovane_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Diazepam (Valium) Dose"     formControlName="other_medic_hypnotic_anxiolytics_diazepam_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Chlordiazepoxide (Librium) Dose"     formControlName="other_medic_hypnotic_anxiolytics_librium_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Buspirone (BuSpar) Dose"     formControlName="other_medic_hypnotic_anxiolytics_buspar_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Alprazolam(Xanax) Dose"     formControlName="other_medic_hypnotic_anxiolytics_alprazolam_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Lorazepam (Ativan) Dose"     formControlName="other_medic_hypnotic_anxiolytics_lorazepam_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Hydroxyzine (Vistaril, Atarax) Dose"     formControlName="other_medic_hypnotic_anxiolytics_hydroxyzine_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Others"     formControlName="other_medic_hypnotic_anxiolytics_others_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Dose"     formControlName="other_medic_hypnotic_anxiolytics_others_dose"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group">
+                <hr/>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-4 my-auto form-group">
+                    <mat-checkbox   formControlName="other_medic_Antiepileptics"  >Antiepileptics& Anticonvulsants</mat-checkbox>
+                </div>
+                <div   class="col-md-8 ">
+                    <div class="col-md-12 row" [hidden]="!form.get('other_medic_Antiepileptics').value && form.get('other_medic_Antiepileptics').value != 'true'">
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Carbamazepine (Tegretol, Equetro, Carbatrol) Dose"     formControlName="other_medic_hypnotic_antiepileptics_carbamazepine_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Clonazepam (Klonopin) Dose"     formControlName="other_medic_hypnotic_antiepileptics_klonopin_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Gabapentin (Neurontin) Dose"     formControlName="other_medic_hypnotic_antiepileptics_gabapentin_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Lamotrigine (Lamictal) Dose"     formControlName="other_medic_hypnotic_antiepileptics_lamotrigine_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Topiramate (Topamax) Dose"     formControlName="other_medic_hypnotic_antiepileptics_topamax_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Phenoytoin Sodium (Dilantin) Dose"     formControlName="other_medic_hypnotic_antiepileptics_dilantin_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Sodium Valproate (Epilim) Dose"     formControlName="other_medic_hypnotic_antiepileptics_epilim_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Others"     formControlName="other_medic_hypnotic_antiepileptics_others_text"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input  placeholder="Dose"     formControlName="other_medic_hypnotic_antiepileptics_others_dose"  matInput autocomplete="off"/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

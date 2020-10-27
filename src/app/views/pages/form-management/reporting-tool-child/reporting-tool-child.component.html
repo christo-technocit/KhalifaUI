@@ -1,0 +1,91 @@
+<style>
+    .nav {
+        border: solid 1px #777;
+        float: left;
+        padding: 8px;
+        margin: 1px;
+        width: 38px;
+        text-align: center;
+    }
+    .navColoured {
+        border: solid 1px #777;
+        float: left;
+        padding: 8px;
+        margin: 1px;
+        width: 38px;
+        text-align: center;
+        background-color:gray;
+    }
+</style>
+<!--End of style-->
+<div *ngIf="Data.length && TotalRows > 0" style="background-color: white;overflow-x: scroll;">
+
+<table class="table" id="excel-table">
+    <tr>
+        <!--Generate column names ... loop on columns array-->
+        <th *ngFor="let col of Columns">
+            {{col}}
+            <!-- <a style="cursor: pointer;" [hidden]="!((SortBy!=col.colName) && AllowSorting && col.sortable)" (click)="Sort(col.colName,-1)">▲</a>
+            <a style="cursor: pointer;" [hidden]="!((Direction==1 && SortBy==col.colName) && AllowSorting && col.sortable)" (click)="Sort(col.colName,-1)">▲</a>
+            <a style="cursor: pointer;" [hidden]="!((Direction==-1 && SortBy==col.colName) && AllowSorting && col.sortable)" (click)="Sort(col.colName,1)">▼</a> -->
+        </th>
+    </tr>
+
+   <!-- <h2 style="display: block;">{{ MyData.SavedFormID}}+'datas'</h2>  -->
+    <tr *ngFor="let c of Data">
+      
+  <!-- <h2>My favorite hero2 is: {{ Data}}</h2> -->
+        <td *ngFor="let col of Columns">{{c[col]}}</td>
+    </tr>
+</table>
+<!--Pagination-->
+<table class="table">
+    <tr>
+        <td>
+            <div class="row">
+            <div class="col-6">Showing {{(PageSize * (PageIndex)) + 1}} to {{PageSize * (PageIndex + 1)>TotalRows?TotalRows:PageSize * (PageIndex + 1)}} of {{TotalRows}} Records</div>
+                <!--[style.width]="Width"-->
+            <div style="margin:0px auto;" class="col-6">
+                <div class="nav" [hidden]="Pages.length==0">
+                    <a style="cursor: pointer;" (click)="OnFirstPage()">First</a>
+                </div>
+                <div class="nav" [hidden]="Pages.length==0">
+                    <a style="cursor: pointer;" (click)="OnPreviousPage()">Prev</a>
+                </div>
+                <div *ngFor="let pageIndex of Pages;let i = index;" [ngClass]="!(PageIndex+1!=pageIndex)?'navColoured':'nav'">
+                    <span style="cursor: pointer;color:white;" [hidden]="PageIndex+1!=pageIndex">{{pageIndex}}</span>
+                    <a style="cursor: pointer;" [hidden]="PageIndex+1==pageIndex" (click)="OnPageIndexChange(pageIndex)">{{pageIndex}}</a>
+                </div>
+                <div class="nav" [hidden]="Pages.length==0">
+                    <a style="cursor: pointer;" (click)="OnNextPage()">Next</a>
+                </div>
+                <div class="nav" [hidden]="Pages.length==0">
+                    <a style="cursor: pointer;" (click)="OnLastPage()">Last</a>
+                </div>
+            </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+
+<div *ngIf="ExcelData.length" style ="display:none">
+    <table class="table" id="excel-table2" style ="display:none">
+        <tr>
+            <!--Generate column names ... loop on columns array-->
+            <th *ngFor="let col of Columns">
+                {{col}}
+                <!-- <a style="cursor: pointer;" [hidden]="!((SortBy!=col.colName) && AllowSorting && col.sortable)" (click)="Sort(col.colName,-1)">▲</a>
+                <a style="cursor: pointer;" [hidden]="!((Direction==1 && SortBy==col.colName) && AllowSorting && col.sortable)" (click)="Sort(col.colName,-1)">▲</a>
+                <a style="cursor: pointer;" [hidden]="!((Direction==-1 && SortBy==col.colName) && AllowSorting && col.sortable)" (click)="Sort(col.colName,1)">▼</a> -->
+            </th>
+        </tr>
+    
+       <!-- <h2 style="display: block;">{{ MyData.SavedFormID}}+'datas'</h2>  -->
+        <tr *ngFor="let c of ExcelData">
+          
+      <!-- <h2>My favorite hero2 is: {{ Data}}</h2> -->
+            <td *ngFor="let col of Columns">{{c[col]}}</td>
+        </tr>
+    </table>
+    </div>

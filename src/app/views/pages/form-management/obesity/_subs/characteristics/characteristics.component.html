@@ -1,0 +1,223 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Skin colour
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="SDBC_SkinColor">
+                        <mat-radio-button  value="white">White</mat-radio-button>
+                        <mat-radio-button  value="black">Black</mat-radio-button>
+                        <mat-radio-button  value="brown">Brown</mat-radio-button>
+                        <mat-radio-button  value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Socioeconomic status
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="SDBC_Socioeconomic">
+                        <mat-radio-button  value="low">Low</mat-radio-button>
+                        <mat-radio-button  value="moderate">Moderate</mat-radio-button>
+                        <mat-radio-button  value="high">High</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Smoking Status
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="SDBC_SmokingStatus">
+                        <mat-radio-button  value="yes">Current smoker</mat-radio-button>
+                        <mat-radio-button  value="exsmoker">Ex-smoker</mat-radio-button>
+                        <mat-radio-button  value="never">Never smoked</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row  col-md-12">
+            <div class="form-group">
+                <h6>
+                    Food Intake
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often per week do you eat fast food?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="FOOD_EatFastfood_Week">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="twice">Twice</mat-radio-button>
+                        <mat-radio-button  value="4times">4 times</mat-radio-button>
+                        <mat-radio-button  value="daily">Daily</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Eat fruits/vegetables, per day?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="FOOD_Fruits_Vegetables_Day">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="once">Once</mat-radio-button>
+                        <mat-radio-button  value="twice">Twice</mat-radio-button>
+                        <mat-radio-button  value="3ormore">Three or more</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How much soda pop do you consume per week?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="FOOD_Sodapop_Week">
+                        <mat-radio-button  value="never">0</mat-radio-button>
+                        <mat-radio-button  value="2L">2L</mat-radio-button>
+                        <mat-radio-button  value="4L">4L</mat-radio-button>
+                        <mat-radio-button  value="6L">6L or more</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you eat in the middle of the night?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="FOOD_Eat_Midnight">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you follow a healthy diet?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="FOOD_HealthyDiet">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row  col-md-12">
+            <div class="form-group">
+                <h6>
+                    Physical activity
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you exercise 30 min each week?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PHYA_Exercise_Week">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you satisfied with your body?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PHYA_Satisfy_Body">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you happy about your life?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PHYA_Happy_Life">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

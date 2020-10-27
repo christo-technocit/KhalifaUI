@@ -1,0 +1,132 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5> Healthcare and hospital presentations</h5>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Did the case present to a hospital in the 14 days prior to onset with COVID-19 symptoms?</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+            <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker"
+                       autocomplete="off"
+                       (click)="doaPicker.open()"
+                       placeholder="Date of presentation to a hospital: (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker.open()" formControlName="ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="Give details of the presentation and illness below:" autocomplete="off" formControlName="ES_5A_present_to_hospital_in_14_days_COVID_19_symptoms_detail_of_illness" />
+                      
+             </mat-form-field>
+             </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Did the case present to a hospital during the 14days prior to onset with other symptoms?</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="ES_5A_present_to_hospital_in_14_days_other_symptoms">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+            <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_other_symptoms').value == 'yes'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker2"
+                       autocomplete="off"
+                       (click)="doaPicker2.open()"
+                       placeholder="Date of presentation to a hospital: (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker2.open()" formControlName="ES_5A_present_to_hospital_in_14_days_other_symptoms_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker2"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker2></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            <div class="col-md-2 form-group"  *ngIf="form.get('ES_5A_present_to_hospital_in_14_days_other_symptoms').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="Give details of the presentation and illness below:" autocomplete="off" formControlName="ES_5A_present_to_hospital_in_14_days_other_symptoms_detail_of_illness" />
+                      
+             </mat-form-field>
+             </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Did the case present to any other healthcare facility in the 14 days prior to onset with COVID-19 symptoms? (e.g. GP practice) </label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+            <div class="col-md-2 form-group" *ngIf="form.get('ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker3"
+                       autocomplete="off"
+                       (click)="doaPicker3.open()"
+                       placeholder="Date of presentation to a hospital:  (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker3.open()" formControlName="ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker3"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker3></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            <div class="col-md-2 form-group"  *ngIf="form.get('ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="Give details of the presentation and illness below:" autocomplete="off" formControlName="ES_5A_present_to_other_healthcare_facility_in_14_days_COVID_19_symptoms_detail_of_illness" />
+                      
+             </mat-form-field>
+             </div>  
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,113 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section kt-form__section--first">
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Obesity in the family:
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-radio-group formControlName="FAMI_Obesity">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Obesity complication in the family:
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-radio-group formControlName="FAMI_ObesityComplication">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="form-group  row" *ngIf="form.get('FAMI_ObesityComplication').value == 'yes'">
+                    <div class="col-lg-8 kt-margin-bottom-20-mobile" >
+                        <mat-form-field  class="mat-form-field-fluid">
+                            <input type="text" matInput placeholder="If Yes, Please specify" formControlName="FAMI_ObesityComplication_Remarks" autocomplete="off"    />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Diabetes in the family
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-radio-group formControlName="FAMI_Diabetes">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Hypertension in the family
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-radio-group formControlName="FAMI_Hypertension">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Dyslipidemia in the family
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-radio-group formControlName="FAMI_Dyslipidemia">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </form>
+</div>
+
+

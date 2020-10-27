@@ -1,0 +1,72 @@
+<kt-portlet>
+    <kt-portlet-header [title]="'Osteoporosis Form'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+        <ng-container ktPortletTools>
+            <a [routerLink]="[ formId ? '../../' : '../']" class="btn btn-secondary kt-margin-r-10" mat-raised-button
+               matTooltip="Back to the forms list">
+                <i class="la la-arrow-left"></i>
+                <span class="kt-hidden-mobile">Back</span>
+            </a>
+            <a href="javascript:;" class="btn btn-primary kt-margin-r-10" color="primary" (click)="onSubmit()"
+               mat-raised-button matTooltip="Save & Continue">
+                <i class="la la-save"></i>
+                <span class="kt-hidden-mobile">Save</span>
+            </a>
+
+        </ng-container>
+    </kt-portlet-header>
+
+    <kt-portlet-body>
+        <mat-tab-group [(selectedIndex)]="selectedTab">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-user"></i>
+                    Participant Details
+                </ng-template>
+                <kt-ob-participant-personal [disableInput]="isPrint"   [formData]="formId"  #appParticipation></kt-ob-participant-personal>
+            </mat-tab>
+            <mat-tab>
+            <ng-template mat-tab-label>
+                <i class="mat-tab-label-icon fa fa-user"></i>
+                Clinical Details
+            </ng-template>
+            <kt-ob-clinical-details [disableInput]="isPrint"   [formData]="formId"  #appClinical></kt-ob-clinical-details>
+        </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-user"></i>
+                    Biochemical Details
+                </ng-template>
+                <kt-ob-biochemical-details [disableInput]="isPrint"   [formData]="formId"  #appBiochemical></kt-ob-biochemical-details>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-user"></i>
+                    Medications
+                </ng-template>
+                <kt-ob-medications [disableInput]="isPrint"   [formData]="formId"  #appMedications></kt-ob-medications>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-user"></i>
+                    One Minute Risk Test
+                </ng-template>
+                <kt-ob-one-minute-risk-test [disableInput]="isPrint"   [formData]="formId"  #appOneMinuteRiskTest></kt-ob-one-minute-risk-test>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-user"></i>
+                   Family History
+                </ng-template>
+                <kt-ob-family-history [disableInput]="isPrint"   [formData]="formId"  #appFamilyHistory></kt-ob-family-history>
+            </mat-tab>
+            <mat-tab >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-file"></i>
+                    Document Upload
+                </ng-template>
+                <kt-doc-upload  #appDocUpload></kt-doc-upload>
+            </mat-tab>
+
+        </mat-tab-group>
+    </kt-portlet-body>
+</kt-portlet>

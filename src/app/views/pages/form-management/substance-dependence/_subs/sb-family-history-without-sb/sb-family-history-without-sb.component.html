@@ -1,0 +1,91 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Diabetes in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="diabetes_family_his">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Diabetes complication in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="diab_comp_family">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Obesity in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="obesity_family_his">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Hypertension in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="hypertension_family_his">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Dyslipidaemia in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="dyslip_family_his">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

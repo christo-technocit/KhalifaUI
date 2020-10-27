@@ -1,0 +1,181 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Are you currently on any medication?</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDI_Any_Medication" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+                <div [hidden]="form.get('MEDI_Any_Medication').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="MEDI_Any_Medication_Remarks" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Do you have allergies?</label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDI_Any_Allergies" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+                <div [hidden]="form.get('MEDI_Any_Allergies').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="MEDI_Any_Allergies_Remarks" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Do you have intolerance?
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDI_Intolerance" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+                <div [hidden]="form.get('MEDI_Intolerance').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="MEDI_Intolerance_Remarks" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <h6>*Supplements:
+                </h6>
+            </div>
+
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Do you take Multivitamins
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDIS_Multivitamins" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Do these multivitamins contain Vitamin D?
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDIS_Multivitamins_VitaminD" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Are you taking any Calcium Supplements prescribed?
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDIS_CalciumSupplements" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div [hidden]="form.get('MEDIS_CalciumSupplements').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="MEDIS_CalciumSupplements_Dose" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Are you taking any Vitamin D supplements?
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDIS_VitaminD" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div [hidden]="form.get('MEDIS_VitaminD').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="MEDIS_VitaminD_Dose" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>Are you taking any Hormone Replacement Therapy?
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="MEDIS_HormoneReplacementTherapy" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div [hidden]="form.get('MEDIS_HormoneReplacementTherapy').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="MEDIS_HormoneReplacementTherapy_Remarks" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

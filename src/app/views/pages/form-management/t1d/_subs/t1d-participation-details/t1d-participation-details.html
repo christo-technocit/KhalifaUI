@@ -1,0 +1,265 @@
+<div class="col-md-12" >
+    <form autocomplete="off" [formGroup]="VForm1" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+            <div class=" row">
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input #firstInput matInput placeholder="Sample Id" formControlName="SampleID" />
+                        <!--<mat-error>Sample Id is-->
+                        <!--<strong>required</strong>-->
+                        <!--</mat-error>-->
+                        <!--<mat-hint align="start">-->
+                        <!--<strong>Sample Id</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Depository Id" autocomplete="off" formControlName="Depository_ID" />
+                     
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3  form-group">
+                    <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                        <input  matInput [matDatepicker]="dp3" formControlName="DateofAssessment"  placeholder="Date of Assesment" (click)="dp3.open()" (focus)="dp3.open()"  name="dp3">
+                        <mat-datepicker-toggle matSuffix [for]="dp3">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #dp3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3  form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collecion Center"
+                               formControlName="CollectionPoint" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collection Point</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class=" row">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collected By" formControlName="CollectedBy" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collected by</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="T1D Child" formControlName="PERS_T1DChild" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Year of diagnosis" formControlName="PERS_YearofDiagnosis" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2  form-group ">
+                    <mat-form-field floatPlaceholder="Mother"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Mother</label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PERS_Mother" >
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2  form-group ">
+                    <mat-form-field floatPlaceholder="Father"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Father</label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PERS_Father" >
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2  form-group ">
+                    <mat-form-field floatPlaceholder="Sibling"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Sibling</label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PERS_Sibling" >
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+ 
+                <div class="col-md-2 form-group ">
+                    <mat-form-field floatPlaceholder="Others"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Others</label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PERS_Others" >
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+           
+                <div class="col-md-4 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <div class="kt-section"><br><br>
+                            <input matInput placeholder="If yes, please specify" formControlName="PERS_Firstname" />
+                        </div>
+                        </mat-form-field>
+                </div>
+            
+            </div>
+
+            <div class=" row">
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Name" formControlName="PERS_MiddleName" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Place of Birth" formControlName="PERS_PlaceofBirth" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group ">
+                    <mat-form-field floatPlaceholder="Gender"  class="mat-form-field-fluid">
+                       <!--<div class="kt-section"> --> 
+                            <label align="start">Gender</label>&nbsp;&nbsp;&nbsp;
+                        <!--</div> -->
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PERS_Gender" >
+                            <mat-radio-button  value="Male">Male</mat-radio-button>
+                            <mat-radio-button  value="Female">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+
+            </div>
+
+            <div class=" row">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input [max]="maxDate" matInput [matDatepicker]="dobPicker"
+                               placeholder="Choose a Date of Birth" (click)="dobPicker.open()"   (focus)="dobPicker.open()"   formControlName="PERS_DateofBirth" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4  form-group">
+                    <!-- <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="nationality" />
+                        <mat-hint align="start">Please enter
+                            <strong>Nationality</strong>
+                        </mat-hint>
+                    </mat-form-field> -->
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="PERS_Nationality" [matAutocomplete]="manuf">
+                        <mat-autocomplete #manuf="matAutocomplete">
+                            <mat-option *ngFor="let nationality of filteredNationalities | async" [value]="nationality">
+                                {{ nationality }}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <mat-error>
+                            Nationality is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Nationality</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-4  form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Ethnicity (Not Reliable)" formControlName="PERS_Ethnicity" />
+                        <mat-hint align="start">Please enter
+                        <strong>Ethnicity</strong>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-5  form-group">
+                    <mat-form-field floatPlaceholder="Marital Status"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Marital Status</label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PERS_MaritalStatus">
+                            <mat-radio-button  value="single">Single</mat-radio-button>
+                            <mat-radio-button  value="married">Married</mat-radio-button>
+                            <mat-radio-button  value="divorced">Divorced</mat-radio-button>
+                            <mat-radio-button  value="widow">Widow</mat-radio-button>
+                        </mat-radio-group>
+
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group"><br><br><br>
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput formControlName="PERS_ParentAgeDuringPregnancy"  placeholder="Age of parent during pregnancy" />
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-3  form-group">
+                    <mat-form-field floatPlaceholder="Consanguineous Marriage"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Consanguineous Marriage</label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group  formControlName="PERS_marriage_con"  >
+                            <mat-radio-button   value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input formControlName="PERS_NumberofChildren" matInput  placeholder="Number of Children" />
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput formControlName="PERS_Mobile_Number"  placeholder="Mobile Number" />
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput formControlName="PERS_SiblingDiabetesType1"  placeholder="Comments if other siblings are diagnosed with Diabetes Type 1" />
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                <textarea matInput rows="4" placeholder="Address"
+                          formControlName="PERS_Address"></textarea>
+                    </mat-form-field>
+                </div>
+             </div>   
+
+        </div>
+    </form>
+</div>

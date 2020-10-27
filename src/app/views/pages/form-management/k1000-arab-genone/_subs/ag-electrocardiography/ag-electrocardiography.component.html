@@ -1,0 +1,102 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Have you had an ECG Test before?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="ECXR_AnyECGTestBefore" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('ECXR_AnyECGTestBefore').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, when" formControlName="ECXR_AnyECGTestBefore_Date"  autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Have you had a chest X-ray before?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="ECXR_AnyXRayBefore" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('ECXR_AnyXRayBefore').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes,when" formControlName="ECXR_AnyXRayBefore_Date"  autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row form-group">
+                <h6>To be filled by physician only</h6>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Is the participant’s chest x-ray exam normal?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PHYS_IsXRayNormal_PO" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Is the participant’s ECG test normal?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PHYS_IsECGNormal_PO" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Is the participant considered healthy?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="PHYS_IsHealthy_PO" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

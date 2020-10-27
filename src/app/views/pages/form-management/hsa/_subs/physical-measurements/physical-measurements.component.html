@@ -1,0 +1,83 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <!--<div class="row ">
+            <div class="col-md-12 form-group">
+                <span layout="row"><hr flex/><h5>1.1 Anthropometric Measurements </h5><hr flex/></span>
+            </div>
+        </div>-->
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="number" matInput placeholder="Body weight(kg)" autocomplete="off"   (ngModelChange)="calculateBodyMass()"  formControlName="PCD_BodyWeight" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="number"  matInput placeholder="Height (m)"  autocomplete="off"  (ngModelChange)="calculateBodyMass()" formControlName="PCD_Height" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Body mass index (kg/m2)"  autocomplete="off"   formControlName="PCD_bmi" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Waist circumference (cm)" autocomplete="off"      formControlName="PCD_Waist" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Hip circumference (cm)" autocomplete="off"      formControlName="PCD_hip" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Neck circumference (cm)" autocomplete="off"      formControlName="PCD_neck" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Body fat mass (Kg)" autocomplete="off"      formControlName="PCD_BodyMass" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Body fat percentage (%)" autocomplete="off"      formControlName="PCD_bodyfatper" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="WHR (WR/HR)" autocomplete="off"      formControlName="PCD_WHR" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <h6>Blood pressure</h6>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Systolic (mm/Hg)" formControlName="PCD_BloodPressureSystolic" autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Diastolic (mm/Hg)" formControlName="PCD_BloodPressureDiastolic" autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+            </div>
+               
+        </div>
+    </form>
+</div>
+

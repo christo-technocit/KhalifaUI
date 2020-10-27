@@ -1,0 +1,972 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Diabetes in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="diabetes">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Diabetes complication in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="diabetesc">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Obesity in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="obesity">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Hypertension in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="hypertension">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        CVD in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="cvd">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Dyslipidaemia in the family
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="dyslipidaemia">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 row ">
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Others"
+                           formControlName="familyothers" />
+                </mat-form-field>
+            </div>
+            </div>
+        <div class="col-md-12 row ">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Grandfather (mother side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="grandfa_maside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="grandfa_maside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="grandfa_maside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="grandfa_maside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="grandfa_maside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Grandmother (mother side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="grandma_maside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="grandma_maside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="grandma_maside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="grandma_maside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="grandma_maside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Grandfather (father side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="grandfa_faside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="grandfa_faside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="grandfa_faside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="grandfa_faside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="grandfa_faside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Grandmother (father side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="grandma_faside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="grandma_faside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="grandma_faside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="grandma_faside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="grandma_faside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Mother
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="ma_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="ma_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="ma_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="ma_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="ma_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Father
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="fa_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="fa_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="fa_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="fa_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="fa_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Sisters
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="sister_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="sister_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="sister_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="sister_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="sister_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Brothers
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="brother_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="brother_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="brother_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="brother_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="brother_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Wives
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="wives_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="wives_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="wives_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="wives_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="wives_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Husband
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="husband_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="husband_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="husband_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="husband_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="husband_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Son
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="son_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="son_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="son_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="son_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="son_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Daughters
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="daughters_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="daughters_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="daughters_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="daughters_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="daughters_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Grandsons
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="grandsons_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="grandsons_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="grandsons_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="grandsons_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="grandsons_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Grand Daughters
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="grand_daughters_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="grand_daughters_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="grand_daughters_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="grand_daughters_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="grand_daughters_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Uncles (mother side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="uncles_maside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="uncles_maside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="uncles_maside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="uncles_maside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="uncles_maside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Aunts (mother side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="aunts_maside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="aunts_maside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="aunts_maside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="aunts_maside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="aunts_maside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Uncles (father side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="uncles_faside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="uncles_faside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="uncles_faside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="uncles_faside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="uncles_faside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Aunts (father side)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="aunts_faside_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="aunts_faside_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="aunts_faside_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="aunts_faside_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="aunts_faside_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Cousins (mother side - Aunt)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="cousins_maside_aunt_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="cousins_maside_aunt_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="cousins_maside_aunt_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="cousins_maside_aunt_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="cousins_maside_aunt_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Cousins (mother side - Uncle)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="cousins_maside_uncle_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="cousins_maside_uncle_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="cousins_maside_uncle_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="cousins_maside_uncle_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="cousins_maside_uncle_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Cousins (father side - Aunt)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="cousins_faside_aunt_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="cousins_faside_aunt_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="cousins_faside_aunt_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="cousins_faside_aunt_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="cousins_faside_aunt_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">
+                        Cousins (father side - Uncle)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Total No"
+                           formControlName="cousins_faside_uncle_no" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Deceased"
+                           formControlName="cousins_faside_uncle_dec" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not affected"
+                           formControlName="cousins_faside_uncle_notaff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Affected"
+                           formControlName="cousins_faside_uncle_aff" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Not Sure"
+                           formControlName="cousins_faside_uncle_notsur" />
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>

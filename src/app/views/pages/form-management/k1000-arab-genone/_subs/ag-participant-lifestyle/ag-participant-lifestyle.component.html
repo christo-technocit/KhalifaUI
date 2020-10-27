@@ -1,0 +1,103 @@
+<div>
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section row kt-form__section--first">
+            <div class="col-md-3">
+                <label align="start">
+                    What is your smoking status
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="Healthy"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="LIFE_SmokingStatus" >
+                        <mat-radio-button  value="CurrentSmoke">Current smoker</mat-radio-button>
+                        <mat-radio-button  value="NeverSmoke">Never smoked</mat-radio-button>
+                        <mat-radio-button  value="Ex-Smoker"> Ex Smoker</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    How often do you exercise?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="Walk"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="LIFE_ExcersizeFrquent" >
+                        <mat-radio-button  value="daily">Daily</mat-radio-button>
+                        <mat-radio-button  value="3TimesPerWeek">3 times/week</mat-radio-button>
+                        <mat-radio-button  value="No">I do not exercise</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Do you follow a healthy diet
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="Healthy"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="LIFE_FollowHealthyDiet" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="others">Others</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-md-3">
+                <label align="start">
+                    Are you on a special diet to lose/gain weight?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="LIFE_SpecialDiet_weight_LossGain"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="LIFE_SpecialDiet_weight_LossGain" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Has your weight changed in the last 5 years?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="LIFE_healthy_Individual"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="LIFE_healthy_Individual" >
+                        <mat-radio-button  value="Increased">Increased</mat-radio-button>
+                        <mat-radio-button  value="Decreased">Decreased</mat-radio-button>
+                        <mat-radio-button  value="NoChange">No Change</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-md-3">
+                <label align="start">
+                    Do you consider yourself a healthy individual?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="LIFE_healthy_Individual"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="LIFE_healthy_Individual" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+
+        </div>
+    </form>
+</div>

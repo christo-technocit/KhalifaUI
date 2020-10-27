@@ -1,0 +1,104 @@
+<div class="col-md-12 ">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>*Osteoporosis in the family:
+                    </label>
+                </div>
+                <div class="col-md-5 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="FAMH_Osteoporosis" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">No Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>*Osteoporosis complication in the family:
+                    </label>
+                </div>
+                <div class="col-md-5 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="FAMH_Osteoporosis_complication" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+                <div [hidden]="form.get('FAMH_Osteoporosis_complication').value != 'yes'"
+                     class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, please specify"   formControlName="FAMH_Osteoporosis_complication_Remarks" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>*Obesity in the family
+                    </label>
+                </div>
+                <div class="col-md-5 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="FAMH_Obesity" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>*Bone fractures in the family
+                    </label>
+                </div>
+                <div class="col-md-5 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="FAMH_BoneFractures" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>*CVD in the family
+                    </label>
+                </div>
+                <div class="col-md-5 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="FAMH_CVD" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 ">
+                    <label>*Other
+                    </label>
+                </div>
+                <div class="col-md-5 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput formControlName="FAMH_Other" placeholder="Others"/>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

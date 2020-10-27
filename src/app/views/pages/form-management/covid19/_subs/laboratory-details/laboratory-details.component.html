@@ -1,0 +1,79 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-12 form-group">
+                <h6>
+                    Laboratory Details (Filled by research members)
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Sample Type
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="LD_7_blood">Blood</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="LD_7_saliva">Saliva </mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="LD_7_tissue">Tissue </mat-checkbox>
+                     <mat-checkbox class="lab-mar-right-15"   formControlName="LD_7_sample_type_other">Other</mat-checkbox>
+                    <div class="col-md-12 row" [hidden]="!form.get('LD_7_sample_type_other').value">
+                        <mat-form-field   class="mat-form-field-fluid">
+                            <input   type="text" matInput placeholder="If other, Please specify" formControlName="LD_7_sample_type_other_txt" autocomplete="off"    />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker"
+                           (click)="dobPicker.open()"
+                           [max]="maxDate"
+                           autocomplete="off"
+                           placeholder="Sample receiving date" formControlName="LD_7_sample_received_date" />
+                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #dobPicker></mat-datepicker>
+                    <!--<mat-hint align="start">Please enter-->
+                    <!--<strong>Date of Birth</strong> in 'mm/dd/yyyy' format</mat-hint>-->
+                </mat-form-field>
+            </div>
+            
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Storage" autocomplete="off" formControlName="LD_7_storage" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Sample Volume" autocomplete="off" formControlName="LD_7_sample_volume" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Project Code" autocomplete="off" formControlName="LD_7_project_code" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Test Code" autocomplete="off" formControlName="LD_7_test_code" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <textarea matInput placeholder="Comments" rows="5" autocomplete="off" formControlName="LD_7_comments" >
+                        </textarea>
+                </mat-form-field>
+            </div>
+        </div>
+</form>
+</div>

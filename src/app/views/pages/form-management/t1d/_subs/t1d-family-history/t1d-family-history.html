@@ -1,0 +1,139 @@
+<form [formGroup]="VForm1" class="col-md-12">
+<div class="kt-form__section kt-form__section--first">
+    <div class="form-group  row">
+        <div class="col-md-3 kt-margin-bottom-20-mobile">
+            <div class="kt-section">
+                <mat-form-field floatPlaceholder="T1D in the family"  class="mat-form-field-fluid">
+                    <div class="kt-section">
+                    <label align="start">
+                        T1D in the family
+                    </label>
+                    </div>
+                    <input matInput  style="display: none">
+                    <mat-radio-group formControlName="FAMH_T1DFamily">
+                        <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="No">No</mat-radio-button>
+                        <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="col-md-3 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="T2D in the family"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        T2D in the family
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FAMH_T2DFamily">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-3 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Diabetes complication in the family:"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Diabetes complication in the family: 
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FAMH_Diabetescomplication">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>       
+        <div class="col-md-3 kt-margin-bottom-20-mobile"><br><br><br>
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput   formControlName="FAMH_Diabetescomplication_Remarks" placeholder="If Yes, please specify" />
+            </mat-form-field>
+        </div>
+     </div>
+
+
+    <div class="form-group  row">
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Obesity in the family"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Obesity in the family
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FAMH_Obesity">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Hypertension in the family"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Hypertension in the family
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FAMH_Hypertension">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Dyslipidaemia in the family"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Dyslipidaemia in the family
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FAMH_Dyslipidaemia">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+    </div>
+   
+
+    <div class="form-group  row">
+        <div class="col-md-6 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Other Diseases in the Family"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Other Diseases in the Family
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FAMH_OtherDisease">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6 kt-margin-bottom-20-mobile"><br><br><br>
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput   formControlName="FAMH_OtherDisease_Remarks" placeholder="Other Diseases in the Family" />
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+</form>
+

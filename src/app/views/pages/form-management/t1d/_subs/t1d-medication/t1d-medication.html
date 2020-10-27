@@ -1,0 +1,46 @@
+<form [formGroup]="VForm1" class="col-md-12">
+<div class="kt-form__section kt-form__section--first">
+    <div class="form-group  row">
+        <div class="col-md-12 kt-margin-bottom-10-mobile">
+            <mat-form-field floatPlaceholder="Do you take medications?"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">Do you take medications?</label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="MEDI_Any_Medication">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="col-md-12 kt-margin-bottom-20-mobile">
+        <mat-form-field class="mat-form-field-fluid">
+            <div class="kt-section mar-t-10">
+                <label align="start">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label><label align="start">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+            </div>
+            <input matInput formControlName="MEDI_Any_Medication_Remarks"  placeholder="if Yes please specify" />
+        </mat-form-field>
+    </div>
+    <div class="col-md-12 kt-margin-bottom-20-mobile">
+        <mat-form-field class="mat-form-field-fluid">
+            <div class="kt-section mar-t-10">
+                <label align="start">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label><label align="start">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+            </div>
+            <input matInput formControlName="MEDI_CurrentInsulinDose"  placeholder="Current insulin dose(unit/kg/day)" />
+        </mat-form-field>
+    </div>
+
+</div>
+</form>
+
+
+

@@ -1,0 +1,386 @@
+<div>
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section row kt-form__section--first">
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Do you have any allergies?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Any_Allergies" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Any_Allergies').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, please specify" formControlName="MEDI_Any_Allergies_Remarks"  autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        What about intolerance?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Intolerance" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Intolerance').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Intolerance_Remarks"  placeholder="If yes, please specify"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Do you take any medications?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Any_Medications" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Do you take any vitamins or supplements?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Any_Vitamins_Supplements" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Any_Vitamins_Supplements').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Any_Vitamins_Supplements_Remarks"  placeholder="If yes, please specify"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Do you have any diseases?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Any_Diseases" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Type 1 Diabetes
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Type1Diabetes" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Type1Diabetes').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Any_Vitamins_Supplements_Remarks"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Seizures
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Seizures" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Seizures').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Seizures_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Hypertension
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Hypertension" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Hypertension').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Hypertension_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Arthritis/Rheumatism
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Arthritis_Rheumatism" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Arthritis_Rheumatism').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Arthritis_Rheumatism_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Eczema
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Eczema" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Eczema').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Eczema_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Kidney disease
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Kidneydisease" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Kidneydisease').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Eczema_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Liver disease
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Liverdisease" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Liverdisease').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Liverdisease_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Neurological disorder
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Neurologicaldisorder" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Neurologicaldisorder').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Neurologicaldisorder_Remarks"  placeholder="If yes, please specify"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Psychological diseasesr
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Psychologicaldiseases" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Psychologicaldiseases').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Psychologicaldiseases_Remarks"  placeholder="If yes, please specify"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Thyroid
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Thyroid" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Thyroid').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Thyroid_Age"  placeholder="If yes, at what age"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Others
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Others" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Others').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Others_Remarks"  placeholder="If yes, please specify"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label align="start">
+                        Did you have any surgery?
+                    </label>
+                </div>
+                <div class="col-md-5 form-group ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MEDI_Any_Surgery" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div  [hidden]="form.get('MEDI_Any_Surgery').value != 'yes'"   class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput   formControlName="MEDI_Any_Surgery_Remarks"  placeholder="If yes, please specify"  autocomplete="off" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

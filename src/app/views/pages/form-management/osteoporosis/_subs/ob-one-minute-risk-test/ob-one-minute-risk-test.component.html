@@ -1,0 +1,279 @@
+<div class="col-md-12 ">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>1. Have either of your parents been diagnosed with osteoporosis or broken a bone after a minor fall (a fall from standing height or less)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q1_Parent_osteoporosis" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>2. Did either of your parents have a stooped back (dowager’s hump)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q2_Parent_StoopedBack" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>3. Are you 40 years old or older?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q3_Parent_40YearsOlder" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>4. Have you ever broken a bone after a minor fall, as an adult?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q4_BrokenBone" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>5. Do you fall frequently (more than once in the last year) or do you have a fear of falling because you are frail?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q5_FearFalling" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>6. After the age of 40, have you lost more than 3 cm in height (just over 1 inch)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q6_After40_3cmHeight" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>7. Are you underweight (is your Body Mass Index less than 19 kg/m2)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q7_Underweight" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>8. Have you ever taken corticosteroid tablets (cortisone, prednisone, etc.) for more than 3 consecutive months (corticosteroids are often prescribed for conditions like asthma, rheumatoid arthritis, and some inflammatory diseases)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q8_CorticosteroidTablets" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>9. Have you ever been diagnosed with rheumatoid arthritis?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q9_RheumatoidArthritis" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>10. Have you been diagnosed with an over-active thyroid, overactive parathyroid glands, type 1 diabetes or a nutritional/ gastrointestinal disorder such as Crohn’s or celiac disease?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q10_OveractiveThyroid" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>11. For women over 45: Did your menopause occur before the age of 45?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q11_Menopause" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>12. Have your periods ever stopped for 12 consecutive months or more (other than because of pregnancy, menopause or hysterectomy)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q12_PeriodsEver" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>13. Were your ovaries removed before age 50, without you taking Hormone Replacement Therapy?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q13_HormoneReplacementTherapy" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>14. Do you currently, or have you ever, smoked cigarettes?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q14_SmokedCigarettes" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>15. Is your daily level of physical activity less than 30 minutes per day (housework, gardening, walking, running etc.)?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q15_PhysicalActivity" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>16. Do you avoid, or are you allergic to milk or dairy products, without taking any calcium supplements?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q16_Allergic_Milk" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3 form-group ">
+                    <label>17. Do you spend less than 10 minutes per day outdoors (with part of your body exposed to sunlight), without taking vitamin D supplements?
+                    </label>
+                </div>
+                <div class="col-md-7 form-group">
+                    <mat-form-field class="mat-form-field-fluid  mat-n-top-10">
+                        <input matInput style="display: none" />
+                        <mat-radio-group formControlName="OMRT_Q17_OutdoorsSpend" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

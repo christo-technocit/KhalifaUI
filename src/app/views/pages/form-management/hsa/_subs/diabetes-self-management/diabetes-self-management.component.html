@@ -1,0 +1,2104 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+    
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+
+        <!--<div class="kt-form__section kt-form__section--first">-->
+           <!--<div class="row ">
+                <div class="col-md-12 form-group">
+                        <span layout="row"><hr flex/><h5>4. Diabetes Self-Management*</h5><hr flex/></span>
+                </div>
+            </div>-->
+                    
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start"><h6> The following statements describe self-care activities related to your diabetes. Thinking about your self-care over the last 8 weeks, please specify the extent to which each statement applies to you.</h6>  
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.1 Do you have any long-term diabetic complications?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group">
+                <mat-radio-group formControlName="DSM_longterm_diabetic_complications">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="idontknow">I Don't Know</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        
+            <div class="col-md-4 form-group" *ngIf="Mform.get('DSM_longterm_diabetic_complications').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, for how many years?"
+                        formControlName="DSM_longterm_diabetic_complications_year" />
+                </mat-form-field>
+            </div>
+        </div>
+                   
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                        <label align="start">4.2 If yes, did you experience any of the following? (tick as many as appropriate)
+                        </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">                   
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_Kidney">Kidney problems</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_Foot">Foot problems (e.g. ulcers, numbness)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complication_Stroke">Stroke</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_Heart">Heart problems (e.g., arrhythmias)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_Eye">Eye problems (e.g., impaired vision)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_others">Other</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_dontknow">I Don't Know</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_longterm_diabetic_complications_notdisclose">Prefer not to disclose</mat-checkbox>    
+                </div>
+            </div>
+            <div *ngIf="Mform.get('DSM_longterm_diabetic_complications_others').value"  class="dis-con">
+                <div class="col-md-12 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Specify"  formControlName="DSM_longterm_diabetic_complications_others_Specify" />
+                    </mat-form-field>
+                </div>
+            </div>            
+
+
+        </div>
+
+        <div class="row col-md-12">
+            <div class="form-group col-md-12 row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <label>4.3 Please, select your current diabetes management method (tick as many as appropriate)</label>
+                </div>
+
+                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="physical_activity">Physical activity</mat-checkbox>
+                        <div *ngIf="Mform.get('physical_activity').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="If yes, specify Date"  formControlName="physical_activity_specify" />
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="If yes, specify year"  formControlName="physical_activity_year" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diet">Diet</mat-checkbox>
+                        <div *ngIf="Mform.get('diet').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder=" If yes, please, specify the latest type of diet you have used "  formControlName="diet_specify" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="Since When"  formControlName="diet_specify_year" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="Until When" formControlName="diet_specify_until_year" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                                
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="education">Education about diabetes self-management</mat-checkbox>                            
+                        <div *ngIf="Mform.get('education').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="f yes, please, specify by who:" formControlName="education_specify" />
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Since when? Date:" formControlName="education_specify_date" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="If yes, specify year" formControlName="education_specify_year" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                                
+                        <mat-checkbox  class="lab-mar-right-15"  formControlName="metformin">Medication: Metformin</mat-checkbox>
+                        <div *ngIf="Mform.get('metformin').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="If yes, since when? Date:" formControlName="metformin_specify" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Year" formControlName="metformin_year" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Current Dose" formControlName="metformin_current_dose" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="antidiabetic">Other antidiabetic medication:</mat-checkbox>
+                        <div *ngIf="Mform.get('antidiabetic').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="Please, specify which medication" formControlName="antidiabetic_specify" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Since when?  Date:" formControlName="antidiabetic_date" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Year:" formControlName="antidiabetic_year" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Current Dose" formControlName="antidiabetic_current_dose" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="insulin">Insulin</mat-checkbox>
+                        <div *ngIf="Mform.get('insulin').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="Please, specify which type"  formControlName="insulin_specify" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Since when?  Date:" formControlName="insulin_date" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Year:" formControlName="insulin_year" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="Current Dose"  formControlName="insulin_current_dose" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="others">Other</mat-checkbox>
+                        <div *ngIf="Mform.get('others').value"  class="dis-con">
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                    <input matInput placeholder="please specify" formControlName="other_specify" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <mat-form-field class="mat-form-field-fluid">
+                                            <input matInput placeholder="If other,please specify " formControlName="other_specify" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="none">None</mat-checkbox>
+                        <div class="col-md-4 form-group" *ngIf="Mform.get('none').value">
+                            <mat-form-field class="mat-form-field-fluid">
+                                        <input matInput placeholder="If other,please specify " formControlName="other_txt" />
+                            </mat-form-field>
+                        </div>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.4 I check my blood sugar levels with care and attention.
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_blood_sugar_levels_with_care">
+                <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                <label align="start">4.5 The food I choose to eat makes it easy to achieve optimal blood sugar levels. 
+                </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_achieve_optimal_blood_sugar_level">
+                    <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                    <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                    <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                    <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.6 I keep all doctors’ appointments (appointments with health professionals) recommended for my diabetes treatment. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_keep_doctors_appointments">
+                    <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                    <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                    <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                    <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>        
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.7 I take my diabetes medication as prescribed. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_take_diabetes_medication">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.8 Occasionally I eat lots of sweets or other foods rich in carbohydrates. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_Occasionally_eat_sweets">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+    
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.9 I record my blood sugar levels regularly (or analyse the value chart with my blood glucose meter). 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_record_blood_sugar">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.10 I tend to avoid diabetes-related doctors’ appointments (appointments with health professionals). 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_avoid_diabetes_related_appointments">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.11 I am regularly physically active to improve my diabetes treatment. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_physically_active">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.12 I strictly follow the dietary recommendations given by my doctor or diabetes specialist. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_follow_dietary_recommendations">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.13 I do not check my blood sugar levels frequently enough to achieve good blood glucose control. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_do_not_check_blood_sugar_levels">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.14 I avoid physical activity, although it could improve my diabetes. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_avoid_physical_activity">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.15 I tend to forget to take or skip my diabetes medication. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_skip_medication">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.16 Sometimes I have real ‘food binges’ (not triggered by hypoglycaemia). 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_food_binges">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.17 Regarding my diabetes care, I should see my medical practitioner(s) more often. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_morevisit">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.18 I am less physically active than would be optimal for my diabetes. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_less_physically_active">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.19 My diabetes self-care is poor. 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_self_care_poor">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">     <h6>Diabetes Treatment:</h6>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">4.20 How many oral antidiabetic medications do you currently take for (pre)diabetes?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="DSM_DiabetesTreatment_none">
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                        <mat-radio-button  value="Medications">Medication(s)</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+
+            <div class="col-md-3 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Medication(s)"  formControlName="DSM_DiabetesTreatment_medication" />                      
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">4.21 What medication(s) do you currently take for (pre)diabetes?  (put all that apply) 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Medication 1 name:"  formControlName="DSM_DiabetesTreatment_1name" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Since when:" formControlName="DSM_DiabetesTreatment_1year" />
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Daily Dose:" formControlName="DSM_DiabetesTreatment_1year_dose" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Medication 2 name:" formControlName="DSM_DiabetesTreatment_2name" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Since when:" formControlName="DSM_DiabetesTreatment_2year" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Daily Dose:" formControlName="DSM_DiabetesTreatment_2year_dose" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Medication 3 name:" formControlName="DSM_DiabetesTreatment_3name" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Since when:"  formControlName="DSM_DiabetesTreatment_3year" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Daily Dose:"  formControlName="DSM_DiabetesTreatment_3year_dose" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Medication 4 name:" formControlName="DSM_DiabetesTreatment_4name" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Since when:" formControlName="DSM_DiabetesTreatment_4year" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Daily Dose:" formControlName="DSM_DiabetesTreatment_4year_dose" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.22 Did you STOP taking your medication in the past six months? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-radio-group formControlName="DSM_stop_medication">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button> 
+                    <mat-radio-button  value="Does not apply to me">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+    
+            <div class="col-md-2 form-group" *ngIf="Mform.get('DSM_stop_medication').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, which medication(s) did you stop taking?"
+                        formControlName="DSM_stop_medication_name" />                        
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-2 form-group" *ngIf="Mform.get('DSM_stop_medication').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Please specify the reasons?"
+                            formControlName="DSM_stop_medication_reason" />
+                </mat-form-field>
+            </div>
+        </div>
+        
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.23 What diabetic medication was stopped?  For what reason was it stopped? 
+                        </label>
+                </div>
+            </div>
+
+            <div class="col-md-2 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="MedicationStopped1:" formControlName="DSM_stop_medication_1name" />
+                </mat-form-field>
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Reason:" formControlName="DSM_stop_medication_1reason" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="MedicationStopped2:" formControlName="DSM_stop_medication_2name" />
+                </mat-form-field>
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Reason:" formControlName="DSM_stop_medication_2reason" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="MedicationStopped3:" formControlName="DSM_stop_medication_3name" />
+                </mat-form-field>
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Reason:" formControlName="DSM_stop_medication_3reason" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="MedicationStopped4:" formControlName="DSM_stop_medication_4name" />
+                </mat-form-field>
+                <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Reason:"   formControlName="DSM_stop_medication_4reason" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-6">
+                <div class="kt-section">
+                    <label align="start">4.24 Did you take all your medication yesterday?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_medication_yesterday">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="Does not apply to me">Does not apply to me</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-6">
+                <div class="kt-section">
+                    <label align="start">4.25 Did you doctor prescribed metformin to you?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_prescribed_metformin">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="Does not apply to me">Does not apply to me</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-6">
+                <div class="kt-section">
+                    <label align="start">4.26 Do you take metformin tables as prescribed by your doctor?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_take_metformin">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="Does not apply to me">Does not apply to me</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        The following questions ask about your use of metformin medication(s) in the PAST WEEK.  For each question, please circle the answer that best describes your experience. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">4.27 How often does your doctor want you to take this medication? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_period">
+                    <mat-radio-button  value="everyday">Every day	</mat-radio-button>
+                    <mat-radio-button  value="asneeded">As needed</mat-radio-button>
+                    <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                    <mat-radio-button  value="itisnotapplicabletome">It is not possible to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="row col-md-12">
+                <label align="start"><strong><h5>In the PAST WEEK:</h5></strong>  
+                </label>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">4.28 Did you take any of metformin?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                    <mat-radio-group formControlName="DSM_take_metformin_pastweek">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="itisnotapplicabletome">It is not applicable to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.29 How many days did you take this medication? 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start"> I took it   </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_days">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="4">4</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                    <mat-radio-button  value="6">6</mat-radio-button>
+                    <mat-radio-button  value="7days">7days</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.30 How many times a day did you usually take it? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">I took it </label>
+                </div>
+            </div>
+
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_times">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3timesaday">3 times a day</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.31 How much did you usually take each time?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start"> I took</label>
+                </div>
+            </div> 
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_qty">
+                    <mat-radio-button  value="0medications">0 tablets</mat-radio-button>
+                    <mat-radio-button  value="1medication">1 tablet</mat-radio-button>
+                    <mat-radio-button  value="2medication">2 tablets</mat-radio-button>
+                    <mat-radio-button  value="3medicationseachtime">3 tablets each time</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.32 How many times did you MISS taking it? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">I missed it</label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_missed">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="4">4</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                    <mat-radio-button  value="6">6</mat-radio-button>
+                    <mat-radio-button  value="7times">7 times</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.33 How well does this medication work for you?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_works">
+                    <mat-radio-button  value="doesnotworkatall">Does not work at all</mat-radio-button>
+                    <mat-radio-button  value="moderatelywell">Moderately well</mat-radio-button> 
+                    <mat-radio-button  value="verywell">Very well</mat-radio-button>
+                    <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.34 How much does this medication bother you?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_take_metformin_bothers">
+                    <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                    <mat-radio-button  value="Bothers a little">Bothers a little</mat-radio-button> 
+                    <mat-radio-button  value="Bothers a lot">Bothers a lot</mat-radio-button>
+                    <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">4.35 Do you have any difficulties in any of the following areas? 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.36 It is hard to remember all the doses. 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_difficulty_hard_to_remember">
+                    <mat-radio-button  value="none">None</mat-radio-button>
+                    <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    <mat-radio-button  value="alot">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.37 It is hard to pay for this medication.	 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_difficulty_hard_to_pay">
+                    <mat-radio-button  value="None">None</mat-radio-button>
+                    <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    <mat-radio-button  value="alot">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.38 It is hard to get my refill on time.		 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_difficulty_hard_to_refill">
+                    <mat-radio-button  value="None">None</mat-radio-button>
+                    <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.39 I still get unwanted side effects from this medication.			 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_difficulty_unwanted_side_effect">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.40 This medication causes other concerns or problems.				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_difficulty_other_concern">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">4.41 In the <strong>past 2 weeks</strong> did you experience any of the below-mentioned symptoms of abdominal discomfort after taking the 
+                        <strong> metformin </strong>tablets? Please, tick appropriate option for each symptom.				 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Nausea </label>
+                </div>
+            </div>
+
+            <div class="col-md-9 form-group">
+                    <mat-radio-group formControlName="DSM_discomfort_Nausea">
+                        <mat-radio-button  value="No">No</mat-radio-button>
+                        <mat-radio-button  value="1-3times">1-3 times</mat-radio-button>
+                        <mat-radio-button  value="4-6times">4-6 times</mat-radio-button>
+                        <mat-radio-button  value="6-9times">6-9 times</mat-radio-button>
+                        <mat-radio-button  value="Mostofthetime">Most of the time</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Vomiting 				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-9 form-group">
+                <mat-radio-group formControlName="DSM_discomfort_Vomiting">
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="1-3times">1-3 times</mat-radio-button>
+                    <mat-radio-button  value="4-6times">4-6 times</mat-radio-button>
+                    <mat-radio-button  value="6-9times">6-9 times</mat-radio-button>
+                    <mat-radio-button  value="Mostofthetime">Most of the time</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>    
+                    
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Diarrhea 	 </label>
+                </div>
+            </div>
+
+            <div class="col-md-9 form-group">
+                <mat-radio-group formControlName="DSM_discomfort_Diarrhea">
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="1-3times">1-3 times</mat-radio-button>
+                    <mat-radio-button  value="4-6times">4-6 times</mat-radio-button>
+                    <mat-radio-button  value="6-9times">6-9 times</mat-radio-button>
+                    <mat-radio-button  value="Mostofthetime">Most of the time</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+ 
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Abdominal pain 				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-9 form-group">
+                    <mat-radio-group formControlName="DSM_discomfort_Abdominal_pain">
+                        <mat-radio-button  value="No">No</mat-radio-button>
+                        <mat-radio-button  value="1-3times">1-3 times</mat-radio-button>
+                        <mat-radio-button  value="4-6times">4-6 times</mat-radio-button>
+                        <mat-radio-button  value="6-9times">6-9 times</mat-radio-button>
+                        <mat-radio-button  value="Mostofthetime">Most of the time</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+      
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Bloating 				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-9 form-group">
+                    <mat-radio-group formControlName="DSM_discomfort_Bloating">
+                        <mat-radio-button  value="No">No</mat-radio-button>
+                        <mat-radio-button  value="1-3times">1-3 times</mat-radio-button>
+                        <mat-radio-button  value="4-6times">4-6 times</mat-radio-button>
+                        <mat-radio-button  value="6-9times">6-9 times</mat-radio-button>
+                        <mat-radio-button  value="Mostofthetime">Most of the time</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+   
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Loss of appetite 				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-5 form-group">
+                <mat-radio-group formControlName="DSM_discomfort_Loss_of_appetite">
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="1-3times">1-3 times</mat-radio-button>
+                    <mat-radio-button  value="4-6times">4-6 times</mat-radio-button>
+                    <mat-radio-button  value="6-9times">6-9 times</mat-radio-button>
+                    <mat-radio-button  value="Mostofthetime">Most of the time</mat-radio-button>
+                </mat-radio-group>
+            </div>      
+            
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Other (please, specify)"  formControlName="DSM_discomfort_Loss_of_appetite_specify" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.42 Did you experience anorexia after taking the metformin tablets?	 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_Metformin_anorexia">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="Doesnotapplytome">Does not apply to me</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>                 
+  
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        The following questions ask about your use of other oral antidiabetic (OAD) medication(s) in the PAST WEEK.  For each question, please circle the answer that best describes your experience.	
+                        <br><br>
+                        <strong>MEDICATION #2</strong>		 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Please, specify the name of the OAD medication:"
+                        formControlName="DSM_1OAD_Name" />
+                </mat-form-field>
+            </div>
+        </div>
+            
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.43 How often does your doctor want you to take this medication?   
+
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_1OAD_Period">
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                        <mat-radio-button  value="asneeded">As needed</mat-radio-button>
+                        <mat-radio-button  value="donottknow">Don't Know</mat-radio-button>
+                        </mat-radio-group>
+            </div>               
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start"> In the PAST WEEK: 	 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.44 Did you take any of this medication? 	 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_take"> 
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button> 
+                    <mat-radio-button  value="itisnotapplicabletome">It is not applicable to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.45 How many days did you take this medication? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start"> I took it   </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_days">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="4">4</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                    <mat-radio-button  value="6">6</mat-radio-button>
+                    <mat-radio-button  value="7days">7days</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.46 How many times a day did you usually take it? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_times">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3timesaday">3 times a day</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+  
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.47 How much did you usually take each time?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_qty">
+                    <mat-radio-button  value="0medications">0 tablets</mat-radio-button>
+                    <mat-radio-button  value="1medication">1 tablet</mat-radio-button>
+                    <mat-radio-button  value="2medication">2 tablets</mat-radio-button>
+                    <mat-radio-button  value="3medicationseachtime">3 tablets each time</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.48 How many times did you MISS taking it?
+                    </label>
+                </div>
+            </div>
+        <div class="col-md-1">
+            <div class="kt-section">
+                <label align="start">
+                    I missed it
+                </label>
+            </div>
+        </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_miss">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="4">4</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                    <mat-radio-button  value="6">6</mat-radio-button>
+                    <mat-radio-button  value="7times">7 times</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.49 How well does this medication work for you?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_works">
+                    <mat-radio-button  value="doesnotworkatall">Does not work at all</mat-radio-button>
+                    <mat-radio-button  value="moderatelywell">Moderately well</mat-radio-button> 
+                    <mat-radio-button  value="verywell">Very well</mat-radio-button>
+                    <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                </mat-radio-group>
+            </div>       
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.50 Does this medication bother you? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_bothers">
+                    <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                    <mat-radio-button  value="Bothers a little">Bothers a little</mat-radio-button> 
+                    <mat-radio-button  value="Bothers a lot">Bothers a lot</mat-radio-button>
+                    <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                </mat-radio-group>
+            </div>     
+        </div>
+        
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">4.51 How much difficulty are you having in each area? 
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.52 It is hard to remember all the doses. 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_Difficulty_hard_to_remember">
+                    <mat-radio-button  value="None">None</mat-radio-button>
+                    <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+    
+        <div class="row col-md-12">                 
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.53 It is hard to pay for this medication.	
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_1OAD_Difficulty_hard_to_pay">
+                    <mat-radio-button  value="None">None</mat-radio-button>
+                    <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.54 It is hard to get my refill on time.		 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_1OAD_Difficulty_hard_to_refill">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.55 I still get unwanted side effects from this medication.			 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_1OAD_Difficulty_unwanted_side_effect">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.56 This medication causes other concerns or problems.				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_1OAD_Difficulty_other_concern">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+            
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        <strong>MEDICATION #3</strong>		 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Please, specify the name of the OAD medication:"
+                        formControlName="DSM_2OAD_Name" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.57 How often does your doctor want you to take this medication?   
+
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_2OAD_Period">
+                    <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                    <mat-radio-button  value="asneeded">As needed</mat-radio-button>
+                    <mat-radio-button  value="donottknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>               
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start"> In the PAST WEEK: 	 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.58 Did you take any of this medication? 	 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_2OAD_take"> 
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button> 
+                    <mat-radio-button  value="itisnotapplicabletome">It is not applicable to me</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.59 How many days did you take this medication? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_days">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2</mat-radio-button>
+                        <mat-radio-button  value="3">3</mat-radio-button>
+                        <mat-radio-button  value="4">4</mat-radio-button>
+                        <mat-radio-button  value="5">5</mat-radio-button>
+                        <mat-radio-button  value="6">6</mat-radio-button>
+                        <mat-radio-button  value="7days">7days</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.60 How many times a day did you usually take it? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">I took it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_times">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2</mat-radio-button>
+                        <mat-radio-button  value="3timesaday">3 times a day</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.61 How much did you usually take each time?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_2OAD_qty">
+                    <mat-radio-button  value="0medications">0 tablets</mat-radio-button>
+                    <mat-radio-button  value="1medication">1 tablet</mat-radio-button>
+                    <mat-radio-button  value="2medication">2 tablets</mat-radio-button>
+                    <mat-radio-button  value="3medicationseachtime">3 tablets each time</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+ 
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.62 How many times did you MISS taking it?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">I missed it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_2OAD_miss">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="4">4</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                    <mat-radio-button  value="6">6</mat-radio-button>
+                    <mat-radio-button  value="7times">7 times</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+    
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.63 How well does this medication work for you?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_works">
+                        <mat-radio-button  value="doesnotworkatall">Does not work at all</mat-radio-button>
+                        <mat-radio-button  value="moderatelywell">Moderately well</mat-radio-button> 
+                        <mat-radio-button  value="verywell">Very well</mat-radio-button>
+                        <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.64 How much does this medication bother you? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_bothers">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="Bothers a little">Bothers a little</mat-radio-button> 
+                        <mat-radio-button  value="Bothers a lot">Bothers a lot</mat-radio-button>
+                        <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                    <div class="kt-section">
+                        <label align="start">4.65 How much difficulty are you having in each area? 
+                        </label>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.66 It is hard to remember all the doses. 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_Difficulty_hard_to_remember">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">              
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.67 It is hard to pay for this medication.	
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_Difficulty_hard_to_pay">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.68 It is hard to get my refill on time.		 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_Difficulty_hard_to_refill">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.69 I still get unwanted side effects from this medication.			 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="DSM_2OAD_Difficulty_unwanted_side_effect">
+                    <mat-radio-button  value="None">None</mat-radio-button>
+                    <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+ 
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.70 This medication causes other concerns or problems.				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_2OAD_Difficulty_other_concern">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+        
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        <br><strong>MEDICATION #4</strong>		 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Please, specify the name of the OAD medication:"
+                        formControlName="DSM_3OAD_Name" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.71 How often does your doctor want you to take this medication?   
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_Period">
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                        <mat-radio-button  value="asneeded">As needed</mat-radio-button>
+                        <mat-radio-button  value="donottknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>      
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start"> In the PAST WEEK: 	 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.72 Did you take any of this medication? 	 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_take"> 
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="itisnotapplicabletome">It is not applicable to me</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+ 
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.73 How many days did you take this medication? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                <mat-radio-group formControlName="DSM_3OAD_days">
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="1">1</mat-radio-button>
+                    <mat-radio-button  value="2">2</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="4">4</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                    <mat-radio-button  value="6">6</mat-radio-button>
+                    <mat-radio-button  value="7days">7days</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.74 How many times a day did you usually take it? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_times">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2</mat-radio-button>
+                        <mat-radio-button  value="3timesaday">3 times a day</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <!--<div class="form-group  row">-->
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.75 How much did you usually take each time?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I took
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_qty">
+                        <mat-radio-button  value="0medications">0 tablets</mat-radio-button>
+                        <mat-radio-button  value="1medication">1 tablet</mat-radio-button>
+                        <mat-radio-button  value="2medication">2 tablets</mat-radio-button>
+                        <mat-radio-button  value="3medicationseachtime">3 tablets each time</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.76 How many times did you MISS taking it?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="kt-section">
+                    <label align="start">
+                    I missed it
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_miss">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2</mat-radio-button>
+                        <mat-radio-button  value="3">3</mat-radio-button>
+                        <mat-radio-button  value="4">4</mat-radio-button>
+                        <mat-radio-button  value="5">5</mat-radio-button>
+                        <mat-radio-button  value="6">6</mat-radio-button>
+                        <mat-radio-button  value="7times">7 times</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.77 How well does this medication work for you?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_works">
+                        <mat-radio-button  value="doesnotworkatall">Does not work at all</mat-radio-button>
+                        <mat-radio-button  value="moderatelywell">Moderately well</mat-radio-button> 
+                        <mat-radio-button  value="verywell">Very well</mat-radio-button>
+                        <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.78 How much does this medication bother you? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_bothers">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="Bothers a little">Bothers a little</mat-radio-button> 
+                        <mat-radio-button  value="Bothers a lot">Bothers a lot</mat-radio-button>
+                        <mat-radio-button  value="donotknow">Don’t know</mat-radio-button>
+                    </mat-radio-group>
+            </div>    
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">4.79 How much difficulty are you having in each area? 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.80 It is hard to remember all the doses. 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_Difficulty_hard_to_remember">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">          
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.81 It is hard to pay for this medication.	
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_Difficulty_hard_to_pay">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.82 It is hard to get my refill on time.		 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_Difficulty_hard_to_refill">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.83 I still get unwanted side effects from this medication.			 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_Difficulty_unwanted_side_effect">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">4.84 This medication causes other concerns or problems.				 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                    <mat-radio-group formControlName="DSM_3OAD_Difficulty_other_concern">
+                        <mat-radio-button  value="None">None</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                        <mat-radio-button  value="A lot">A lot</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start"><strong>Note:	
+                        <br>
+                        If the participant did not come to the appointment, please state the reason for his/her absence:		 
+                    </strong>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4 form-group">
+                <mat-radio-group formControlName="DSM_absence_reason">
+                    <mat-radio-button  value="Death">Death</mat-radio-button>
+                    <mat-radio-button  value="Other">Other</mat-radio-button>
+                    <mat-radio-button  value="Unknown">Unknown</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('DSM_absence_reason').value == 'Death'"  >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker3"
+                    (click)="dobPicker3.open()"
+                    [max]="maxDate"
+                    autocomplete="off"
+                    placeholder="Date" formControlName="DSM_absence_death_date" />
+                    <mat-datepicker-toggle matSuffix [for]="dobPicker3"></mat-datepicker-toggle>
+                    <mat-datepicker #dobPicker3></mat-datepicker>             
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" *ngIf="Mform.get('DSM_absence_reason').value == 'Death'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Cause of Death" formControlName="DSM_absence_death_reason" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 form-group" *ngIf="Mform.get('DSM_absence_reason').value == 'Other'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Reason"  formControlName="DSM_absence_death_reason" />
+                </mat-form-field>
+            </div>
+        </div> 
+        <!--</div>-->
+       <!--</div> --> 
+    </form>
+</div>

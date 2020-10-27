@@ -1,0 +1,72 @@
+<div>
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section row kt-form__section--first">
+            <div class="col-md-3">
+                <label align="start">
+                    How often do you Eat Fast food per week
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="Healthy"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="FOOD_EatFastfood_Week" >
+                        <mat-radio-button  value="Never">Never</mat-radio-button>
+                        <mat-radio-button  value="Twice">Twice</mat-radio-button>
+                        <mat-radio-button  value="4times"> 4 times</mat-radio-button>
+                        <mat-radio-button  value="Daily">Daily</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Consume soda pop, per week?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="Walk"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="FOOD_Sodapop_Week" >
+                        <mat-radio-button  value="Never">Never</mat-radio-button>
+                        <mat-radio-button  value="Twice">Twice</mat-radio-button>
+                        <mat-radio-button  value="4times"> 4 times</mat-radio-button>
+                        <mat-radio-button  value="Daily">Daily</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Eat fruits/vegetables, per day?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field floatPlaceholder="Healthy"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="FOOD_Fruits_Vegetables_Day" >
+                        <mat-radio-button  value="Never">Never</mat-radio-button>
+                        <mat-radio-button  value="Once">Once</mat-radio-button>
+                        <mat-radio-button  value="Twice">Twice</mat-radio-button>
+                        <mat-radio-button  value="Daily">Daily</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-md-3">
+                <label align="start">
+                    Do you eat in the middle of the night?
+                </label>
+            </div>
+            <div class="col-md-9 form-group ">
+                <mat-form-field  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="FOOD_Eat_Midnight" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>

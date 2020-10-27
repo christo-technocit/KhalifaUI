@@ -1,0 +1,56 @@
+<kt-portlet id="print_form">
+    <kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+        <div class="kt-form kt-margin-b-30">
+            <div class="">
+                <kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ob-participant-personal [disableInput]="isPrint"   [formData]="formId"  #appParticipation></kt-ob-participant-personal>
+                </kt-portlet-body>
+            </div>
+
+            <div class="">
+                <kt-portlet-header [title]="'Clinical Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ob-clinical-details [disableInput]="isPrint"   [formData]="formId"  #appClinical></kt-ob-clinical-details>
+                </kt-portlet-body>
+            </div>
+
+            <div class="">
+                <kt-portlet-header [title]="'Biochemical Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ob-biochemical-details [disableInput]="isPrint"   [formData]="formId"  #appBiochemical></kt-ob-biochemical-details>
+                </kt-portlet-body>
+            </div>
+
+            <div class="">
+            <kt-portlet-header [title]="'Medications'" [class]="'kt-portlet__head--lg'" >
+            </kt-portlet-header>
+            <kt-portlet-body  class="kt-portlet__body">
+                <kt-ob-medications [disableInput]="isPrint"   [formData]="formId"  #appMedications></kt-ob-medications>
+            </kt-portlet-body>
+        </div>
+
+
+            <div class="">
+            <kt-portlet-header [title]="'One Minute Risk Test'" [class]="'kt-portlet__head--lg'" >
+            </kt-portlet-header>
+            <kt-portlet-body  class="kt-portlet__body">
+                <kt-ob-one-minute-risk-test [disableInput]="isPrint"   [formData]="formId"  #appOneMinuteRiskTest></kt-ob-one-minute-risk-test>
+            </kt-portlet-body>
+        </div>
+
+            <div class="">
+                <kt-portlet-header [title]="'Family History'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ob-family-history [disableInput]="isPrint"   [formData]="formId"  #appFamilyHistory></kt-ob-family-history>
+                </kt-portlet-body>
+            </div>
+
+
+            </div>
+        </kt-portlet-body>
+    </kt-portlet>

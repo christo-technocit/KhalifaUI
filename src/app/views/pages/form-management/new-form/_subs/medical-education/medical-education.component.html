@@ -1,0 +1,168 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Who do you usually contact for health advice about your health?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="med_healthadvcontact">
+                        <mat-radio-button  value="noone">No one</mat-radio-button>
+                        <mat-radio-button  value="dietician">Dietician</mat-radio-button>
+                        <mat-radio-button  value="nurse">Nurse</mat-radio-button>
+                        <mat-radio-button  value="gp">GP</mat-radio-button>
+                        <mat-radio-button  value="pharmacist">Pharmacist</mat-radio-button>
+                        <mat-radio-button  value="diabetesspecialist">Diabetes Specialist</mat-radio-button>
+                        <mat-radio-button  value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                      
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group" *ngIf="Mform.get('med_healthadvcontact').value == 'other'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If Other"
+                        formControlName="med_healthadvcontact_othtxt" />
+                </mat-form-field>
+            </div>
+       </div>
+       
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you do an annual Medical checkup?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="med_annualcheck">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+           
+            <div class="col-md-12 row" >
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Have you seen any health practitioners (GP/specialist/consultant) in the last 12 months?
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-8  form-group">
+                    <div>
+                        <mat-radio-group formControlName="med_Gpvisit">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                          
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-8 form-group" *ngIf="Mform.get('med_Gpvisit').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes,"
+                            formControlName="med_Gpvisit_yestxt" />
+                    </mat-form-field>
+                </div>
+           </div>
+           <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        If you are >40 years, how often do you monitor your blood glucose at home (i.e. with finger pricks)?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="med_glucosemon40">
+                        <mat-radio-button  value="0times">0 times</mat-radio-button>
+                        <mat-radio-button  value="morethan4timesaday">More than 4 times a day</mat-radio-button>
+                        <mat-radio-button  value="onceaday">Once a day</mat-radio-button>
+                        <mat-radio-button  value="3to5timesaweek">3 to 5 times a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="onceamonth">Once a month</mat-radio-button>
+                        <mat-radio-button  value="2to4timesaday">2 to 4 times a day</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not sure</mat-radio-button>
+                        <mat-radio-button  value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                      
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group" *ngIf="Mform.get('med_glucosemon40').value == 'other'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If Other"
+                        formControlName="med_glucosemon40_othtxt" />
+                </mat-form-field>
+            </div>
+       </div>
+       <div class="col-md-12 row" >
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start">
+                    Have you been admitted to the hospital/emergency department in the last 12 months?
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8  form-group">
+            <div>
+                <mat-radio-group formControlName="med_hospitaladm">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start">
+                  
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 form-group" *ngIf="Mform.get('med_hospitaladm').value == 'yes'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="If Yes"
+                    formControlName="med_hospitaladm_yestxt" />
+            </mat-form-field>
+        </div>
+   </div>
+    </form>
+</div>
+

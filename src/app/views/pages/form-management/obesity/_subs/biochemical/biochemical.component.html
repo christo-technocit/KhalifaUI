@@ -1,0 +1,799 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Fasting Blood Glucose (mmol/l)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp1" formControlName="BIOC_FastingGlucose_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp1.open()" (focus)="dp1.open()"  name="dp1">
+                    <mat-datepicker-toggle matSuffix [for]="dp1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_FastingGlucose_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp1_1" formControlName="BIOC_FastingGlucose_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp1_1.open()" (focus)="dp1_1.open()"  name="dp1_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp1_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp1_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_FastingGlucose_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20 " >Is the result normal</label><br>
+                    <mat-radio-group formControlName="BIOC_FastingGlucose_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+       
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Random glucose level (mmol/l)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp2" formControlName="BIOC_RandomGlucose_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp2.open()" (focus)="dp2.open()"  name="dp2">
+                    <mat-datepicker-toggle matSuffix [for]="dp2">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp2></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_RandomGlucose_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp2_1" formControlName="BIOC_RandomGlucose_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp2_1.open()" (focus)="dp2_1.open()"  name="dp2_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp2_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp2_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_RandomGlucose_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label><br>
+                    <mat-radio-group formControlName="BIOC_RandomGlucose_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Glucose tolerance (OGTT) - * Fasting Blood Glucose
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp3" formControlName="BIOC_OGTT_FBG_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp3.open()" (focus)="dp3.open()"  name="dp3">
+                    <mat-datepicker-toggle matSuffix [for]="dp3">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp3></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_OGTT_FBG_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp3_1" formControlName="BIOC_OGTT_FBG_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp3_1.open()" (focus)="dp3_1.open()"  name="dp3_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp3_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp3_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_OGTT_FBG_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+          <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label><br>
+                    <mat-radio-group formControlName="BIOC_OGTT_FBG_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Glucose tolerance (OGTT) - * FBG after 2 hours
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp4" formControlName="BIOC_OGTT_FBG2_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp4.open()" (focus)="dp4.open()"  name="dp4">
+                    <mat-datepicker-toggle matSuffix [for]="dp4">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp4></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_OGTT_FBG2_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp4_1" formControlName="BIOC_OGTT_FBG2_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp4_1.open()" (focus)="dp4_1.open()"  name="dp4_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp4_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp4_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_OGTT_FBG2_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_OGTT_FBG2_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    HbA1c (%)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp5" formControlName="BIOC_HbA1c_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp5.open()" (focus)="dp5.open()"  name="dp5">
+                    <mat-datepicker-toggle matSuffix [for]="dp5">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp5></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_HbA1c_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp5_1" formControlName="BIOC_HbA1c_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp5_1.open()" (focus)="dp5_1.open()"  name="dp5_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp5_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp5_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_HbA1c_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+       
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_HbA1c_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Total cholesterol (mmol/L)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp6" formControlName="BIOC_TotalCholesterol_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp6.open()" (focus)="dp6.open()"  name="dp6">
+                    <mat-datepicker-toggle matSuffix [for]="dp6">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp6></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_TotalCholesterol_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp6_1" formControlName="BIOC_TotalCholesterol_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp6_1.open()" (focus)="dp6_1.open()"  name="dp6_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp6_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp6_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_TotalCholesterol_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_TotalCholesterol_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Triglyceride (mmol/L)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp7" formControlName="BIOC_Triglyceride_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp7.open()" (focus)="dp7.open()"  name="dp7">
+                    <mat-datepicker-toggle matSuffix [for]="dp7">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp7></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_Triglyceride_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp7_1" formControlName="BIOC_Triglyceride_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp7_1.open()" (focus)="dp7_1.open()"  name="dp7_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp7_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp7_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_Triglyceride_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_Triglyceride_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    HDL (mmol/L)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp8" formControlName="BIOC_HDL_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp8.open()" (focus)="dp8.open()"  name="dp8">
+                    <mat-datepicker-toggle matSuffix [for]="dp8">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp8></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_HDL_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp8_1" formControlName="BIOC_HDL_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp8_1.open()" (focus)="dp8_1.open()"  name="dp8_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp8_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp8_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_HDL_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_HDL_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    LDL (mmol/L)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp9" formControlName="BIOC_LDL_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp9.open()" (focus)="dp9.open()"  name="dp9">
+                    <mat-datepicker-toggle matSuffix [for]="dp9">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp9></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_LDL_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp9_1" formControlName="BIOC_LDL_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp9_1.open()" (focus)="dp9_1.open()"  name="dp9_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp9_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp9_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_LDL_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_LDL_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Microalbumin (mg)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp10" formControlName="BIOC_Microalbumin_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp10.open()" (focus)="dp10.open()"  name="dp10">
+                    <mat-datepicker-toggle matSuffix [for]="dp10">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp10></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_Microalbumin_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp10_1" formControlName="BIOC_Microalbumin_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp10_1.open()" (focus)="dp10_1.open()"  name="dp10_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp10_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp10_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test" formControlName="BIOC_Microalbumin_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_Microalbumin_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Creatinine (mg/dl)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp11" formControlName="BIOC_Creatinine_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp11.open()" (focus)="dp11.open()"  name="dp11">
+                    <mat-datepicker-toggle matSuffix [for]="dp11">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp11></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_Creatinine_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp11_1" formControlName="BIOC_Creatinine_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp11_1.open()" (focus)="dp11_1.open()"  name="dp11_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp11_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp11_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_Creatinine_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_Creatinine_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Urea (mmol/l)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp12" formControlName="BIOC_Urea_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp12.open()" (focus)="dp12.open()"  name="dp12">
+                    <mat-datepicker-toggle matSuffix [for]="dp12">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp12></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_Urea_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp12_1" formControlName="BIOC_Urea_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp12_1.open()" (focus)="dp12_1.open()"  name="dp12_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp12_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp12_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_Urea_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_Urea_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Vitamin D level (nmol/l)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp13" formControlName="BIOC_VitaminDLevel_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp13.open()" (focus)="dp13.open()"  name="dp13">
+                    <mat-datepicker-toggle matSuffix [for]="dp13">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp13></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_VitaminDLevel_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp13_1" formControlName="BIOC_VitaminDLevel_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp13_1.open()" (focus)="dp13_1.open()"  name="dp13_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp13_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp13_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_VitaminDLevel_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_VitaminDLevel_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Leptin (ng/mL)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp14" formControlName="BIOC_Lepatin_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp14.open()" (focus)="dp14.open()"  name="dp14">
+                    <mat-datepicker-toggle matSuffix [for]="dp14">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp14></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_Lepatin_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp14_1" formControlName="BIOC_Lepatin_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp14_1.open()" (focus)="dp14_1.open()"  name="dp14_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp14_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp14_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_Lepatin_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_Lepatin_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    Leptin receptor (ng/mL)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp15" formControlName="BIOC_LepatinReceptor_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp15.open()" (focus)="dp15.open()"  name="dp15">
+                    <mat-datepicker-toggle matSuffix [for]="dp15">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp15></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_LepatinReceptor_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp15_1" formControlName="BIOC_LepatinReceptor_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp15_1.open()" (focus)="dp15_1.open()"  name="dp15_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp15_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp15_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_LepatinReceptor_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_LepatinReceptor_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    CRP (ng/mL)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp16" formControlName="BIOC_CRP_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp16.open()" (focus)="dp16.open()"  name="dp16">
+                    <mat-datepicker-toggle matSuffix [for]="dp16">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp16></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_CRP_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp16_1" formControlName="BIOC_CRP_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp16_1.open()" (focus)="dp16_1.open()"  name="dp16_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp16_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp16_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_CRP_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_CRP_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    TNF- (ng/mL)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp17" formControlName="BIOC_TNF_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp17.open()" (focus)="dp17.open()"  name="dp17">
+                    <mat-datepicker-toggle matSuffix [for]="dp17">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp17></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_TNF_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp17_1" formControlName="BIOC_TNF_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp17_1.open()" (focus)="dp17_1.open()"  name="dp17_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp17_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp17_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_TNF_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_TNF_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-2 form-group">
+                <label><br>
+                    IL-F (ng/mL)
+                </label>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp18" formControlName="BIOC_ILF_RecentTest_Date_PO"  placeholder="Date of recent test" (click)="dp18.open()" (focus)="dp18.open()"  name="dp18">
+                    <mat-datepicker-toggle matSuffix [for]="dp18">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp18></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of recent test"
+                           formControlName="BIOC_ILF_RecentTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                    <input  matInput [matDatepicker]="dp18_1" formControlName="BIOC_ILF_LastTest_Date_PO"  placeholder="Date of last test" (click)="dp18_1.open()" (focus)="dp18_1.open()"  name="dp18_1">
+                    <mat-datepicker-toggle matSuffix [for]="dp18_1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #dp18_1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2  form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Result of last test"
+                           formControlName="BIOC_ILF_LastTest_Result_PO" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="mat-form-field-fluid">
+                    <label class="lab-mar-right-20" >Is the result normal</label>
+                    <mat-radio-group formControlName="BIOC_ILF_IsNormalResult_PO">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+       
+    </form>
+</div>

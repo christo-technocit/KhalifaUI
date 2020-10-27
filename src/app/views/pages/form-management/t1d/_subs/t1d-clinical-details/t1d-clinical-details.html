@@ -1,0 +1,399 @@
+<form [formGroup]="VForm1">
+    <div class="col-md-12">
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group row">
+                <h6>Physical Measurements</h6>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput type="number"  formControlName="CLIN_BodyWeight_KG"  placeholder="Body weight without shoes (kg)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input type="number" formControlName="CLIN_Height_CM" matInput  placeholder="Height without shoes (m)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_BMI_KGM2"   placeholder="Body mass index (kg/m2)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_WaistCircumference_CM" placeholder="Waist circumference (cm)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_BloodPressure_SYS_mmHg"  placeholder="Systolic Blood Pressure (mmHg)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_BloodPressure_DIA_mmHg"  placeholder="Diastolic Blood Pressure (mmHg)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-7 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Do you have any Medical Conditions"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Do you have any Medical Conditions
+                            </label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                            <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-5 kt-margin-bottom-10-mobile"><br><br><br>
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_MC_YesRemarks"  placeholder="If Yes, Please Specify" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Type 2 Diabetes Mellitus"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Type 2 Diabetes Mellitus</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Type2Diabetes">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Type 1 Diabetes"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Type 1 Diabetes</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Type1Diabetes">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Hypertension"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Hypertension</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_Hypertension">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Dyslipidemia"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Dyslipidemia</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_HypertensionAge">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Other"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Other</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_OtherDiseases">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-10-mobile">
+                    <div class="kt-section"><br><br><br>
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_OtherDiseases"  placeholder="If Other Diseases, Please Specify" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="if you have T1D or T2D, Do you have any specific diabetes related complications?"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">If you have T1D or T2D, Do you have any specific diabetes related complications?</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_DiabetesComplications">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                            <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>              
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-20-mobile">
+                    <h6>If Yes, What are the specific diabetes related complications
+                        (Please tick as many as possible)</h6>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-5 kt-margin-bottom-20-mobile">
+ 
+                    <mat-form-field floatPlaceholder="Retinopathy"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Retinopathy</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Diabetes_Retinopathy">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-hint align="start"><strong>Eyes: 
+                            1. Non Proliferative   
+                            2. Proliferative
+                            3. Laser </strong>                    
+                            </mat-hint>
+                    </mat-form-field>
+                </div>  
+                <div class="col-md-5 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Neuropathy"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Neuropathy</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Diabetes_Neuropathy">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-hint align="start"><strong>
+                            Feet (Ulcers) :  
+                            * Gangrene
+                            * Loss of sensation / numbness / pain / burning / tingling<br>
+                            Ambutation : 
+                            * Loss of toe, foot or leg 
+                            * Pain in calf musle while walking
+                            * Circulation / Peripheral vascular disease / operation on artery in legs.<br>
+                            
+                        </strong>                    
+                            </mat-hint>
+                    </mat-form-field>
+                </div> 
+                <div class="col-md-2 kt-margin-bottom-10-mobile"><br><br><br>
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput formControlName="CLIN_MC_Diabetes_Neuropathy_Other"  placeholder="Others" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-5 kt-margin-bottom-20-mobile">
+ 
+                    <mat-form-field floatPlaceholder="Cerebrovascular accident (C.V.A)"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Cerebrovascular accident (C.V.A)</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Diabetes_CVA">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-hint align="start"><strong>TIA Stroke (bleeding, ischemia)
+                            Bleeding Stroke: * Loss of sensation down one side of the body
+                              * Difficulty in speaking / eating   
+                              * Operation on artery or neck
+                              * Facial drop / paralised arm or leg</strong>                    
+                            </mat-hint>
+                    </mat-form-field>
+                </div>  
+                <div class="col-md-3 kt-margin-bottom-20-mobile">
+ 
+                    <mat-form-field floatPlaceholder="Nephropathy"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Nephropathy</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Diabetes_CVA">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-hint align="start"><strong></strong>                    
+                            </mat-hint>
+                    </mat-form-field>
+                </div>  
+                <div class="col-md-2 kt-margin-bottom-20-mobile"><br><br><br>
+                         <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="CLIN_MC_Diabetes_Nephropathy_Albuminuria"  placeholder="Albuminuria" />
+                            <mat-hint align="start"><strong>
+                                Kidney : protien or albumin in urine
+                            </strong>                    
+                            </mat-hint>
+                       </mat-form-field>
+                </div> 
+                <div class="col-md-2 kt-margin-bottom-20-mobile"><br><br><br>
+                    <mat-form-field class="mat-form-field-fluid">
+                       <input matInput formControlName="CLIN_MC_Diabetes_Nephropathy_eGFR"  placeholder="eGFR" />
+                  </mat-form-field>
+                </div> 
+
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-5 kt-margin-bottom-20-mobile">
+ 
+                    <mat-form-field floatPlaceholder="Coronary artery disease (C.A.D)"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Coronary artery disease (C.A.D)</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Diabetes_CAD">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-hint align="start"><strong>* Coronary artery bypass grafting (CABG)
+                            * Percutneous Coronary Intervention (PCI)
+                              * Arrhythmias </strong>                    
+                            </mat-hint>
+                    </mat-form-field>
+                </div> 
+                <div class="col-md-3 kt-margin-bottom-20-mobile">
+ 
+                    <mat-form-field floatPlaceholder="Other"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Other</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_Diabetes_Others">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div> 
+                <div class="col-md-4 kt-margin-bottom-20-mobile"><br><br><br>
+                    <mat-form-field class="mat-form-field-fluid">
+                       <input matInput formControlName="CLIN_MC_Diabetes_Others_Remarks"  placeholder="Please specify" />
+                  </mat-form-field>
+                </div> 
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Do you have any significant past history: of the following?"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Do you have any significant past history: of the following?</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_PastHistory">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                            <mat-radio-button  value="Not Sure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>              
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-20-mobile">
+                    <h6>If Yes, Please tick as many as appropriate</h6>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Autoimmune Diseases"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Autoimmune Diseases</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_PastHistory_Autoimmune">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Celiac"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Celiac</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_PastHistory_Celiac">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Hypothyroidism"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Hypothyroidism</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_PastHistory_Hypothyroidism">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Arthritis"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Arthritis</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_PastHistory_Arthritis">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 kt-margin-bottom-10-mobile">
+                    <mat-form-field floatPlaceholder="Other"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">Other</label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="CLIN_MC_PastHistory_Other">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-9 kt-margin-bottom-20-mobile"><br><br><br>
+                    <mat-form-field class="mat-form-field-fluid">
+                       <input matInput formControlName="CLIN_MC_PastHistory_Other_Remarks"  placeholder="Please specify" />
+                  </mat-form-field>
+                </div> 
+
+            </div>
+        </div>
+    </div>
+</form>

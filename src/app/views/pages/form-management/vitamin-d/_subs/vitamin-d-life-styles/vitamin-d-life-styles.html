@@ -1,0 +1,260 @@
+<form [formGroup]="VForm1" class="col-md-12">
+<div class="kt-form__section kt-form__section--first">
+    <div class="form-group  row">
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <div class="kt-section">
+                <mat-form-field floatPlaceholder=" Do you exercise or walk"  class="mat-form-field-fluid">
+                    <div class="kt-section">
+                        <label align="start">
+                             Do you exercise or walk
+
+                        </label>
+                    </div>
+                    <input matInput  style="display: none">
+                    <mat-radio-group formControlName="Walk">
+                        <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="No">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you go to the gym"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you go to the gym
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Gym">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you follow a healthy diet"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you follow a healthy diet
+
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Diet">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="form-group  row">
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you eat breakfast everyday?
+"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you eat breakfast everyday?
+
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Breakfast">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Are you happy about your life?
+"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Are you happy about your life?
+
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Happy">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="What is your smoking status"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         What is your smoking status
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="smoking_status">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not_Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="form-group  row">
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you eat fast food"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you eat fast food
+
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="FastFood">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you drink soft drinks"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you drink soft drinks
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="SoftDrinks">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Are you satisfied with your body?"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you satisfied with your body?
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Satisfied">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="form-group  row">
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you stay up late"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you stay up late
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Late">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <div class="kt-section mar-t-10">
+                    <label align="start">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </label>
+                </div>
+                <input matInput formControlName="Dinner_Time"  placeholder="What time do you eat dinner" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Were you obese or overweight when you were a child"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                        Were you obese or overweight when you were a child
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="Overweight">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group  row">
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you know what is Vitamin D deficiency is?"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you know what is Vitamin D deficiency is?
+
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group  formControlName="VitaminD_Deficiency">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                    <mat-radio-button  value="Not_Sure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+
+            </mat-form-field>
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field floatPlaceholder="Do you drink soft drinks"  class="mat-form-field-fluid">
+                <div class="kt-section">
+                    <label align="start">
+                         Do you take Vitamin D supplement
+                    </label>
+                </div>
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="VitaminD_Supplement">
+                    <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <div class="kt-section mar-t-10">
+                    <label align="start">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </label><label align="start">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </label>
+                </div>
+                <input matInput formControlName="VitaminD_Supplement_Dose"  placeholder="if Yes specify Dose" />
+            </mat-form-field>
+
+        </div>
+    </div>
+
+    <div class="form-group  row">
+        <div class="col-md-12 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <textarea matInput rows="7" placeholder="Comments"
+                          formControlName="LifeStyle_Comments"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+</form>
+
+
+

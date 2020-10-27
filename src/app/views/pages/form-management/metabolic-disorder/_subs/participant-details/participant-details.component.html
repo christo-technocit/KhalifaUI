@@ -1,0 +1,322 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group  row">
+                <div class="col-md-3 kt-margin-bottom-20-mobile">
+
+                    <label class="hoverable" for="fileInput">
+                        <img class="img" [src]="url ? url : form.get('sex_mat').value == 'female' ?   '/assets//media/img_avatar-female.png' :  '/assets//media/img_avatar.png'">
+                        <div class="hover-text">
+                            Choose file
+                            <!--<h4 class="success-message" *ngIf="url"> Uploaded Successfully </h4>-->
+                        </div>
+                        <div class="background"></div>
+                    </label>
+                    <br/>
+                    <input id="fileInput" type='file' (change)="onSelectFile($event)">
+
+                    <!--<mat-form-field class="mat-form-field-fluid">-->
+                        <!--<input matInput placeholder="Form Id" autocomplete="off" formControlName="formId" />-->
+                        <!--<mat-error>Form Id is-->
+                            <!--<strong>required</strong>-->
+                        <!--</mat-error>-->
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Form Id</strong>-->
+                        <!--</mat-hint>-->
+                    <!--</mat-form-field>-->
+                </div>
+                <div class="col-md-3 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid input-bottom">
+                        <input matInput placeholder="Sample Id" autocomplete="off" formControlName="Sample" />
+                        <mat-error>Sample Id is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Sample Id</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid input-bottom">
+                        <input matInput placeholder="Depository Id" autocomplete="off" formControlName="Depository_ID" />
+                        <mat-error>Depository Id is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Sample Id</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid input-bottom">
+                        <input matInput [matDatepicker]="doaPicker"
+                               autocomplete="off"
+                               (click)="doaPicker.open()"
+                               placeholder="Choose a Date of Assessment" (click)="doaPicker.open()" formControlName="DateAsses" />
+                        <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #doaPicker></mat-datepicker>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Date of assessment</strong> in 'mm/dd/yyyy' format</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collected by" autocomplete="off" formControlName="collected_by" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collected by</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collection Point"
+                               autocomplete="off"
+                               formControlName="Collected_point" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collection Point</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="First Name" autocomplete="off" formControlName="Firstname" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>First Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Middle Name" autocomplete="off" formControlName="Middlename" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Middle Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Family Name" autocomplete="off" formControlName="Familyname" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Family Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker"
+                               (click)="dobPicker.open()"
+                               [max]="maxDate"
+                               autocomplete="off"
+                               placeholder="Choose a Date of Birth" formControlName="dob" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Date of Birth</strong> in 'mm/dd/yyyy' format</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <!-- <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="nationality" />
+                        <mat-hint align="start">Please enter
+                            <strong>Nationality</strong>
+                        </mat-hint>
+                    </mat-form-field> -->
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="country" [matAutocomplete]="manuf">
+                        <mat-autocomplete #manuf="matAutocomplete">
+                            <mat-option *ngFor="let nationality of filteredNationalities | async" [value]="nationality">
+                                {{ nationality }}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <mat-error>
+                            Nationality is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Nationality</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Ethnicity" formControlName="Ethnicity" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Ethnicity</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+
+                        <label id="example-radio-group-label">Gender &nbsp;&nbsp;&nbsp;</label>
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="sex_mat">
+                            <mat-radio-button matInput  value="male">Male</mat-radio-button>
+                            <mat-radio-button  matInput value="female">Female</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <label id="marital_status">Marital Status &nbsp;&nbsp;&nbsp;</label>
+                        <mat-radio-group aria-labelledby="marital_status"  formControlName="MaritalStatus">
+                            <mat-radio-button matInput  value="single">Single</mat-radio-button>
+                            <mat-radio-button  matInput value="married">Married</mat-radio-button>
+                            <mat-radio-button  matInput value="divorced">Divorced</mat-radio-button>
+                            <mat-radio-button  matInput value="widow">Widow</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <label id="Consanguineou_Marrage">Consanguineous Marriage &nbsp;&nbsp;&nbsp;</label>
+                        <mat-radio-group aria-labelledby="Consanguineous_Marrage"  formControlName="marriage_con">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Number Of Wives"
+                               formControlName="Numberofwives" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Number Of Wives</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Number Of Children"
+                               formControlName="Numberofchildren" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Number Of Children</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Health Card Number"
+                               formControlName="Healthcardnumber" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Health Card Number</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Health Center"
+                               formControlName="healthcentre" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Health Center</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Place Of Birth" autocomplete="off"
+                               [matAutocomplete]="manuf1"       formControlName="Placeofbirth" />
+
+                        <mat-autocomplete #manuf1="matAutocomplete">
+                            <mat-option *ngFor="let data of filteredPlaces | async" [value]="data">
+                                {{ data }}
+                            </mat-option>
+                        </mat-autocomplete>
+
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Address" formControlName="Address" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Address</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Suburb" formControlName="Suburb" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Suburb</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  ">
+                <h6>Contact phone number(s)</h6>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Home" formControlName="home" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Home</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Work" formControlName="work" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Work</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Mobile" formControlName="mobile" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Mobile</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-10-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+											<textarea matInput rows="7" placeholder="Comments"
+                                                      formControlName="comments"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

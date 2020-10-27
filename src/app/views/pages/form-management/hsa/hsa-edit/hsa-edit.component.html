@@ -1,0 +1,119 @@
+<kt-portlet>
+	<kt-portlet-header [title]="'Precision Medicine'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+		<ng-container ktPortletTools>
+			<a  [routerLink]="[ formId ? '../../' : '../']"   class="btn btn-secondary kt-margin-r-10" mat-raised-button
+				matTooltip="Back to the forms list">
+				<i class="la la-arrow-left"></i>
+				<span class="kt-hidden-mobile">Back</span>
+			</a>
+			<a href="javascript:;" class="btn btn-primary kt-margin-r-10" color="primary" (click)="onSubmit()"
+				mat-raised-button matTooltip="Save & Continue">
+				<i class="la la-save"></i>
+				<span class="kt-hidden-mobile">Save</span>
+			</a>
+
+		</ng-container>
+	</kt-portlet-header>
+
+	<kt-portlet-body>
+       
+		<mat-tab-group [(selectedIndex)]="selectedTab">
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user"></i>
+					Personal Details
+				</ng-template>
+				<kt-hsa-personal-details [disableInput]="isPrint"   [formData]="formId"  #appHsaPersonalDetails></kt-hsa-personal-details>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user-md"></i>
+					Life Style Details
+				</ng-template>
+					<kt-hsa-lifestyle-details [disableInput]="isPrint"   [formData]="formId" #appHsaLifeStyleDetails></kt-hsa-lifestyle-details>
+            </mat-tab>
+            <!-- <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+                    Family History
+                </ng-template>
+                    <kt-hsa-family-history [disableInput]="isPrint"   [formData]="formId" #appHsaFamilyHistory></kt-hsa-family-history>
+            </mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+					Family Pedigree
+				</ng-template>
+					<kt-hsa-family-pedigree  [disableInput]="isPrint"   [formData]="formId"   #appHsaFamilyPedigree></kt-hsa-family-pedigree>
+			</mat-tab> -->
+
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>Medical Details 
+				</ng-template>
+					<kt-hsa-medical-details [disableInput]="isPrint"   [formData]="formId" #appHsaMedicalDetails></kt-hsa-medical-details>
+			</mat-tab>
+
+            <mat-tab  >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>Diabetes Self Management
+                </ng-template>
+                    <kt-hsa-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appHsaDiabetesSelfManagement></kt-hsa-diabetes-self-management>
+            </mat-tab>
+           
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user-md"></i>Physical Measurements
+				</ng-template>
+					<kt-hsa-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appHsaPhysicalMeasurements></kt-hsa-physical-measurements>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>Medical History 
+				</ng-template>
+					<kt-hsa-medical-history [disableInput]="isPrint"   [formData]="formId" #appHsaMedicalHistory></kt-hsa-medical-history>
+			</mat-tab>
+          <!-- <mat-tab  >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>Medical Details(If Type 2 Diabetic)
+                </ng-template>
+                    <kt-hsa-clinical-details [disableInput]="isPrint"   [formData]="formId" #appHsaClinicalDetails></kt-hsa-clinical-details>
+			</mat-tab>
+			--> 
+			
+			<mat-tab >
+			<ng-template mat-tab-label>
+				<i class="mat-tab-label-icon fa fa-pills"></i>Medication(Type 2 Diabetes Patient)
+			</ng-template>
+				<kt-hsa-medication [disableInput]="isPrint"   [formData]="formId" #appHsaMedicationDetails></kt-hsa-medication>
+			</mat-tab> 
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-dna"></i>Cognitive Test Result
+				</ng-template>
+					<kt-hsa-cognitive-test-result [disableInput]="isPrint"   [formData]="formId" #appHsaCognitiveTestResult></kt-hsa-cognitive-test-result>
+			</mat-tab>
+            <mat-tab  >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-exchange-alt"></i>Laboratory Details
+				</ng-template>
+					<kt-hsa-laboratory-details  [disableInput]="isPrint"   [formData]="formId"   #appHsaLaboratoryDetails></kt-hsa-laboratory-details>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-procedures"></i>Biochemical
+				</ng-template>
+					<kt-hsa-biochemical [disableInput]="isPrint"   [formData]="formId" #appHsaBiochemical></kt-hsa-biochemical>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-file"></i>Document Upload
+				</ng-template>
+				<kt-doc-upload  #appDocUpload></kt-doc-upload>
+			</mat-tab> 
+
+		</mat-tab-group>
+	</kt-portlet-body>
+</kt-portlet>

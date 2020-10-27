@@ -1,0 +1,24 @@
+<form [formGroup]="VForm1" class="col-md-12">
+<div class="kt-form__section kt-form__section--first">
+  
+    <div class="form-group col-md-12 row">
+        <div class="kt-section col-md-3">
+            <label align="start">Smoking Status</label>
+        </div>
+        <div class="col-md-9 kt-margin-bottom-10-mobile">
+            <mat-form-field floatPlaceholder="Smoking Status"  class="mat-form-field-fluid">
+
+                <input matInput  style="display: none">
+                <mat-radio-group formControlName="LIFE_SmokingStatus">
+                    <mat-radio-button  value="Current Smoker">Current Smoker</mat-radio-button>
+                    <mat-radio-button  value="Ex-smoker">Ex-smoker</mat-radio-button>
+                    <mat-radio-button  value="Never smoked">Never smoked</mat-radio-button>
+                </mat-radio-group>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+</form>
+
+
+

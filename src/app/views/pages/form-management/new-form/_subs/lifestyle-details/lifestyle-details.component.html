@@ -1,0 +1,301 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-12 form-group">
+                <h6>
+                    Lifestyle Details
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        What is your smoking status
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="life_smokingstatus">
+                        <mat-radio-button  value="yes">Current smoker</mat-radio-button>
+                        <mat-radio-button  value="exsmoker">Ex-smoker</mat-radio-button>
+                        <mat-radio-button  value="never">Never smoked</mat-radio-button>
+                        <mat-radio-button  value="prefer not to disclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+            <div class="row col-md-12 form-group">
+                <h6>
+                    Physical Activity
+                </h6>
+            </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you exercise or walk?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Walk">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+                <div class="col-md-8 form-group" *ngIf="Mform.get('Walk').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Yes, Please Specify in minutes"
+                            formControlName="Walk_IfYes" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-8 form-group" *ngIf="Mform.get('Walk').value == 'other'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Other, Please Specify"
+                            formControlName="Walk_others_Specify" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row" >
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Intensity
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-8  form-group">
+                    <div>
+                        <mat-radio-group formControlName="walking_intensity">
+                            <mat-radio-button  value="low">Low</mat-radio-button>
+                            <mat-radio-button  value="moderate">Moderate</mat-radio-button>
+                            <mat-radio-button  value="high">High</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+    
+        <div class="row  col-md-12">
+            <div class="form-group">
+                <h6>
+                    Diet
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you follow a healthy diet
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="healthy_diet">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="others">Others</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group" *ngIf="Mform.get('healthy_diet').value == 'others'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If Others, Please specify"
+                           formControlName="diet_other" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Weight change in the past 5 years
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="weight_change">
+                        <mat-radio-button  value="increased">Increased</mat-radio-button>
+                        <mat-radio-button  value="decreased">Decreased</mat-radio-button>
+                        <mat-radio-button  value="nochange">No change</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you on a special diet to lose/gain weight?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="spl_diet">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How many times a week do you consume fast food?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="fastfood_intake">
+                        <mat-radio-button  value="0">0 times</mat-radio-button>
+                        <mat-radio-button  value="2">Twice</mat-radio-button>
+                        <mat-radio-button  value="4">4 times</mat-radio-button>
+                        <mat-radio-button  value="6">More than 6 times</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How many times a week do you consume fruits/vegetables?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="fruits_veg">
+                        <mat-radio-button  value="0">0 times</mat-radio-button>
+                        <mat-radio-button  value="1">Once</mat-radio-button>
+                        <mat-radio-button  value="2">Twice</mat-radio-button>
+                        <mat-radio-button  value="3">More than 3 times</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How much soft drinks do you consume per week?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="softdrinks">
+                        <mat-radio-button  value="0">0 litres</mat-radio-button>
+                        <mat-radio-button  value="2">2 litres</mat-radio-button>
+                        <mat-radio-button  value="4">4 litres</mat-radio-button>
+                        <mat-radio-button  value="6">More than 6 litres</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start">
+                            Do you eat after midnight (12am)?
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-radio-group formControlName="eat_after_midnight">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12 ">
+            <div class="col-md-12 row form-group">
+                <h6>
+                    Satisfaction
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you satisfied with your body?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="satisfied_body">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you happy with your life?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="happy_life">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you consider yourself a healthy individual?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="healthy_individual">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

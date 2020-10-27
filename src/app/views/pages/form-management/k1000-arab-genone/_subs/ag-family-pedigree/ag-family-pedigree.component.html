@@ -1,0 +1,13 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <label class="hoverable" for="fileInput">
+            <img class="img" [src]="url ? url :  '/assets//media/img_avatar.png'">
+            <div class="hover-text">
+                Family Photo
+            </div>
+            <div class="background"></div>
+        </label>
+        <input id="fileInput" type='file' (change)="onSelectFile($event)">
+    </form>
+</div>
+

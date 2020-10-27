@@ -1,0 +1,591 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group  row">
+                
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Sample Id" autocomplete="off" formControlName="sample" />
+                        <mat-error>Sample Id is
+                            <strong>required</strong>
+                        </mat-error>
+                        
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="COVID-19 ID" autocomplete="off" formControlName="COVID19_ID" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Depository ID" autocomplete="off" formControlName="depository_ID" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+
+                        <label id="example-radio-group-label"><strong> Severity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+
+                       <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="Severity">
+                            <mat-radio-button matInput  value="Severe">Severe</mat-radio-button>
+                            <mat-radio-button  matInput value="Moderate">Moderate</mat-radio-button>
+                            <mat-radio-button  matInput value="Mild">Mild</mat-radio-button>
+                            <mat-radio-button  matInput value="Asymptomatic">Asymptomatic</mat-radio-button>
+                            <mat-radio-button  matInput value="Healthy">Healthy</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group  row">
+            
+
+
+                    <div class="col-md-8 kt-margin-bottom-20-mobile">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Project Title"
+                                   autocomplete="off"
+                                   formControlName="projecttitle" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Principal Investigator"
+                                   autocomplete="off"
+                                   formControlName="principalinvestigator" />
+                        </mat-form-field>
+                    </div>
+            </div>
+              
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collection Point"
+                               autocomplete="off"
+                               formControlName="collection_point" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collection Point</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collected by" autocomplete="off" formControlName="collected_by" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collected by</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="doaPicker"
+                               autocomplete="off"
+                               (click)="doaPicker.open()"
+                               placeholder="Collection Date" (click)="doaPicker.open()" formControlName="collected_date" />
+                        <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #doaPicker></mat-datepicker>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Date of assessment</strong> in 'mm/dd/yyyy' format</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+
+                        <label id="example-radio-group-label"> Individual/Family&nbsp;&nbsp;&nbsp;</label>
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="indifamily">
+                            <mat-radio-button matInput  value="Individual">Individual</mat-radio-button>
+                            <mat-radio-button  matInput value="Family">Family</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Family Number" autocomplete="off" formControlName="family_number" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Family Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">If Family &nbsp;&nbsp;&nbsp;</label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="family_yes">
+                        <mat-radio-button matInput  value="Father">Father</mat-radio-button>
+                        <mat-radio-button  matInput value="Mother">Mother</mat-radio-button>
+                        <mat-radio-button matInput  value="Adult">Adult Less than 18 </mat-radio-button>
+                        <mat-radio-button  matInput value="Child">Child</mat-radio-button>
+                    </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+
+        <div class="form-group  row">
+            
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <label align="start">
+                        Was an interpreted used?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group" >
+                <mat-radio-group aria-labelledby="interpreted_used"  formControlName="interpreted_used">
+                    <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  matInput value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div class="col-md-4 form-group" *ngIf="form.get('interpreted_used').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, name of interpreter and language spoken:"
+                        formControlName="interpreted_language" />
+                </mat-form-field>
+            </div>
+
+       </div>
+
+       <div class="form-group  row">
+                    
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <div class="mat-form-field-fluid">
+            <label id="example-radio-group-label">Reason for interview: (Tick all that applies)</label>
+        </div>
+    </div>
+    <div class="col-md-8 form-group">
+        <div>
+
+            <mat-checkbox class="lab-mar-right-15"   formControlName="interview_reason_contact_with_known_case">Contact with known case</mat-checkbox>
+            <mat-checkbox class="lab-mar-right-15"   formControlName="interview_reason_Overseas_travel">Overseas travel</mat-checkbox>
+            <mat-checkbox class="lab-mar-right-15"   formControlName="interview_reason_Symptomatic_of_disease">Symptomatic of disease</mat-checkbox>
+            <mat-checkbox class="lab-mar-right-15"   formControlName="interview_reason_Reported_recent_risk_exposure_contact">Reported recent risk exposure/contact</mat-checkbox>
+            <mat-checkbox class="lab-mar-right-15"   formControlName="interview_reason_Occupational_exposure">Occupational exposure</mat-checkbox>
+            <mat-checkbox class="lab-mar-right-15"   formControlName="interview_reason_other">Other</mat-checkbox>
+            <div *ngIf="form.get('interview_reason_other').value"  class="dis-con">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="other"
+                               formControlName="interview_reason_other_remarks" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+          
+<div class="form-group  row">
+    <div class="col-md-12">
+            <label align="start">
+             <h5>Participant’s Personal Details </h5>  
+            </label>
+    </div>
+</div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="First Name" autocomplete="off" formControlName="per_firstname" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>First Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Middle Name" autocomplete="off" formControlName="per_middlename" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Middle Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Last Name" autocomplete="off" formControlName="per_lastname" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Family Name</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+
+                        <label id="example-radio-group-label">Gender &nbsp;&nbsp;&nbsp;</label>
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="gender">
+                            <mat-radio-button matInput  value="male">Male</mat-radio-button>
+                            <mat-radio-button  matInput value="female">Female</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Emirates ID number" autocomplete="off" formControlName="emiratesid" />
+                       </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="nationality" [matAutocomplete]="manuf">
+                        <mat-autocomplete #manuf="matAutocomplete">
+                            <mat-option *ngFor="let nationality of filteredNationalities | async" [value]="nationality">
+                                {{ nationality }}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <mat-error>
+                            Nationality is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Nationality</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+           
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker"
+                               (click)="dobPicker.open()"
+                               [max]="maxDate"
+                               autocomplete="off"
+                               (ngModelChange)="CalculateAge()" 
+                               placeholder="Choose a Date of Birth" formControlName="dob" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Date of Birth</strong> in 'mm/dd/yyyy' format</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-1 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Age"  autocomplete="off"   formControlName="Age" />
+                    </mat-form-field>
+                </div>
+               
+<div class="col-md-3 kt-margin-bottom-20-mobile">
+    <mat-form-field class="mat-form-field-fluid">
+        <input matInput placeholder="Place Of Birth" autocomplete="off"
+               [matAutocomplete]="manuf1"       formControlName="PlaceOfBirth" />
+    
+        <mat-autocomplete #manuf1="matAutocomplete">
+            <mat-option *ngFor="let data of filteredPlaces | async" [value]="data">
+                {{ data }}
+            </mat-option>
+        </mat-autocomplete>
+    
+    </mat-form-field>
+    </div>
+    
+                  
+            
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="City"
+                                   formControlName="city" />
+                            <!--<mat-hint align="start">Please enter-->
+                            <!--<strong>Number Of Wives</strong>-->
+                            <!--</mat-hint>-->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-group  row">
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Phone" autocomplete="off" formControlName="phone" />
+                           </mat-form-field>
+                    </div>
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Email" autocomplete="off" formControlName="email" />
+                           </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-group  row">
+                    
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <div class="mat-form-field-fluid">
+                        <label id="example-radio-group-label">Ethnicity &nbsp;&nbsp;&nbsp;</label>
+                    </div>
+                </div>
+                <div class="col-md-8 form-group">
+                    <div>
+                            <mat-radio-group aria-labelledby="Ethnicity"  formControlName="ethnicity">
+                                <mat-radio-button matInput  value="arab">Arab/Bedouin</mat-radio-button>
+                                <mat-radio-button  matInput value="ajam">Ajam</mat-radio-button>
+                                <mat-radio-button  matInput value="bloush">Bloush</mat-radio-button>
+                                <mat-radio-button  matInput value="southasian">South Asian</mat-radio-button>
+                                <mat-radio-button  matInput value="africanamerican">African American</mat-radio-button>
+                                <mat-radio-button  matInput value="mixed">Mixed</mat-radio-button>
+                                <mat-radio-button  matInput value="other">Other</mat-radio-button>
+                                <mat-radio-button  matInput value="eastasian">East Asian</mat-radio-button>
+                                <mat-radio-button  matInput value="african">African</mat-radio-button>
+                                <mat-radio-button  matInput value="nativeamerican">Native American</mat-radio-button>
+                                <mat-radio-button  matInput value="hispanic">hispanic</mat-radio-button>
+                                <mat-radio-button  matInput value="caucasian">Caucasian</mat-radio-button>
+                            </mat-radio-group>
+    
+                        </div>
+                        <div *ngIf="form.get('ethnicity').value == 'mixed'" >
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If Mixed, specify"
+                                    formControlName="ethnicity_mixed_specify_text" />
+                            </mat-form-field>
+                        </div>
+                        <div *ngIf="form.get('ethnicity').value == 'other'" >
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If Other, specify"
+                                    formControlName="ethnicity_others_text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group  row">
+                    
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <div class="mat-form-field-fluid">
+                        <label id="example-radio-group-label">Address</label>
+                    </div>
+                </div>
+                <div class="col-md-8 form-group">
+                    <div>
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Address"
+                                formControlName="Address" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group  row">
+                    
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <div class="mat-form-field-fluid">
+                            <label id="example-radio-group-label">Address type  &nbsp;&nbsp;&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8 form-group">
+                        <div>
+                            <mat-radio-group aria-labelledby="Address_type"  formControlName="Address_type">
+                                <mat-radio-button matInput  value="household">Household</mat-radio-button>
+                                <mat-radio-button  matInput value="aged-carefacility">Aged-care facility</mat-radio-button>
+                                <mat-radio-button  matInput value="educationalinstitution">Educational Institution</mat-radio-button>
+                                <mat-radio-button  matInput value="other">Other:</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+
+                        <div *ngIf="form.get('Address_type').value == 'other'" >
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If Other, specify"
+                                    formControlName="Address_type_other" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group  row">
+                    
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <div class="mat-form-field-fluid">
+                            <label id="example-radio-group-label">Marital Status &nbsp;&nbsp;&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8 form-group">
+                        <div>
+                            <mat-radio-group aria-labelledby="marital_status"  formControlName="maritalstatus">
+                                <mat-radio-button matInput  value="single">Single</mat-radio-button>
+                                <mat-radio-button  matInput value="married">Married</mat-radio-button>
+                                 <mat-radio-button  matInput value="divorced">Divorced</mat-radio-button>
+                                <mat-radio-button  matInput value="widow">Widowed</mat-radio-button>
+                                </mat-radio-group>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group  row">
+                    
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <div class="mat-form-field-fluid">
+                            <label align="start">
+                                Consanguineous Marriage?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group" >
+                        <mat-radio-group aria-labelledby="Consanguineous_Marrage"  formControlName="marriage_con">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                            </mat-radio-group>
+                    </div>
+
+                     <!-- <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <div class="mat-form-field-fluid">
+                            <label align="start">
+                                What is the highest grade (or year) of regular school you have completed? (check one)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-8 form-group" >
+                        <mat-radio-group aria-labelledby="highest_grade"  formControlName="highest_grade">
+                            <mat-radio-button matInput  value="males">Elementary/Middle School:  01    02    03    04    05    06    07   08</mat-radio-button>
+                            <mat-radio-button  matInput value="females">High School:  09    10    11    12</mat-radio-button>
+                            <mat-radio-button  matInput value="notapplicable">University/College/Junior College:  13     14    15    16</mat-radio-button>
+                            <mat-radio-button  matInput value="females">Graduate School:  17     18     19    20+</mat-radio-button>
+                            <mat-radio-button  matInput value="females">Other</mat-radio-button>
+                            <mat-radio-button  matInput value="females">Prefer not to disclose</mat-radio-button>
+                            </mat-radio-group>
+                    </div>
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                        <div class="mat-form-field-fluid">
+                            <label align="start">
+                                What is the highest degree you earned?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-8 form-group" >
+                        <mat-radio-group aria-labelledby="highest_degree_earned"  formControlName="highest_degree_earned">
+                            <mat-radio-button matInput  value="males">High school diploma or equivalency (GED)</mat-radio-button>
+                            <mat-radio-button  matInput value="females">Associate degree (junior college) or vocational degree/license</mat-radio-button>
+                            <mat-radio-button matInput  value="males">Bachelor’s degree</mat-radio-button>
+                            <mat-radio-button  matInput value="females">Master’s degree</mat-radio-button>
+                            <mat-radio-button matInput  value="males">Doctorate, Professional (MD, JD, DDS)</mat-radio-button>
+                            <mat-radio-button  matInput value="females">None of the above</mat-radio-button>
+                            <mat-radio-button matInput  value="males">Other, please specify: </mat-radio-button>
+                            </mat-radio-group>
+                    </div> -->
+               </div>
+                        
+    <div class="form-group  row">
+
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <div class="mat-form-field-fluid">
+                <label align="start">
+                    Number of children, and their ages: 
+                </label>
+            </div>
+        </div>
+        <div class="col-md-2 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Males"
+                       formControlName="pers_NumberofChildren" />
+                <!--<mat-hint align="start">Please enter-->
+                <!--<strong>Number Of ChilNumberofchildrendren</strong>-->
+                <!--</mat-hint>-->
+            </mat-form-field>
+        </div>
+        <div class="col-md-3 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Ages: "
+                       formControlName="pers_Boys" />
+                <!--<mat-hint align="start">Please enter-->
+                <!--<strong>Number Of ChilNumberofchildrendren</strong>-->
+                <!--</mat-hint>-->
+            </mat-form-field>
+        </div>
+        <div class="col-md-3 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="If male, number of wives "
+                       formControlName="pers_Numberofwives" />
+                <!--<mat-hint align="start">Please enter-->
+                <!--<strong>Number Of ChilNumberofchildrendren</strong>-->
+                <!--</mat-hint>-->
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group  row">
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <div class="mat-form-field-fluid">
+                <label align="start">
+                    
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Females: "
+                       formControlName="pers_Girls" />
+                <!--<mat-hint align="start">Please enter-->
+                <!--<strong>Number Of ChilNumberofchildrendren</strong>-->
+                <!--</mat-hint>-->
+            </mat-form-field>
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+           <mat-form-field class="mat-form-field-fluid">
+               <input matInput placeholder="Ages:"
+                      formControlName="pers_Girls_ages" />
+               <!--<mat-hint align="start">Please enter-->
+               <!--<strong>Number Of ChilNumberofchildrendren</strong>-->
+               <!--</mat-hint>-->
+           </mat-form-field>
+       </div>
+
+    </div>
+    <div class="form-group  row">
+
+        <div class="col-md-6 kt-margin-bottom-20-mobile">
+                    
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="highestlevelofeducation" formControlName="eduLevel" [matAutocomplete]="edu">
+                <mat-autocomplete #edu="matAutocomplete">
+                    <mat-option  value="didnotattendschool">Did not attend school</mat-option>
+                    <mat-option  value="lessthanhighschool">Less than high school</mat-option>
+                    <mat-option  value="completedhighschool">Completed High School</mat-option>
+                    <mat-option  value="completedbachelorordiploma">Completed bachelor or diploma</mat-option>
+                    <mat-option  value="completedmasterorPhD">Completed master or PhD</mat-option>
+                    <mat-option  value="notsure">Not sure</mat-option>
+                    <mat-option  value="prefernottodisclose">Prefer not to disclose</mat-option>
+                </mat-autocomplete>
+                <mat-error>
+                    Education level is
+                    <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+                <div class="col-md-6 kt-margin-bottom-20-mobile">
+                    
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Employment Status" formControlName="employment_status" [matAutocomplete]="empstatus">
+                        <mat-autocomplete #empstatus="matAutocomplete">
+                            <mat-option  value="employed(including-self-employement)">Employed (including self-employement)</mat-option>
+                            <mat-option  value="unemployment">Unemployment</mat-option>
+                            <mat-option  value="retired">Retired</mat-option>
+                            <mat-option  value="student">Student</mat-option>
+                            <mat-option  value="housewife">Housewife</mat-option>
+                            <mat-option  value="notsure">Not sure</mat-option>
+                            <mat-option  value="prefernottodisclose">Prefer not to disclose</mat-option>
+                        </mat-autocomplete>
+                        <mat-error>
+                            Education level is
+                            <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+            </div>
+           
+        </div>
+    </form>
+</div>

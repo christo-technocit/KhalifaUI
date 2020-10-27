@@ -1,0 +1,177 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-12 form-group">
+                <h6>
+                    Family History
+                </h6>
+            </div>
+            <div class="row col-md-12">   
+                <div class="col-md-4">
+                    <div class="kt-section">
+                        <label align="start"><br>
+                            Father's Ethnicity
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <div>
+                        <mat-radio-group aria-labelledby="Ethnicity"  formControlName="fam_fatethnicity"><br>
+                            <mat-radio-button matInput  value="single">Arab</mat-radio-button>
+                            <mat-radio-button  matInput value="ajam">Ajam</mat-radio-button>
+                            <mat-radio-button  matInput value="bloush">Bloush</mat-radio-button>
+                            <mat-radio-button  matInput value="mixed">Mixed</mat-radio-button>
+                            <mat-radio-button  matInput value="other">Other</mat-radio-button>
+                        </mat-radio-group>
+    
+                    </div>
+                </div>
+                    <div class="col-md-2 form-group" *ngIf="Mform.get('fam_fatethnicity').value == 'other'" >
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="If Other, specify"
+                                formControlName="fam_fatethnicity_other" />
+                        </mat-form-field>
+                    </div>
+                
+            </div>
+            
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Father's Place Of Birth" formControlName="fam_fatplaceofbirth" [matAutocomplete]="pob1">
+                <mat-autocomplete #pob1="matAutocomplete">
+                    <mat-option *ngFor="let nationality of filteredNationalities | async" [value]="nationality">
+                        {{ nationality  }}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-error>
+                    Place of Birth is
+                    <strong>required</strong>
+                </mat-error>
+                <!--<mat-hint align="start">Please enter-->
+                <!--<strong>Nationality</strong>-->
+                <!--</mat-hint>-->
+            </mat-form-field>
+        </div>
+        <div class="row col-md-12">   
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br>
+                        Mother's Ethnicity
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group aria-labelledby="Ethnicity"  formControlName="fam_motethnicity"><br>
+                        <mat-radio-button matInput  value="single">Arab</mat-radio-button>
+                        <mat-radio-button  matInput value="ajam">Ajam</mat-radio-button>
+                        <mat-radio-button  matInput value="bloush">Bloush</mat-radio-button>
+                        <mat-radio-button  matInput value="mixed">Mixed</mat-radio-button>
+                        <mat-radio-button  matInput value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+            </div>
+                <div class="col-md-2 form-group" *ngIf="Mform.get('fam_motethnicity').value == 'other'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If Other, specify"
+                            formControlName="fam_motethnicity_other" />
+                    </mat-form-field>
+                </div>
+            
+        </div>
+        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Mother's Place Of Birth" formControlName="fam_motplaceofbirth" [matAutocomplete]="pob">
+                <mat-autocomplete #pob="matAutocomplete">
+                    <mat-option *ngFor="let data of filteredPlaces | async" [value]="data">
+                        {{ data  }}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-error>
+                    Place of Birth is
+                    <strong>required</strong>
+                </mat-error>
+                <!--<mat-hint align="start">Please enter-->
+                <!--<strong>Nationality</strong>-->
+                <!--</mat-hint>-->
+            </mat-form-field>
+        </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br>
+                    Are your parents related?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="fam_parents_related"><br>
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('fam_parents_related').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, please specify"
+                        formControlName="fam_parents_related_yes" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-group col-md-12 row">
+
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <label>Has anyone in your immediate family (siblings or parents) ever had any of the following conditions?</label>
+            </div>
+                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Epilepsy">Epilepsy/seizures</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_dep">Depression</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Bipolar">Bipolar Disorder</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Schizophrenia">Schizophrenia</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_traumatic_stress">Post-traumatic stress syndrome</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Asthma">Asthma</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Thyroid">Thyroid problem</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Rheumatoid_Arthritis">Rheumatoid Arthritis</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Liver">Liver disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_cancer">Cancer</mat-checkbox>
+                    <div *ngIf="Mform.get('fam_cancer').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If yes, type"
+                                       formControlName="fam_condition_cancer_type" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-checkbox  class="lab-mar-right-15"  formControlName="fam_other">Other</mat-checkbox>
+                    <div *ngIf="Mform.get('fam_other').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If other, please specify"
+                                       formControlName="fam_condition_other" />
+                            </mat-form-field>
+                        </div>
+                    </div><mat-checkbox class="lab-mar-right-15"   formControlName="fam_hypertension">Hypertension</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_heart">Heart disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_High_cholesterol">High cholesterol</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Obesity">Obesity</mat-checkbox>
+                    <mat-checkbox  class="lab-mar-right-15"  formControlName="fam_osteo">Osteoporosis</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_type1">Type 1 Diabetes</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_type2">Type 2 Diabetes</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_gesdia">Gestational diabetes</mat-checkbox>
+                    
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Alzheimer">Alzheimer disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="fam_Parkinsons">Parkinson’s Disease</mat-checkbox>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

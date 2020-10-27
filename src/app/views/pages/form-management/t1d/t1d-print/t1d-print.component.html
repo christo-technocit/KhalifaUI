@@ -1,0 +1,64 @@
+<kt-portlet id="print_form">
+    <!-- PORTLET LOADING | Binded to TABLE Datasource -->
+    <!-- See prop => '~/core/_crud/models/data-sources/_base.datasource.ts' (loading$) -->
+
+
+    <kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+        <!-- start::FILTERS & GROUP ACTIONS -->
+        <div class="kt-form kt-margin-b-30">
+            <div class="">
+                <kt-portlet-header [title]="'Participation Detail'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-participation-details   [disableInput]="isPrint"   [formData]="formId" #appParticipation></kt-t1d-participation-details>
+                </kt-portlet-body>
+            </div>
+            <div class="">
+                <kt-portlet-header [title]="'Clinical Detail'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-clinical-details   [disableInput]="isPrint"   [formData]="formId" #appClinical></kt-t1d-clinical-details>
+                </kt-portlet-body>
+            </div>
+            <div class="">
+                <kt-portlet-header [title]="'Biochemical Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-biochemical-details   [disableInput]="isPrint"   [formData]="formId" #appBiochemicalDetails></kt-t1d-biochemical-details>
+                </kt-portlet-body>
+            </div>
+
+            <div class="">
+                <kt-portlet-header [title]="'Life Style Detail'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-life-styles   [disableInput]="isPrint"   [formData]="formId" #appLifeStyle></kt-t1d-life-styles>
+                </kt-portlet-body>
+            </div>
+            <div class="">
+                <kt-portlet-header [title]="'Medication'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-medication   [disableInput]="isPrint"   [formData]="formId" #appMedication></kt-t1d-medication>
+                </kt-portlet-body>
+            </div>
+
+
+            <div class="">
+                <kt-portlet-header [title]="'Family History Detail'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-family-history   [disableInput]="isPrint"   [formData]="formId" #appFamilyHistory></kt-t1d-family-history>
+                </kt-portlet-body>
+            </div>
+            <div class="">
+                <kt-portlet-header [title]="'Family Pedigree'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-t1d-pedigree   [disableInput]="isPrint"   [formData]="formId" #appPedigree></kt-t1d-pedigree>
+                </kt-portlet-body>
+            </div>
+
+            </div>
+    </kt-portlet-body>
+</kt-portlet>

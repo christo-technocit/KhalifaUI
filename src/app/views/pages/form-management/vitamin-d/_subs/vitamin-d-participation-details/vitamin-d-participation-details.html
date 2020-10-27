@@ -1,0 +1,178 @@
+<div class="col-md-12" >
+    <form autocomplete="off" [formGroup]="VForm1" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+            <div class=" row">
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input #firstInput matInput placeholder="Sample Id" formControlName="Sample" />
+                        <!--<mat-error>Sample Id is-->
+                        <!--<strong>required</strong>-->
+                        <!--</mat-error>-->
+                        <!--<mat-hint align="start">-->
+                        <!--<strong>Sample Id</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Depository Id" autocomplete="off" formControlName="Depository_ID" />
+                     
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3  form-group">
+                    <mat-form-field class="mat-form-field-fluid" style="width:100%;">
+                        <input  matInput [matDatepicker]="dp3" formControlName="collected_date"  placeholder="Collection Date" (click)="dp3.open()" (focus)="dp3.open()"  name="dp3">
+                        <mat-datepicker-toggle matSuffix [for]="dp3">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #dp3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3  form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collecion Center"
+                               formControlName="Collected_Center" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collection Point</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" row">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Student/Staff Name" formControlName="staff_name" />
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Collected by</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Student/Staff ID" formControlName="staff_id" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input [max]="maxDate" matInput [matDatepicker]="dobPicker"
+                               placeholder="Choose a Date of Birth" (click)="dobPicker.open()"   (focus)="dobPicker.open()"   formControlName="birth_date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Place of Birth" formControlName="birth_place" [matAutocomplete]="manuf1" />
+                        <mat-autocomplete #manuf1="matAutocomplete">
+                            <mat-option *ngFor="let list of filteredPlaces | async" [value]="list">
+                                {{ list }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4  form-group">
+                    <!-- <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="nationality" />
+                        <mat-hint align="start">Please enter
+                            <strong>Nationality</strong>
+                        </mat-hint>
+                    </mat-form-field> -->
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="country" [matAutocomplete]="manuf">
+                        <mat-autocomplete #manuf="matAutocomplete">
+                            <mat-option *ngFor="let list of filteredNationalities | async" [value]="list">
+                                {{ list }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4  form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input ktNumberOnly  matInput placeholder="Mobile#1221" type="number" formControlName="Mobile_no" />
+                        <!--<div *ngIf=".errors.required">-->
+                            <!--Name is required.-->
+                        <!--</div>-->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  form-group ">
+                    <mat-form-field floatPlaceholder="Gender"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Gender
+                            </label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="Gender" >
+                            <mat-radio-button  value="Male">Male</mat-radio-button>
+                            <mat-radio-button  value="Female">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-5  form-group">
+                    <mat-form-field floatPlaceholder="Marital Status"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Marital Status
+
+                            </label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="MaritalStatus">
+                            <mat-radio-button  value="single">Single</mat-radio-button>
+                            <mat-radio-button  value="married">Married</mat-radio-button>
+                            <mat-radio-button  value="divorced">Divorced</mat-radio-button>
+                            <mat-radio-button  value="widow">Widow</mat-radio-button>
+                        </mat-radio-group>
+
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3  form-group">
+                    <mat-form-field floatPlaceholder="Consanguineous marriage"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Consanguineous marriage
+                            </label>
+                        </div>
+                        <input  matInput  style="display: none">
+                        <mat-radio-group  formControlName="Consanguineous_Marriage"  >
+                            <mat-radio-button   value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput formControlName="NoOfWives"  placeholder="Number of Wives" />
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-4  form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input formControlName="NoOfChildren" matInput  placeholder="Number of Children" />
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                <textarea matInput rows="4" placeholder="Address"
+                          formControlName="Address"></textarea>
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+</div>

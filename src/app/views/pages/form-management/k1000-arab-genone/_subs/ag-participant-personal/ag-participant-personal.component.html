@@ -1,0 +1,220 @@
+<div class="col-md-12" >
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group  row">
+                <div class="col-md-3 form-group">
+                    <label class="hoverable" for="fileInput">
+                        <img class="img" [src]="url ? url : form.get('PERS_Gender').value == 'female' ?   '/assets//media/img_avatar-female.png' :  '/assets//media/img_avatar.png'">
+                        <div class="hover-text">
+                            Choose file
+                            <!--<h4 class="success-message" *ngIf="url"> Uploaded Successfully </h4>-->
+                        </div>
+                        <div class="background"></div>
+                    </label>
+                    <br/>
+                    <input id="fileInput" type='file' (change)="onSelectFile($event)">
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid input-bottom">
+                        <input matInput placeholder="Sample Id" autocomplete="off" formControlName="SampleID" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid input-bottom">
+                        <input matInput placeholder="Depository Id" autocomplete="off" formControlName="Depository_ID" />
+                        
+                        <!--<mat-hint align="start">Please enter-->
+                        <!--<strong>Sample Id</strong>-->
+                        <!--</mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid input-bottom">
+                        <input matInput placeholder="Collection Point"
+                               autocomplete="off"
+                               formControlName="CollectionPoint" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Collected by" autocomplete="off" formControlName="CollectedBy" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid ">
+                        <input matInput [matDatepicker]="doaPicker"
+                               autocomplete="off"
+                               (click)="doaPicker.open()"
+                               placeholder="Choose a Date of Assessment" (click)="doaPicker.open()" formControlName="DateofAssessment" />
+                        <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #doaPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="First Name" autocomplete="off" formControlName="PERS_Firstname" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Middle Name" autocomplete="off" formControlName="PERS_MiddleName" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Last Name" autocomplete="off" formControlName="PERS_LastName" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <div class="mat-form-field-fluid">
+
+                        <label id="example-radio-group-label">Gender &nbsp;&nbsp;&nbsp;</label>
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PERS_Gender">
+                            <mat-radio-button matInput  value="male">Male</mat-radio-button>
+                            <mat-radio-button  matInput value="female">Female</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker"
+                               (click)="dobPicker.open()"
+                               [max]="maxDate"
+                               autocomplete="off"
+                               placeholder="Choose a Date of Birth" formControlName="PERS_DateofBirth" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Place of Birth" formControlName="PERS_PlaceofBirth" [matAutocomplete]="manuf" />
+                        <mat-autocomplete #manuf="matAutocomplete">
+                            <mat-option *ngFor="let list of filteredPlace | async" [value]="list">
+                                {{ list }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nationality" formControlName="PERS_Nationality" [matAutocomplete]="manuf1">
+                        <mat-autocomplete #manuf1="matAutocomplete">
+                            <mat-option *ngFor="let nationality of filteredNationalities | async" [value]="nationality">
+                                {{ nationality }}
+                            </mat-option>
+                        </mat-autocomplete>
+
+
+                    </mat-form-field>
+                </div>
+                <div class="col-md-1">
+                    <label align="start">
+                        Ethnicity
+                    </label>
+                </div>
+                <div class="col-md-6 form-group">
+                        <mat-radio-group formControlName="PERS_Ethnicity">
+                            <mat-radio-button  value="arab">Arab</mat-radio-button>
+                            <mat-radio-button  value="ajam">Ajam</mat-radio-button>
+                            <mat-radio-button  value="bloush">Bloush</mat-radio-button>
+                            <mat-radio-button  value="mixed">Mixed, specify</mat-radio-button>
+                            <mat-radio-button  value="others">Others</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+                <div [ngClass]="  form.get('PERS_Ethnicity').value != 'others' && form.get('PERS_Ethnicity').value != 'mixed' ? 'col-md-4' : 'col-md-4' " class="form-group">
+                    <ng-container [ngSwitch]="form.get('PERS_Ethnicity').value"   >
+                        <ng-container *ngSwitchCase="'mixed'">
+                            <mat-form-field class="mat-form-field-fluid" >
+                                <input  matInput placeholder="If mixed, please specify" formControlName="PERS_Ethnicity_Mixed_Remarks" />
+                            </mat-form-field>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'others'">
+                            <mat-form-field class="mat-form-field-fluid" >
+                                <input  matInput placeholder="If others, please specify" formControlName="PERS_Ethnicity_Other_Remarks" />
+                            </mat-form-field>
+                        </ng-container>
+                    </ng-container>
+                </div>
+
+                <div class="col-lg-8 form-group">
+                    <div class="mat-form-field-fluid">
+                        <label id="PERS_MaritalStatus">Marital Status &nbsp;&nbsp;&nbsp;</label>
+                        <mat-radio-group aria-labelledby="PERS_MaritalStatus"  formControlName="PERS_MaritalStatus">
+                            <mat-radio-button matInput  value="single">Single</mat-radio-button>
+                            <mat-radio-button  matInput value="married">Married</mat-radio-button>
+                            <mat-radio-button  matInput value="divorced">Divorced</mat-radio-button>
+                            <mat-radio-button  matInput value="widow">Widow</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+                <div class="col-md-4 form-group">
+                    <div class="mat-form-field-fluid">
+                        <label id="PERS_marriage_con">Consanguineous Marriage &nbsp;&nbsp;&nbsp;</label>
+                        <mat-radio-group aria-labelledby="Consanguineous_Marrage"  formControlName="PERS_marriage_con">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Number Of Children"
+                               formControlName="PERS_NumberofChildren" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Number of Boys"
+                               formControlName="PERS_Boys" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Number of Girls"
+                               formControlName="PERS_Girls" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Number Of Wives"
+                               formControlName="PERS_Numberofwives" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Address"
+                               formControlName="PERS_Address" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="City"
+                               formControlName="PERS_City" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Emirates" autocomplete="off"
+                               formControlName="PERS_Emirates" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Mobile number" formControlName="PERS_Mobilenumber" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

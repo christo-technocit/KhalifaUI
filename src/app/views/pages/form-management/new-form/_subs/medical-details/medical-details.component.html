@@ -1,0 +1,163 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Medical details (If Type 2 diabetic)
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you have diabetes-related complications?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="type2_complications">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notsure">Not sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-4 form-group" *ngIf="Mform.get('type2_complications').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If Yes, number of years"
+                        formControlName="type2_complications_yestxt" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="form-group  col-md-12 row">
+            <h6>If Yes, what are the specific diabetes related complications? (Please select as many as appropriate)</h6>
+        </div>
+        <div class="form-group col-md-12 row">
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox   formControlName="type2_retinopathy"  >Retinopathy</mat-checkbox>
+                    <br>
+                    <mat-hint>
+                        *Nonproliferative<br>
+                        *Proliferative<br>
+                        *Laser
+                    </mat-hint>
+                </div>
+            </div>
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox   formControlName="type2_neuropathy"  >Neuropathy</mat-checkbox>
+                    <br>
+                    <mat-hint>
+                        
+                        *gangrene<br>
+                        *loss of sensation/numbness/pain/burning/tingling
+                        *Loss of sensation, numbness, pain, burning, tingling
+                        *Amputation
+                        *Loss of toe, foot, or leg
+                        *Pain in calf muscles while walking
+                        *Circulation/peripheral vascular disease/operation on artery in legs.
+                    </mat-hint>
+                </div>
+            </div>
+            <!-- <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field  class="mat-form-field-fluid">
+                    <input type="text" matInput placeholder="Other" formControlName="type2_neuropathy_other" autocomplete="off"    />
+                </mat-form-field>
+                    <mat-hint>
+                        Amputation:<br>
+                        *Loss of toe, foot or leg. <br>*Pain in calf muscles while walking. <br>
+                        *Circulation/peripheral vascular disease/operation on artery in legs.
+                    </mat-hint>
+                
+            </div> -->
+        </div>
+        <div class="form-group col-md-12  row">
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox   formControlName="type2_cva"  >Cerebrovascular accident (C.V.A)
+                    </mat-checkbox>
+                    <br>
+                    <mat-hint>
+                        *TIA <br>
+                        *Stroke (bleeding, Ischemia) <br>
+                        *Bleeding<br>
+                        *loss of sensation down one side of the body<br>
+                        *Difficulty in speaking/eating<br>
+                        *Operation on artery or neck<br>
+                        *Facial drop/paralysed arm or leg<br>
+                    </mat-hint>
+                </div>
+            </div>
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox   formControlName="type2_nephropathy" >Nephropathy</mat-checkbox>
+                     <br>
+                    <mat-hint>
+                       
+                        * protein or albumin in the urine<br>
+                        * Albuminuria <br>
+                        * 30-299 <br>
+                        * >300<br>
+                        * eGFR<br>
+                    </mat-hint>
+                    <div class="col-md-12 row">
+                        <mat-form-field   class="mat-form-field-fluid">
+                            <input type="text" matInput placeholder="eGFR" formControlName="type2_egfr" autocomplete="off" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12 row">
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox   formControlName="type2_cad"  >Coronary artery disease(C.A.D)
+                    </mat-checkbox>
+                    <br>
+                    <mat-hint>
+                        * Coronary artery bypass grafting (CABG)<br>
+                        * Percutaneous Coronary Intervention (PCI)<br>
+                        * Arrhythymias (AF)
+                    </mat-hint>
+                </div>
+            </div>
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox   formControlName="type2_other">Other</mat-checkbox>
+                    <div [hidden]="!Mform.get('type2_other').value">
+                        <mat-form-field   class="mat-form-field-fluid">
+                            <input  type="text" matInput placeholder="Please specify" formControlName="type2_other_specify" autocomplete="off"    />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group  col-md-12 row">
+
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <label>* Current diabetes management method</label>
+            </div>
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_none">None</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_tabletsonly">Tablets only </mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_diettablets">Diet & Tablets </mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"    formControlName="diabetes_mgt_diettabletsinsulin">Diet, Tablets & Insulin</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_dietonly">Diet only</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_insulinonly">Insulin only</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_dietinsulin">Diet & Insulin</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_unknown">Unknown</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_mgt_other">Others please specify</mat-checkbox>
+                    <div class="col-md-12 row" [hidden]="!Mform.get('diabetes_mgt_other').value">
+                        <mat-form-field   class="mat-form-field-fluid">
+                            <input   type="text" matInput placeholder="Please specify" formControlName="diabetes_mgt_othertxt" autocomplete="off"    />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</div>

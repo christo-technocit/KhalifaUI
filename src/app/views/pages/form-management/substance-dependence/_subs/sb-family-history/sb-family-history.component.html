@@ -1,0 +1,191 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+            <div class="col-md-12  form-group">
+                <h6>Do you have (blood) relatives who have, or have had a history of drug use/abuse?</h6>
+            </div>
+
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Sibling</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="drug_sibling" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('drug_sibling').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Type of drug"  autocomplete="off"   formControlName="sib_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Mother</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="drug_mother" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('drug_mother').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Type of drug"  autocomplete="off"   formControlName="mother_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Father</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="drug_father" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('drug_father').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Type of drug"  autocomplete="off"   formControlName="father_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Others</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="drug_others_his" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('drug_others_his').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Relationship"  autocomplete="off"   formControlName="others_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div class="col-md-12  form-group">
+                <h6>- Do you have (blood) relatives who have been treated for drug addiction at this clinic?</h6>
+            </div>
+
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Sibling</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="medic_sib" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('medic_sib').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Treatment medication (if possible)"  autocomplete="off"   formControlName="medic_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Mother</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="medic_mother" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('medic_mother').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Treatment medication (if possible)"  autocomplete="off"   formControlName="medic_mother_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Father</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="medic_father" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('medic_father').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Treatment medication (if possible)"  autocomplete="off"   formControlName="medic_father_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Others</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="medic_others_his" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+                <div [hidden]="form.get('medic_others_his').value != 'yes'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Relationship"  autocomplete="off"   formControlName="medic_others_drug" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>Did the family member completed the treatment</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="completed_fam" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+            </div>
+            <div [hidden]="form.get('completed_fam').value != 'yes'" class="col-md-12 row form-group">
+                <div class="col-md-4 form-group">
+                    <label>If No, Please specify the reason</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="completed_fam_reason" >
+                        <mat-radio-button  value="yes">Successful treatment</mat-radio-button>
+                        <mat-radio-button  value="no">Relapse</mat-radio-button>
+                        <mat-radio-button  value="others">Others</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div [hidden]="form.get('completed_fam_reason').value != 'others'" class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If others, please specify"  autocomplete="off"   formControlName="completed_fam_reason_other" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

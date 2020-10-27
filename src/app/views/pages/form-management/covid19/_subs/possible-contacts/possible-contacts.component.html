@@ -1,0 +1,301 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5> High-risk occupation</h5>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">During the period of interest, did the person work in any of the following high-risk occupations?</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6A_work_in_highrisk_occupations">
+                            <mat-radio-button matInput  value="healthcare">Healthcare</mat-radio-button>
+                            <mat-radio-button  matInput value="aged-carefacility">Aged-care facility</mat-radio-button>
+                            <mat-radio-button  matInput value="educationalfacility">Educational facility</mat-radio-button>
+                            <mat-radio-button  matInput value="assistedliving">Assisted living</mat-radio-button>
+                            <mat-radio-button  matInput value="militaryinstitution">Military institution</mat-radio-button>
+                            <mat-radio-button  matInput value="correctionalfacility">Correctional facility</mat-radio-button>
+                            <mat-radio-button  matInput value="nohigh-riskoccupation">No high-risk occupation</mat-radio-button>
+                            <mat-radio-button  matInput value="other">Other</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+                <div class="col-md-6 form-group" *ngIf="form.get('PC_6A_work_in_highrisk_occupations').value == 'other'">
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If other, specify:" autocomplete="off" formControlName="PC_6A_work_in_highrisk_occupations_others" />
+                          
+                 </mat-form-field>
+                 </div>  
+            <div class="col-md-6 form-group" *ngIf="form.get('PC_6A_work_in_highrisk_occupations').value == 'other'" >
+                
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker"
+                       autocomplete="off"
+                       (click)="doaPicker.open()"
+                       placeholder="Date last attended this work: (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker.open()" formControlName="PC_6A_work_in_highrisk_occupations_Last_date" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker></mat-datepicker>
+                </mat-form-field>
+                
+            </div>
+
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Was the infection likely acquired in the workplace? </label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6A_infection_likely_acquired_in_workplace">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                 <input matInput placeholder="Description of occupation:" autocomplete="off" formControlName="PC_6A_Description_of_occupation" />
+                      
+             </mat-form-field>
+             </div>  
+            </div>
+
+            <div class="form-group  row">
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Employer/facility details:" autocomplete="off" formControlName="PC_6A_Employer_facility_details" />
+                               </mat-form-field>
+                        </div>
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Address:" autocomplete="off" formControlName="PC_6A_Employer_facility_address" />
+                               </mat-form-field>
+                        </div>
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Emirates" autocomplete="off" formControlName="PC_6A_Employer_facility_emirates" />
+                               </mat-form-field>
+                        </div>
+            </div>
+            <div class="form-group  row">
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="E-mail:" autocomplete="off" formControlName="PC_6A_Employer_facility_email" />
+                               </mat-form-field>
+                        </div>
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Phone number:" autocomplete="off" formControlName="PC_6A_Employer_facility_phone" />
+                               </mat-form-field>
+                        </div>
+                        <div class="col-md-4 kt-margin-bottom-20-mobile">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Employer contact name:" autocomplete="off" formControlName="PC_6A_Employer_facility_contact_name" />
+                               </mat-form-field>
+                        </div>
+               
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>High-risk setting</h5>  
+                        </label>
+                </div>
+            </div> 
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5> While infectious, did they visit any of the following venues or locations?</h5>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Doctor’s room/clinic/emergency department</label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_doctor">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Schools/university/TAFE </label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_Schools">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Aged-care facility/assisted living </label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_Aged_care_facility">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Transport (plane/train/bus/ship) </label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_Transport">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+
+                        </mat-radio-group>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Concert venue/theatre/conference</label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_Concert">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Office/workplace</label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_Office">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Other public venue/gathering</label>
+                    </div>
+                 </div>
+                <div class="col-md-6 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6B_infectious_visited_venues_other">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+
+                        </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('PC_6B_infectious_visited_venues_other').value == 'yes'">
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If yes, give details:" autocomplete="off" formControlName="PC_6B_infectious_visited_venues_other_detail" />
+                          
+                 </mat-form-field>
+                 </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>Close contacts</h5>  
+                        </label>
+                </div>
+            </div> 
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">While infectious, did they have close contact with any of the following:</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                       
+
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PC_6C_infectious_close_contact">
+                            <mat-radio-button matInput  value="familymembers">Family members</mat-radio-button>
+                            <mat-radio-button  matInput value="housemates">House mates</mat-radio-button>
+                            <mat-radio-button  matInput value="friends">Friends</mat-radio-button>
+                            <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If yes, give details below: (including name, phone number, e-mail address)" autocomplete="off" formControlName="PC_6C_infectious_close_contact_details" />
+                          
+                 </mat-form-field>
+                 </div>  
+            </div>
+
+
+        </div>
+    </form>
+</div>

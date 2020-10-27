@@ -1,0 +1,75 @@
+<div>
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section row kt-form__section--first">
+            <div class="col-md-3">
+                <label align="start">
+                    Do you exercise or walk
+                </label>
+            </div>
+            <div class="col-md-5 form-group ">
+                <mat-form-field floatPlaceholder="Walk"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="Walk" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="others">Others</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <ng-container [ngSwitch]="form.get('Walk').value">
+                    <ng-container *ngSwitchCase="'yes'">
+                        <mat-form-field class="mat-form-field-fluid" >
+                            <input  matInput placeholder="If Yes, Walk (minutes per walk)" formControlName="Walk_IfYes" />
+                        </mat-form-field>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'others'">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="If others, please specify" autocomplete="off" formControlName="Walk_others_Specify" />
+                        </mat-form-field>
+                    </ng-container>
+                </ng-container>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Do you follow a healthy diet
+                </label>
+            </div>
+            <div class="col-md-5 form-group ">
+                <mat-form-field floatPlaceholder="Healthy"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="Healthy" >
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="others">Others</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <ng-container [ngSwitch]="form.get('Healthy').value">
+                    <ng-container *ngSwitchCase="'others'">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="If others, please specify" autocomplete="off" formControlName="Walk_others_Specify" />
+                        </mat-form-field>
+                    </ng-container>
+                </ng-container>
+            </div>
+            <div class="col-md-3">
+                <label align="start">
+                    What is your smoking status
+                </label>
+            </div>
+            <div class="col-md-5 form-group ">
+                <mat-form-field floatPlaceholder="Healthy"  class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="Healthy" >
+                        <mat-radio-button  value="CurrentSmoke">Current smoker</mat-radio-button>
+                        <mat-radio-button  value="NeverSmoke">Never smoked</mat-radio-button>
+                        <mat-radio-button  value="Ex-Smoker"> Ex Smoker</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>

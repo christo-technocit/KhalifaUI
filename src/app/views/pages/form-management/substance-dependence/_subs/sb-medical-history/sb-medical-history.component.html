@@ -1,0 +1,684 @@
+<div>
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section row col-md-12 kt-form__section--first">
+            <div class="col-md-3">
+                <label align="start">
+                    Do you have any medical condition?
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="medical_condition">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12 form-group">
+                <h6>Indicate if you had any of the following medical conditions and specify the period (Pre- Post substance use)</h6>
+            </div>
+            <div class="col-md-5 form-group">
+                <label class="label-bold">Medical condition</label>
+            </div>
+            <div class="col-md-7 form-group">
+                <label class="label-bold">When</label>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_con"> Asthma</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_con').value ||  form.get('medical_con').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="asthma_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="asthma_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_circle"> Diabetes Circle type</mat-checkbox>
+                    </label>
+                    <mat-radio-group *ngIf="form.get('diabetes_circle').value ||  form.get('diabetes_circle').value == 'true'" formControlName="diabetes_circle_type">
+                        <mat-radio-button  value="one">I</mat-radio-button>
+                        <mat-radio-button  value="two">II</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div *ngIf="form.get('diabetes_circle').value ||  form.get('diabetes_circle').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="diabetes_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="diabetes_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_heart"> Heart Disease</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_heart').value ||  form.get('medical_heart').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_heart_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_heart_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_high_pressure"> High Blood Pressure	</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_high_pressure').value ||  form.get('medical_high_pressure').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_high_pressure_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_high_pressure_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_anemia">Anemia</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_anemia').value ||  form.get('medical_anemia').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_anemia_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_anemia_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_ulcer">Ulcer</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_ulcer').value ||  form.get('medical_ulcer').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_ulcer_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_ulcer_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_cancer">Cancer</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_cancer').value ||  form.get('medical_cancer').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_cancer_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_cancer_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_cancer">Kidney Disease</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_kidney').value ||  form.get('medical_kidney').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_kidney_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_kidney_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_HepatitisCircle"> Hepatitis Circle</mat-checkbox>
+                    </label>
+                    <mat-radio-group *ngIf="form.get('medical_HepatitisCircle').value ||  form.get('medical_HepatitisCircle').value == 'true'" formControlName="medical_HepatitisCircleType">
+                        <mat-radio-button  value="b">B</mat-radio-button>
+                        <mat-radio-button  value="c">C</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div *ngIf="form.get('medical_HepatitisCircle').value ||  form.get('medical_HepatitisCircle').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_HepatitisCircle_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_HepatitisCircle_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_liver">Liver Disease	</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_liver').value ||  form.get('medical_liver').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_liver_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_liver_pre" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_Seizures">Seizures	</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_Seizures').value ||  form.get('medical_Seizures').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_Seizures_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_Seizures_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_gastro">Gastro intestinal problems</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_gastro').value ||  form.get('medical_gastro').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3 ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_gastro_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3 ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_gastro_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_Sinusitis">Sinusitis</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_Sinusitis').value ||  form.get('medical_Sinusitis').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_Sinusitis_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_Sinusitis_pre_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_cough">Persistent cough</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_cough').value ||  form.get('medical_cough').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_cough_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_cough_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_skin">Skin Problems</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_skin').value ||  form.get('medical_skin').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_skin_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_skin_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_Arthritis">Arthritis</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_Arthritis').value ||  form.get('medical_Arthritis').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_Arthritis_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_Arthritis_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_hallucination">Hallucination</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_hallucination').value ||  form.get('medical_hallucination').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_hallucination_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_hallucination_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_Depression">Depression</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_Depression').value ||  form.get('medical_Depression').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_Depression_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_Depression_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_hiv">HIV</mat-checkbox>
+                    </label>
+                </div>
+                <div *ngIf="form.get('medical_hiv').value ||  form.get('medical_hiv').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_hiv_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_hiv_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group row">
+                <div class="col-md-5  ">
+                    <label>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="medical_others">Others</mat-checkbox>
+                        <div style="display: inline-block"  *ngIf="form.get('medical_others').value ||  form.get('medical_others').value == 'true'">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="If others, please specify"
+                                       formControlName="medical_others_specify" />
+                            </mat-form-field>
+                        </div>
+                    </label>
+
+                </div>
+                <div *ngIf="form.get('medical_others').value ||  form.get('medical_others').value == 'true'"  class="dis-con" >
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pre"
+                                   formControlName="medical_others_pre" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3  ">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Post"
+                                   formControlName="medical_others_post" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Do you have allergies?
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="allergies">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-4" >
+                <div  [hidden]="form.get('allergies').value != 'yes'" >
+                    <mat-form-field  class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, please specify"
+                               formControlName="all_specify" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Do you have intolerance to any medication or food
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="intolerance">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4" >
+                <div [hidden]="form.get('intolerance').value != 'yes'">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, please specify"
+                               formControlName="intolerance_specify" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    During dependence: Have you loss/ gain weight
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="intolerance">
+                        <mat-radio-button  value="loss">Loss</mat-radio-button>
+                        <mat-radio-button  value="gain">Gain</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div class="col-md-1" >
+                <div [hidden]="form.get('intolerance').value !=''  && form.get('intolerance').value != null">
+                    <label align="start">
+                        Reason
+                    </label>
+                </div>
+            </div >
+            <div class="col-md-5" >
+                <div [hidden]="form.get('intolerance').value !=''  && form.get('intolerance').value != null">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input  matInput  style="display: none">
+                        <mat-radio-group formControlName="intolerance_specify">
+                            <mat-radio-button  value="loss">Medical illness</mat-radio-button>
+                            <mat-radio-button  value="gain">Substance dependence</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Have you been hospitalised (medical or psychiatric) or had surgery
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="surgery">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div [hidden]="form.get('surgery').value !='yes'" class="col-md-12 row">
+                <div class="col-md-12">
+                <h6>If yes, Please indicate the following</h6>
+                </div>
+                    <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="hospitalised"
+                               (click)="hospitalised.open()"
+                               [max]="maxDate"
+                               autocomplete="off"
+                               placeholder="Choose a Date" formControlName="ind_specify" />
+                        <mat-datepicker-toggle matSuffix [for]="hospitalised"></mat-datepicker-toggle>
+                        <mat-datepicker #hospitalised></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput
+                               autocomplete="off"
+                               placeholder="Place" formControlName="where_specify" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput
+                               autocomplete="off"
+                               placeholder="Reason" formControlName="Reasaon_specify" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Have you ever been on medical pain management
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="medical_pain">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+            <div [hidden]="form.get('medical_pain').value !='yes'" class="col-md-12 row">
+                <div class="col-md-12">
+                    <h6>If yes, Please specify</h6>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="when_specify"
+                               (click)="when_specify.open()"
+                               [max]="maxDate"
+                               autocomplete="off"
+                               placeholder="When" formControlName="when_specify" />
+                        <mat-datepicker-toggle matSuffix [for]="when_specify"></mat-datepicker-toggle>
+                        <mat-datepicker #when_specify></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput
+                               autocomplete="off"
+                               placeholder="Source of pain (physical /psychological)" formControlName="source_specify" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput
+                               autocomplete="off"
+                               placeholder="Medication" formControlName="medic_specify" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput
+                               autocomplete="off"
+                               placeholder="Duration" formControlName="dur_specify" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label align="start">
+                    Are you currently on any medication other than treatment
+                </label>
+            </div>
+            <div class="col-md-3  form-group">
+                <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                    <input  matInput  style="display: none">
+                    <mat-radio-group formControlName="medic_treatment">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </mat-form-field>
+            </div>
+
+            <div [hidden]="form.get('medic_treatment').value !='yes'" class="col-md-4 ">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput
+                           autocomplete="off"
+                           placeholder="If yes, Please specify" formControlName="medic_treat_specify" />
+                </mat-form-field>
+            </div>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,77 @@
+:host {
+	::ng-deep {
+		ngb-tabset > .nav-tabs {
+			display: none;
+		}
+	}
+}
+
+
+tr.mat-header-row {
+	height: 48px;
+}
+
+.header{
+
+	padding: 10px;
+	border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+table{
+	box-shadow: none;
+}
+
+.bg-white{
+	background-color: #fff;
+	height: 100%;
+}
+
+.mat-button.mat-warn, .mat-icon-button.mat-warn, .mat-stroked-button.mat-warn {
+	color: #fd397a;
+}
+
+.mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+	color: #5d78ff;
+}
+
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+
+.add-new-btn{
+	box-shadow: none;
+	border: none;
+	min-width: 55px;
+	line-height: 33px;
+	padding: 0 16px;
+	border-radius: 4px;
+}
+
+.fab-btn{
+	color: #fff;
+	right: 31px;
+	bottom: 35px;
+	left: auto;
+	position: absolute;
+	background-color: #5d78ff;
+	box-shadow: none;
+	border: none;
+	padding: 10px;
+	border-radius: 40px;
+	width: 40px;
+	height: 38px;
+	text-align: center;
+	transition: all .2s ease-in-out;
+}
+
+.fab-btn:hover { transform: scale(1.1); }
+
+.padding-lr-zero{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+

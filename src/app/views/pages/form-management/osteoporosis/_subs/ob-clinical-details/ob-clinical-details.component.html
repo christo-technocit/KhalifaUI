@@ -1,0 +1,221 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+                <div class="form-group  col-md-12 row">
+                <h6>Physical Measurements</h6>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Body weight without shoes (kg)"   formControlName="CLIN_BodyWeight_KG" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="WHR (WC/HC)"   formControlName="CLIN_WHR" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Height without shoes (m)"   formControlName="CLIN_Height_CM" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Body Fat mass (Kg)"   formControlName="CLIN_BodyFatMass_Kg" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Body mass index(kg/m2)"   formControlName="CLIN_BMI_KGM2" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Body Fat percentage (%)"   formControlName="CLIN_BMIFatPercent" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Waist circumference (cm)"   formControlName="CLIN_WaistCircumference_CM" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Systolic Blood Pressure (mmHg)"   formControlName="CLIN_BloodPressure_SYS_mmHg" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Hip circumference (cm)"   formControlName="CLIN_Hipcircumference_CM" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Diastolic Blood Pressure (mmHg)"   formControlName="CLIN_BloodPressure_DIA_mmHg" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Vertical Trunk Circumference (cm)"   formControlName="CLIN_VerticalTrunkCircumference_CM" autocomplete="off"   />
+                    </mat-form-field>
+                </div>
+
+            <div class="form-group row col-md-12 ">
+                <h6>Medical Conditions </h6>
+            </div>
+
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Do you have any Medical Conditions?</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                        </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group" [hidden]="form.get('CLIN_MC').value != 'yes'">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, please specify"  autocomplete="off"   formControlName="CLIN_MC_YesRemarks" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Type 2 Diabetes Mellitus</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Type2Diabetes" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                        </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Hypertension</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Hypertension" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                        </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Dyslipidemia</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Dyslipidemia" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                        </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Respiratory Disease: (Sleep apnoea, Asthma, Emphysema)</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Respiratory" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                        </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Gastrointestinal System: (Gastroesophageal reflux, Hepatobiliary disease)</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Gastrointestinal" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                        </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Other</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Others" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group" [hidden]="form.get('CLIN_MC').value != 'yes'">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, please specify"  autocomplete="off"   formControlName="CLIN_MC_Others_Remarks" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row">
+                <div class="col-md-3">
+                    <label>Any Previous or current Fractures:</label>
+                </div>
+                <div class="form-group  col-md-5 ">
+                    <mat-form-field   class="mat-form-field-fluid mat-n-top-10">
+                        <input matInput style="display: none;" />
+                        <mat-radio-group formControlName="CLIN_MC_Fractures" >
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="notsure"> Not Sure</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div [hidden]="form.get('CLIN_MC_Fractures').value != 'yes' && form.get('CLIN_MC_Fractures').value != 'notsure'"    class="col-md-12 row">
+
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Type of Fracture"  autocomplete="off"   formControlName="CLIN_MC_FracturesType" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid ">
+                    <input matInput [matDatepicker]="doaPicker"
+                           autocomplete="off"
+                           (click)="doaPicker.open()"
+                           [max]="maxDate"
+                           placeholder="Choose a Date of Assessment" (click)="doaPicker.open()" formControlName="CLIN_MC_FracturesDate" />
+                    <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #doaPicker></mat-datepicker>
+                </mat-form-field>
+                    </div>
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="DEXA readings"  autocomplete="off"   formControlName="CLIN_MC_DEXAReadings" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

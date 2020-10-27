@@ -1,0 +1,138 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+        <div class="col-md-12 form-group row">
+            <h6>
+                Medical details (If Type 2 diabetic)
+            </h6>
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <label> Please, mark all conditions that apply to this patient:
+                </label>
+            </div>
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_gastrointestinal">Chronic gastrointestinal disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Inflammatory_bowel">Inflammatory bowel disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Gastrointestinal_ulcer">Gastrointestinal ulcer</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_liver">Chronic liver disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_pancreatitis">Chronic pancreatitis</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_kidney">Chronic kidney disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Cholelithiasis">Cholelithiasis (the presence of gallstones)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Endocrine_disorders">Endocrine disorders (e.g., PCOS, Cushing syndrome, acromegaly, gigantism)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_inflammation">Infection and/or inflammation</mat-checkbox>
+
+                    <!-- <div *ngIf="Mform.get('health_advice_others').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder=""
+                                    formControlName="health_advice_others_remarks" />
+                            </mat-form-field>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <label> Does this patient has any of the following conditions? (select as many as appropriate)
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_retinopathy"><strong>Retinopathy</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_No_proliferative">Noproliferative</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_proliferative">Proliferative</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Laser">Laser</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Retinopathy_other">Other</mat-checkbox>
+                    <div *ngIf="Mform.get('complications_Retinopathy_other').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder=""  formControlName="complications_Retinopathy_other_other" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_neuropathy"><strong>Neuropathy</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_foot">Foot (ulcers)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Gangrene">Gangrene</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_numbness">Loss of sensation, numbness, pain, burning, tingling</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Amputation">Amputation</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Loss_of_toe">Loss of toe, foot, or leg</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Pain_in_calfmuscles">Pain in calf muscles while walking</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Circulation_peripheral_vascular">Circulation, peripheral vascular disease, operation on artery in legs</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_neuropathy_other_other">Other</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_cva"><strong>Cerebrovascular accident (CVA)</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_tia">TIA</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Stroke">Stroke (bleeding, ischemia)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_onesidebody">Loss of sensation down one side of the body</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Bleeding">Bleeding</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Diff_speaking">Difficulty speaking/eating</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Operation_on_artery">Operation on artery or neck</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Facial_drop">Facial drop</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Paralyzedarm">Paralyzed arm or leg </mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Laser_other">Other</mat-checkbox>
+                    <div *ngIf="Mform.get('complications_Laser_other').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder=""
+                                       formControlName="complications_Laser_other_other" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_nephropathy"><strong>Nephropathy</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_albumin">Protein or albumin in the urine</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Albuminuria">Albuminuria</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_30_29mg_24h">30-299 mg/24h</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_300_mg_24h">>300 mg/24h</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_egfr">eGFR</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_cad"><strong>Coronary artery disease (CAD)</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_CABG">Coronary artery bypass grafting (CABG)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_PCI">Percutaneous Coronary Intervention (PCI)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Arrhythmias">Arrhythmias (AF)</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_other">Other (please specify)</mat-checkbox>
+                </div>
+            </div>
+        </div>
+</form>
+</div>

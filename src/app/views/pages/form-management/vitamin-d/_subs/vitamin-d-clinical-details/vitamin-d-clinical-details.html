@@ -1,0 +1,128 @@
+<form [formGroup]="VForm1">
+    <div class="col-md-12">
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group row">
+                <h6>Physical Measurements</h6>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput type="number"  formControlName="BodyWeight" (ngModelChange)="calculateBodyMass()" placeholder="Body weight without shoes (kg)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input type="number" formControlName="Height" matInput  (ngModelChange)="calculateBodyMass()" placeholder="Height without shoes (m)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="BodyMass"   placeholder="Body mass index (kg/m2)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="Waist" placeholder="Waist circumference (cm)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="BloodPressure"  placeholder="Blood pressure (mmHg)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="BloodPressurePercentage"  placeholder="Body Fat percentage (%)" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <h6>Medial Conditions</h6>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field floatPlaceholder="What is your smoking status"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Hypertension
+                            </label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="Hypertension">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field floatPlaceholder="Do you eat fast food"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Dyslipidemia
+                            </label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="Dyslipidemia">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field floatPlaceholder="Do you drink soft drinks"  class="mat-form-field-fluid">
+                        <div class="kt-section">
+                            <label align="start">
+                                Diabetes
+                            </label>
+                        </div>
+                        <input matInput  style="display: none">
+                        <mat-radio-group formControlName="Diabetis">
+                            <mat-radio-button  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="No">No</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput  formControlName="Diabetis_Type" placeholder="Type" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="AgeOf_Diagnosis"  placeholder="Age of diagnosis" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="kt-section">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput formControlName="Diseases_Other"  placeholder="Other Diseases" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,86 @@
+
+<kt-portlet id="print_form">
+	<kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+		<div class="kt-form kt-margin-b-30">
+			<div class="">
+				<kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-personal-details [disableInput]="isPrint"   [formData]="formId"  #appNewPersonalDetails></kt-new-personal-details>
+				</kt-portlet-body>
+            </div>
+            <div class="">
+				<kt-portlet-header [title]="'Physical Measurements'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-physical-measurements [disableInput]="isPrint"   [formData]="formId"  #appNewPhysicalMeasurements></kt-new-physical-measurements>
+				</kt-portlet-body>
+            </div>
+            <div class="">
+				<kt-portlet-header [title]="'Medical Education'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-medical-education [disableInput]="isPrint"   [formData]="formId" #appNewMedicalEducation></kt-new-medical-education>
+				</kt-portlet-body>
+            </div>
+            <div class="">
+				<kt-portlet-header [title]="'Medical Status'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-medical-status [disableInput]="isPrint"   [formData]="formId" #appNewMedicalStatus></kt-new-medical-status>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Medical Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-medical-details [disableInput]="isPrint"   [formData]="formId" #appNewMedicalDetails></kt-new-medical-details>
+				</kt-portlet-body>
+            </div>
+            <div class="">
+				<kt-portlet-header [title]="'Medication'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-medication [disableInput]="isPrint"   [formData]="formId" #appNewMedication></kt-new-medication>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Biochemical Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-biochemical [disableInput]="isPrint"   [formData]="formId" #appNewBiochemical></kt-new-biochemical>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Life Style'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-lifestyle-details [disableInput]="isPrint"   [formData]="formId" #appNewLifestyle></kt-new-lifestyle-details>
+				</kt-portlet-body>
+			</div>
+            <div class="">
+				<kt-portlet-header [title]="'Family Information'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-family-information [disableInput]="isPrint"   [formData]="formId" #appNewFamilyInformation></kt-new-family-information>
+				</kt-portlet-body>
+			</div>
+			
+			<div class="">
+				<kt-portlet-header [title]="'Family Pedigree'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-family-pedigree  [disableInput]="isPrint"   [formData]="formId"   #appNewFamilyPedigree></kt-new-family-pedigree>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+				<kt-portlet-header [title]="'Laboratory Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-new-laboratory-details [disableInput]="isPrint"   [formData]="formId" #appNewLaboratoryDetails></kt-new-laboratory-details>
+				</kt-portlet-body>
+			</div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet>
+

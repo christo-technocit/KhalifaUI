@@ -1,0 +1,63 @@
+<kt-portlet>
+
+    <kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+        <div class="kt-form kt-margin-b-30">
+            <div>
+                <kt-portlet-header [title]="'Participant Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-participant-personal [disableInput]="isPrint"   [formData]="formId"  #appParticipation></kt-ag-participant-personal>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="' Participant Lifestyle Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-participant-lifestyle [disableInput]="isPrint"   [formData]="formId"  #appLifestyle></kt-ag-participant-lifestyle>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="'Participant Food Intake'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-participant-food-intake [disableInput]="isPrint"   [formData]="formId"  #appFoodIntake></kt-ag-participant-food-intake>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="'Participant Medical History'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-participant-medical-history [disableInput]="isPrint"   [formData]="formId"  #appMedicalHistory></kt-ag-participant-medical-history>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="'Participant Family History'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-family-history [disableInput]="isPrint"   [formData]="formId"  #appFamilyHistory></kt-ag-family-history>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="'Family pedigree Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-family-pedigree [disableInput]="isPrint"   [formData]="formId"  #appFamilyPedigree></kt-ag-family-pedigree>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="' Participant Clinical Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-participant-clinical [disableInput]="isPrint"   [formData]="formId"  #appClinical></kt-ag-participant-clinical>
+                </kt-portlet-body>
+            </div>
+            <div>
+                <kt-portlet-header [title]="'Electrocardiography Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-ag-electrocardiography [disableInput]="isPrint"   [formData]="formId"  #appElectrocardiography  ></kt-ag-electrocardiography>
+                </kt-portlet-body>
+            </div>
+            </div>
+        </kt-portlet-body>
+    </kt-portlet>

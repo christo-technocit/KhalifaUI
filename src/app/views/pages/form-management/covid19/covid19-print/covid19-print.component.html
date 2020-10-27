@@ -1,0 +1,73 @@
+
+
+
+<kt-portlet id="print_form">
+
+	<kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+		<div class="kt-form kt-margin-b-30">
+			<div class="">
+				<kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				<kt-covid19-personal-details [disableInput]="isPrint"   [formData]="formId"  #appCovid19PersonalDetails></kt-covid19-personal-details>
+				</kt-portlet-body>
+			</div>
+            
+			<div class="">
+				<kt-portlet-header [title]="'Risk History'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				
+					<kt-covid19-risk-history  [disableInput]="isPrint"   [formData]="formId"   #appCovid19RiskHistory></kt-covid19-risk-history>
+				</kt-portlet-body>
+				</div>
+			<div class="">
+				<kt-portlet-header [title]="'Clinical Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				<kt-covid19-clinical-details [disableInput]="isPrint"   [formData]="formId" #appCovid19ClinicalDetails></kt-covid19-clinical-details>
+				</kt-portlet-body>
+			</div>
+            <div class="">
+				<kt-portlet-header [title]="'Clinical Information'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+                    <kt-covid19-clinical-information [disableInput]="isPrint"   [formData]="formId" #appCovid19ClinicalInformation></kt-covid19-clinical-information>
+				</kt-portlet-body>
+				</div>
+            <div class="">
+				<kt-portlet-header [title]="'Exposure Sites'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+					<kt-covid19-exposure-sites [disableInput]="isPrint"   [formData]="formId" #appCovid19ExposureSites></kt-covid19-exposure-sites>
+				</kt-portlet-body>
+				</div>
+            <div class="">
+                
+				<kt-portlet-header [title]="'Possible Contacts'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+                    <kt-covid19-possible-contacts [disableInput]="isPrint"   [formData]="formId" #appCovid19PossibleContacts></kt-covid19-possible-contacts>
+				</kt-portlet-body>
+				</div>
+           
+            <div class="">
+				<kt-portlet-header [title]="'Laboratory Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				
+					<kt-covid19-laboratory-details  [disableInput]="isPrint"   [formData]="formId"   #appCovid19LaboratoryDetails></kt-covid19-laboratory-details>
+				</kt-portlet-body>
+				</div>
+
+				<div class="">
+					<kt-portlet-header [title]="'Microbiome Questionnaire'" [class]="'kt-portlet__head--lg'" >
+					</kt-portlet-header>
+					<kt-portlet-body  class="kt-portlet__body">
+						<kt-covid19-Microbiome [disableInput]="isPrint"   [formData]="formId" #appCovid19Microbiome></kt-covid19-Microbiome>
+					</kt-portlet-body>
+					</div> 
+				
+		</div>
+	</kt-portlet-body>
+</kt-portlet>

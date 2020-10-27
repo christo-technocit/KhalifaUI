@@ -1,0 +1,40 @@
+<div class="col-md-12">
+    <div autocomplete="off"  class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+
+            <!-- Upload  -->
+            <form id="file-upload-form" class="uploader">
+                <input  accept="application/pdf"  multiple (change)="onSelectFile($event)" id="file-upload" type="file" name="fileUpload" />
+
+                <label for="file-upload" id="file-drag">
+                    <div id="start">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <div> </div>
+                        <div id="notimage" *ngIf="error">{{sMsg}}</div>
+                        <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                    </div>
+                </label>
+
+                <div id="response" >
+                        <div class="col-md-12 ">
+                            <ng-container *ngFor="let file of myFiles;let i=index;">
+                                <div class="col-md-12 row file-row form-group" >
+                                    <div class="col-md-10">
+                                        <p [style.fontWeight]=" file.isUpload ? 'bold' : '400' "> <a *ngIf="file.isUpload;else uploaded" target="_blank" [href]="mediaPath+'/Documents/'+saveFormId+ '_' + file.name">{{file.name}}</a> <ng-template #uploaded> <p data-attr="test">{{file.name}}</p> </ng-template> </p>
+                                    </div>
+                                    <div class="col-md-2" style="text-align: right;cursor: pointer">
+                                        <i (click)="deleteDocument(file,i)"  class="mat-tab-label-icon fa fa-trash"></i>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+
+
+            </form>
+
+
+
+        </div>
+    </div>
+</div>

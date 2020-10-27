@@ -1,0 +1,183 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section kt-form__section--first">
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <label class="lab-mar-right-20" >Diabetic</label>
+                        <mat-radio-group aria-labelledby="Diabetic"  formControlName="diabetesMellitus">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Type" formControlName="diabetic" autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input type="number" matInput placeholder="Age of diagnosis(diabetes)" formControlName="age" autocomplete="off"    />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <label class="lab-mar-right-20" >Dyslipidemia</label>
+                        <mat-radio-group aria-labelledby="Dyslipidemia"  formControlName="dyslipidemia">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <label class="lab-mar-right-20" >Do you have any specific diabetes related complications?</label>
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="Dyslipidemia"  formControlName="diabetes_com">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        <mat-radio-button  matInput value="unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+            </div>
+    
+            <div class="form-group  row">
+                <h6>If Yes, what are the specific diabetes related complications? (Please select as many as appropriate)</h6>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox   formControlName="spec_app_retinopathy"  >Retinopathy</mat-checkbox>
+                        <br>
+                        <mat-hint>
+                            Eyes:
+                            1. Nonproliferative
+                            2. Proliferative<br>
+                            3. Laser
+                        </mat-hint>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox   formControlName="spec_app_neuropathy"  >Neuropathy</mat-checkbox>
+                        <br>
+                        <mat-hint>
+                            Feet (ulcers):
+                            *gangrene<br>
+                            *loss of sensation/numbness/pain/burning/tingling
+                        </mat-hint>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field  class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Other" formControlName="neuropathy_other" autocomplete="off"    />
+                        <mat-hint>
+                            Amputation:
+                            *Loss of toe, foot or leg. *Pain in calf muscles while walking. <br>
+                            *Circulation/peripheral vascular disease/operation on artery in legs.
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox   formControlName="spec_app_cva"  >Cerebrovascular accident (C.V.A)
+                        </mat-checkbox>
+                        <br>
+                        <mat-hint>
+                            TIA <br>
+                            Stroke (bleeding, Ischemia) <br>
+                            Bleeding<br>
+                            Stroke: *loss of sensation down one side of the body<br>
+                            *Difficulty in speaking/eating<br>
+                            *Operation on artery or neck<br>
+                            *Facial drop/paralysed arm or leg
+                        </mat-hint>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox   formControlName="spec_app_nephropathy" >Nephropathy</mat-checkbox>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field  class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="Albuminuria 30-299 > 300" formControlName="nephropathy_albuminuria_others" autocomplete="off"    />
+                        <mat-hint>
+                            Kidney:
+                            *protein or albumin in the urine
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field  class="mat-form-field-fluid">
+                        <input type="text" matInput placeholder="eGFR" formControlName="nephropathy_eGFR_others" autocomplete="off"    />
+                        <mat-hint>
+                            Kidney:
+                            *protein or albumin in the urine
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox   formControlName="spec_app_cad"  >Coronary artery disease(C.A.D)
+                        </mat-checkbox>
+                        <br>
+                        <mat-hint>
+                            * Coronary artery bypass grafting (CABG)<br>
+                            * Percutaneous Coronary Intervention (PCI)<br>
+                            * Arrhythymias (AF)
+                        </mat-hint>
+                    </div>
+                </div>
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                        <mat-checkbox   formControlName="diabetes_comp_other_check"  >Other</mat-checkbox>
+                        <div [hidden]="!form.get('diabetes_comp_other_check').value">
+                            <mat-form-field   class="mat-form-field-fluid">
+                                <input  type="text" matInput placeholder="Please specify" formControlName="diabetes_comp_others_text" autocomplete="off"    />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <label>* Current diabetes management method</label>
+                </div>
+                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_man_none">None</mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_man_tabletsonly">Tablets only </mat-checkbox>
+                        <mat-checkbox  class="lab-mar-right-15"   formControlName="diabetes_man_diettablets">Diet & Tablets </mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"    formControlName="diabetes_man_diettabletsinsulin">Diet, Tablets & Insulin</mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_man_dietonly">Diet only</mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_man_insulinonly">Insulin only</mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_man_dietinsulin">Diet & Insulin</mat-checkbox>
+                        <mat-checkbox class="lab-mar-right-15"   formControlName="diabetes_man_unknown">Unknown</mat-checkbox>
+                        <mat-checkbox  class="lab-mar-right-15"   formControlName="current_diabetes_man_other">Others please specify</mat-checkbox>
+                        <div class="col-md-12 row" [hidden]="!form.get('current_diabetes_man_other').value">
+                            <mat-form-field   class="mat-form-field-fluid">
+                                <input   type="text" matInput placeholder="Please specify" formControlName="current_diabetes_man_other_text" autocomplete="off"    />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

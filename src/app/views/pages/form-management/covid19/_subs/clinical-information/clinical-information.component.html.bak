@@ -1,0 +1,1259 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5> General clinical information:</h5>  
+                        </label>
+                </div>
+            </div>
+            
+            <div class="form-group  row">
+                       
+                <div class="col-md-12 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Participants blood type:" autocomplete="off" formControlName="PCI_4A_Participants_blood_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4">
+                        <label align="start">
+                        Participants weight (Kg) and height (cm): 
+                        </label>
+                </div>
+
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Weight: " autocomplete="off" formControlName="PCI_4A_Participants_Weight" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Height:" autocomplete="off" formControlName="PCI_4A_Participants_Height" />
+                          
+                 </mat-form-field>
+                 </div>   
+            </div>
+
+            <div class="form-group  row">
+                 <div class="col-md-12">
+                        <label align="start">
+                         <h5>Immunization record:</h5>  
+                        </label>
+                </div>
+            </div> 
+            
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Hepatitis B(HepB, Hib-HepB, HepA-HepB, DTaP-HepB-IPV)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Hepatitis_B_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                     
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker"
+                       autocomplete="off"
+                       (click)="doaPicker.open()"
+                       placeholder="Date given" (click)="doaPicker.open()" formControlName="PCI_4B_Hepatitis_B_date_given" />
+                <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker></mat-datepicker>
+                </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Hepatitis_B_administered_by" />
+                     
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Deptheria, Tetanus, Pertussis (DTaP, DTP, DT, Td, Tdap, DTaP-HepB-IPV, DTaP-IPV/Hib, DTaP-IPV, DTaP/Hib)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Deptheria_Tetanus_Pertussis_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker2"
+                     autocomplete="off"
+                     (click)="doaPicker2.open()"
+                     placeholder="Date given" (click)="doaPicker2.open()" formControlName="PCI_4B_Deptheria_Tetanus_Pertussis_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker2"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker2></mat-datepicker>        
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Deptheria_Tetanus_Pertussis_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Haemophilus influenza type b(Hib, Hib-HepB, DTaP-IPV/Hib, DTaP/Hib)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Haemophilus_influenza_type_b_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker3"
+                     autocomplete="off"
+                     (click)="doaPicker3.open()"
+                     placeholder="Date given" (click)="doaPicker3.open()" formControlName="PCI_4B_Haemophilus_influenza_type_b_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker3"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker3></mat-datepicker>        
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Haemophilus_influenza_type_b_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Pneumococcal
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Pneumococcal_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker4"
+                     autocomplete="off"
+                     (click)="doaPicker4.open()"
+                     placeholder="Date given" (click)="doaPicker4.open()" formControlName="PCI_4B_Pneumococcal_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker4"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker4></mat-datepicker>       
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Pneumococcal_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Polio(IPV, OPV, DTaP-HepB-IPV, DTaP-IPV/Hib, DTaP-IPV)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Polio_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker5"
+                     autocomplete="off"
+                     (click)="doaPicker5.open()"
+                     placeholder="Date given" (click)="doaPicker5.open()" formControlName="PCI_4B_Polio_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker5"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker5></mat-datepicker>        
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Polio_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Rotavirus(RV1, RV5, RV [unknown])
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Rotavirus_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker6"
+                     autocomplete="off"
+                     (click)="doaPicker6.open()"
+                     placeholder="Date given" (click)="doaPicker6.open()" formControlName="PCI_4B_Rotavirus_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker6"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker6></mat-datepicker>   
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Rotavirus_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Measles, Mumps, & Rubella (MMR, MMRV)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Measles_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker7"
+                     autocomplete="off"
+                     (click)="doaPicker7.open()"
+                     placeholder="Date given" (click)="doaPicker7.open()" formControlName="PCI_4B_Measles_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker7"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker7></mat-datepicker>     
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Measles_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Varicella (chickenpox)(VAR, MMRV)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Varicella_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker8"
+                     autocomplete="off"
+                     (click)="doaPicker8.open()"
+                     placeholder="Date given" (click)="doaPicker8.open()" formControlName="PCI_4B_Varicella_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker8"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker8></mat-datepicker>    
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Varicella_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Hepatitis A (HepA, HepA-HepB)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Hepatitis_A_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker9"
+                     autocomplete="off"
+                     (click)="doaPicker9.open()"
+                     placeholder="Date given" (click)="doaPicker9.open()" formControlName="PCI_4B_Hepatitis_A_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker9"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker9></mat-datepicker>    
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Hepatitis_A_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Meningococcal(MCV4, MPSV4)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Meningococcal_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput [matDatepicker]="doaPicker10"
+                     autocomplete="off"
+                     (click)="doaPicker10.open()"
+                     placeholder="Date given" (click)="doaPicker10.open()" formControlName="PCI_4B_Meningococcal_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker10"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker10></mat-datepicker>         
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Meningococcal_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Human papillomavirus(HPV4, HPV2)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Human_papillomavirus_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker11"
+                     autocomplete="off"
+                     (click)="doaPicker11.open()"
+                     placeholder="Date given" (click)="doaPicker11.open()" formControlName="PCI_4B_Human_papillomavirus_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker11"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker11></mat-datepicker>         
+                      
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Human_papillomavirus_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Zoster (shingles)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Zoster_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker12"
+                     autocomplete="off"
+                     (click)="doaPicker12.open()"
+                     placeholder="Date given" (click)="doaPicker12.open()" formControlName="PCI_4B_Zoster_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker12"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker12></mat-datepicker>  
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Zoster_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Influenza (yearly)(TIV, LAIV)
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Influenza_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker13"
+                     autocomplete="off"
+                     (click)="doaPicker13.open()"
+                     placeholder="Date given" (click)="doaPicker13.open()" formControlName="PCI_4B_Influenza_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker13"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker13></mat-datepicker>     
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Influenza_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Bacillus Calmette–Guérin (BCG) vaccine
+                        </label>
+                </div>
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Type" autocomplete="off" formControlName="PCI_4B_Bacillus_Calmette_type" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="doaPicker14"
+                     autocomplete="off"
+                     (click)="doaPicker14.open()"
+                     placeholder="Date given" (click)="doaPicker14.open()" formControlName="PCI_4B_Bacillus_Calmette_date_given" />
+              <mat-datepicker-toggle matSuffix [for]="doaPicker14"></mat-datepicker-toggle>
+              <mat-datepicker #doaPicker14></mat-datepicker>       
+                 </mat-form-field>
+                 </div>   
+                 <div class="col-md-3 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Administered by" autocomplete="off" formControlName="PCI_4B_Bacillus_Calmette_administered_by" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                         <h5>Allergies:</h5>  
+                        </label>
+                </div>
+            </div> 
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Asthma (wheezing)
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Asthma_wheezing_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Asthma_wheezing_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Asthma_wheezing_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Asthma_wheezing_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Other breathing problems 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Other_breathing_problems_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Other_breathing_problems_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Other_breathing_problems_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Other_breathing_problems_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Sinus trouble 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Sinus_trouble_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Sinus_trouble_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Sinus_trouble_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Sinus_trouble_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Hay fever (runny, stuffy, itchy nose; sneezing) 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Hay_fever_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Hay_fever_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Hay_fever_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Hay_fever_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Hives or swelling 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Hives_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Hives_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Hives_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Hives_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Eczema or other rashes 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Eczema_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Eczema_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Eczema_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Eczema_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Frequent infections 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Frequent_infections_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Frequent_infections_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Frequent_infections_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Frequent_infections_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Food reactions 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Food_reactions_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Food_reactions_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Food_reactions_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Food_reactions_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Drug reactions 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Drug_reactions_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-3 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Drug_reactions_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Drug_reactions_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Drug_reactions_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                            Others: 
+                        </label>
+                </div>
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Name:" autocomplete="off" formControlName="PCI_4C_Others_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4C_Others_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-1 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Age at onset" autocomplete="off" formControlName="PCI_4C_Others_OnsetAge" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4C_Others_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4C_Others_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-3">
+                        <label align="start">
+                         <h5>Previous viral infections</h5>  
+                        </label>
+                </div>
+                  
+            </div> 
+
+            <div class="form-group  row">
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 1" autocomplete="off" formControlName="PCI_4D_1_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_1_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_1_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_1_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_1_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 2" autocomplete="off" formControlName="PCI_4D_2_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_2_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_2_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_2_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_2_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 3" autocomplete="off" formControlName="PCI_4D_3_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_3_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_3_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_3_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_3_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 4" autocomplete="off" formControlName="PCI_4D_3_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_4_Viral_Infection_Severity">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+                 <div class="col-md-2 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_4_Viral_Infection_year" />
+                           
+                  </mat-form-field>
+                  </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_4_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_4_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 5" autocomplete="off" formControlName="PCI_4D_5_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_5_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_5_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_5_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_5_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 6" autocomplete="off" formControlName="PCI_4D_6_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_6_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_6_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_6_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_6_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 7" autocomplete="off" formControlName="PCI_4D_7_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_7_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_7_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                 <input matInput placeholder="Severity" formControlName="PCI_4D_7_Viral_Infection_Severity" [matAutocomplete]="edu">
+                 <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                 </mat-autocomplete>
+
+                </mat-form-field>
+            </div>   
+                 <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_7_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                  </div>  
+            </div>
+            <div class="form-group  row">
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Viral Infection 8" autocomplete="off" formControlName="PCI_4D_8_Viral_Infection_Name" />
+                          
+                 </mat-form-field>
+                 </div>   
+                <div class="col-md-2 form-group" >
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="PCI_4D_8_Viral_Infection_YesNo">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        </mat-radio-group>
+                 </div>   
+
+                <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Year of infection" autocomplete="off" formControlName="PCI_4D_8_Viral_Infection_year" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                 <div class="col-md-2 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     
+                    <input matInput placeholder="Severity" formControlName="PCI_4D_8_Viral_Infection_Severity" [matAutocomplete]="edu">
+                    <mat-autocomplete #edu="matAutocomplete">
+                     <mat-option  value="Mild">Mild</mat-option>
+                     <mat-option  value="Mod">Mod</mat-option>
+                     <mat-option  value="Sev.">Sev.</mat-option>
+                    </mat-autocomplete>
+
+                    </mat-form-field>
+                /div>   
+
+                <div class="col-md-4 form-group" >
+                     <mat-form-field class="mat-form-field-fluid">
+                      <input matInput placeholder="Comments" autocomplete="off" formControlName="PCI_4D_8_Viral_Infection_Comments" />
+                           
+                  </mat-form-field>
+                </div> 
+                  
+            </div>
+
+        </div>
+    </form>
+</div>

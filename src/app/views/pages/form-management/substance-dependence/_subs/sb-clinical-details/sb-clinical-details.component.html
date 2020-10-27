@@ -1,0 +1,39 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section  row kt-form__section--first">
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input type="number" matInput placeholder="Body weight without shoes (kg)" autocomplete="off"   (ngModelChange)="calculateBodyMass()"  formControlName="BodyWeight" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input type="number"  matInput placeholder="Height without shoes (m)"  autocomplete="off"  (ngModelChange)="calculateBodyMass()" formControlName="Height" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Body mass index (kg/m2)"  autocomplete="off"   formControlName="BodyMass" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input type="text" matInput placeholder="Waist circumference (cm)" autocomplete="off"      formControlName="Waist" />
+                </mat-form-field>
+            </div>
+            <div class="form-group  col-md-12 row">
+                <h6>Blood pressure</h6>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input type="text" matInput placeholder="Systolic" formControlName="BloodPressureSystolic" autocomplete="off"    />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input type="text" matInput placeholder="Diastolic" formControlName="BloodPressureDiastolic" autocomplete="off"    />
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>
