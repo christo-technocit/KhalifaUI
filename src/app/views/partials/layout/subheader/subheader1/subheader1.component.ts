@@ -19,6 +19,7 @@ export class Subheader1Component implements OnInit, OnDestroy, AfterViewInit {
 
 	today: number = Date.now();
 	title: string = '';
+	username: string = '';
 	desc: string = '';
 	showPrint : boolean = false;
 	breadcrumbs: Breadcrumb[] = [];
@@ -54,6 +55,7 @@ export class Subheader1Component implements OnInit, OnDestroy, AfterViewInit {
 				Promise.resolve(null).then(() => {
 					this.title = bt.title;
 					this.desc = bt.desc;
+					this.username =localStorage.getItem('username');// this.user();
 				});
 			}
 		}));
@@ -66,21 +68,25 @@ export class Subheader1Component implements OnInit, OnDestroy, AfterViewInit {
 
 		this.subheaderService.print$.subscribe(res => {
 			this.showPrint = res;
-			this.cd.detectChanges();
+			// this.cd.detectChanges();
 		})
 
 
 	}
 
+
 	signOut(){
 		localStorage.clear();
+		window.location.reload();
 		this.router.navigate(['/login'])
+
 	}
 
 	/**
 	 * On destroy
 	 */
 	ngOnDestroy(): void {
+
 		this.subscriptions.forEach(sb => sb.unsubscribe());
 	}
 }

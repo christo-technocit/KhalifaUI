@@ -6,7 +6,7 @@
             <mat-form-field>
                  <mat-label>Reports</mat-label>
             <mat-select matNativeControl required name="reports" [(ngModel)]="reportColumns.Reports" (selectionChange)="showBranch(reportColumns.Reports)">
-              
+              <!-- listtemplates
                 <mat-option value="1">Metabolic Disorder</mat-option>
                 <mat-option value="2">Substance Dependence</mat-option>
                 <mat-option value="4">Vitamin-D</mat-option>
@@ -17,7 +17,10 @@
                 <mat-option value="9">Emirates Family Registry</mat-option>        
                 <mat-option value="10">Precision Medicine (Part 1)</mat-option>       
                 <mat-option value="12">Precision Medicine (Part 2)</mat-option>       
-                <mat-option value="11">Covid-19</mat-option>
+                <mat-option value="11">Covid-19</mat-option> -->
+
+              <mat-option *ngFor="let templates of listtemplates" [value]="templates.Templateid">{{templates.Name}}
+              </mat-option>
               </mat-select>
              </mat-form-field>
             </div>
@@ -44,10 +47,7 @@
 
                      <mat-checkbox class="mat-option"
                                    [(ngModel)]="checkAll"
-
                                    (click)="$event.stopPropagation()"
-                                   (change)="selectAll($event.checked, yearSelect, attributeNames)"
-
                                    >
                          Select All
                      </mat-checkbox>

@@ -49,6 +49,9 @@ export class VitamindService {
     else
       return this.httpClient.post(this.baseUrl + 'form/Updateformattributevalue', data);
   }
+  getFormTemplates() {
+    return this.httpClient.get(this.baseUrl + 'form/templates');
+  }
   getFormAttributeValues(SavedFormID: number) {
     return this.httpClient.get(this.baseUrl + 'form/formattributevalues?SavedFormID=' + SavedFormID);
   }
@@ -250,5 +253,27 @@ export class VitamindService {
     return this.httpClient.get<any>(this.baseUrl+`form/Countries`);
   }
 
+  getTemplates(){
+    return this.httpClient.get<any>(this.baseUrl+`form/templates`);
+  }
 
+  getTemplatesName(data){
+    return this.httpClient.get<any>(this.baseUrl+`Users/getTemplate?UserName=${data.username}`);
+  }
+  getReportTemplate(data){
+    return this.httpClient.get<any>(this.baseUrl+`Users/GetReportTemplate?UserName=${data.username}`);
+  }
+  // getMenus(){
+  //   return this.httpClient.get(this.baseUrl+`Users/GetMenu?UserName=kustar`);
+  // }
+
+  getMenus(data){
+    return this.httpClient.get<any>(this.baseUrl+`Users/GetMenu?UserName=${data.username}`);
+  }
+  // getMenus(): Observable<any> {
+  //   return this.httpClient.get(`${this.baseUrl}Users/GetMenu?UserName=kustar`)
+  //           .pipe(
+  //             map(res => res)
+  //         );
+  //     }
 }

@@ -51,6 +51,7 @@ interface Nationality {
 
 export class ReportingToolComponent {
     public listitems = [];
+    public listtemplates = [];
     @Input() model: NgModel;
     @Input() values = [];
     @Input() text = 'Select All';
@@ -86,7 +87,10 @@ export class ReportingToolComponent {
     //Through this we can access the child component through _AutoGrid
     @ViewChild("reportingToolChildComponent",{static : true}) reportingToolChildComponent: ReportingToolChildComponent;
     ngAfterViewInit() {
+        this.FillTemplate();
+
         this.initGrid();
+
     }
     ExportTOExcel():void {
         this.getExcel();
@@ -99,6 +103,18 @@ export class ReportingToolComponent {
         if(localStorage.getItem('ReportColumns') != null)
         localStorage.removeItem('ReportColumns');
     }
+    FillTemplate(){
+
+		let data = [];
+		data["username"] = localStorage.getItem('username');
+        this._vService.getReportTemplate(data).subscribe(
+            results => {
+                this.listtemplates = results;
+                console.log('listitime',this.listtemplates);
+                // this.filteredNationality.next(this.listtemplates.slice());
+                this.cdr.detectChanges();
+            }
+        )}
     FillCountries(){
         this._vService.getCountries().subscribe(
             results => {
@@ -144,7 +160,7 @@ export class ReportingToolComponent {
         this.checkAll = false;
         this.reportColumns.AttributeDisplayName = [];
 
-        if(this.reportColumns.Reports == 12){
+        if(this.reportColumns.Reports == 100){
             this.sectionID=9;
             _val=10;
         }
@@ -195,7 +211,7 @@ export class ReportingToolComponent {
         if(this.reportColumns.Reports == 9){this.excelReportName ="Emirates_Family_Registry";}
         if(this.reportColumns.Reports == 10){this.excelReportName ="Precision_Medicine_1";}
         if(this.reportColumns.Reports == 11){this.excelReportName ="Covid-19";}
-        if(this.reportColumns.Reports == 12){this.excelReportName ="Precision_Medicine_2";
+        if(this.reportColumns.Reports == 100){this.excelReportName ="Precision_Medicine_2";
         this.reportColumns.Reports = 10;this.sectionID=9;}
         this.reportingToolChildComponent.FillExcel(this.parameterList,this.reportColumns.Reports,this.attributeName,this.sectionID,this.reportColumns.Collected_by,this.reportColumns.Collected_point,this.reportColumns.BeginPeriod,this.reportColumns.EndPeriod,this.reportColumns.Nationality,this.reportColumns.Diabetes,this.reportColumns.Gender,this.reportColumns.Sample_id,this.reportColumns.Filter,this.excelReportName);
     }
@@ -218,7 +234,7 @@ export class ReportingToolComponent {
                 }
             })
         })
-        if(this.reportColumns.Reports == 12){
+        if(this.reportColumns.Reports == 100){
         this.sectionID=9;
         this.reportColumns.Reports = 10;
         console.log('Reports',this.reportColumns.Reports);

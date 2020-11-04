@@ -12,6 +12,8 @@
               <a (click)="signOut()" >
 				<span matTooltip="Sign Out"   style="position: absolute;right: 20px;margin-top:-5px" class="mat-button-wrapper"><mat-icon>power_settings_new</mat-icon></span>
 			  </a>
+			<h3 *ngIf="username" style="position: absolute;right: 35px;margin-top:-1px" class="kt-subheader__title">{{username}}</h3>
+
 		</div>
 		<div class="kt-subheader__toolbar">
 			<div class="kt-subheader__wrapper">

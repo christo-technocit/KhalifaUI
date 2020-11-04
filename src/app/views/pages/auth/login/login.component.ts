@@ -6,6 +6,7 @@ import { MatSpinner } from '@angular/material';
 // RxJS
 import { Observable, Subject } from 'rxjs';
 import { finalize, takeUntil, tap } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 // Translate
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../../../../core/services/auth.service'
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 	data : any = [];
 	isLoggedIn$: Observable<boolean>;
 	loading : boolean = false;
+	private subscriptions: Subscription[] = [];
 	private unsubscribe: Subject<any>;
 	@ViewChild('userName', { static: true }) userName: ElementRef;
 	private returnUrl: any;
@@ -35,10 +37,10 @@ export class LoginComponent implements OnInit, OnDestroy {
 			private translate: TranslateService,
 			private fb: FormBuilder,
 			private route: ActivatedRoute,
-			private _snackBar: MatSnackBar,
+			private _snackBar: MatSnackBar,private cdr: ChangeDetectorRef,
 			private auth : AuthService
 	) {
-		this.unsubscribe = new Subject();
+		// this.unsubscribe = new Subject();
 	}
 
 	/**
@@ -67,9 +69,11 @@ export class LoginComponent implements OnInit, OnDestroy {
 	 * On destroy
 	 */
 	ngOnDestroy(): void {
-		this.unsubscribe.next();
-		this.unsubscribe.complete();
+		// this.unsubscribe.next();
+		// this.unsubscribe.complete();
 		this.loading = false;
+		this.subscriptions.forEach(sb => sb.unsubscribe());
+
 	}
 
 	/**
@@ -102,10 +106,30 @@ setLoadingOff(){
 		data["password"] = this.loginForm.controls['password'].value;
 
 		this.loading = true;
-		this.auth.loginToApp(data).subscribe((res)=>{
+		
+		this.subscriptions.push(this.auth.loginToApp(data).subscribe((res)=>{
+			Promise.resolve(null).then(() => {
+
 			if(res[0].UserId != -1){
+				this.subscriptions.push(this.auth.getMenus(data).subscribe((res2) => {
+					Promise.resolve(null).then(() => {
+					
+					if (res2) {
+						const propertyValues = Object.values(res2);
+						var menus = JSON.stringify(propertyValues);
+						
 				localStorage.setItem("Token",res[0].UserId);
-				this.router.navigate(['/dashboard']);
+						localStorage.setItem("menus",menus);
+						localStorage.setItem("username",data["username"])
+						this.cdr.detectChanges();
+
+		this.router.navigate(['/dashboard']);
+
+					}
+					else{
+						 this.cdr.detectChanges();
+					}
+				})}))
 			}else{
 
 				this._snackBar.open("Invalid username and password!", 'Ok', {
@@ -117,7 +141,7 @@ setLoadingOff(){
 				this.userName.nativeElement.click();
 
 			}
-		})
+		})}))
 
 	}
 }

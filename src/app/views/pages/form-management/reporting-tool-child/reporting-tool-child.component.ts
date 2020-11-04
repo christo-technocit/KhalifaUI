@@ -266,7 +266,7 @@ console.log('sectionid',sectionId);
 
         }
         else{
-            if(x.Reports == 12)
+            if(x.Reports == 100)
             this.FillGridByParms(this.parameters,x.Reports,this.Columns,9,x.Collected_by,x.Collected_point,x.BeginPeriod,x.EndPeriod,x.Nationality,x.Diabetes,x.Gender,x.Sample_id,x.filter);
             else
             this.FillGridByParms(this.parameters,x.Reports,this.Columns,0,x.Collected_by,x.Collected_point,x.BeginPeriod,x.EndPeriod,x.Nationality,x.Diabetes,x.Gender,x.Sample_id,x.filter);
