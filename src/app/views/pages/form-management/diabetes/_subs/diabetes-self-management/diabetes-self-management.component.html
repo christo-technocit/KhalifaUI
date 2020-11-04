@@ -1,0 +1,723 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section kt-form__section--first">
+
+                    <div class="row col-md-12">
+                <div class="col-md-4 form-group">
+                    <div class="kt-section">
+                        <label align="start">
+                            Do you have any long-term diabetic complications?
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 form-group">
+                        <mat-radio-group formControlName="DSM_long_term_diabetic">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="idontknow">I Don't Know</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+                <div class="col-md-4 form-group" *ngIf="Mform.get('DSM_long_term_diabetic').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, for how many years?"
+                            formControlName="DSM_long_term_diabetic_years" />
+                    </mat-form-field>
+                </div>
+                </div>
+
+                    <div class="form-group  row">
+                        <div class="row col-md-12">
+                    <div class="col-md-4">
+                        <div class="kt-section">
+                            <label align="start">
+                                If yes, did you experience any of the following? (tick as many as appropriate)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+
+                            <div class="mat-form-field-fluid">
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_kidney_problems">Kidney problems</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_foot_problems">Foot problems (e.g. ulcers, numbness)</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_stroke">Stroke</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_heart_problems">Heart problems (e.g., arrhythmias)</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_eye_problems">Eye problems (e.g., impaired vision)</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_other">Other</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_dont_know">I Don't Know</mat-checkbox>
+                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_not_disclose">Prefer not to disclose</mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+						<div class="form-group  row">
+                        <div class="form-group col-md-12 row">
+
+                            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                                <label>Please, select your current diabetes management method (tick as many as appropriate)</label>
+                            </div>
+                                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                                <div class="mat-form-field-fluid">
+
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_physically_active">Physical activity</mat-checkbox>
+                                    <div *ngIf="Mform.get('DSM_physically_active').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="If yes, specify year"
+                                                        formControlName="DSM_physically_active_Year" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_Diet">Diet</mat-checkbox>
+                                    <div *ngIf="Mform.get('DSM_Diet').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                <input matInput placeholder=" If yes, please, specify the latest type of diet you have used "
+                                                       formControlName="DSM_Diet_Type" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Since When"
+                                                        formControlName="DSM_Diet_StartDate" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Until When"
+                                                        formControlName="DSM_Diet_EndDate" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_diabetes_education">Education about diabetes self-management</mat-checkbox>
+
+                                    <div *ngIf="Mform.get('DSM_diabetes_education').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                <input matInput placeholder="f yes, please, specify by who:"
+                                                       formControlName="DSM_diabetes_education_specify" />
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="If yes, specify year"
+                                                        formControlName="DSM_diabetes_education_year" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <mat-checkbox  class="lab-mar-right-15"  formControlName="DSM_Metformin">Medication: Metformin</mat-checkbox>
+
+                                    <div *ngIf="Mform.get('DSM_Metformin').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                <input matInput placeholder="Dose:"
+                                                       formControlName="metformin_current_dose" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Year"
+                                                        formControlName="DSM_diabetes_dose_year" />
+                                            </mat-form-field>
+                                        </div>
+
+                                    </div>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_antidiabetic">Other antidiabetic medication:</mat-checkbox>
+                                    <div *ngIf="Mform.get('DSM_antidiabetic').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                <input matInput placeholder="Please, specify which medication"
+                                                       formControlName="DSM_antidiabetic_name" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Year"
+                                                        formControlName="DSM_antidiabetic_year" />
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Current Dose"
+                                                        formControlName="DSM_antidiabetic_dose" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_Insulin">Insulin</mat-checkbox>
+                                    <div *ngIf="Mform.get('DSM_Insulin').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                <input matInput placeholder="Please, specify which type"
+                                                       formControlName="DSM_Insulin_name" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Since when?  Year:"
+                                                        formControlName="DSM_Insulin_year" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="Current Dose"
+                                                        formControlName="DSM_Insulin_dose" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSMCDM_Other">Other</mat-checkbox>
+                                    <div *ngIf="Mform.get('DSMCDM_Other').value"  class="dis-con">
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                <input matInput placeholder="please specify"
+                                                       formControlName="other_specify" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <mat-form-field class="mat-form-field-fluid">
+                                                       <input matInput placeholder="If other,please specify "
+                                                        formControlName="DSMCDM_Other_Specify" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSMCDM_None">None</mat-checkbox>
+
+                                </div>
+
+
+                            </div>
+						</div>
+						</div>
+						<div class="form-group  row">
+							<div class="row col-md-12">
+
+								<br>
+									 <h6> The following statements describe self-care activities related to your diabetes. Thinking about your self-care over the last 8 weeks, please specify the extent to which each statement applies to you.</h6>
+
+
+						</div>
+							</div>
+
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I check my blood sugar levels with care and attention.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_blood_sugar_levels_with_care">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        The food I choose to eat makes it easy to achieve optimal blood sugar levels.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_achieve_optimal_blood_sugar_level">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I keep all doctors’ appointments (appointments with health professionals) recommended for my diabetes treatment.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_keep_doctors_appointments">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I take my diabetes medication as prescribed.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_take_diabetes_medication">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Occasionally I eat lots of sweets or other foods rich in carbohydrates.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_Occasionally_eat_sweets">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I record my blood sugar levels regularly (or analyse the value chart with my blood glucose meter).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_record_blood_sugar">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I tend to avoid diabetes-related doctors’ appointments (appointments with health professionals).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_avoid_diabetes_related_appointments">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I am regularly physically active to improve my diabetes treatment.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_physically_active">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I strictly follow the dietary recommendations given by my doctor or diabetes specialist.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_follow_dietary_recommendations">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I do not check my blood sugar levels frequently enough to achieve good blood glucose control.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_do_not_check_blood_sugar_levels">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I avoid physical activity, although it could improve my diabetes.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_avoid_physical_activity">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I tend to forget to take or skip my diabetes medication.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_skip_medication">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Sometimes I have real ‘food binges’ (not triggered by hypoglycaemia).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_food_binges">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Regarding my diabetes care, I should see my medical practitioner(s) more often.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_morevisit">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        I am less physically active than would be optimal for my diabetes.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_less_physically_active">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+                </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        My diabetes self-care is poor.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="DSM_self_care_poor">
+                        <mat-radio-button  value="appliestomeverymuch">Applies to me very much</mat-radio-button>
+                        <mat-radio-button  value="appliestometoaconsiderabledegree">Applies to me to a considerable degree</mat-radio-button>
+                        <mat-radio-button  value="appliestometosomedegree">Applies to me to some degree</mat-radio-button>
+                        <mat-radio-button  value="doesnotapplytome">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+				</div>
+
+				<div class="form-group  row">
+					<div class="row col-md-12">
+						<strong>Questions for Female Participants only</strong><br><br>
+					</div>
+					<div class="row col-md-12">
+						<div class="col-md-4">
+						 How old were you when (if) you got the first period?
+						</div>
+						<div class="col-md-2">
+							<mat-form-field class="mat-form-field-fluid">
+								<input matInput placeholder="First period year"
+									formControlName="female_first_period_year" />
+							</mat-form-field>
+						</div>
+						<div class="col-md-6">
+							<mat-radio-group formControlName="female_first_period">
+								<mat-radio-button  value="never">I never had it </mat-radio-button>
+								<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+								<mat-radio-button  value="yes">Prefer not to disclose</mat-radio-button>
+							</mat-radio-group>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group  row">
+					<div class="row col-md-12">
+						<div class="col-md-4">
+					  Are you currently in menopause?
+						</div>
+						<div class="col-md-6">
+							<mat-radio-group formControlName="female_menopause">
+								<mat-radio-button  value="yes">Yes</mat-radio-button>
+								<mat-radio-button  value="no">No</mat-radio-button>
+								<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+								<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+							</mat-radio-group>
+						</div>
+						<div class="col-md-2 form-group1" *ngIf="Mform.get('female_menopause').value == 'yes'" >
+							<mat-form-field class="mat-form-field-fluid">
+								<input matInput placeholder="If yes,since when "
+									formControlName="female_menopause_year" />
+							</mat-form-field>
+						</div>
+					</div>
+
+				</div>
+
+			<div class="form-group  row">
+				<div class="row col-md-12">
+					<div class="col-md-4">
+						How often do you have periods?
+					</div>
+					<div class="col-md-6">
+						<mat-radio-group formControlName="female_period_How_often">
+							<mat-radio-button  value="1pmonth">Once per month</mat-radio-button>
+							<mat-radio-button  value="more1month">More than once per month</mat-radio-button>
+							<mat-radio-button  value="every2-3month">Every 2-3 months</mat-radio-button>
+							<mat-radio-button  value="every6month">Every 6 months </mat-radio-button>
+							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+							<mat-radio-button  value="other">Other</mat-radio-button>
+						</mat-radio-group>
+					</div>
+					<div class="col-md-2 form-group1" *ngIf="Mform.get('female_period_How_often').value == 'other'" >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="If other, specify"
+								formControlName="female_period_How_often_others" />
+						</mat-form-field>
+					</div>
+				</div>
+		</div>
+		<div class="form-group  row">
+			<div class="row col-md-12">
+				<div class="col-md-4">
+					Do you still have your periods in regular time intervals?
+				</div>
+				<div class="col-md-8">
+					<mat-radio-group formControlName="female_period_regular_time_intervals">
+						<mat-radio-button  value="yes">Yes</mat-radio-button>
+						<mat-radio-button  value="no">No</mat-radio-button>
+						<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+						<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+					</mat-radio-group><br>
+					<div  *ngIf="Mform.get('female_period_regular_time_intervals').value == 'yes'" >
+						If yes, when did you have your last period <br>
+						<mat-radio-group formControlName="female_period_regular_time_intervals_yes">
+							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+						</mat-radio-group>
+					</div>
+					<div  *ngIf="Mform.get('female_period_regular_time_intervals').value == 'no'" >
+						If no, since when your periods are irregular?<br>
+						<mat-radio-group formControlName="female_period_regular_time_intervals_no">
+							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+						</mat-radio-group>
+					</div>
+				</div>
+
+			</div>
+	</div>
+	<div class="form-group  row">
+		<div class="row col-md-12">
+			<div class="col-md-4">
+				Are you currently pregnant?
+			</div>
+			<div class="col-md-6">
+				<mat-radio-group formControlName="female_pregnant">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+				</mat-radio-group><br>
+			</div>
+			<div class="col-md-2"  *ngIf="Mform.get('female_pregnant').value == 'yes'" >
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="If yes, since when"
+						formControlName="female_pregnant_when" />
+				</mat-form-field>
+			</div>
+
+		</div>
+	  </div>
+	  <div class="form-group  row">
+		<div class="row col-md-12">
+			<div class="col-md-4">
+		 Are you currently taking birth control medications?
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="female_birth_control">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+				</mat-radio-group><br>
+				<div class="row col-md-12" *ngIf="Mform.get('female_birth_control').value == 'yes'">
+					<div class="col-md-4"   >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="If yes, since when"
+								formControlName="female_birth_control_when" />
+						</mat-form-field>
+					</div>
+					<div class="col-md-6"   >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Which medication"
+								formControlName="female_birth_control_Which_medication" />
+						</mat-form-field>
+					</div>
+					<div class="col-md-2"   >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Dose"
+								formControlName="female_birth_control_dose" />
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+      </div>
+	  <div class="form-group  row">
+		<div class="row col-md-12">
+			<div class="col-md-4">
+				Do you have excessive body or facial hair?
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="female_facial_hair">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+				</mat-radio-group><br>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="FG scoring system points"
+						formControlName="female_fg_points" />
+				</mat-form-field>
+			</div>
+
+
+		</div>
+	  </div>
+</div>
+    </form>
+</div>

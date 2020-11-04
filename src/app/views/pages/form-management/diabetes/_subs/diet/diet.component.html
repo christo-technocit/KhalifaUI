@@ -1,0 +1,375 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+		<div>
+		<div class="col-md-12 form-group row">
+			<strong>Think about your diet over the last MONTH. Please tick or circle the answer that best applies to you.</strong><br>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat a portion of vegetables? (Include fresh, tinned and frozen vegetables. A portion is 80g.</label>
+			</div><div class="col-md-8">
+				<mat-radio-group formControlName="PPA_sit_computer_nonworkhours_hours">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat a portion of fruit? (Include fresh, frozen, tinned and dried fruit. Do not count fruit juices. A portion is 80g</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_fruit">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat a cake, a sweet pastry like a Danish pastry, a donut or a sweet biscuit?</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_cake">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class=col-md-4>
+				<label align="start">How often did you drink sugary drinks? (Include non-diet fizzy drinks, squashes, mixers, energy drinks, fruit juices or coffee, tea or other hot drinks with sugar or flavored syrups).</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_sugary_drinks">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you use full-fat spread (butter or a full fat margarine) on your bread, potatoes or vegetables?</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_fullfat_spread">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">
+					How often did you eat full-fat cheese? Include cheese in sandwiches, on biscuits, in sauces and when used as a topping. (Full fat cheeses include hard cheeses like cheddar, blue cheeses and soft cheeses like brie or cream cheese or full-fat goat cheeses.)
+				</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_fullfat_cheese">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat processed meat? Include processed meat in sandwiches, ready meals and if eaten as a snack. (Processed meat includes foods like sausages or salami)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_processed_meat">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week or less often</mat-radio-button>
+					<mat-radio-button  value="2-4wk">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6wk">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="1-2day">1-2 times a day	  </mat-radio-button>
+					<mat-radio-button  value="3more">3 or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat savory foods like crisps, corn chips, corn puffs, salted nuts or Bombay mix? </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_savory_food">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-5week">2-5 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Nearly every day</mat-radio-button>
+					<mat-radio-button  value="twice">Twice or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat 'fast foods' from a take-away or in a restaurant? (Think about foods like burgers, fish and chips, fried chicken, donor kebabs, pizza, fried rice or curries with cream or ghee.) </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_fast_food">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-5week">2-5 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Nearly every day</mat-radio-button>
+					<mat-radio-button  value="twice">Twice or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat by ordering from a take-away or in a restaurant? (Think about foods other than 'fast foods', for example “all you can eat buffet”, à la carte restaurants, …)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_buffet_restaurant">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-5week">2-5 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Nearly every day</mat-radio-button>
+					<mat-radio-button  value="twice">Twice or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often do you prepare your meals at home? (Think about breakfast, lunch, and dinner) </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_meal_at_home">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-5week">2-5 times a week</mat-radio-button>
+					<mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+					<mat-radio-button  value="everyday">Every day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat pudding or dessert, apart from fruit, with your meals? </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_pudding">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-5week">2-5 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Nearly every day</mat-radio-button>
+					<mat-radio-button  value="twice">Twice or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat oily fish? (Think about fresh or tinned salmon, trout, sardine, mackerel, herring or fresh tuna).</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_oilyfish">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="twice">Twice or more times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you have 3 or more regular meals in a day? (Include light meals like a sandwich or a soup
+					and roll; Don’t include snack times when you ate only a biscuit or cake or a piece of fruit or vegetable sticks
+					</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_regular_meals">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-4week">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6week">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Every day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat breakfast (more than just a drink or one or two sweet biscuits) within about 2 h of waking?</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_breakfast">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-4week">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6week">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Every day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you 'snack' or 'pick' on high-fat or high-sugar foods between meals? (Think about food like biscuits, chocolate, cakes, crisps, nuts and cheese)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_snack_between_meals">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-4week">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6week">5-6 times a week</mat-radio-button>
+					<mat-radio-button  value="everyday">Every day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat a portion of bread? (Include bread in sandwiches and wraps. A portion of bread is 1 slice of bread, a bread roll, half a baguette,
+				a bagel, a tortilla wrap, a small naan, a chapatti or a paratha) </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_portion_bread">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Once a week or Less than once a week</mat-radio-button>
+					<mat-radio-button  value="2-6week">2-6 times a week</mat-radio-button>
+					<mat-radio-button  value="5-6week">1-2 times a day</mat-radio-button>
+					<mat-radio-button  value="5-6week">3-4 times a day</mat-radio-button>
+					<mat-radio-button  value="More4day">More than 4 times a day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">If you ate bread how often did you choose higher fiber breads? (Breads that are high in fiber include whole meal, granary, multi-grain or rye breads. If you follow a gluten free diet include high fiber gluten free breads). </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_highfiber_bread">
+					<mat-radio-button  value="alltime">All of time</mat-radio-button>
+					<mat-radio-button  value="mosttime">Most of time </mat-radio-button>
+					<mat-radio-button  value="halftime">About half the time</mat-radio-button>
+					<mat-radio-button  value="lesshalf">Less than half the time</mat-radio-button>
+					<mat-radio-button  value="never">Never</mat-radio-button>
+					<mat-radio-button  value="everyday">I did not eat bread</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How often did you eat a bowl of breakfast cereal, porridge or muesli?</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_bowl_breakfast">
+					<mat-radio-button  value="never">Never or very rarely</mat-radio-button>
+					<mat-radio-button  value="lessthan1week">Less than once a week</mat-radio-button>
+					<mat-radio-button  value="1week">Once a week </mat-radio-button>
+					<mat-radio-button  value="2-4week">2-4 times a week</mat-radio-button>
+					<mat-radio-button  value="veryday">Nearly every day or daily</mat-radio-button>
+					<mat-radio-button  value="twice">Every day</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">If you ate breakfast cereal how often did you choose higher fiber cereals? (Cereals that are high in fiber include porridge, muesli, Weetabix, Shredded Wheat, multi- grain cereals and wheat or oat bran cereals). </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_eat_bowl_highfiber">
+					<mat-radio-button  value="alltime">All of time</mat-radio-button>
+					<mat-radio-button  value="mosttime">Most of time</mat-radio-button>
+					<mat-radio-button  value="halftime">About half the time</mat-radio-button>
+					<mat-radio-button  value="lesshalf">Less than half the time</mat-radio-button>
+					<mat-radio-button  value="never">Never</mat-radio-button>
+					<mat-radio-button  value="not">I did not eat cereals</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+        <div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">What type of milk did you usually use, if any?</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_milk_type">
+					<mat-radio-button  value="fullfat">Full fat (cow, goat or sheep) </mat-radio-button>
+					<mat-radio-button  value="Semi-skimmed">Semi-skimmed (cow, goat or sheep)</mat-radio-button>
+					<mat-radio-button  value="Skimmed">Skimmed (cow, goat or sheep)  </mat-radio-button>
+					<mat-radio-button  value="all">Sometimes full fat, sometimes skimmed or semi-skimmed</mat-radio-button>
+				    <mat-radio-button  value="Soya">Soya, oat, rice or other non-dairy milk</mat-radio-button>
+					<mat-radio-button  value="Other">Other</mat-radio-button>
+					<mat-radio-button  value="None">None</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Are you concerned about your weight? </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_weight_concern">
+					<mat-radio-button  value="not">I am not concerned about my weight</mat-radio-button>
+					<mat-radio-button  value="little">I am a little concerned about my weight</mat-radio-button>
+					<mat-radio-button  value="moderately">I am moderately concerned about my weight </mat-radio-button>
+					<mat-radio-button  value="very">I am very concerned about my weight</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How important is it to you to change your diet?<br>
+				(0 - Not at all important  to 10 - Extremely important)
+				</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_important_change_diet">
+					<mat-radio-button  value="0">0</mat-radio-button>
+					<mat-radio-button  value="3">3</mat-radio-button>
+					<mat-radio-button  value="5">5</mat-radio-button>
+					<mat-radio-button  value="7">7</mat-radio-button>
+					<mat-radio-button  value="10">10</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">How confident are you that you could change your diet?<br>
+				(0 - Not at all important  to 10 - Extremely important)
+				</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PD_confident_change_diet">
+					<mat-radio-button  value="0">0</mat-radio-button>
+					<mat-radio-button  value="3">3</mat-radio-button>
+					<mat-radio-button  value="5">5</mat-radio-button>
+					<mat-radio-button  value="7">7</mat-radio-button>
+					<mat-radio-button  value="10">10</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+	</div>
+    </form>
+</div>
+

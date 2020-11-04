@@ -1,0 +1,1352 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+            <div class="col-md-12 row form-group">
+                <h5>
+                    Medications for Type 2 Diabetes Patients:
+                </h5>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Anti-Hypertensive
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Hypertensive_ACE_inhibitors"> ACE-inhibitors</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Anti_Hypertensive_ACE_inhibitors').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Perindopril Dose"
+                               formControlName="Anti_Hypertensive_ACE_inhibitors_Perindopril" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Captopril Dose"
+                               formControlName="Anti_Hypertensive_ACE_inhibitors_Captopril" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Enalapril Dose"
+                               formControlName="Anti_Hypertensive_ACE_inhibitors_Enalapril" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Lisinopril Dose"
+                               formControlName="Anti_Hypertensive_ACE_inhibitors_Lisinopril" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Hypertensive_ACE_inhibitors_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <label>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Hypertensive_ARBs"> ARBs</mat-checkbox>
+                </label>
+            </div>
+            <div *ngIf="Mform.get('Anti_Hypertensive_ARBs').value ||  Mform.get('Anti_Hypertensive_ARBs').value == 'true'"  class="dis-con" >
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Losartan Dose"
+                               formControlName="Anti_Hypertensive_ARBs_Losartan" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Valsartan Dose"
+                               formControlName="Anti_Hypertensive_ARBs_Valsartan" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Hypertensive_ARBs_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <label>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Hypertensive_Beta_blockers"> Beta-blockers</mat-checkbox>
+                </label>
+            </div>
+            <div *ngIf="Mform.get('Anti_Hypertensive_Beta_blockers').value"  class="dis-con" >
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Atenolol Dose"
+                               formControlName="Anti_Hypertensive_Beta_blockers_Atenolol" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Bisoprolol Dose"
+                               formControlName="Anti_Hypertensive_Beta_blockers_Bisoprolol" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Hypertensive_Beta_blockers_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <label>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Hypertensive_Diuretics"> Diuretics</mat-checkbox>
+                </label>
+            </div>
+            <div *ngIf="Mform.get('Anti_Hypertensive_Diuretics').value"  class="dis-con" >
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Indapamide Dose"
+                               formControlName="Anti_Hypertensive_Diuretics_Indapamide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Hydrochlorothiazide Dose"
+                               formControlName="Anti_Hypertensive_Diuretics_Hydrochlorothiazide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Frusemide Dose"
+                               formControlName="Anti_Hypertensive_Diuretics_Frusemide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Hypertensive_Diuretics_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <label>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Hypertensive_CaChannel_Blockers"> CA Channel Blockers</mat-checkbox>
+                </label>
+            </div>
+            <div *ngIf="Mform.get('Anti_Hypertensive_CaChannel_Blockers').value"  class="dis-con" >
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Amlodipine Dose"
+                               formControlName="Anti_Hypertensive_CaChannel_Blockers_Amlodipine" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nifedipine Dose"
+                               formControlName="Anti_Hypertensive_CaChannel_Blockers_Nifedipine" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Verapamil Dose"
+                               formControlName="Anti_Hypertensive_CaChannel_Blockers_Verapamil" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Hypertensive_CaChannel_Blockers_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <label>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Hypertensive_other"> Others</mat-checkbox>
+                </label>
+            </div>
+            <div *ngIf="Mform.get('Anti_Hypertensive_other').value"  class="dis-con" >
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Methyldopa Dose"
+                               formControlName="Anti_Hypertensive_Methyldopa" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Hypertensive_other_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Anti-Dyslipidemia
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Anti_Dyslipidemia_Statins"> Statins</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Anti_Dyslipidemia_Statins').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Simvastatin Dose"
+                               formControlName="Anti_Dyslipidemia_Statins_Simvastatin" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Atorvastatin Dose"
+                               formControlName="Anti_Dyslipidemia_Statins_Atorvastatin" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Rosuvastatin Dose"
+                               formControlName="Anti_Dyslipidemia_Statins_Rosuvastatin" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Anti_Dyslipidemia_Statins_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15" formControlName="Anti_Dyslipidemia_Fibrates"> Fibrates</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Anti_Dyslipidemia_Fibrates').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Gemfibrozil Dose"
+                               formControlName="Anti_Dyslipidemia_Fibrates_Gemfibrozil" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Fenofibrate  Dose"
+                               formControlName="Anti_Dyslipidemia_Fibrates_Fenofibrate" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-checkbox class="lab-mar-right-15" formControlName="Anti_Dyslipidemia_Fibrate_other"> Other Dose:</mat-checkbox>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15" formControlName="Anti_Dyslipidemia_other"> Other</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Anti_Dyslipidemia_other').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose:"
+                               formControlName="Anti_Dyslipidemia_other_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Anti-hyperglycemia (diabetes) Oral agents
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Oral_agents_Biguanides"> Biguanides</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Biguanides').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Metformin Dose"
+                               formControlName="Oral_agents_Biguanides_Metformin" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15" formControlName="Oral_agents_Sulphonyuras_other"> Other Dose:</mat-checkbox>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Oral_agents_Sulphonyureas"> SUs</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Sulphonyureas').value"  class="col-md-10 row">
+                <div class="col-md-12 ">
+                <div class="row">
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Glibenclamide Dose"
+                               formControlName="Oral_agents_Sulphonyureas_Glibenclamide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Glimepride Dose"
+                               formControlName="Oral_agents_Sulphonyureas_Glimepiride" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Glipizide Dose"
+                               formControlName="Oral_agents_Sulphonyureas_Glipizide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Gliclazide MR Dose"
+                               formControlName="Oral_agents_Sulphonyureas_GliclazideMR" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12 row ">
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Glipizide Dose"
+                               formControlName="Oral_agents_Sulphonyureas_Glipizide1" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Glimepride Dose"
+                               formControlName="Oral_agents_Sulphonyureas_Glimepride" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Oral_agents_Sulphonyureas_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Oral_agents_Thiazolidinediones"> Thiazolidinediones</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Thiazolidinediones').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Pioglitazone Dose"
+                               formControlName="Oral_agents_Thiazolidinediones_Pioglitazone" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Oral_agents_Thiazolidinediones_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Oral_agents_Meglitinides"> Meglitinides</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Meglitinides').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Nateglinide Dose"
+                               formControlName="Oral_agents_Meglitinides_Nateglinide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Repaglinide Dose"
+                               formControlName="Oral_agents_Meglitinides_Repaglinide" />
+                    </mat-form-field>
+                </div>
+
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15" formControlName="Oral_agents_Meglitinides_other"> Other Dose:</mat-checkbox>
+            </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="dis-chek-label" formControlName="Oral_agents_Alpha_glucosidase_inhibitors"> Alpha-glucosidase inhibitors</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Alpha_glucosidase_inhibitors').value"  class="col-md-10 row">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Acarbose Dose"
+                               formControlName="Oral_agents_Alpha_glucosidase_inhibitors_Acarbose" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15" formControlName="Oral_agents_Alpha_glucosidase_inhibitors_other"> Other Dose:</mat-checkbox>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="dis-chek-label" formControlName="Oral_agents_SGLT2">SGLT2 inhibitors </mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_SGLT2').value"  class="col-md-10 row">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Canagliflozin Dose"
+                               formControlName="Oral_agents_SGLT2_Canagliflozin" />
+                    </mat-form-field>
+                </div> <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Dapagliflozin Dose"
+                           formControlName="Oral_agents_SGLT2_Dapagliflozin" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Saxagliptin Dose"
+                           formControlName="Oral_agents_SGLTLT2_Empagliflozin" />
+                </mat-form-field>
+                <div class="col-md-2 form-group">
+                    <mat-checkbox class="lab-mar-right-15" formControlName="Oral_agents_SGLTLT2_other"> Other Dose:</mat-checkbox>
+                </div>
+            </div> 
+        </div>
+        </div>
+            <div class="row col-md-12">
+                <div class="col-md-2 form-group">
+                    <mat-checkbox class="dis-chek-label" formControlName="Oral_agents_Amylin">Amylin analogs</mat-checkbox>
+                </div>
+                <div *ngIf="Mform.get('Oral_agents_Amylin').value"  class="col-md-10 row">
+                    <div class="col-md-2 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Pramlintide Dose"
+                                   formControlName="Oral_agents_Pramlintide" />
+                        </mat-form-field>
+                    </div> 
+                     <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Other Dose"
+                               formControlName=" Oral_agents_Amylin_other" />
+                    </mat-form-field>
+                    </div> 
+                </div>
+            </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="dis-chek-label" formControlName="Oral_agents_Dipeptidyl">Dipeptidyl peptidase-IV inhibitors (DPP-IV)</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Dipeptidyl').value"  class="col-md-10 row">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Sitagliptin Dose"
+                               formControlName="Oral_agents_Dipeptidyl_Sitagliptin" />
+                    </mat-form-field>
+                </div> <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Vildagliptin Dose"
+                           formControlName="Oral_agents_Dipeptidyl_Vildagliptin" />
+                </mat-form-field>
+            </div> <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Saxagliptin Dose"
+                           formControlName="Oral_agents_Dipeptidyl_Saxagliptin" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-2 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Linagliptin Dose"
+                           formControlName="Oral_agents_Dipeptidyl_Linagliptin" />
+                </mat-form-field>
+            </div>
+               
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15" formControlName="Oral_agents_Meglitinides_other"> Other Dose:</mat-checkbox>
+            </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="dis-chek-label" formControlName="Oral_agents_other">Others</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_other').value"  class="col-md-10 row">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Pramlintide Dose"
+                               formControlName="Oral_agents_other_Pramlintide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Oral_agents_other_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="dis-chek-label" formControlName="Oral_agents_Incretin">Incretinmimetics (GLP-1 agonist)</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Oral_agents_Incretin').value"  class="col-md-10 row">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Exenatide Dose"
+                               formControlName="Oral_agents_Incretin_Exenatide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Liraglutide Dose"
+                               formControlName="Oral_agents_Incretin_Liraglutide" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Exenatide (weekly) Dose"
+                               formControlName="Oral_agents_Incretin_Exenatide_weekly" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Injections
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="dis-chek-label" formControlName="Injections_Insulin">Insulin</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Injections_Insulin').value"  class="col-md-10 row">
+
+                <div class="col-md-12 ">
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Lispro Dose"
+                                       formControlName="Injections_Insulin_Lispro" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Aspart Dose"
+                                       formControlName="Injections_Insulin_Aspart" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Glulisine Dose"
+                                       formControlName="Injections_Insulin_Glulisine" />
+                            </mat-form-field>
+                        </div>
+                        
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Regular Dose"
+                                       formControlName="Injections_Insulin_Regular" />
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    <div class="col-md-12 row ">
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="NPH Dose"
+                                       formControlName="Injections_Insulin_NPH" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Detemir Dose"
+                                       formControlName="Injections_Insulin_Detemir" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Glargine Dose"
+                                       formControlName="Injections_Insulin_Glargine" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Combination Dose"
+                                       formControlName="Injections_Insulin_Combination" />
+                            </mat-form-field>
+                        </div>
+                        
+                     <div class="col-md-3 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Other Dose"
+                                   formControlName=" Injections_Insulin_other" />
+                        </mat-form-field>
+                    </div> 
+                    </div>
+                </div>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Supplement
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Supplements_VitaminD3"> Vitamin D3</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Supplements_VitaminD3').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Supplements_others" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Supplements_Erythropoietin"> Erythropoietin injections Dose:</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Supplements_Erythropoietin').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Supplements_Erythropoietin_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Antidepressives
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Antidepressants_Prozac"> Prozac Dose</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Antidepressants_Prozac').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Antidepressants_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12 row form-group">
+                <h6>
+                    Antianxiety
+                </h6>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Antianxiety_Diazepam"> Diazepam Dose</mat-checkbox>
+            </div>
+            <div *ngIf="Mform.get('Antianxiety_Diazepam').value"  class="dis-con">
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="Antianxiety_other" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <mat-checkbox class="lab-mar-right-15"   formControlName="Antianxiety_Alprazolam"> Alprazolam (Xanax): Dose</mat-checkbox>
+            </div>
+        </div>
+            <div class="col-md-12 row form-group">
+                <h6>
+                    Others (e.g. thyroid)
+                </h6>
+        </div>
+        <div class="row col-md-12">
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Others/Dose"
+                               formControlName="othermedication_other" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Please, specify: "
+                               formControlName="othermedication_other_specify" />
+                    </mat-form-field>
+                </div>
+        </div>
+            <div class="col-md-12 form-group row">
+                <h6>
+                    Traditional Chinese Medicine
+                </h6>
+            </div>
+        <div class="row col-md-12">
+            <div class="col-md-4 form-group"  >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Others"
+                           formControlName="traditional_chinese" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Please, specify: "
+                           formControlName="traditional_chinese_specify" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-md-12 form-group row">
+            <h6>
+                Other
+            </h6>
+        </div>
+    <div class="row col-md-12">
+        <div class="col-md-4 form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Other: "
+                       formControlName="following_medications_other" />
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="col-md-12 row form-group">
+        <h6>
+            Oral Antidiabetic Medication (OAD):
+        </h6>
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-3  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Oral Antidiabetic Medication (OAD):1"
+                       formControlName="DT_OAD_1" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-1  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Start"
+                       formControlName="DT_OAD_1_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_1_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_1_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_1_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_1_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-3  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Oral Antidiabetic Medication (OAD):2"
+                       formControlName="DT_OAD_2" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-1  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Start"
+                       formControlName="DT_OAD_2_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_2_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_2_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_2_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_2_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-3  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Oral Antidiabetic Medication (OAD):3"
+                       formControlName="DT_OAD_3" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-1  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Start"
+                       formControlName="DT_OAD_3_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_3_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_3_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_3_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_3_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-3  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Oral Antidiabetic Medication (OAD):4"
+                       formControlName="DT_OAD_4" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-1  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Start"
+                       formControlName="DT_OAD_4_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_4_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_4_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_4_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_4_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="col-md-12 row form-group">
+        <h6>
+            OAD side effects:
+        </h6>
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="OAD side effects:1"
+                       formControlName="DT_OAD_side_1" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_OAD_side_1_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_side_1_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_side_1_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_side_1_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_side_1_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="OAD side effects:2"
+                       formControlName="DT_OAD_side_2" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_OAD_side_2_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_side_2_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_side_2_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_side_2_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_side_2_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="OAD side effects:3"
+                       formControlName="DT_OAD_side_3" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_OAD_side_3_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_side_3_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_side_3_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_side_3_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_side_3_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="OAD side effects:4"
+                       formControlName="DT_OAD_side_4" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_OAD_side_4_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_OAD_side_4_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_OAD_side_4_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_OAD_side_4_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_OAD_side_4_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+  
+    <div class="col-md-12 row form-group">
+        <h6>
+            Metformin side effects Gastrointestinal symptoms (in the absence of any GI disease):-
+        </h6>
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Bloating"
+                       formControlName="DT_Metformin_Bloating" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_Metformin_Bloating_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Bloating_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Bloating_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Bloating_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Bloating_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Abdominal pain"
+                       formControlName="DT_Metformin_Abdominal_pain" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_Metformin_Abdominal_pain_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Abdominal_pain_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Abdominal_pain_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Abdominal_pain_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Abdominal_pain_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Nausea"
+                       formControlName="DT_Metformin_Nausea" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_Metformin_Nausea_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Nausea_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Nausea_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Nausea_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Nausea_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Diarrhea"
+                       formControlName="DT_Metformin_Diarrhea" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_Metformin_Diarrhea_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Diarrhea_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Diarrhea_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Diarrhea_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Diarrhea_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Vomiting"
+                       formControlName="DT_Metformin_Vomiting" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_Metformin_Vomiting_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Vomiting_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Vomiting_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Vomiting_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Vomiting_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Anorexia"
+                       formControlName="DT_Metformin_Anorexia" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Treatment Start"
+                       formControlName="DT_Metformin_Anorexia_start" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Anorexia_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Anorexia_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Anorexia_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Anorexia_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Other"
+                       formControlName="DT_Metformin_Other" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 3 months"
+                       formControlName="DT_Metformin_Other_3month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 6 months"
+                       formControlName="DT_Metformin_Other_6month" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 9 months"
+                       formControlName="DT_Metformin_Other_9month" />
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Dose after 12 months"
+                       formControlName="DT_Metformin_Other_12month" />
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row ">
+        
+        <div class="col-md-2  form-group">
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="Comments"
+                       formControlName="DT_Comments" />
+            </mat-form-field>
+        </div>
+    </div>
+  
+    </form>
+</div>

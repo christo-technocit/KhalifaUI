@@ -96,7 +96,10 @@ const routes: Routes = [
                },{
 	            path: 'substance-dependence',
 			    loadChildren: () => import('app/views/pages/form-management/substance-dependence/substance.module').then(m => m.SubstanceModule)
-               }
+               },{
+	            path: 'diabetes',
+			    loadChildren: () => import('app/views/pages/form-management/diabetes/diabetes.module').then(m => m.DiabetesModule)
+			   }
 
 		]
 	}

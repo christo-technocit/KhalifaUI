@@ -77,7 +77,8 @@ export class Subheader1Component implements OnInit, OnDestroy, AfterViewInit {
 
 	signOut(){
 		localStorage.clear();
-		window.location.reload();
+		// window.location.reload();
+		location.reload(true);
 		this.router.navigate(['/login'])
 
 	}

@@ -1,0 +1,367 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+            <div class="col-md-12 form-group row">
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        When were you diagnosed with Type 2 diabetes?
+                    </label>
+                </div>
+			</div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PMD_Type_2_diabetes_status">
+						<mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+					</mat-radio-group>
+                </div>
+			</div>
+			<div class="col-md-2">
+				<div *ngIf="Mform.get('PMD_Type_2_diabetes_status').value == 'yes'">
+                <mat-form-field class="mat-form-field-fluid">
+					<input matInput [matDatepicker]="dobPicker"
+						   (click)="dobPicker.open()"
+						   [max]="maxDate"
+						   autocomplete="off"
+						   placeholder="Date" formControlName="PMD_Type_2_diabetes_date" />
+					<mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+					<mat-datepicker #dobPicker></mat-datepicker>
+				</mat-form-field>
+			</div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br>
+                When were you diagnosed with prediabetes?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div><br>
+                    <mat-radio-group formControlName="PMD_Type_2_prediabetes_status">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                      </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_Type_2_prediabetes_status').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+					<input matInput [matDatepicker]="dobPicker0"
+						   (click)="dobPicker0.open()"
+						   [max]="maxDate"
+						   autocomplete="off"
+						   placeholder="If yes, please specify date" formControlName="PMD_Type_2_prediabetes_date" />
+					<mat-datepicker-toggle matSuffix [for]="dobPicker0"></mat-datepicker-toggle>
+					<mat-datepicker #dobPicker0></mat-datepicker>
+				</mat-form-field>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br>
+                        In the last 12 months did you have a flu?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div><br>
+                    <mat-radio-group formControlName="PMD_lastmonths_flu">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                      </mat-radio-group>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						Were you diagnosed with COVID-19?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PMD_diagnosed_with_COVID_19">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+		</div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                Did you have any of the following symptoms of COVID-19 within the last three months?
+                    </label>
+                </div>
+            </div>
+			<div class="col-md-8 form-group">
+				<div>
+					<mat-radio-group formControlName="PMD_symptoms_COVID_19">
+						<mat-radio-button value="yes">Yes</mat-radio-button>
+						<mat-radio-button value="no">No</mat-radio-button>
+						<mat-radio-button value="dontknow">Don't Know</mat-radio-button>
+					</mat-radio-group>
+				</div>
+				<div class="row col-md-12" *ngIf="Mform.get('PMD_symptoms_COVID_19').value == 'yes'">
+					<div class="row col-md-12">
+						<div class="col-md-4 form-group">
+							<mat-form-field class="mat-form-field-fluid">
+								<input matInput [matDatepicker]="dobPicker1" (click)="dobPicker1.open()" [max]="maxDate"
+									autocomplete="off" placeholder="Date" formControlName="PMD_symptoms_COVID_19_date" />
+								<mat-datepicker-toggle matSuffix [for]="dobPicker1"></mat-datepicker-toggle>
+								<mat-datepicker #dobPicker1></mat-datepicker>
+							</mat-form-field>
+						</div>
+						<div class="col-md-4 form-group">
+							<mat-form-field class="mat-form-field-fluid">
+								<input matInput [matDatepicker]="dobPicker2" (click)="dobPicker2.open()" [max]="maxDate"
+									autocomplete="off" placeholder="End date" formControlName="PMD_symptoms_COVID_19_enddate" />
+								<mat-datepicker-toggle matSuffix [for]="dobPicker2"></mat-datepicker-toggle>
+								<mat-datepicker #dobPicker2></mat-datepicker>
+							</mat-form-field>
+						</div>
+						<div class="col-md-4 form-group"></div>
+					</div>
+					<div class="row col-md-12">
+						<br><small>If yes, please tick all that apply (you can tick more than one answer)</small>
+						<div class="col-md-6">
+							<div class="mat-form-field-fluid">
+								<mat-checkbox class="lab-mar-right-15" formControlName="PMD_headache">Headache</mat-checkbox><br>
+								<mat-checkbox class="lab-mar-right-15" formControlName="PMD_bodytemperatur">Body temperature >38*C
+								</mat-checkbox><br>
+								<mat-checkbox class="lab-mar-right-15" formControlName="PMD_cough">Cough</mat-checkbox><br>
+								<mat-checkbox class="lab-mar-right-15" formControlName="PMD_muscle_pain">Muscle pain </mat-checkbox>
+								<mat-checkbox class="lab-mar-right-15" formControlName="PMD_shortness_breath">Shortness of breath
+								</mat-checkbox><br>
+								<mat-checkbox class="lab-mar-right-15" formControlName="PMD_running_nose">Running nose
+								</mat-checkbox><br>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<mat-checkbox class="lab-mar-right-15" formControlName="PMD_sore_throat">Sore Throat</mat-checkbox><br>
+							<mat-checkbox class="lab-mar-right-15" formControlName="PMD_weakness">Weakness </mat-checkbox><br>
+							<mat-checkbox class="lab-mar-right-15" formControlName="PMD_lossof_smell">Loss of smell</mat-checkbox>
+							<br>
+							<mat-checkbox class="lab-mar-right-15" formControlName="PMD_diarrhea">Diarrhea (more than 3 stools in 24
+								hours) </mat-checkbox>
+							<mat-checkbox class="lab-mar-right-15" formControlName="PMD_nausea_vomiting">Nausea or Vomiting
+							</mat-checkbox><br>
+							<mat-checkbox class="lab-mar-right-15" formControlName="PMD_loss_taste">Loss of taste</mat-checkbox>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br/>
+					Have you received any vaccination in the past year?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PMD_vaccination">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_vaccination').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify year"
+                        formControlName="med_Vaccination_year" />
+				</mat-form-field>
+				<mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Name"
+                        formControlName="PMD_vaccination_details" />
+				</mat-form-field>
+
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br>
+                       Do you have any allergies?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div><br>
+                    <mat-radio-group formControlName="PMD_allergies">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+			</div>
+			<div class="col-md-2 form-group" *ngIf="Mform.get('PMD_allergies').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify"
+                        formControlName="PMD_allergies_details" />
+                </mat-form-field>
+			</div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+					Do you have any intolerance? (e.g. food or medication)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+				<mat-radio-group formControlName="PMD_intolerance" >
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+				</mat-radio-group>
+
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_intolerance').value == 'yes'">
+				<mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify year"
+                        formControlName="PMD_intolerance_details" />
+                </mat-form-field>
+            </div>
+       </div>
+       <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start"><br>
+                   Have you had any surgery?
+                </label>
+            </div>
+        </div>
+        <div class="col-md-6 form-group">
+            <div><br>
+                <mat-radio-group formControlName="PMD_surgery">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_surgery').value == 'yes'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="If yes, specify"
+                    formControlName="PMD_surgery_details" />
+            </mat-form-field>
+        </div>
+	</div>
+	<div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start"><br>
+					Who do you usually contact for health advice about your health? (you can tick more than one answer)
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 form-group">
+            <div>
+                <div class="row col-md-12">
+					<div class="col-md-6">
+						<div class="mat-form-field-fluid">
+							<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_noone">No one</mat-checkbox><br>
+							<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Dietitian">Dietitian</mat-checkbox><br>
+							<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Nurse">Nurse </mat-checkbox><br>
+							<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_GP">General Practitioner (GP) </mat-checkbox>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Pharmacist">Pharmacist </mat-checkbox><br>
+						<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Diabetes_specialist">Diabetes specialist  </mat-checkbox><br>
+						<mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_others">Other </mat-checkbox><br>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+	<div class="row col-md-12">
+		<div class="col-md-4">
+			<div class="kt-section">
+				<label align="start"><br>
+					Do you do an annual medical checkup?
+				</label>
+			</div>
+		</div>
+		<div class="col-md-6 form-group">
+			<div><br>
+				<mat-radio-group formControlName="health_annual_medical_checkup">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-2 form-group1" *ngIf="Mform.get('health_annual_medical_checkup').value == 'yes'" >
+			<mat-form-field class="mat-form-field-fluid">
+				<input matInput placeholder="If yes, specify year"
+					formControlName="health_annual_medical_checkup_year" />
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="row col-md-12">
+		<div class="col-md-4">
+			<div class="kt-section">
+				<label align="start"><br>
+					Do you currently smoke cigarettes?
+				</label>
+			</div>
+		</div>
+		<div class="col-md-8 form-group">
+			<div>
+				<mat-radio-group formControlName="PSS_current_smoker">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+				</mat-radio-group>
+			</div>
+			<div *ngIf="Mform.get('PSS_current_smoker').value == 'yes'">
+				If yes, How many per day?<br>
+				<mat-radio-group formControlName="PSS_avg_cigarettes_perday">
+					<mat-radio-button  value="1-4">1-4</mat-radio-button>
+					<mat-radio-button  value="5-14">5-14</mat-radio-button>
+					<mat-radio-button  value="15-24">15-24</mat-radio-button>
+					<mat-radio-button  value="25-34">25-34</mat-radio-button>
+					<mat-radio-button  value="35-44">35-44</mat-radio-button>
+					<mat-radio-button  value="45+">45+</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+        </form>
+        </div>

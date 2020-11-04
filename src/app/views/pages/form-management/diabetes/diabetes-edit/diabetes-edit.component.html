@@ -1,0 +1,112 @@
+<kt-portlet>
+	<kt-portlet-header [title]="'Diabetes'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+		<ng-container ktPortletTools>
+			<a  [routerLink]="[ formId ? '../../' : '../']"   class="btn btn-secondary kt-margin-r-10" mat-raised-button
+				matTooltip="Back to the forms list">
+				<i class="la la-arrow-left"></i>
+				<span class="kt-hidden-mobile">Back</span>
+			</a>
+			<a href="javascript:;" class="btn btn-primary kt-margin-r-10" color="primary" (click)="onSubmit()"
+				mat-raised-button matTooltip="Save & Continue">
+				<i class="la la-save"></i>
+				<span class="kt-hidden-mobile">Save</span>
+			</a>
+
+		</ng-container>
+	</kt-portlet-header>
+
+	<kt-portlet-body>
+
+		<mat-tab-group [(selectedIndex)]="selectedTab">
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user"></i>
+					Personal Details
+				</ng-template>
+				<kt-diabetes-personal-details [disableInput]="isPrint"   [formData]="formId"  #appDiabetesPersonalDetails></kt-diabetes-personal-details>
+			</mat-tab>
+            <mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>
+					Medical Details
+				</ng-template>
+					<kt-diabetes-medical-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalDetails></kt-diabetes-medical-details>
+			</mat-tab>
+            <mat-tab  >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+                    Diabetes Self Management
+                </ng-template>
+                    <kt-diabetes-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appDiabetesDiabetesSelfManagement></kt-diabetes-diabetes-self-management>
+            </mat-tab>
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-bicycle"></i>
+					Participant’s Physical Activity
+				</ng-template>
+					<kt-diabetes-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalMeasurements></kt-diabetes-physical-measurements>
+            </mat-tab>
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-coffee"></i>
+					Participant’s Diet
+				</ng-template>
+					<kt-diabetes-diet [disableInput]="isPrint"   [formData]="formId" #appDiabetesDietComponent></kt-diabetes-diet>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>
+					Medical History
+				</ng-template>
+					<kt-diabetes-medical-history [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalHistoryComponent></kt-diabetes-medical-history>
+				</mat-tab>
+
+
+			<mat-tab  >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+                    Medical Details(If Type 2 Diabetic)
+                </ng-template>
+                    <kt-diabetes-medication2 [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedication2Component></kt-diabetes-medication2>
+			</mat-tab>
+             <mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>
+					Medication(Type 2 Diabetes Patient)
+				</ng-template>
+					<kt-diabetes-medication [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicationDetails></kt-diabetes-medication>
+				</mat-tab>
+
+				<mat-tab >
+					<ng-template mat-tab-label>
+						<i class="mat-tab-label-icon fa fa-pills"></i>
+						Metformin
+					</ng-template>
+						<kt-diabetes-metformin [disableInput]="isPrint"   [formData]="formId" #appDiabetesMetformin></kt-diabetes-metformin>
+					</mat-tab>
+					<mat-tab >
+						<ng-template mat-tab-label>
+							<i class="mat-tab-label-icon fa fa-dna"></i>
+							Cognitive Test Result
+						</ng-template>
+							<kt-diabetes-cognitive-test-result [disableInput]="isPrint"   [formData]="formId" #appDiabetesCognitiveTestResult></kt-diabetes-cognitive-test-result>
+					</mat-tab>
+					<mat-tab >
+						<ng-template mat-tab-label>
+							<i class="mat-tab-label-icon fa fa-dna"></i>
+							Laboratory Details
+						</ng-template>
+							<kt-diabetes-laboratory-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesClinicalDetails></kt-diabetes-laboratory-details>
+					</mat-tab>
+					<mat-tab >
+						<ng-template mat-tab-label>
+							<i class="mat-tab-label-icon fa fa-procedures"></i>
+							Biochemical
+						</ng-template>
+							<kt-diabetes-biochemical [disableInput]="isPrint"   [formData]="formId" #appDiabetesBiochemical></kt-diabetes-biochemical>
+					</mat-tab>
+		</mat-tab-group>
+	</kt-portlet-body>
+</kt-portlet>

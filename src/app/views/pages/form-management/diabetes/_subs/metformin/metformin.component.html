@@ -1,0 +1,810 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-12 form-group">
+                <h6>
+                    Metformin Treatment
+                </h6>
+            </div>
+        </div>
+            <div class="form-group row">
+                <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">
+						How many oral antidiabetic medications the patient currently takes for (pre)diabetes?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+					<mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Metformin no of medications"
+                               formControlName="Metformin_antidiabetic_medications" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">
+                        What medication(s) the patient currently takes for (pre)diabetes?  (put all that apply)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3 form-group">
+                <div>
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Medication 1 name"
+                               formControlName="Metformin_Medication1_name" />
+                    </mat-form-field>
+                </div>
+			</div>
+			<div class="col-md-3 form-group">
+                <div>
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Medication 1 date"
+                               formControlName="Metformin_Medication1_date" />
+                    </mat-form-field>
+                </div>
+			</div>
+			<div class="col-md-3 form-group">
+                <div>
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Dialy dose"
+                               formControlName="Metformin_Medication1_dos" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+		</div>
+		<div class="form-group  row">
+			<div class="row col-md-12">
+		<div class="col-md-3">
+			<div class="kt-section">
+
+			</div>
+		</div>
+		<div class="col-md-3 form-group">
+			<div>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="Medication 2 name"
+						   formControlName="Metformin_Medication2_name" />
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="col-md-3 form-group">
+			<div>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="Medication 2 date"
+						   formControlName="Metformin_Medication2_date" />
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="col-md-3 form-group">
+			<div>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="Dialy dose"
+						   formControlName="Metformin_Medication2_dos" />
+				</mat-form-field>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<div class="form-group  row">
+		<div class="row col-md-12">
+	<div class="col-md-3">
+		<div class="kt-section">
+
+		</div>
+	</div>
+	<div class="col-md-3 form-group">
+		<div>
+			<mat-form-field class="mat-form-field-fluid">
+				<input matInput placeholder="Medication 3 name"
+					   formControlName="Metformin_Medication2_name" />
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="col-md-3 form-group">
+		<div>
+			<mat-form-field class="mat-form-field-fluid">
+				<input matInput placeholder="Medication 3 date"
+					   formControlName="Metformin_Medication3_date" />
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="col-md-3 form-group">
+		<div>
+			<mat-form-field class="mat-form-field-fluid">
+				<input matInput placeholder="Dialy dose"
+					   formControlName="Metformin_Medication2_dos" />
+			</mat-form-field>
+		</div>
+	</div>
+</div>
+
+    </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						Did he/she STOP taking any medication in the past six months?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_Medication3_stop">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+				</div>
+
+					<div *ngIf="form.get('Metformin_Medication3_stop').value == 'yes'" >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="If yes, which medication(s) did you stop taking?"
+							   formControlName="Metformin_Medication_Name_Stop" />
+						</mat-form-field><br>
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Please specify the reasons?"
+							   formControlName="Metformin_Medication_Stop_Reason" />
+						</mat-form-field>
+					</div>
+
+            </div>
+        </div>
+
+        </div>
+           <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						What diabetic medication was stopped?  For what reason was it stopped?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="Name of medication"
+						   formControlName="Metformin_Medication_Name_Stop1" />
+					</mat-form-field>
+                </div>
+			</div>
+			<div class="col-md-4 form-group">
+                <div>
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="Reasons?"
+						   formControlName="Metformin_Medication_Stop_Reason1" />
+					</mat-form-field>
+                </div>
+            </div>
+        </div>
+
+		</div>
+		<div class="form-group  row">
+			<div class="row col-md-12">
+		<div class="col-md-4">
+			<div class="kt-section">
+			</div>
+		</div>
+		<div class="col-md-4 form-group">
+			<div>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="Name of medication"
+					   formControlName="Metformin_Medication_Name_Stop2" />
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="col-md-4 form-group">
+			<div>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="Reasons?"
+					   formControlName="Metformin_Medication_Stop_Reason2" />
+				</mat-form-field>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<div class="form-group  row">
+		<div class="row col-md-12">
+	<div class="col-md-4">
+		<div class="kt-section">
+		</div>
+	</div>
+	<div class="col-md-4 form-group">
+		<div>
+			<mat-form-field class="mat-form-field-fluid">
+				<input matInput placeholder="Name of medication"
+				   formControlName="Metformin_Medication_Name_Stop3" />
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="col-md-4 form-group">
+		<div>
+			<mat-form-field class="mat-form-field-fluid">
+				<input matInput placeholder="Reasons?"
+				   formControlName="Metformin_Medication_Stop_Reason3" />
+			</mat-form-field>
+		</div>
+	</div>
+</div>
+
+</div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+					Did he/she take all medication yesterday?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_medication_yesterday">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						Is metformin prescribed to this patient?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_prescribed">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						Does he/she takes metformin as prescribed by the doctor?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_prescribed_doctor">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+		</div>
+		<div class="form-group  row">
+			<div class="row col-md-12">
+				The following questions ask about your use of metformin medication(s) in the PAST WEEK.  For each question, please circle the answer that best describes your experience
+			</div>
+		</div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						How often the patient has to take this medication?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_how_often">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+						<mat-radio-button  value="no">No</mat-radio-button>
+						<mat-radio-button  value="no">I dont know</mat-radio-button>
+                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><strong>In the PAST WEEK:</strong>
+                        Did he/she take metformin?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_past_week">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+						<mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="not">It is not applicable to me</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						How many days did he/she take this medication?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_how_many">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2</mat-radio-button>
+						<mat-radio-button  value="3">3</mat-radio-button>
+						<mat-radio-button  value="4">4</mat-radio-button>
+                        <mat-radio-button  value="5">5</mat-radio-button>
+						<mat-radio-button  value="6">6</mat-radio-button>
+						<mat-radio-button  value="7">6</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						How many times a day did he/she usually take it? (Times a day )
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_how_many_time">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2</mat-radio-button>
+						<mat-radio-button  value="3">3</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						How much did he/she usually take each time?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+					<mat-radio-group formControlName="Metformin_usually">
+                        <mat-radio-button  value="0">0 Tablet</mat-radio-button>
+                        <mat-radio-button  value="1">1 Tablet</mat-radio-button>
+                        <mat-radio-button  value="2">2 Tablet</mat-radio-button>
+						<mat-radio-button  value="3">3 Tablet</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+						How many times did he/she MISSED taking it?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_missed">
+                        <mat-radio-button  value="0">0</mat-radio-button>
+                        <mat-radio-button  value="1">1</mat-radio-button>
+                        <mat-radio-button  value="2">2 </mat-radio-button>
+						<mat-radio-button  value="3">3 </mat-radio-button>
+						<mat-radio-button  value="4">4 </mat-radio-button>
+                        <mat-radio-button  value="5">5 </mat-radio-button>
+						<mat-radio-button  value="6">6 </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How well does this medication work for her/him?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_medication_work">
+                        <mat-radio-button  value="not">Does not work at all</mat-radio-button>
+                        <mat-radio-button  value="well">Moderately well </mat-radio-button>
+                        <mat-radio-button  value="very">Very well</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don’t know </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Does this medication bother the patient?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_medication_bother">
+                        <mat-radio-button  value="not">Not at all</mat-radio-button>
+                        <mat-radio-button  value="little">Bothers a little </mat-radio-button>
+                        <mat-radio-button  value="lot">Bothers a lot</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don’t know </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <strong>  Does he/she have any difficulties in any of the following areas? </strong> <br>
+                    <label align="start">
+                       It is hard to remember all the doses
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_hard_remember">
+                        <mat-radio-button  value="0times">None</mat-radio-button>
+                        <mat-radio-button  value="1time">A little </mat-radio-button>
+                        <mat-radio-button  value="2times">A lot</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                       It is hard to pay for this medication
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <mat-radio-group formControlName="Metformin_hard_remember">
+                    <mat-radio-button  value="0times">None</mat-radio-button>
+                    <mat-radio-button  value="1time">A little </mat-radio-button>
+                    <mat-radio-button  value="2times">A lot</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                      It is hard to get the refill on time
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="Metformin_hard_refill">
+                        <mat-radio-button  value="0times">None</mat-radio-button>
+                        <mat-radio-button  value="1time">A little </mat-radio-button>
+                        <mat-radio-button  value="2times">A lot</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                      I still get unwanted side effects from this medication
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div class="mat-form-field-fluid">
+                    <mat-radio-group formControlName="Metformin_side_effects">
+                        <mat-radio-button  value="0times">None</mat-radio-button>
+                        <mat-radio-button  value="1time">A little </mat-radio-button>
+                        <mat-radio-button  value="2times">A lot</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+                </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <label>This medication causes other concerns or problems
+                </label>
+            </div>
+                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-radio-group formControlName="Metformin_other_concerns">
+                        <mat-radio-button  value="0times">None</mat-radio-button>
+                        <mat-radio-button  value="1time">A little </mat-radio-button>
+                        <mat-radio-button  value="2times">A lot</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group  row">
+            <div class="row col-md-12">
+                In the past 2 weeks did she/he experience any of the below-mentioned symptoms of abdominal discomfort after
+                taking the metformin tablets? Please, tick appropriate option for each symptom.
+            </div>
+        </div>
+          <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Nausea
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="MetforminNausea">
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+                        <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+                        <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+                        <mat-radio-button  value="most">Most of the time</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="form-group  row">
+            <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start">
+                    Vomiting
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 form-group">
+            <div>
+                <mat-radio-group formControlName="MetforminVomiting">
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+                    <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+                    <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+                    <mat-radio-button  value="most">Most of the time</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="form-group  row">
+        <div class="row col-md-12">
+    <div class="col-md-4">
+        <div class="kt-section">
+            <label align="start">
+                Diarrhea
+            </label>
+        </div>
+    </div>
+    <div class="col-md-8 form-group">
+        <div>
+            <mat-radio-group formControlName="MetforminDiarrhea">
+                <mat-radio-button  value="no">No</mat-radio-button>
+                <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+                <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+                <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+                <mat-radio-button  value="most">Most of the time</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="form-group  row">
+    <div class="row col-md-12">
+<div class="col-md-4">
+    <div class="kt-section">
+        <label align="start">
+            Abdominal pain
+        </label>
+    </div>
+</div>
+<div class="col-md-8 form-group">
+    <div>
+        <mat-radio-group formControlName="MetforminAbdominal_pain">
+            <mat-radio-button  value="no">No</mat-radio-button>
+            <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="most">Most of the time</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+</div>
+
+</div>
+
+<div class="form-group  row">
+    <div class="row col-md-12">
+<div class="col-md-4">
+    <div class="kt-section">
+        <label align="start">
+            Bloating
+        </label>
+    </div>
+</div>
+<div class="col-md-8 form-group">
+    <div>
+        <mat-radio-group formControlName="MetforminBloating">
+            <mat-radio-button  value="no">No</mat-radio-button>
+            <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="most">Most of the time</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+</div>
+
+</div>
+
+<div class="form-group  row">
+    <div class="row col-md-12">
+<div class="col-md-4">
+    <div class="kt-section">
+        <label align="start">
+            Loss of appetite
+        </label>
+    </div>
+</div>
+<div class="col-md-8 form-group">
+    <div>
+        <mat-radio-group formControlName="MetforminLoss_appetite">
+            <mat-radio-button  value="no">No</mat-radio-button>
+            <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="most">Most of the time</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+</div>
+
+</div>
+
+<div class="form-group  row">
+    <div class="row col-md-12">
+<div class="col-md-4">
+    <div class="kt-section">
+        <label align="start">
+            Other (please, specify)
+        </label>
+    </div>
+</div>
+<div class="col-md-8 form-group">
+    <div>
+
+    </div>
+</div>
+</div>
+
+</div>
+
+<div class="form-group  row">
+    <div class="row col-md-12">
+<div class="col-md-4">
+    <div class="kt-section">
+        <label align="start">
+            Did the patient experience anorexia after taking the metformin tablets?
+        </label>
+    </div>
+</div>
+<div class="col-md-8 form-group">
+    <div>
+        <mat-radio-group formControlName="MetforminOther_anorexia">
+            <mat-radio-button  value="no">No</mat-radio-button>
+            <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="most">Most of the time</mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+</div>
+
+</div>
+
+            <!-- <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Have you quit smoking since 1 year ago?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_quit_smoking_since1year">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div> -->
+
+
+
+    </form>
+</div>

@@ -1,0 +1,2874 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-12 form-group">
+                <h6>
+                    Lifestyle Details
+                </h6>
+            </div>
+        </div>
+            <div class="form-group row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Overall, how would you rate your health during the past 4 weeks? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_overall_4weeks">
+                        <mat-radio-button  value="excellent">Excellent</mat-radio-button>
+                        <mat-radio-button  value="verygood">Very Good</mat-radio-button>
+                        <mat-radio-button  value="good">Good</mat-radio-button>
+                        <mat-radio-button  value="fair">Fair</mat-radio-button>
+                        <mat-radio-button  value="poor">Poor</mat-radio-button>
+                        <mat-radio-button  value="verypoor">Very Poor</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how much did physical health problems limit your usual physical activities (such as walking or climbing stairs)? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_physical_problem_4weeks">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="verylittle">Very little</mat-radio-button>
+                        <mat-radio-button  value="somewhat">Somewhat</mat-radio-button>
+                        <mat-radio-button  value="quitealot ">Quite a lot </mat-radio-button>
+                        <mat-radio-button  value="couldnotdophysicalactivities">Could not do physical activities</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how much difficulty did you have doing your daily work, both at home and away from home, because of your physical health?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_difficulty_4weeks">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="alittlebit">A little bit</mat-radio-button>
+                        <mat-radio-button  value="some">Some</mat-radio-button>
+                        <mat-radio-button  value="quitealot ">Quite a lot </mat-radio-button>
+                        <mat-radio-button  value="couldnotdodailywork">Could not do daily work </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+           <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How much bodily pain have you had during the past 4 weeks?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_body_pain_4weeks">
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                        <mat-radio-button  value="veryMild">Very Mild</mat-radio-button>
+                        <mat-radio-button  value="mild">Mild</mat-radio-button>
+                        <mat-radio-button  value="moderate">Moderate</mat-radio-button>
+                        <mat-radio-button  value="severe">Severe</mat-radio-button>
+                        <mat-radio-button  value="verysevere">Very Severe</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how much energy did you have?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_energy_4weeks">
+                        <mat-radio-button  value="verymuch">Very much</mat-radio-button>
+                        <mat-radio-button  value="quitealot">Quite a lot</mat-radio-button>
+                        <mat-radio-button  value="asome">Some</mat-radio-button>
+                        <mat-radio-button  value="alittle">A little</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how much did your physical health or emotional problems limit your usual social activities with family or friends? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_emotional_problems_4weeks">  
+                         <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="verylittle">Very little</mat-radio-button>
+                        <mat-radio-button  value="some">Some</mat-radio-button>
+                        <mat-radio-button  value="quitealot ">Quite a lot </mat-radio-button>
+                        <mat-radio-button  value="icouldnotdosocialactivities">I Could not do social activities</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how much have you been bothered by emotional problems (such as feeling anxious, depressed or irritable)?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_bothered_emotional_problems_4weeks">
+                        <mat-radio-button  value="notatallslightly">Not at all Slightly</mat-radio-button>
+                        <mat-radio-button  value="moderately">Moderately</mat-radio-button>
+                        <mat-radio-button  value="quitealot">Quite a lot</mat-radio-button>
+                        <mat-radio-button  value="extremely">Extremely</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how much did personal or emotional problems keep you from doing your usual work, school or other daily activities?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_bothered_emotional_problems_affect_4weeks">
+                    <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                    <mat-radio-button  value="verylittle">Very little</mat-radio-button>
+                    <mat-radio-button  value="some">Some</mat-radio-button>
+                    <mat-radio-button  value="quitealot ">Quite a lot </mat-radio-button>
+                    <mat-radio-button  value="icouldnotdodailyactivities">I Could not do daily activities</mat-radio-button>
+                </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks, how often did you brush your teeth at least twice a day? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_brushteethtwice_4weeks">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="rarely">Rarely</mat-radio-button>
+                        <mat-radio-button  value="usually">Usually</mat-radio-button>
+                        <mat-radio-button  value="always">Always</mat-radio-button>
+                        <mat-radio-button  value="notapplicable">Not applicable</mat-radio-button> 
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Did you notice any weight change in the past year?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_weight_change">
+                        <mat-radio-button  value="increased">Increased</mat-radio-button>
+                        <mat-radio-button  value="decrease">Decrease</mat-radio-button>
+                        <mat-radio-button  value="nochange">No change</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you on any special diet in the past 4 weeks?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_special_diet_4weeks">
+                        <mat-radio-button  value="Ketogenic">Ketogenic</mat-radio-button>
+                        <mat-radio-button  value="Paleo">Paleo</mat-radio-button>
+                        <mat-radio-button  value="intermittentfasting">Intermittent fasting</mat-radio-button>
+                        <mat-radio-button  value="calorierestriction">Calorie restriction</mat-radio-button>
+                        <mat-radio-button  value="other">Other</mat-radio-button>
+                        <mat-radio-button  value="iamnotondiet">I am not on diet</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks how often did you have bowel movements?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_bowel_movement_4weeks">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                        <mat-radio-button  value="morethanonceperday">More than once per day</mat-radio-button>
+                        
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks how often did you urinate? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_urinate_4weeks">
+                        <mat-radio-button  value="2-3timesperday">2-3 times per day</mat-radio-button>
+                        <mat-radio-button  value="4-6timesperday">4-6 times per day</mat-radio-button>
+                        <mat-radio-button  value="morethan8timesperday">More than 8 times per day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 4 weeks did you urinate during night? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_urinate_night_4weeks">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="Mform.get('health_urinate_night_4weeks').value =='yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If yes, how often?"
+                               formControlName="health_urinate_night_4weeks_often" />
+                    </mat-form-field> 
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+               During the past year, how often did you visit your primary care provider? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_advcontact">
+                        <mat-radio-button  value="0times">0 times</mat-radio-button>
+                        <mat-radio-button  value="1time">1 time</mat-radio-button>
+                        <mat-radio-button  value="2times">2 times</mat-radio-button>
+                        <mat-radio-button  value="3times">3 times</mat-radio-button>
+                        <mat-radio-button  value="4ormoretimes">4 or more times</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                   During the past 3 months, how many times did you visit the Emergency Room?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_emergency">
+                        <mat-radio-button  value="0times">0 times</mat-radio-button>
+                        <mat-radio-button  value="1time">1 time</mat-radio-button>
+                        <mat-radio-button  value="2times">2 times</mat-radio-button>
+                        <mat-radio-button  value="3times">3 times</mat-radio-button>
+                        <mat-radio-button  value="4ormoretimes">4 or more times</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        The reason was (check all that apply):
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div class="mat-form-field-fluid">
+                   
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_emergency_my_mental_health">My mental health</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_emergency_my_physical_health">My physical Health</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_emergency_my_diabetes_status">My Diabetes status</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_emergency_Non_applicable">Non applicable</mat-checkbox>
+                   
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the past 3 months, how many times were you admitted to a hospital? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_hospital">
+                        <mat-radio-button  value="0times">0 times</mat-radio-button>
+                        <mat-radio-button  value="1time">1 time</mat-radio-button>
+                        <mat-radio-button  value="2times">2 times</mat-radio-button>
+                        <mat-radio-button  value="3times">3 times</mat-radio-button>
+                        <mat-radio-button  value="4ormoretimes">4 or more times</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        The reason was (check all that apply):
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div class="mat-form-field-fluid">
+
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_hospital_my_mental_health">My mental health</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_hospital_my_physical_health">My physical Health</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_hospital_my_diabetes_status">My Diabetes status</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_hospital_Non_applicable">Non applicable</mat-checkbox>
+                   
+                </div>
+            </div>
+                </div>
+        </div>
+       
+        <div class="form-group row">
+
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <label> Who do you usually contact for health advice about your health? (you can tick more than one answer)
+                </label>
+            </div>
+                <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_noone">noone</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Dietitian">Dietitian</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Nurse">Nurse</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_GP">General Practitioner (GP)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Pharmacist">Pharmacist</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_Diabetes_specialist">Diabetes specialist</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="health_advice_others">Other, please specify:</mat-checkbox>
+                    <div *ngIf="Mform.get('health_advice_others').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Other, please specify:"
+                                       formControlName="health_advice_others_remarks" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+          <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you do an annual medical checkup?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="health_annual_medical_checkup">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group" *ngIf="Mform.get('health_annual_medical_checkup').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker"
+                           (click)="dobPicker.open()"
+                           [max]="maxDate"
+                           autocomplete="off"
+                           placeholder="Choose a Date Year" formControlName="health_annual_medical_checkuptxtdateyear" />
+                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #dobPicker></mat-datepicker>
+                    <!--<mat-hint align="start">Please enter-->
+                    <!--<strong>Date of Birth</strong> in 'mm/dd/yyyy' format</mat-hint>-->
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="form-group  row">
+            <div class="row col-md-12">
+            <div class="kt-section">
+                <label align="start">
+                    <h5>  Questions for Female Participants only</h5>
+                </label>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How old were you when (if) you got the first period?  
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="I was___________years old"
+                        formControlName="female_first_period_others" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="female_first_period">
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="ineverhadit">I never had it</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you currently in menopause?  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="female_menopause">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group" *ngIf="Mform.get('female_menopause').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, since when"
+                        formControlName="female_menopause_others" />
+                </mat-form-field>
+            </div>
+                </div>
+
+        </div>
+           <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How many days your period last? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="female_period_days">
+                        <mat-radio-button  value="days">Days</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="Mform.get('female_period_days').value =='days'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="If days,how many"
+                               formControlName="female_period_days_number" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often do you have periods? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="female_period_How_often">
+                        <mat-radio-button  value="oncepermonth">Once per month</mat-radio-button>
+                        <mat-radio-button  value="morethanoncepermonth">More than once per month</mat-radio-button>
+                        <mat-radio-button  value="every2-3months">Every 2-3 months</mat-radio-button>
+                        <mat-radio-button  value="every6months">Every 6 months</mat-radio-button>
+                        <mat-radio-button  value="otherpleasespecify">Other, please specify:</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group" *ngIf="Mform.get('female_period_How_often').value == 'otherpleasespecify'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder=""
+                        formControlName="female_period_How_often_others" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+           
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you still have your periods in regular time intervals?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="female_period_regular_time_intervals">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="col-md-2 form-group" *ngIf="Mform.get('female_period_regular_time_intervals').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker2"
+                    (click)="dobPicker2.open()"
+                    [max]="maxDate"
+                    autocomplete="off"
+                    placeholder="If yes, since when" formControlName="female_period_regular_time_intervals_yes_when" />
+             <mat-datepicker-toggle matSuffix [for]="dobPicker2"></mat-datepicker-toggle>
+             <mat-datepicker #dobPicker2></mat-datepicker>
+                 
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-2 form-group" *ngIf="Mform.get('female_period_regular_time_intervals').value == 'no'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If no"
+                        formControlName="female_period_regular_time_intervals_no_when" />
+                </mat-form-field>
+            </div>
+        </div>
+        </div>
+              <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"><br>
+                        Are you currently pregnant?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div><br>
+                    <mat-radio-group formControlName="female_pregnant">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row col-md-12" *ngIf="Mform.get('female_pregnant').value == 'yes'">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        If yes, specify year When 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group" *ngIf="Mform.get('female_pregnant').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker3"
+                    (click)="dobPicker3.open()"
+                    [max]="maxDate"
+                    autocomplete="off"
+                    placeholder="Date:" formControlName="female_pregnant_when" />
+             <mat-datepicker-toggle matSuffix [for]="dobPicker3"></mat-datepicker-toggle>
+             <mat-datepicker #dobPicker3></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group" *ngIf="Mform.get('female_pregnant').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Year"
+                        formControlName="female_pregnant_when_year" />
+                </mat-form-field>
+            </div>
+       </div>
+
+       </div>
+
+       
+
+
+    <div class="form-group  row">
+                <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start"><br>
+                    Are you currently taking the birth control medications?  
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 form-group">
+            <div><br>
+                <mat-radio-group formControlName="female_birth_control">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+       
+                 </div>
+        <div class="form-group row col-md-12" *ngIf="Mform.get('female_birth_control').value == 'yes'">
+           <div class="col-md-4">
+               <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="If yes, since when"
+                    formControlName="female_birth_control_when" />
+            </mat-form-field>
+           </div>
+           <div class="col-md-4 form-group" *ngIf="Mform.get('female_birth_control').value == 'yes'" >
+               <mat-form-field class="mat-form-field-fluid">
+                   <input matInput placeholder="Which medication"
+                       formControlName="female_birth_control_Which_medication" />
+               </mat-form-field>
+           </div>
+           <div class="col-md-4 form-group" *ngIf="Mform.get('female_birth_control').value == 'yes'" >
+               <mat-form-field class="mat-form-field-fluid">
+                   <input matInput placeholder="Dose"
+                       formControlName="female_birth_control_dose" />
+               </mat-form-field>
+           </div>
+        </div>
+    </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Do you have excessive body or facial hair?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="female_facial_hair">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+           <div class="col-md-2 form-group" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder="FG scoring system points________"
+                    formControlName="female_fg_points" />
+            </mat-form-field>
+            </div>
+        </div>
+            </div>
+        <div class="form-group  row">
+            <div class="row col-md-12">
+            <div class="kt-section">
+                <label align="start">
+       <h5> Participant’s Physical Activity*</h5>
+          </label>
+            </div>
+
+             </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the last 7 days, on how many days did you do vigorous physical activities like heavy lifting, digging, aerobics, or fast bicycling?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_vigorous_physical_activities">
+                        <mat-radio-button  value="daysperweek">Days per week:</mat-radio-button>
+                        <mat-radio-button  value="novigorousphysicalactivities">No vigorous physical activities</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+           <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_vigorous_physical_activities').value == 'daysperweek'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_vigorous_physical_activities_days_per_week" />
+            </mat-form-field>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How much time did you usually spend doing vigorous physical activities on one of those days?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_vigorous_physical_activities_time">
+                        <mat-radio-button  value="hoursperday">Hours per day:</mat-radio-button>
+                        <mat-radio-button  value="minutesperday">Minutes per day:</mat-radio-button>
+                        <mat-radio-button  value="donotknownotsure">Don’t know/not sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+           <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_vigorous_physical_activities_time').value == 'hoursperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_vigorous_physical_activities_hours" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_vigorous_physical_activities_time').value == 'minutesperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_vigorous_physical_activities_min" />
+            </mat-form-field>
+        </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis?  Do not include walking.
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_moderate_physical_activities">
+                        <mat-radio-button  value="daysperweek">Days per week:</mat-radio-button>
+                        <mat-radio-button  value="nomoderatephysicalactivities">No moderate physical activities</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How much time did you usually spend doing moderate physical activities on one of those days?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_moderate_physical_activities_time">
+                        <mat-radio-button  value="hoursperday">Hours per day:</mat-radio-button>
+                        <mat-radio-button  value="minutesperday">Minutes per day:</mat-radio-button>
+                        <mat-radio-button  value="donotknownotsure">Don’t know/not sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+           <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_moderate_physical_activities_time').value == 'hoursperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_moderate_physical_activities_hours" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_moderate_physical_activities_time').value == 'minutesperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_moderate_physical_activities_min" />
+            </mat-form-field>
+        </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the last 7 days, on how many days did you walk for at least 10 minutes at a time?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_walk">
+                        <mat-radio-button  value="daysperweek">Days per week</mat-radio-button>
+                        <mat-radio-button  value="nowalking">No walking</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_walk').value == 'daysperweek'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder=""
+                        formControlName="PPA_walk_days" />
+                </mat-form-field>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How much time did you usually spend walking on one of those days?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_walk_time">
+                        <mat-radio-button  value="hoursperday">Hours per day:</mat-radio-button>
+                        <mat-radio-button  value="minutesperday">Minutes per day:</mat-radio-button>
+                        <mat-radio-button  value="donotknownotsure">Don’t know/not sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+           <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_walk_time').value == 'hoursperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_walk_time_hours" />
+            </mat-form-field>
+        </div>
+        <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_walk_time').value == 'minutesperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_walk_time_min" />
+            </mat-form-field>
+        </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the last 7 days, how much time did you spend sitting on a week day?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_sit">
+                        <mat-radio-button  value="hoursperday">Hours per day:</mat-radio-button>
+                        <mat-radio-button  value="minutesperday">Minutes per day:</mat-radio-button>
+                        <mat-radio-button  value="donotknownotsure">Don’t know/not sure</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+           <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_sit').value == 'hoursperday'" >
+            <mat-form-field class="mat-form-field-fluid">
+                <input matInput placeholder=""
+                    formControlName="PPA_sit_hours" />
+            </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PPA_sit').value == 'minutesperday'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder=""
+                        formControlName="PPA_sit_min" />
+                </mat-form-field>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On how many of the last 7 days did you work? 
+                    </label>
+                </div>
+            </div>
+            
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Days"
+                           formControlName="PPA_work_days" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group">
+                <div>
+                    <mat-radio-group formControlName="PPA_work">
+                        <mat-radio-button  value="idonotwork ">I don’t work </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Over the last 7 days, what time did you usually get into bed for the purpose of sleep on the night before a typical work day?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Hour"
+                           formControlName="PPA_getintobed_hour" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Minute"
+                           formControlName="PPA_getintobed_minute" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="AM/PM"
+                           formControlName="PPA_getintobed_AMPM" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Over the last 7 days, what time did you usually get out of bed on workdays?
+                     </label>
+                </div>
+            </div>
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Hour"
+                           formControlName="PPA_getoutbed_hour" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Minute"
+                           formControlName="PPA_getoutbed_minute" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="AM/PM"
+                           formControlName="PPA_getoutbed_AMPM" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Over the last 7 days, what time did you usually get into bed for the purpose of sleep on the night before a typical work day?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Hour"
+                           formControlName="PPA_startwork_hour" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Minute"
+                           formControlName="PPA_startwork_minute" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="AM/PM"
+                           formControlName="PPA_startwork_AMPM" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Over the last 7 days, what time did you usually leave work?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Hour"
+                           formControlName="PPA_leavework_hour" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Minute"
+                           formControlName="PPA_leavework_minute" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="AM/PM"
+                           formControlName="PPA_leavework_AMPM" />
+                </mat-form-field>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        For the next few questions, please only consider your time at work. As a reminder, this may include working in an office, telecommuting or working from home, or doing volunteer work.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On your workdays over the last 7 days, what percentage of your work hours was spent at:   (Must total 100%)
+
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Your desk (%):"
+                           formControlName="PPA_workhours_yourdeskperc" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-4 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Away from your desk (%):"
+                           formControlName="PPA_workhours_awaydeskperc" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On your workdays over the last 7 days, when you were at work AND at your desk, how much time did you spend:
+(Must total 100%)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Sitting (%)(on a chair or on ball):"
+                           formControlName="PPA_workhours_yourdeskperc_sitting" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Standing (%)(includes still or fidgeting):"
+                           formControlName="PPA_workhours_yourdeskperc_standing" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 kt-margin-bottom-20-mobile">
+               <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Moving (%)(e.g. pacing about, treadmill desk, pedal desk):"
+                           formControlName="PPA_workhours_yourdeskperc_moving" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On your workdays over the last 7 days, when you were at work but AWAY from your desk (e.g., lunch break, meetings), how much time did you spend: (Must total 100%)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Sitting (%):"
+                           formControlName="PPA_workhours_awaydeskperc_sitting" />
+                </mat-form-field>
+            </div> 
+            <div class="col-md-3 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Standing (%):"
+                           formControlName="PPA_workhours_awaydeskperc_standing" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 kt-margin-bottom-20-mobile">
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Moving (%)"
+                           formControlName="PPA_workhours_awaydeskperc_moving" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        The next few questions refer specifically to your time spent sitting or reclining during NONWORK  HOURS ON WORKDAYS (i.e., before and after work) and on NONWORK DAYS in the last 7 days.
+For each of the activities only count the time where this was your main activity; for example if you are watching TV and sitting for a meal, count it as TV time or a meal but not as both.
+                     </label>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the past 7 days, please estimate the average time per day that you spent sitting to travel to or from places.
+Do not include any time you were standing up while travelling or waiting. If you spent sitting for traveling as part of your work, such as being a taxi driver, this should have been included in the question about sitting for work so do not report it here.
+                    </label>
+                </div>
+            </div>
+            
+            <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_transport_nonworkhours_workdays">Non-work hours on workdays: </mat-checkbox>
+                
+                <div *ngIf="Mform.get('PPA_sit_transport_nonworkhours_workdays').value"  class="dis-con">
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Hours:"
+                                   formControlName="PPA_sit_transport_nonworkhours_hours" />
+                        </mat-form-field>
+                    </div>
+                     <div class="col-md-1 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Minutes:"
+                                       formControlName="PPA_sit_transport_nonworkhours_mininutes" />
+                            </mat-form-field>
+                        </div>
+           
+                 </div>
+                <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_transport_nonworkdays">Non-Workdays:</mat-checkbox>
+            
+                <div *ngIf="Mform.get('PPA_sit_transport_nonworkdays').value"  class="dis-con">
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Hours:"
+                                   formControlName="PPA_sit_transport_nonwork_hours" />
+                        </mat-form-field>
+                    </div>
+               
+                        <div class="col-md-1 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Minutes:"
+                                       formControlName="PPA_sit_transport_nonwork_mininutes" />
+                            </mat-form-field>
+                        </div>
+           
+                </div>
+                 </div>
+
+        </div>
+             <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the past 7 days, please estimate the average time per day that you spent sitting while watching TV 
+                        or videos/DVDs. This is when it was the main activity that you were doing; for example you would not include time when the television was switched on and you were preparing a meal.
+                    </label>
+                </div>
+            </div>
+            <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_tv_nonworkhours_workdays">Non-work hours on workdays: </mat-checkbox>
+                
+                <div *ngIf="Mform.get('PPA_sit_tv_nonworkhours_workdays').value"  class="dis-con">
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Hours:"
+                                   formControlName="PPA_sit_tv_nonworkhours_hours" />
+                        </mat-form-field>
+                    </div>
+                     <div class="col-md-1 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Minutes:"
+                                       formControlName="PPA_sit_tv_nonworkhours_mininutes" />
+                            </mat-form-field>
+                        </div>
+           
+                 </div>
+                <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_tv_nonworkdays">Non-Workdays:</mat-checkbox>
+            
+                <div *ngIf="Mform.get('PPA_sit_tv_nonworkdays').value"  class="dis-con">
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Hours:"
+                                   formControlName="PPA_sit_tv_nonwork_hours" />
+                        </mat-form-field>
+                    </div>
+               
+                        <div class="col-md-1 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Minutes:"
+                                       formControlName="PPA_sit_tv_nonwork_mininutes" />
+                            </mat-form-field>
+                        </div>
+           
+                </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the past 7 days, please estimate the average time per day that you spent sitting while using computer. For example, include time spent playing any PlayStation, Nintendo, Xbox, computer or handheld console games, and time spent on internet activities.
+Do not include time spent doing paid work on the computer as this should have been included in the previous questions about sitting at work.
+Sitting while using computer, internet, or electronic games:
+                     </label>
+                </div>
+            </div>
+            <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_computer_nonworkhours_workdays">Non-work hours on workdays: </mat-checkbox>
+                
+                <div *ngIf="Mform.get('PPA_sit_computer_nonworkhours_workdays').value"  class="dis-con">
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Hours:"
+                                   formControlName="PPA_sit_computer_nonworkhours_hours" />
+                        </mat-form-field>
+                    </div>
+                     <div class="col-md-1 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Minutes:"
+                                       formControlName="PPA_sit_computer_nonworkhours_mininutes" />
+                            </mat-form-field>
+                        </div>
+           
+                 </div>
+                <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_computer_nonworkdays">Non-Workdays:</mat-checkbox>
+            
+                <div *ngIf="Mform.get('PPA_sit_computer_nonworkdays').value"  class="dis-con">
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Hours:"
+                                   formControlName="PPA_sit_computer_nonwork_hours" />
+                        </mat-form-field>
+                    </div>
+               
+                        <div class="col-md-1 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder="Minutes:"
+                                       formControlName="PPA_sit_computer_nonwork_mininutes" />
+                            </mat-form-field>
+                        </div>
+           
+                </div>
+                </div>
+        </div>
+
+        <div class="form-group  row">
+            <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start">
+                    We are interested in any other sitting or lying down that you may have done during your waking hours in the last week that you have not already told us about. For example, this could include sitting for reading or hobbies, socializing with friends or family including time on the telephone, eating meals, or listening to music.
+                    In the past 7 days, please estimate the average time per day that you spent sitting NOT including sitting for work, transport, television viewing, or computer use that you have mentioned in the previous answers.
+                    Sitting for other purposes:
+                 </label>
+            </div>
+        </div>
+        <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_others_nonworkhours_workdays">Non-work hours on workdays: </mat-checkbox>
+            
+            <div *ngIf="Mform.get('PPA_sit_others_nonworkhours_workdays').value"  class="dis-con">
+                <div class="col-md-1 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Hours:"
+                               formControlName="PPA_sit_others_nonworkhours_hours" />
+                    </mat-form-field>
+                </div>
+                 <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Minutes:"
+                                   formControlName="PPA_sit_others_nonworkhours_mininutes" />
+                        </mat-form-field>
+                    </div>
+       
+             </div>
+            <mat-checkbox  class="lab-mar-right-15"  formControlName="PPA_sit_others_nonworkdays">Non-Workdays:</mat-checkbox>
+        
+            <div *ngIf="Mform.get('PPA_sit_others_nonworkdays').value"  class="dis-con">
+                <div class="col-md-1 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Hours:"
+                               formControlName="PPA_sit_others_nonwork_hours" />
+                    </mat-form-field>
+                </div>
+           
+                    <div class="col-md-1 form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Minutes:"
+                                   formControlName="PPA_sit_others_nonwork_mininutes" />
+                        </mat-form-field>
+                    </div>
+       
+            </div>
+            </div>
+    </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                    Participant’s Diet<br/>
+                    Following questions are adopted from the UK Diabetes and Diet Questionnaire (UKDDQ), Version 1.91 25.09.2015.© The University of Bristol, 2015 (England, C.Y. et al, Public Health Nutrition, 20(2), 191-199, 2016.)
+                    <br/><strong> Think about your diet over the last MONTH. Please tick or circle the answer that best applies to you.</strong>
+                     </label>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat a portion of vegetables? (Include fresh, tinned and frozen vegetables.                                                            
+                        <br/> A portion is 80g (see the back sheet for what this looks like).  
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_vegetables">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="onceaweekorlessoften">Once a week or less often</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        
+                        <mat-radio-button  value="1-2timesaday">1-2 times a day</mat-radio-button>
+                        <mat-radio-button  value="3ormoretimesaday">3 or more times a day</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat a portion of fruit? (Include fresh, frozen, tinned and dried fruit. Do not count fruit juices. A portion is 80g (see the back sheet for what this looks like).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_fruit">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="onceaweekorlessoften">Once a week or less often</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        
+                        <mat-radio-button  value="1-2timesaday">1-2 times a day</mat-radio-button>
+                        <mat-radio-button  value="3ormoretimesaday">3 or more times a day</mat-radio-button>  
+                    
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat a cake, a sweet pastry like a Danish pastry, a donut or a sweet biscuit?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_cake">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="onceaweekorlessoften">Once a week or less often</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        
+                        <mat-radio-button  value="1-2timesaday">1-2 times a day</mat-radio-button>
+                        <mat-radio-button  value="3ormoretimesaday">3 or more times a day</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you drink sugary drinks? (Include non-diet fizzy drinks, squashes, mixers, energy drinks, fruit juices or coffee, tea or other hot drinks with sugar or flavored syrups).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_sugary_drinks">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="onceaweekorlessoften">Once a week or less often</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        
+                        <mat-radio-button  value="1-2timesaday">1-2 times a day</mat-radio-button>
+                        <mat-radio-button  value="3ormoretimesaday">3 or more times a day</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you use full-fat spread (butter or a full fat margarine) on your bread, potatoes or vegetables?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_fullfat_spread">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="onceaweekorlessoften">Once a week or less often</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        
+                        <mat-radio-button  value="1-2timesaday">1-2 times a day</mat-radio-button>
+                        <mat-radio-button  value="3ormoretimesaday">3 or more times a day</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat full-fat cheese? Include cheese in sandwiches, on biscuits, in sauces and when used as a topping. (Full fat cheeses include hard cheeses like cheddar, blue cheeses and soft cheeses like brie or cream cheese or full-fat goat cheeses.)</label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_fullfat_cheese">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat processed meat? Include processed meat in sandwiches, ready meals and if eaten as a snack. (Processed meat includes foods like sausages or salami).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_processed_meat">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat savory foods like crisps, corn chips, corn puffs, salted nuts or Bombay mix?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_savory_food">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat a savory pastry? (Think about food like pies, pasties, samosas, sausage rolls).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_savory_pastry">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat 'fast foods' from a take-away or in a restaurant? (Think about foods like burgers, fish and chips, fried chicken, donor kebabs, pizza, fried rice or curries with cream or ghee.)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_fast_food">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat by ordering from a take-away or in a restaurant? (Think about foods other than 'fast foods', for example “all you can eat buffet”, à la carte restaurants, …)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_by_ordering">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often do you prepare your meals at home? (Think about breakfast, lunch, and dinner).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_meal_at_home">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat pudding or dessert, apart from fruit, with your meals?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_pudding">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-5timesaweek">2-5 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat oily fish? (Think about fresh or tinned salmon, trout, sardine, mackerel, pilchards, herring or red mullet, or fresh tuna).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_oilyfish">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                       <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="twiceormoretimesaday">Twice or more times a day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you have 3 or more regular meals in a day? (Include light meals like a sandwich or a soup and roll; Don’t include snack times when you ate only a biscuit or cake or a piece of fruit or vegetable sticks or a packet of crisps or piece of cheese).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_regular_meals">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat breakfast (more than just a drink or one or two sweet biscuits) within about 2 hours of waking?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_breakfast">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you 'snack' or 'pick' on high-fat or high-sugar foods between meals? (Think about food like biscuits, chocolate, cakes, crisps, nuts and cheese).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_snack_between_meals">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="5-6timesaweek">5-6 times a week </mat-radio-button>
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                         </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat a portion of bread? (Include bread in sandwiches and wraps. A portion of bread is 1 slice of bread, a bread roll, half a baguette, a bagel, a tortilla wrap, a small naan, a chapatti or a paratha) </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_portion_bread">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="onceaweekorlessoften">Once a week or less often</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-6 times a week</mat-radio-button>
+                        <mat-radio-button  value="1-2timesaday">1-2 times a day</mat-radio-button>
+                        
+                        <mat-radio-button  value="3-4timesaday">3-4 times a day</mat-radio-button>
+                        <mat-radio-button  value="morethan4timesaday">more than 4 times a day</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        If you ate bread how often did you choose higher fiber breads? (Breads that are high in fiber include whole meal, granary, multi-grain or rye breads. If you follow a gluten free diet include high fiber gluten free breads)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_highfiber_bread">
+                        <mat-radio-button  value="alloftime">All of time</mat-radio-button>
+                        <mat-radio-button  value="mostoftime">Most of time</mat-radio-button>
+                        <mat-radio-button  value="abouthalfthetime">About half the time</mat-radio-button>
+                        <mat-radio-button  value="lessthanhalfthetime">Less than half the time</mat-radio-button>
+                        
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="ididnoteatbread">I did not eat bread</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often did you eat a bowl of breakfast cereal, porridge or muesli?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_bowl_breakfast">
+                        <mat-radio-button  value="neverorveryrarely">Never or very rarely</mat-radio-button>
+                        <mat-radio-button  value="lessthanonceaweek">Less than once a week</mat-radio-button>
+                        <mat-radio-button  value="onceaweek">Once a week</mat-radio-button>
+                        <mat-radio-button  value="2-4timesaweek">2-4 times a week</mat-radio-button>
+                        <mat-radio-button  value="nearlyeverydayordaily">Nearly every day or daily</mat-radio-button>
+                        
+                        <mat-radio-button  value="twiceormoreperday">Twice or more per day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        If you ate breakfast cereal how often did you choose higher fiber cereals? (Cereals that are high in fiber include porridge, muesli, Weetabix, Shredded Wheat, multi- grain cereals and wheat or oat bran cereals).
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_eat_bowl_highfiber">
+                        <mat-radio-button  value="alloftime">All of time</mat-radio-button>
+                        <mat-radio-button  value="mostoftime">Most of time</mat-radio-button>
+                        <mat-radio-button  value="abouthalfthetime">About half the time</mat-radio-button>
+                        <mat-radio-button  value="lessthanhalfthetime">Less than half the time</mat-radio-button>
+                        
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="ididnoteatbread">I did not eat cereal</mat-radio-button>  
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        What type of milk did you usually use, if any?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_milk_type">
+                        <mat-radio-button  value="fullfat">Full fat (cow, goat or sheep)</mat-radio-button>
+                        <mat-radio-button  value="semiskimmed">Semi-skimmed (cow, goat or sheep)</mat-radio-button>
+                        <mat-radio-button  value="skimmed">Skimmed (cow, goat or sheep)</mat-radio-button>
+                        <mat-radio-button  value="sometimesfullfatskimmedsemi-skimmed">Sometimes full fat, sometimes skimmed or semi-skimmed</mat-radio-button>
+                        
+                        <mat-radio-button  value="soyaoatriceorothernon-dairymilk">Soya, oat, rice or other non-dairy milk</mat-radio-button>
+                        <mat-radio-button  value="otherpleasespecify">Other</mat-radio-button>  
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-md-4 form-group" *ngIf="Mform.get('PD_milk_type').value == 'otherpleasespecify'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Other"
+                            formControlName="PD_milk_type_others" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Are you concerned about your weight?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PD_weight_concern">
+                        <mat-radio-button  value="iamnotconcernedaboutmyweight">I am not concerned about my weight</mat-radio-button>
+                        <mat-radio-button  value="iamlittleconcernedaboutmyweight">I am a little concerned about my weight</mat-radio-button>
+                        <mat-radio-button  value="iammoderatelyconcernedaboutmyweight">I am moderately concerned about my weight</mat-radio-button>
+                        <mat-radio-button  value="iamveryconcernedaboutmyweight">I am very concerned about my weight</mat-radio-button>
+                         
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="form-group  row">
+            <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start">
+                    How important is it to you to change your diet?
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 form-group">
+            <div>
+                <mat-radio-group formControlName="PD_important_change_diet">
+                    <div class="col-md-12">
+                            <label align="start">
+                                Not at all important 
+                            </label>
+                    <mat-radio-button  value="0">0</mat-radio-button>
+                    <mat-radio-button  value="3">3</mat-radio-button>
+                    <mat-radio-button  value="5">5</mat-radio-button>
+                 </div>
+
+                    <div class="col-md-8">
+                        <div class="kt-section">
+                            <label align="start">
+                                Extremely important
+                            </label>
+                    <mat-radio-button  value="7">7</mat-radio-button>
+                    <mat-radio-button  value="10">10</mat-radio-button>
+                    </div>
+                </div>
+                     
+                </mat-radio-group>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="form-group  row">
+    <div class="col-md-4">
+        <div class="kt-section">
+            <label align="start">
+                How confident are you that you could change your diet?
+
+            </label>
+        </div>
+    </div>
+    <div class="col-md-8 form-group">
+        <div>
+            <mat-radio-group formControlName="PD_confident_change_diet">
+                <div class="col-md-12">
+                        <label align="start">
+                            Not at all important 
+                        </label>
+                <mat-radio-button  value="0">0</mat-radio-button>
+                <mat-radio-button  value="3">3</mat-radio-button>
+                <mat-radio-button  value="5">5</mat-radio-button>
+             </div>
+
+                <div class="col-md-8">
+                    <div class="kt-section">
+                        <label align="start">
+                            Extremely important
+                        </label>
+                <mat-radio-button  value="7">7</mat-radio-button>
+                <mat-radio-button  value="10">10</mat-radio-button>
+                </div>
+            </div>
+                 
+            </mat-radio-group>
+        </div>
+    </div>
+</div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                 <h4>Participant’s Stress Exposure*</h4>     <strong> The questions in this scale ask you about your feelings and thoughts during THE LAST MONTH.</strong> 
+                    </label>
+                </div>
+            </div>
+        </div>       
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the last month, how often have you felt that you were unable to control the important things in your life?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_unable_to_control">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="almostnever">Almost Never</mat-radio-button>
+                        <mat-radio-button  value="sometimes">Sometimes</mat-radio-button>
+                        <mat-radio-button  value="fairlyOften">Fairly Often</mat-radio-button>
+                        <mat-radio-button  value="veryOften">Very Often</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the last month, how often have you felt confident about your ability to handle your personal problems?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_handle_problem">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="almostnever">Almost Never</mat-radio-button>
+                        <mat-radio-button  value="sometimes">Sometimes</mat-radio-button>
+                        <mat-radio-button  value="fairlyOften">Fairly Often</mat-radio-button>
+                        <mat-radio-button  value="veryOften">Very Often</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the last month, how often have you felt that things were going your way?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_yourway">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="almostnever">Almost Never</mat-radio-button>
+                        <mat-radio-button  value="sometimes">Sometimes</mat-radio-button>
+                        <mat-radio-button  value="fairlyOften">Fairly Often</mat-radio-button>
+                        <mat-radio-button  value="veryOften">Very Often</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_difficulty_handle_problem">
+                        <mat-radio-button  value="never">Never</mat-radio-button>
+                        <mat-radio-button  value="almostnever">Almost Never</mat-radio-button>
+                        <mat-radio-button  value="sometimes">Sometimes</mat-radio-button>
+                        <mat-radio-button  value="fairlyOften">Fairly Often</mat-radio-button>
+                        <mat-radio-button  value="veryOften">Very Often</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+       
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                     <strong>  Over the last two weeks, how often have you been bothered by any of the following problems?</strong> 
+                    </label>
+                </div>
+            </div>
+        </div>       
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Little interest or pleasure in doing things
+                     </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_little_interest">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Feeling down, depressed, or hopeless
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_depressed">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Trouble falling or staying asleep, or sleeping too much
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_sleeping_toomuch">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Feeling tired or having little energy
+                     </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_little_energy">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Poor appetite or overeating
+                     </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_overeating">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Feeling bad about yourself – or that you are a failure or have let yourself or your family down
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_feelingbad">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Trouble concentrating on things, such as reading the newspaper or watching television
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_concentrating_trouble">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Moving or speaking so slowly that other people could have noticed. Or the opposite – being so fidgety or restless that you have been moving around a lot more than usual
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_restless">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Thoughts that you would be better off dead, or of hurting yourself
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_dead_thoughts">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSE_get_along">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="severaldays">Several days</mat-radio-button>
+                        <mat-radio-button  value="morethanhalfthedays">More than half the days</mat-radio-button>
+                        <mat-radio-button  value="nearlyeveryday">Nearly every day</mat-radio-button>
+                     </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        *Questions above are adopted from the short Perceived Stress Scale questionnaire (PSS-4) and from the Patient Health Questionnaire 
+                        <br/>
+                 <strong><h4>Participant's Sleeping Habits</h4></strong> <br/>
+                  Please rate the <strong> CURRENT (PAST 2 WEEKS)</strong> sleeping pattern(s). 
+                        </label>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Difficulty falling asleep
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSH_falling_asleep">
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                        <mat-radio-button  value="mild">Mild</mat-radio-button>
+                        <mat-radio-button  value="moderate">Moderate</mat-radio-button>
+                        <mat-radio-button  value="severe">Severe</mat-radio-button>
+                        <mat-radio-button  value="verysevere">Very Severe</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Difficulty staying asleep
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSH_staying_asleep">
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                        <mat-radio-button  value="mild">Mild</mat-radio-button>
+                        <mat-radio-button  value="moderate">Moderate</mat-radio-button>
+                        <mat-radio-button  value="severe">Severe</mat-radio-button>
+                        <mat-radio-button  value="verysevere">Very Severe</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Problems waking up too early
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSH_wakeup_tooearly">
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                        <mat-radio-button  value="mild">Mild</mat-radio-button>
+                        <mat-radio-button  value="moderate">Moderate</mat-radio-button>
+                        <mat-radio-button  value="severe">Severe</mat-radio-button>
+                        <mat-radio-button  value="verysevere">Very Severe</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSH_satisfied_sleep_pattern">
+                        <mat-radio-button  value="verysatisfied">Very Satisfied</mat-radio-button>
+                        <mat-radio-button  value="satisfied">Satisfied</mat-radio-button>
+                        <mat-radio-button  value="moderateSatisfied">Moderately Satisfied</mat-radio-button>
+                        <mat-radio-button  value="dissatisfied">Dissatisfied</mat-radio-button>
+                        <mat-radio-button  value="verydissatisfied">Very Dissatisfied</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How NOTICEABLE to others do you think your sleep problem is in terms of impairing the quality of your life?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSH_noticeable_sleeping_problem">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="noticeable">Noticeable</mat-radio-button>
+                        <mat-radio-button  value="alittle">A Little</mat-radio-button>
+                        <mat-radio-button  value="somewhat">Somewhat</mat-radio-button>
+                        <mat-radio-button  value="much">Much</mat-radio-button>
+                        <mat-radio-button  value="verymuchnoticeable">Very Much Noticeable</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="form-group  row">
+            <div class="row col-md-12">
+        <div class="col-md-4">
+            <div class="kt-section">
+                <label align="start">
+                    How WORRIED/DISTRESSED are you about your current sleep problem? 
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 form-group">
+            <div>
+                <mat-radio-group formControlName="PSH_worried_sleeping_problem">
+                    <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                    <mat-radio-button  value="noticeable">Noticeable</mat-radio-button>
+                    <mat-radio-button  value="alittle">A Little</mat-radio-button>
+                    <mat-radio-button  value="somewhat">Somewhat</mat-radio-button>
+                    <mat-radio-button  value="much">Much</mat-radio-button>
+                    <mat-radio-button  value="verymuchworried">Very Much Worried</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+    </div>
+
+    </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        To what extent do you consider your sleep problem to INTERFERE with your daily functioning (e.g. daytime fatigue, mood, ability to function at work/daily chores, concentration, memory, mood, etc.) CURRENTLY? 
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSH_interfere_sleeping_problem">
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                        <mat-radio-button  value="interfering">Interfering</mat-radio-button>
+                        <mat-radio-button  value="alittle">A Little</mat-radio-button>
+                        <mat-radio-button  value="somewhat">Somewhat</mat-radio-button>
+                        <mat-radio-button  value="much">Much</mat-radio-button>
+                        <mat-radio-button  value="verymuchinterfering">Very Much Interfering </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">
+                        
+                      <h4><strong>Participant’s  Smoking Status</strong></h4><br/>
+                        Following questions are adopted from the Adult Core- Basic Module-Section IV- Health Behaviors-Part A-Tobacco Questionnaire. 
+                        <br/><strong>These next questions are about cigarette smoking.
+                        </strong></label>
+                </div>
+            </div>
+            
+        </div>
+
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+           
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Have you smoked at least 100 cigarettes in your ENTIRE LIFE?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_smoked_100_cigarettes">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How old were you when you FIRST started to smoke fairly regularly?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_first_smoke_age">
+                        <mat-radio-button  value="6-94yearsofage">6-94 years of age</mat-radio-button>
+                        <mat-radio-button  value="95yearsorolder">95 years or older</mat-radio-button>
+                        <mat-radio-button  value="neversmokedregularly">Never smoked regularly</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PSS_first_smoke_age').value == '6-94yearsofage'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Years of Age"
+                        formControlName="PSS_first_smoke_age694_txt" />
+                </mat-form-field>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How often do you smoke cigarettes NOW?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_current_smoker">
+                        <mat-radio-button  value="everyday">Every day</mat-radio-button>
+                        <mat-radio-button  value="somedays">Some days</mat-radio-button>
+                        <mat-radio-button  value="notatall">Not at all</mat-radio-button>
+                         <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        How long has it been since you quit smoking cigarettes? 
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-1 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Days"
+                        formControlName="PSS_quit_smoking_days_txt" />
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-1 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Weeks"
+                        formControlName="PSS_quit_smoking_week_txt" />
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-1 form-group" >
+                      <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Months"
+                        formControlName="PSS_quit_smoking_month_txt" />
+                </mat-form-field>
+            </div>
+           
+            <div class="col-md-1 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Years"
+                        formControlName="PSS_quit_smoking_yrs_txt" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_quit_smoking">
+                        <mat-radio-button  value="idonotknow">I don’t know(DK)</mat-radio-button>
+                        <mat-radio-button  value="neversmoked">Never Smoked</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <!-- <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        Have you quit smoking since 1 year ago?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_quit_smoking_since1year">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div> -->
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On the average, how many cigarettes do you now smoke a day?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_avg_cigarettes_perday">
+                        <mat-radio-button  value="1-94cigarettes">1-94 cigarettes</mat-radio-button>
+                        <mat-radio-button  value="95+cigarettes">95+ cigarettes</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="idonotsmoke">I don’t smoke</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PSS_avg_cigarettes_perday').value == '1-94cigarettes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Years of Age"
+                        formControlName="PSS_avg_cigarettes_perday194_txt" />
+                </mat-form-field>
+            </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On how many of the PAST 30 DAYS did you smoke a cigarette?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Days"
+                           formControlName="PSS_cigarettes_30days_number" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_cigarettes_30days">
+                        <mat-radio-button  value="none">None</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="idonotsmoke">I don’t smoke</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        On the average, when you smoked during the PAST 30 DAYS, about how many cigarettes did you smoke a day?
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="1-94cigarettes"
+                           formControlName="PSS_avg_cigarettes_30days_1_94" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_avg_cigarettes_30days">
+                        <mat-radio-button  value="95+cigarettes">95+ cigarettes</mat-radio-button>
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="idonotsmoke">I don’t smoke</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="form-group  row">
+                <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">
+                        During the PAST 12 MONTHS, have you stopped smoking for one day or longer because you were trying to quit smoking?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8 form-group">
+                <div>
+                    <mat-radio-group formControlName="PSS_trying_quit_smoke">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button> 
+                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
+                        <mat-radio-button  value="idonotsmoke">I don’t smoke</mat-radio-button>
+                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
+                   </mat-radio-group>
+                </div>
+            </div>
+        </div>
+        </div> 
+
+    </form>
+</div>

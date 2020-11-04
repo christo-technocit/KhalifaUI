@@ -1,0 +1,866 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+
+
+     <!--  <div class="row ">
+            <div class="col-md-12 form-group">
+                <span layout="row"><hr flex/><h5>1.2. Medical History</h5><hr flex/></span>
+            </div>
+        </div>-->
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">1.2.1. Has this patient been diagnosed with any of the following conditions listed below?
+                        <br>If yes, please specify the date or year of diagnosis. (you can tick more than one answer; if you need additional space for your answer, please use separate sheet).
+
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Hypertension(excluding during pregnancy)</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_hypertension">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_hypertension').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_hypertension_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Prediabetes </label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Prediabetes">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Prediabetes').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_Prediabetes_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Type 2 Diabetes (excluding during pregnancy)</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_type2diabetes">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_type2diabetes').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_type2diabetes_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Gestational Diabetes (diabetes during pregnancy)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <mat-radio-group formControlName="med_Gestational_Diabetes">
+                    <mat-radio-button  value="yes">Yes</mat-radio-button>
+                    <mat-radio-button  value="no">No</mat-radio-button>
+                    <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Gestational_Diabetes').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_Gestational_Diabetes_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Type 1 diabetes</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_type1diabetes">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_type1diabetes').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_type1diabetes_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">High cholesterol</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_highcholesterol">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_highcholesterol').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_highcholesterol_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Obesity</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_obesity">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_obesity').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_obesity_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Heart disease </label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_heartdis">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_heartdis').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_heartdis_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Cancer</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_cancer">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_cancer').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_cancer_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Osteoporosis</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                     <mat-radio-group formControlName="med_osteoporosis">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_osteoporosis').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_osteoporosis_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section"><label align="start">Asthma</label></div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_asthma">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_asthma').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_asthma_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Hypothyroidism</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Hypothyroidism1">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Hypothyroidism1').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_Hypothyroidism1_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Hyperthyroidism </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Hypothyroidism2">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Hypothyroidism2').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_Hypothyroidism2_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Autoimmune(e.g. Hashimoto disease) </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Autoimmune">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Autoimmune').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_Autoimmune_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-2">
+                <div class="kt-section">
+                    <label align="start">Other</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_other">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_other').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Specify"  formControlName="med_other_year" />
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('med_other').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_other_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Liver Disease </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_liver">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_liver').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_liver_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+
+
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Rheumatoid Arthritis
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_arthritis">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_arthritis').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_arthritis_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start"> Hepatitis A </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_hepatitis">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_hepatitis').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_hepatitis_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Hepatitis B</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_hepatitis_type_b">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_hepatitis_type_b').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_hepatitis_year_b" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Hepatitis C</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_hepatitis_type_c">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_hepatitis_type_c').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_hepatitis_c_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Hepatitis D</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_hepatitis_type_d">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_hepatitis_type_d').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis"  formControlName="med_hepatitis_d_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Anxiety disorder  </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Anxiety">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Anxiety').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_Anxiety_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Depression</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_depression">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_depression').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Date of diagnosis" formControlName="med_depression_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start"> Bipolar Disorder</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Bipolar">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Bipolar').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Since When" formControlName="med_Bipolar_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Schizophrenia </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Schizophrenia">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Schizophrenia').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Since When"  formControlName="med_Schizophrenia_year" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Post-traumatic Stress Disorder (PTSD)  </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_PTSD">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_PTSD').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Since When"  formControlName="med_PTSD_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-3">
+                <div class="kt-section">
+                    <label align="start">Other Psychiatric disorder</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Psychiatric_other">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Psychiatric_other').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="Specify"  formControlName="med_Psychiatric_other_year" />
+                </mat-form-field>
+            </div>
+
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Alzheimer disease  </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Alzheimer">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Alzheimer').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify year"    formControlName="med_Alzheimer_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Parkinson disease</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Parkinson">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Parkinson').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify year" formControlName="med_Parkinson_year" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Epilepsy/seizures</label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Epilepsy">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Epilepsy').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify year" formControlName="med_Epilepsy_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">Other  neurological disorders(Please specify)
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                    <mat-radio-group formControlName="med_Other_neurological">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-3 form-group" *ngIf="Mform.get('med_Other_neurological').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput placeholder="If yes, specify year" formControlName="med_Other_neurological_year" />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start"><strong>
+                        1.2.2. Additionally, please, mark all other conditions that also apply to this patient:
+                    </strong>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_gastrointestinal">Chronic gastrointestinal disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Inflammatory_bowel">Inflammatory bowel disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Gastrointestinal_ulcer">Gastrointestinal ulcer</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_liver">Chronic liver disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_pancreatitis">Chronic pancreatitis</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_kidney">Chronic kidney disease</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Cholelithiasis">Cholelithiasis (the presence of gallstones)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Endocrine_disorders">Endocrine disorders (e.g., PCOS, Cushing syndrome, acromegaly, gigantism)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_inflammation">Infection and/or inflammation</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <label> <strong>1.2.3.	Does this patient have any of the following conditions? (select as many as appropriate)
+                </strong>
+                </label>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_retinopathy"><strong>Retinopathy</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_No_proliferative">Noproliferative</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_proliferative">Proliferative</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Laser">Laser</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Retinopathy_other">Other</mat-checkbox>
+                    <div *ngIf="Mform.get('complications_Retinopathy_other').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder=""  formControlName="complications_Retinopathy_other_other" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_neuropathy"><strong>Neuropathy</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_foot">Foot (ulcers)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Gangrene">Gangrene</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_numbness">Loss of sensation, numbness, pain, burning, tingling</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Amputation">Amputation</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Loss_of_toe">Loss of toe, foot, or leg</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Pain_in_calfmuscles">Pain in calf muscles while walking</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Circulation_peripheral_vascular">Circulation, peripheral vascular disease, operation on artery in legs</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Neuropathy_other">Other</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_cva"><strong>Cerebrovascular accident (CVA)</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_tia">TIA</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Stroke">Stroke (bleeding, ischemia)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_onesidebody">Loss of sensation down one side of the body</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Bleeding">Bleeding</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Diff_speaking">Difficulty speaking/eating</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Operation_on_artery">Operation on artery or neck</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Facial_drop">Facial drop</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Paralyzedarm">Paralyzed arm or leg </mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Laser_other">Other</mat-checkbox>
+                    <div *ngIf="Mform.get('complications_Laser_other').value"  class="dis-con">
+                        <div class="col-md-2 form-group">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <input matInput placeholder=""
+                                       formControlName="complications_Laser_other_other" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_nephropathy"><strong>Nephropathy</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_albumin">Protein or albumin in the urine</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Albuminuria">Albuminuria</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_30_29mg_24h">30-299 mg/24h</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_300_mg_24h">>300 mg/24h</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_egfr">eGFR</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_cad"><strong>Coronary artery disease (CAD)</strong></mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_CABG">Coronary artery bypass grafting (CABG)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_PCI">Percutaneous Coronary Intervention (PCI)</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_Arrhythmias">Arrhythmias (AF)</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <div class="mat-form-field-fluid">
+                    <mat-checkbox class="lab-mar-right-15"   formControlName="complications_other">Other (please specify)</mat-checkbox>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row col-md-12">
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">1.2.4.	Was the patient diagnosed with COVID-19?
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7 form-group">
+                    <mat-radio-group formControlName="PMD_diagnosed_with_COVID_19">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="idontknow">I Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+           <div class="col-md-12 form-group1" *ngIf="Mform.get('PMD_diagnosed_with_COVID_19').value == 'yes'" >
+            <label align="start">If yes, is it PCR confirmed?   </label>
+                    <mat-radio-group formControlName="PMD_PCR_COVID_19">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="idontknow">I Don't Know</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <div class="kt-section">
+                    <label align="start">1.2.5.	Was the patient hospitalized with COVID-19?
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-5 form-group">
+                   <mat-radio-group formControlName="PMD_Hospital_COVID_19">
+                        <mat-radio-button  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="Unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+            </div>
+            <div class="col-md-2 form-group"  *ngIf="Mform.get('PMD_Hospital_COVID_19').value == 'yes'" >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker3"
+                    (click)="dobPicker3.open()"
+                    [max]="maxDate"
+                    autocomplete="off"
+                    placeholder="Admission date" formControlName="PMD_Admission_COVID_19_date" />
+                    <mat-datepicker-toggle matSuffix [for]="dobPicker3"></mat-datepicker-toggle>
+                    <mat-datepicker #dobPicker3></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_Hospital_COVID_19').value == 'yes'"  >
+                <mat-form-field class="mat-form-field-fluid">
+                    <input matInput [matDatepicker]="dobPicker4"
+                    (click)="dobPicker4.open()"
+                    [max]="maxDate"
+                    autocomplete="off"
+                    placeholder="Discharge date" formControlName="PMD_Discharge_COVID_19_date" />
+                    <mat-datepicker-toggle matSuffix [for]="dobPicker4"></mat-datepicker-toggle>
+                    <mat-datepicker #dobPicker4></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12 form-group" *ngIf="Mform.get('PMD_Hospital_COVID_19').value == 'yes'" >
+                <label align="start">If Yes, was the patient admitted to the Intensive Care Unit (ICU)? </label>
+                        <mat-radio-group formControlName="PMD_ICU_COVID_19">
+                            <mat-radio-button  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  value="no">No</mat-radio-button>
+                            <mat-radio-button  value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12"  >
+            <div class="col-md-5">
+                <div class="kt-section">
+                    <label align="start">
+                        1.2.6.	In regards to the clinical course of COVID-19, did you develop any of the following conditions within the last three months? (you can tick more than one answer)
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-3 form-group">
+                <div class="mat-form-field-fluid" >
+                    <mat-checkbox class="lab-mar-right-1"   formControlName="PMD_Pneumonia_Covid_19">Pneumonia</mat-checkbox><br>
+                    <mat-checkbox class="lab-mar-right-1"   formControlName="PMD_ARDS_Covid_19">Acute Respiratory Distress Syndrome</mat-checkbox><br>
+                    <mat-checkbox class="lab-mar-right-1"   formControlName="PMD_ChestXray_Covid_19">Abnormal chest x-ray</mat-checkbox><br>
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group">
+                 <div class="mat-form-field-fluid" >
+                         <mat-checkbox class="lab-mar-right-1"   formControlName="PMD_ECG_Covid_19">Abnormal ECG</mat-checkbox><br>
+                         <mat-checkbox class="lab-mar-right-1"   formControlName="PMD_Ventilation_Covid_19">Mechanical Ventilation/Intubation</mat-checkbox><br>
+                         <mat-checkbox class="lab-mar-right-1"   formControlName="PMD_ECMO_Covid_19">ECMO (extracorporeal membrane oxygenation)</mat-checkbox><br>
+                    </div>
+            </div>
+        </div>
+    </form>
+</div>
