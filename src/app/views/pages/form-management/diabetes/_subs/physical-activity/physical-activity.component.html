@@ -1,0 +1,286 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+		<div>
+		<div class="col-md-12 form-group row">
+			<strong>During the past year, on average, how many hours per week did you spend:</strong><br>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Standing or walking around at work or away from home? (h/week)</label>
+			</div><div class="col-md-8">
+				<mat-radio-group formControlName="PPA_walk_From_Home">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1h">1 hour</mat-radio-button>
+					<mat-radio-button  value="2-5hr">2-5 hour</mat-radio-button>
+					<mat-radio-button  value="6-10hr">6-10 hour</mat-radio-button>
+					<mat-radio-button  value="11-20hr">11-20 hour</mat-radio-button>
+					<mat-radio-button  value="21-40hr">21-40 hour</mat-radio-button>
+					<mat-radio-button  value="61-90hr">61-90 hour</mat-radio-button>
+					<mat-radio-button  value="over90">Over 90 hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Standing or walking around at home?(h/week)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_walk_At_Home">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1h">1 hour</mat-radio-button>
+					<mat-radio-button  value="2-5hr">2-5 hour</mat-radio-button>
+					<mat-radio-button  value="6-10hr">6-10 hour</mat-radio-button>
+					<mat-radio-button  value="11-20hr">11-20 hour</mat-radio-button>
+					<mat-radio-button  value="21-40hr">21-40 hour</mat-radio-button>
+					<mat-radio-button  value="61-90hr">61-90 hour</mat-radio-button>
+					<mat-radio-button  value="over90">Over 90 hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class=col-md-4>
+				<label align="start">Sitting at work or away from home or while driving? (h/week)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Drive">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1h">1 hour</mat-radio-button>
+					<mat-radio-button  value="2-5hr">2-5 hour</mat-radio-button>
+					<mat-radio-button  value="6-10hr">6-10 hour</mat-radio-button>
+					<mat-radio-button  value="11-20hr">11-20 hour</mat-radio-button>
+					<mat-radio-button  value="21-40hr">21-40 hour</mat-radio-button>
+					<mat-radio-button  value="61-90hr">61-90 hour</mat-radio-button>
+					<mat-radio-button  value="over90">Over 90 hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Sitting at home while watching TV/DVD/video? (h/week)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_watch_TV">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1h">1 hour</mat-radio-button>
+					<mat-radio-button  value="2-5hr">2-5 hour</mat-radio-button>
+					<mat-radio-button  value="6-10hr">6-10 hour</mat-radio-button>
+					<mat-radio-button  value="11-20hr">11-20 hour</mat-radio-button>
+					<mat-radio-button  value="21-40hr">21-40 hour</mat-radio-button>
+					<mat-radio-button  value="61-90hr">61-90 hour</mat-radio-button>
+					<mat-radio-button  value="over90">Over 90 hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Other sitting at home (e.g., reading, meal times, at desk)? (h/week)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_sit">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1h">1 hour</mat-radio-button>
+					<mat-radio-button  value="2-5hr">2-5 hour</mat-radio-button>
+					<mat-radio-button  value="6-10hr">6-10 hour</mat-radio-button>
+					<mat-radio-button  value="11-20hr">11-20 hour</mat-radio-button>
+					<mat-radio-button  value="21-40hr">21-40 hour</mat-radio-button>
+					<mat-radio-button  value="61-90hr">61-90 hour</mat-radio-button>
+					<mat-radio-button  value="over90">Over 90 hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="col-md-12 form-group row">
+			<strong>During the past year, what was your average time per week spent at each of the following recreational activities?</strong><br>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Walking for exercise or walking for transportation/errands</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_walk_For_exercise">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Running or jogging</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Running">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Bicycling (including stationary machine)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Bicycling">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Lap swimming </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Lap_Swimming">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Tennis, squash</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Tennis">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Other aerobic exercise (e.g., aerobic dance)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Aerobic">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Lower intensity exercise (e.g., yoga, starching) </label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Yoga">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Other vigorous activities (e.g., lawn mowing)</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Other_vigorous">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<label align="start">Weight training or resistance exercises (e.g., free weights or resistance machines)</label>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Arm Weights</label>
+
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_Arm_Weights">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+		<div class="col-md-12 form-group row">
+			<div class="col-md-4">
+				<label align="start">Leg Weights</label>
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="PPA_leg_Weights">
+					<mat-radio-button  value="zero">Zero</mat-radio-button>
+					<mat-radio-button  value="1-4min">1-4 min</mat-radio-button>
+					<mat-radio-button  value="5-19min">5-19 min </mat-radio-button>
+					<mat-radio-button  value="1hr">1 hour</mat-radio-button>
+					<mat-radio-button  value="1.5hr">1-1.5 hour</mat-radio-button>
+					<mat-radio-button  value="2-3hr">2-3 hour</mat-radio-button>
+					<mat-radio-button  value="4-6hr">4-6 hour</mat-radio-button>
+					<mat-radio-button  value="7-10hr">7-10 hour</mat-radio-button>
+					<mat-radio-button  value="11plushr">11+ hour</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+
+
+	</div>
+    </form>
+</div>
+

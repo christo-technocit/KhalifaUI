@@ -1,0 +1,57 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+
+
+
+		<div class="row col-md-12" style="padding-bottom:10px;">
+			<strong>	If the participant did not come to the appointment, please state the reason for his/her absence:
+			</strong>
+					</div>
+			<div class="row col-md-12">
+
+					<div class="kt-section">
+						<mat-checkbox class="lab-mar-right-15"   formControlName="Note_Death">Death</mat-checkbox>
+					</div>
+				</div>
+
+				<div *ngIf="form.get('Note_Death').value">
+				<div  class="row col-md-12 form-group">
+					<div class="col-md-6">
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput [matDatepicker]="dobPicker"
+								   (click)="dobPicker.open()"
+								   [max]="maxDate"
+								   autocomplete="off"
+								   placeholder="Date of Death" formControlName="Note_Date" />
+							<mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+							<mat-datepicker #dobPicker></mat-datepicker>
+						</mat-form-field>
+					</div>
+					<div class="col-md-6">
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Cause of Death"
+								formControlName="Note_Cause_of_Death" />
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+				<div  class="row col-md-12 form-group">
+
+					<div class="col-md-6">
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Other"
+								formControlName="Note_Other" />
+						</mat-form-field>
+					</div>
+					<div class="col-md-6">
+						<mat-checkbox class="lab-mar-right-15"   formControlName="Note_Unknown">Unknown</mat-checkbox>
+				</div>
+				</div>
+
+
+
+
+    </form>
+</div>
+

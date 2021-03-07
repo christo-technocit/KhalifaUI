@@ -64,7 +64,7 @@ export class HsaPrintComponent implements OnInit {
 	@ViewChild('appHsaBiochemical',{ static: false })appHsaBiochemical: HsaBiochemicalComponent;
 	@ViewChild('appHsaCognitiveTestResult',{ static: false })appHsaCognitiveTestResult: HsaCognitiveTestResultComponent;
     @ViewChild('appHsaLaboratoryDetails',{ static: false })appHsaLaboratoryDetails: HsaLaboratoryDetailsComponent;
-	
+
 
 
 	constructor(private activatedRoute: ActivatedRoute,
@@ -89,7 +89,7 @@ export class HsaPrintComponent implements OnInit {
 
 			}
 		});
-		
+
 		this.initTitle();
 	}
 
@@ -103,7 +103,7 @@ export class HsaPrintComponent implements OnInit {
 	}
 
 	initTitle() {
-		this.subheaderService.setTitle('Precision Medicine');
+		this.subheaderService.setTitle('Precision Medicine in Type 2 (Long)');
 		this.subheaderService.showPrintButton(true);
 	}
 
@@ -144,9 +144,9 @@ export class HsaPrintComponent implements OnInit {
     }
     else if(this.selectedTab == 11){
 			this.appHsaLaboratoryDetails.onSubmit();
-    } 
+    }
 	}
-	
+
     //
 	//	const editedForm = this.prepareForm();
     //

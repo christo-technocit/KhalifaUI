@@ -89,7 +89,7 @@ $kt-aside-config: (
 							// link itself
 							self: (
 								height: 44px,
-								padding: 9px 25px
+								padding: 9px 11px
 							),
 
 							// link icon
@@ -117,9 +117,13 @@ $kt-aside-config: (
 
 							// link text
 							text:	(
-								font-size: 1rem,
+								font-size:1rem,
 								font-weight: 400,
-								font-transform:	initial
+								font-transform:	initial,
+								display: block,
+								word-wrap:break-word,
+								width: 50px,
+								white-space: normal
 							),
 
 							// link arrow

@@ -1,0 +1,92 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+        <div class="row ">
+            <div class="col-md-12 form-group">
+                <h5>Dietary Fiber Intake Short Food Frequency Questionnaire (DFI-FFQ)</h5>
+                <h6>
+                    On average, over the past year, do you consume the following items daily?
+                </h6>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start"> Fruit  (Tinned / Fresh): </label>
+                </div>
+            </div>
+           
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <mat-radio-group aria-labelledby="example-radio-group-label"  
+                formControlName="Fruit">
+                    <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  matInput value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">Vegetables (Tinned / Frozen): </label>
+                </div>
+            </div>
+           
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <mat-radio-group aria-labelledby="example-radio-group-label"  
+                formControlName="Vegetables">
+                    <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  matInput value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">Whole Meal Breads: </label>
+                </div>
+            </div>
+           
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <mat-radio-group aria-labelledby="example-radio-group-label"  
+                formControlName="WholeMealBreads">
+                    <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  matInput value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">Beans, Peas and Lentils: </label>
+                </div>
+            </div>
+           
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <mat-radio-group aria-labelledby="example-radio-group-label"  
+                formControlName="BeansPeasLentils">
+                    <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  matInput value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <div class="kt-section">
+                    <label align="start">Nuts and Seeds : </label>
+                </div>
+            </div>
+           
+            <div class="col-md-8 kt-margin-bottom-20-mobile">
+                <mat-radio-group aria-labelledby="example-radio-group-label"  
+                formControlName="NutsSeeds">
+                    <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                    <mat-radio-button  matInput value="No">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+    </form>
+</div>

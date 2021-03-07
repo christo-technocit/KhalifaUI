@@ -1,0 +1,80 @@
+<kt-portlet>
+	<kt-portlet-header [title]="'Covid 19V2'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+		<ng-container ktPortletTools>
+			<a  [routerLink]="[ formId ? '../../' : '../']"   class="btn btn-secondary kt-margin-r-10" mat-raised-button
+				matTooltip="Back to the forms list">
+				<i class="la la-arrow-left"></i>
+				<span class="kt-hidden-mobile">Back</span>
+			</a>
+			<a href="javascript:;" class="btn btn-primary kt-margin-r-10" color="primary" (click)="onSubmit()"
+				mat-raised-button matTooltip="Save & Continue">
+				<i class="la la-save"></i>
+				<span class="kt-hidden-mobile">Save</span>
+			</a>
+
+		</ng-container>
+	</kt-portlet-header>
+
+	<kt-portlet-body>
+       
+		<mat-tab-group [(selectedIndex)]="selectedTab">
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user"></i>
+					Personal Details
+				</ng-template>
+				<kt-covid19V2-personal-details [disableInput]="isPrint"   [formData]="formId"  #appcovid19V2PersonalDetails></kt-covid19V2-personal-details>
+            </mat-tab>
+            
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-user-md"></i>
+					Clinical Presentation
+				</ng-template>
+					<kt-covid19V2-clinical-details [disableInput]="isPrint"   [formData]="formId" #appcovid19V2ClinicalDetails></kt-covid19V2-clinical-details>
+            </mat-tab>
+			<mat-tab  >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+                    Clinical Outcome
+                </ng-template>
+                    <kt-covid19V2-ClinicalOutcome [disableInput]="isPrint"   [formData]="formId" #appcovid19V2ClinicalOutcome></kt-covid19V2-ClinicalOutcome>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+                    Clinical Information
+                </ng-template>
+                    <kt-covid19V2-clinical-information [disableInput]="isPrint"   [formData]="formId" #appcovid19V2ClinicalInformation></kt-covid19V2-clinical-information>
+            </mat-tab>
+
+
+           
+            <mat-tab  >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-exchange-alt"></i>
+					DFIFFQ
+				</ng-template>
+					<kt-covid19V2-DFIFFQ  [disableInput]="isPrint"   [formData]="formId"   #appcovid19V2DFIFFQ></kt-covid19V2-DFIFFQ>
+			</mat-tab>
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-pills"></i>
+					Treatment Regimen
+				</ng-template>
+					<kt-covid19V2-Treatmentregimen [disableInput]="isPrint"   [formData]="formId" #appcovid19V2Treatmentregimen></kt-covid19V2-Treatmentregimen>
+			</mat-tab> 
+
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-file"></i>
+					Document Upload
+				</ng-template>
+				<kt-doc-upload  #appDocUpload></kt-doc-upload>
+			</mat-tab> 
+
+		</mat-tab-group>
+	</kt-portlet-body>
+</kt-portlet>

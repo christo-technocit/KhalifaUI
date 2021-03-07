@@ -101,7 +101,7 @@ export class HsaEditComponent implements OnInit, OnDestroy {
 
 			}
 		});
-		this.subheaderService.setTitle('Precision Medicine');
+		this.subheaderService.setTitle('Precision Medicine in Type 2 (Long)');
 	}
 
 	ngOnDestroy() {
@@ -152,12 +152,12 @@ export class HsaEditComponent implements OnInit, OnDestroy {
     }
     else if(this.selectedTab == 10){
 			this.appHsaLaboratoryDetails.onSubmit();
-			
+
     } else if(this.selectedTab == 11){
 			this.appDocUpload.onSubmit();
 		}
 	}
-	
+
     //
 	//	const editedForm = this.prepareForm();
     //

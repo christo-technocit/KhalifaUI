@@ -21,7 +21,7 @@
                      <mat-checkbox class="lab-mar-right-15"   formControlName="lab_other">Other</mat-checkbox>
                     <div class="col-md-12 row" [hidden]="!form.get('lab_other').value">
                         <mat-form-field   class="mat-form-field-fluid">
-                            <input   type="text" matInput placeholder="If other, Please specify" formControlName="lab_other_text" autocomplete="off"    />
+                            <input   type="text" matInput placeholder="If other, Please specify" formControlName="lab_sample_type" autocomplete="off"    />
                         </mat-form-field>
                     </div>
                 </div>
@@ -44,12 +44,12 @@
 
             <div class="col-md-3 kt-margin-bottom-20-mobile">
                 <mat-form-field class="mat-form-field-fluid">
-                    <input matInput placeholder="Time of sample collection: " autocomplete="off" formControlName="LD_sample_time" />
+                    <input matInput placeholder="Time of sample collection: " autocomplete="off" formControlName="lab_sample_collection_time" />
                 </mat-form-field>
             </div>
             <div class="col-md-3 kt-margin-bottom-20-mobile">
                 <mat-form-field class="mat-form-field-fluid">
-                    <input matInput placeholder="Storage" autocomplete="off" formControlName="lab_storage" />
+                    <input matInput placeholder="Storage" autocomplete="off" formControlName="lab_sample_storage" />
                 </mat-form-field>
             </div>
             <div class="col-md-3 kt-margin-bottom-20-mobile">
@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-4 kt-margin-bottom-20-mobile">
                 <mat-form-field class="mat-form-field-fluid">
-                    <input matInput placeholder="Test Code" autocomplete="off" formControlName="LD_test_code" />
+                    <input matInput placeholder="Test Code" autocomplete="off" formControlName="lab_Test_code" />
                 </mat-form-field>
             </div>
         </div>

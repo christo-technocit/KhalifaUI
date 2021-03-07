@@ -36,16 +36,23 @@ export class DiabetesMedicalDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    if (!this.formId)
+	if (!this.formId){
+	console.log('form3',this.formId)
+
       this._interactionService._Refid$.subscribe((id)=> {
         if(id) {
-          this.Mform.patchValue({"savedFormID": id})
+		  this.Mform.patchValue({"savedFormID": id})
+	console.log('for4',this.Mform)
+
         }
-      })
+      })}
     else {
-      this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
+	  this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
+	console.log('form3')
+
       this._service.getQuestionnaire(this.formId,12).subscribe((res:any[])=> {
-        this.formData = res;
+	console.log('form3',res)
+	this.formData = res;
         this.splashService.splashScreen({isLoading : false, message : "" })
         this.saveFormId = this.formId;
         if(res.length)
@@ -55,13 +62,16 @@ export class DiabetesMedicalDetailsComponent implements OnInit {
   }
 
   createForm() {
+	console.log('form1')
+
     this.Mform = this.eformFB.group({
       "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
 	  "PMD_Type_2_diabetes_date": new FormControl({value: '', disabled: this.disableInput}),
+	 // "med_Vaccination_year": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_Type_2_diabetes_status": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_Type_2_prediabetes_date": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_Type_2_prediabetes_status": new FormControl({value: '', disabled: this.disableInput}),
-	  "PMD_lastmonths_flu": new FormControl({value: '', disabled: this.disableInput}),
+	  "PMD_last12_months_flu": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_diagnosed_with_COVID_19": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_symptoms_COVID_19": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_symptoms_COVID_19_date": new FormControl({value: '', disabled: this.disableInput}),
@@ -99,14 +109,14 @@ export class DiabetesMedicalDetailsComponent implements OnInit {
 	  "PMD_running_nose": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_intolerance": new FormControl({value: '', disabled: this.disableInput}),
 	  "PMD_intolerance_details": new FormControl({value: '', disabled: this.disableInput}),
-
-
     })
     this.getFormAttributeValues();
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,4).subscribe((res)=> {
+    this._service.getFormAttribute(12,2).subscribe((res)=> {
+		console.log('form',res)
+
       this.formAttributes = res;
     })
   }
@@ -114,14 +124,19 @@ export class DiabetesMedicalDetailsComponent implements OnInit {
   prepareForm() {
     Object.keys(this.formData[0]).forEach(name => {
       if (this.Mform.controls[name]) {
-        this.Mform.controls[name].patchValue(this.formData[0][name], {onlySelf: true});
+		this.Mform.controls[name].patchValue(this.formData[0][name], {onlySelf: true});
+	console.log('form3',this.Mform.controls[name])
+
       }
     });
   }
 
   createSampleId() {
-    this.splashService.splashScreen({ isLoading : true, message : "SAVING" })
-    this._service.createSampleId(12, 0).subscribe((res) => {
+	this.splashService.splashScreen({ isLoading : true, message : "SAVING" })
+
+    this._service.createSampleId(12,0).subscribe((res) => {
+		console.log('formsample',res)
+
   if (!this.formId) {
   this.saveFormId = res;
   this._interactionService.sendRefId(parseInt(this.saveFormId));
@@ -133,10 +148,13 @@ export class DiabetesMedicalDetailsComponent implements OnInit {
   }
 
   onSubmit() {
+	console.log('formsubmit')
+
     if (!this.Mform.value["savedFormID"] && !this.saveFormId) {
       this.createSampleId();
     } else {
       this.Mform.patchValue({"savedFormID" : this.Mform.value["savedFormID"] || this.saveFormId })
+	  console.log('form')
 
       let data = this.finalFormValues.prepareAttibuteForm(this.Mform.value, this.formAttributes, "savedFormID",this.formId)
       if (this.formId || this.isFormSubmit) {
@@ -149,7 +167,8 @@ export class DiabetesMedicalDetailsComponent implements OnInit {
                   data[i]["FormAttributeValueID"] = res[j]["FormAttributeValueID"]
                 }
               }
-            }
+			}
+			console.log('data',data)
             this._service.createSample8(data, true).subscribe((res)=> {
               if (res) {
                 this.splashService.splashScreen({isLoading : false, message : "" })

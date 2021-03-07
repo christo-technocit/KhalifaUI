@@ -1,5 +1,5 @@
 <kt-portlet>
-	<kt-portlet-header [title]="'Diabetes'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+	<kt-portlet-header [title]="'Precision Medicine in Type 2 (Short)'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
 		<ng-container ktPortletTools>
 			<a  [routerLink]="[ formId ? '../../' : '../']"   class="btn btn-secondary kt-margin-r-10" mat-raised-button
 				matTooltip="Back to the forms list">
@@ -27,7 +27,7 @@
 			</mat-tab>
             <mat-tab >
 				<ng-template mat-tab-label>
-					<i class="mat-tab-label-icon fa fa-pills"></i>
+					<i class="mat-tab-label-icon fa fa-medkit"></i>
 					Medical Details
 				</ng-template>
 					<kt-diabetes-medical-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalDetails></kt-diabetes-medical-details>
@@ -39,15 +39,20 @@
                 </ng-template>
                     <kt-diabetes-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appDiabetesDiabetesSelfManagement></kt-diabetes-diabetes-self-management>
             </mat-tab>
-
+            <mat-tab  >
+                <ng-template mat-tab-label>
+                    <i class="mat-tab-label-icon fa fa-female"></i>
+                    Female Questions
+                </ng-template>
+                    <kt-diabetes-female-questions [disableInput]="isPrint"   [formData]="formId" #appDiabetesFemaleQuestionsComponent></kt-diabetes-female-questions>
+            </mat-tab>
 			<mat-tab >
 				<ng-template mat-tab-label>
 					<i class="mat-tab-label-icon fa fa-bicycle"></i>
 					Participant’s Physical Activity
 				</ng-template>
-					<kt-diabetes-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalMeasurements></kt-diabetes-physical-measurements>
-            </mat-tab>
-
+					<kt-diabetes-physical-activity [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalActivityComponent></kt-diabetes-physical-activity>
+			</mat-tab>
 			<mat-tab >
 				<ng-template mat-tab-label>
 					<i class="mat-tab-label-icon fa fa-coffee"></i>
@@ -57,20 +62,27 @@
 			</mat-tab>
 			<mat-tab >
 				<ng-template mat-tab-label>
-					<i class="mat-tab-label-icon fa fa-pills"></i>
+					<i class="mat-tab-label-icon fa fa-ambulance"></i>
+					Participant’s Absence
+				</ng-template>
+					<kt-diabetes-patient-absence [disableInput]="isPrint"   [formData]="formId" #appDiabetesPatientAbsenceComponent></kt-diabetes-patient-absence>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-male"></i>
+					Participant’s Anthropometric Measurements
+				</ng-template>
+					<kt-diabetes-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalMeasurements></kt-diabetes-physical-measurements>
+			</mat-tab>
+			<mat-tab >
+				<ng-template mat-tab-label>
+					<i class="mat-tab-label-icon fa fa-book"></i>
 					Medical History
 				</ng-template>
 					<kt-diabetes-medical-history [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalHistoryComponent></kt-diabetes-medical-history>
 				</mat-tab>
 
 
-			<mat-tab  >
-                <ng-template mat-tab-label>
-                    <i class="mat-tab-label-icon fa fa-exchange-alt"></i>
-                    Medical Details(If Type 2 Diabetic)
-                </ng-template>
-                    <kt-diabetes-medication2 [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedication2Component></kt-diabetes-medication2>
-			</mat-tab>
              <mat-tab >
 				<ng-template mat-tab-label>
 					<i class="mat-tab-label-icon fa fa-pills"></i>
@@ -84,7 +96,7 @@
 						<i class="mat-tab-label-icon fa fa-pills"></i>
 						Metformin
 					</ng-template>
-						<kt-diabetes-metformin [disableInput]="isPrint"   [formData]="formId" #appDiabetesMetformin></kt-diabetes-metformin>
+						<kt-diabetes-metformin [disableInput]="isPrint"   [formData]="formId" #appDiabetesMetforminComponent></kt-diabetes-metformin>
 					</mat-tab>
 					<mat-tab >
 						<ng-template mat-tab-label>
@@ -98,15 +110,25 @@
 							<i class="mat-tab-label-icon fa fa-dna"></i>
 							Laboratory Details
 						</ng-template>
-							<kt-diabetes-laboratory-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesClinicalDetails></kt-diabetes-laboratory-details>
+							<kt-diabetes-laboratory-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesLaboratoryDetails></kt-diabetes-laboratory-details>
 					</mat-tab>
 					<mat-tab >
 						<ng-template mat-tab-label>
 							<i class="mat-tab-label-icon fa fa-procedures"></i>
-							Biochemical
+							Biochemical Parameters
 						</ng-template>
 							<kt-diabetes-biochemical [disableInput]="isPrint"   [formData]="formId" #appDiabetesBiochemical></kt-diabetes-biochemical>
 					</mat-tab>
+
+
+
+					 <mat-tab >
+                        <ng-template mat-tab-label>
+                            <i class="mat-tab-label-icon fa fa-file"></i>Document Upload
+                        </ng-template>
+                        <kt-doc-upload  #appDocUpload></kt-doc-upload>
+                    </mat-tab>
+
 		</mat-tab-group>
 	</kt-portlet-body>
 </kt-portlet>

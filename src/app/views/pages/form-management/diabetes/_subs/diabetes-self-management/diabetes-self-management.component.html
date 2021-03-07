@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
         <div class="kt-form__section kt-form__section--first">
-
+			<div class="form-group  row">
                     <div class="row col-md-12">
                 <div class="col-md-4 form-group">
                     <div class="kt-section">
@@ -24,17 +24,18 @@
                     </mat-form-field>
                 </div>
                 </div>
-
+			</div>
                     <div class="form-group  row">
-                        <div class="row col-md-12">
-                    <div class="col-md-4">
-                        <div class="kt-section">
+                     <div class="row col-md-12">
+
                             <label align="start">
                                 If yes, did you experience any of the following? (tick as many as appropriate)
                             </label>
-                        </div>
-                    </div>
-                    <div class="col-md-4 form-group">
+
+                     </div></div>
+					<div class="form-group  row">
+						<div class="row col-md-12">
+                    <div class="col-md-12 kt-margin-bottom-20-mobile">
 
                             <div class="mat-form-field-fluid">
                             <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_kidney_problems">Kidney problems</mat-checkbox>
@@ -42,36 +43,51 @@
                             <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_stroke">Stroke</mat-checkbox>
                             <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_heart_problems">Heart problems (e.g., arrhythmias)</mat-checkbox>
                             <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_eye_problems">Eye problems (e.g., impaired vision)</mat-checkbox>
-                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_other">Other</mat-checkbox>
                             <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_dont_know">I Don't Know</mat-checkbox>
-                            <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_not_disclose">Prefer not to disclose</mat-checkbox>
+							<mat-checkbox class="lab-mar-right-15"   formControlName="DSM_not_disclose">Prefer not to disclose</mat-checkbox>
+							<mat-checkbox class="lab-mar-right-15"   formControlName="DSM_other">Other</mat-checkbox>
+							<div *ngIf="Mform.get('DSM_other').value">
+								<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="If other,Please specify"
+							formControlName="DSM_other_specify" />
+						</mat-form-field>
+						</div>
                         </div>
                     </div>
-                </div>
-                        </div>
-						<div class="form-group  row">
-                        <div class="form-group col-md-12 row">
+                  </div>
+						</div>
 
-                            <div class="col-md-4 kt-margin-bottom-20-mobile">
-                                <label>Please, select your current diabetes management method (tick as many as appropriate)</label>
-                            </div>
-                                <div class="col-md-8 kt-margin-bottom-20-mobile">
-                                <div class="mat-form-field-fluid">
+						<div class="form-group  row" style="padding-top:10px;">
+							<div class="form-group col-md-12 row">
+								<label>Please, select your current diabetes management method (tick as many as appropriate)</label>
 
-                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_physically_active">Physical activity</mat-checkbox>
+							</div>
+						</div>
+
+
+                                <div class="form-group  row">
+									<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
+									<mat-checkbox class="lab-mar-right-15"   formControlName="DSM_physically_active">Physical activity</mat-checkbox>
+								   </label>
+								</div>
                                     <div *ngIf="Mform.get('DSM_physically_active').value"  class="dis-con">
-                                        <div class="col-md-4 form-group">
-
-                                        </div>
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
                                                        <input matInput placeholder="If yes, specify year"
                                                         formControlName="DSM_physically_active_Year" />
                                             </mat-form-field>
                                         </div>
-                                    </div>
+									</div>
+									</div>
+								<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
                                     <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_Diet">Diet</mat-checkbox>
-                                    <div *ngIf="Mform.get('DSM_Diet').value"  class="dis-con">
+								</label>
+							    </div>
+									<div *ngIf="Mform.get('DSM_Diet').value"  class="dis-con">
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
                                                 <input matInput placeholder=" If yes, please, specify the latest type of diet you have used "
@@ -90,31 +106,40 @@
                                                         formControlName="DSM_Diet_EndDate" />
                                             </mat-form-field>
                                         </div>
-                                    </div>
+									</div>
+								</div>
+								<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
                                     <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_diabetes_education">Education about diabetes self-management</mat-checkbox>
-
+						  		</label>
+							     </div>
                                     <div *ngIf="Mform.get('DSM_diabetes_education').value"  class="dis-con">
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
-                                                <input matInput placeholder="f yes, please, specify by who:"
+                                                <input matInput placeholder="Please specify by who:"
                                                        formControlName="DSM_diabetes_education_specify" />
                                             </mat-form-field>
                                         </div>
-
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
-                                                       <input matInput placeholder="If yes, specify year"
+                                                       <input matInput placeholder="Specify year"
                                                         formControlName="DSM_diabetes_education_year" />
                                             </mat-form-field>
                                         </div>
-                                    </div>
+									</div>
+								</div>
+								<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
                                     <mat-checkbox  class="lab-mar-right-15"  formControlName="DSM_Metformin">Medication: Metformin</mat-checkbox>
-
+								</label>
+						     	</div>
                                     <div *ngIf="Mform.get('DSM_Metformin').value"  class="dis-con">
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
                                                 <input matInput placeholder="Dose:"
-                                                       formControlName="metformin_current_dose" />
+                                                       formControlName="DSM_Metformin_dose" />
                                             </mat-form-field>
                                         </div>
                                         <div class="col-md-4 form-group">
@@ -124,12 +149,18 @@
                                             </mat-form-field>
                                         </div>
 
-                                    </div>
-                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_antidiabetic">Other antidiabetic medication:</mat-checkbox>
-                                    <div *ngIf="Mform.get('DSM_antidiabetic').value"  class="dis-con">
+									</div>
+								</div>
+								<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
+                                    <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_antidiabetic">Other antidiabetic medication</mat-checkbox>
+								</label>
+							</div>
+									<div *ngIf="Mform.get('DSM_antidiabetic').value"  class="dis-con">
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
-                                                <input matInput placeholder="Please, specify which medication"
+                                                <input matInput placeholder="Specify which medication"
                                                        formControlName="DSM_antidiabetic_name" />
                                             </mat-form-field>
                                         </div>
@@ -146,18 +177,24 @@
                                                         formControlName="DSM_antidiabetic_dose" />
                                             </mat-form-field>
                                         </div>
-                                    </div>
+									</div>
+								</div>
+								<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
                                     <mat-checkbox class="lab-mar-right-15"   formControlName="DSM_Insulin">Insulin</mat-checkbox>
-                                    <div *ngIf="Mform.get('DSM_Insulin').value"  class="dis-con">
+								</label>
+							</div>
+									<div *ngIf="Mform.get('DSM_Insulin').value"  class="dis-con">
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
-                                                <input matInput placeholder="Please, specify which type"
+                                                <input matInput placeholder="Specify which type"
                                                        formControlName="DSM_Insulin_name" />
                                             </mat-form-field>
                                         </div>
                                         <div class="col-md-2 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
-                                                       <input matInput placeholder="Since when?  Year:"
+                                                       <input matInput placeholder="Year:"
                                                         formControlName="DSM_Insulin_year" />
                                             </mat-form-field>
                                         </div>
@@ -167,30 +204,32 @@
                                                         formControlName="DSM_Insulin_dose" />
                                             </mat-form-field>
                                         </div>
-                                    </div>
+									</div>
+								</div>
+								<div class="row col-md-12">
+									<div class="col-md-4 form-group">
+										<label>
                                     <mat-checkbox class="lab-mar-right-15"   formControlName="DSMCDM_Other">Other</mat-checkbox>
-                                    <div *ngIf="Mform.get('DSMCDM_Other').value"  class="dis-con">
-                                        <div class="col-md-4 form-group">
-                                            <mat-form-field class="mat-form-field-fluid">
-                                                <input matInput placeholder="please specify"
-                                                       formControlName="other_specify" />
-                                            </mat-form-field>
-                                        </div>
+								</label>
+						      	</div>
+									<div *ngIf="Mform.get('DSMCDM_Other').value"  class="dis-con">
+
                                         <div class="col-md-4 form-group">
                                             <mat-form-field class="mat-form-field-fluid">
                                                        <input matInput placeholder="If other,please specify "
                                                         formControlName="DSMCDM_Other_Specify" />
                                             </mat-form-field>
                                         </div>
-                                    </div>
+									</div>
+									<div class="col-md-4 form-group">
                                     <mat-checkbox class="lab-mar-right-15"   formControlName="DSMCDM_None">None</mat-checkbox>
-
+								</div>
                                 </div>
 
 
                             </div>
-						</div>
-						</div>
+
+
 						<div class="form-group  row">
 							<div class="row col-md-12">
 
@@ -538,186 +577,7 @@
         </div>
 				</div>
 
-				<div class="form-group  row">
-					<div class="row col-md-12">
-						<strong>Questions for Female Participants only</strong><br><br>
-					</div>
-					<div class="row col-md-12">
-						<div class="col-md-4">
-						 How old were you when (if) you got the first period?
-						</div>
-						<div class="col-md-2">
-							<mat-form-field class="mat-form-field-fluid">
-								<input matInput placeholder="First period year"
-									formControlName="female_first_period_year" />
-							</mat-form-field>
-						</div>
-						<div class="col-md-6">
-							<mat-radio-group formControlName="female_first_period">
-								<mat-radio-button  value="never">I never had it </mat-radio-button>
-								<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
-								<mat-radio-button  value="yes">Prefer not to disclose</mat-radio-button>
-							</mat-radio-group>
-						</div>
-					</div>
-				</div>
 
-				<div class="form-group  row">
-					<div class="row col-md-12">
-						<div class="col-md-4">
-					  Are you currently in menopause?
-						</div>
-						<div class="col-md-6">
-							<mat-radio-group formControlName="female_menopause">
-								<mat-radio-button  value="yes">Yes</mat-radio-button>
-								<mat-radio-button  value="no">No</mat-radio-button>
-								<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
-								<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-							</mat-radio-group>
-						</div>
-						<div class="col-md-2 form-group1" *ngIf="Mform.get('female_menopause').value == 'yes'" >
-							<mat-form-field class="mat-form-field-fluid">
-								<input matInput placeholder="If yes,since when "
-									formControlName="female_menopause_year" />
-							</mat-form-field>
-						</div>
-					</div>
-
-				</div>
-
-			<div class="form-group  row">
-				<div class="row col-md-12">
-					<div class="col-md-4">
-						How often do you have periods?
-					</div>
-					<div class="col-md-6">
-						<mat-radio-group formControlName="female_period_How_often">
-							<mat-radio-button  value="1pmonth">Once per month</mat-radio-button>
-							<mat-radio-button  value="more1month">More than once per month</mat-radio-button>
-							<mat-radio-button  value="every2-3month">Every 2-3 months</mat-radio-button>
-							<mat-radio-button  value="every6month">Every 6 months </mat-radio-button>
-							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
-							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-							<mat-radio-button  value="other">Other</mat-radio-button>
-						</mat-radio-group>
-					</div>
-					<div class="col-md-2 form-group1" *ngIf="Mform.get('female_period_How_often').value == 'other'" >
-						<mat-form-field class="mat-form-field-fluid">
-							<input matInput placeholder="If other, specify"
-								formControlName="female_period_How_often_others" />
-						</mat-form-field>
-					</div>
-				</div>
-		</div>
-		<div class="form-group  row">
-			<div class="row col-md-12">
-				<div class="col-md-4">
-					Do you still have your periods in regular time intervals?
-				</div>
-				<div class="col-md-8">
-					<mat-radio-group formControlName="female_period_regular_time_intervals">
-						<mat-radio-button  value="yes">Yes</mat-radio-button>
-						<mat-radio-button  value="no">No</mat-radio-button>
-						<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
-						<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-					</mat-radio-group><br>
-					<div  *ngIf="Mform.get('female_period_regular_time_intervals').value == 'yes'" >
-						If yes, when did you have your last period <br>
-						<mat-radio-group formControlName="female_period_regular_time_intervals_yes">
-							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
-							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-						</mat-radio-group>
-					</div>
-					<div  *ngIf="Mform.get('female_period_regular_time_intervals').value == 'no'" >
-						If no, since when your periods are irregular?<br>
-						<mat-radio-group formControlName="female_period_regular_time_intervals_no">
-							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
-							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-						</mat-radio-group>
-					</div>
-				</div>
-
-			</div>
-	</div>
-	<div class="form-group  row">
-		<div class="row col-md-12">
-			<div class="col-md-4">
-				Are you currently pregnant?
-			</div>
-			<div class="col-md-6">
-				<mat-radio-group formControlName="female_pregnant">
-					<mat-radio-button  value="yes">Yes</mat-radio-button>
-					<mat-radio-button  value="no">No</mat-radio-button>
-					<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
-					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-				</mat-radio-group><br>
-			</div>
-			<div class="col-md-2"  *ngIf="Mform.get('female_pregnant').value == 'yes'" >
-				<mat-form-field class="mat-form-field-fluid">
-					<input matInput placeholder="If yes, since when"
-						formControlName="female_pregnant_when" />
-				</mat-form-field>
-			</div>
-
-		</div>
-	  </div>
-	  <div class="form-group  row">
-		<div class="row col-md-12">
-			<div class="col-md-4">
-		 Are you currently taking birth control medications?
-			</div>
-			<div class="col-md-8">
-				<mat-radio-group formControlName="female_birth_control">
-					<mat-radio-button  value="yes">Yes</mat-radio-button>
-					<mat-radio-button  value="no">No</mat-radio-button>
-					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-				</mat-radio-group><br>
-				<div class="row col-md-12" *ngIf="Mform.get('female_birth_control').value == 'yes'">
-					<div class="col-md-4"   >
-						<mat-form-field class="mat-form-field-fluid">
-							<input matInput placeholder="If yes, since when"
-								formControlName="female_birth_control_when" />
-						</mat-form-field>
-					</div>
-					<div class="col-md-6"   >
-						<mat-form-field class="mat-form-field-fluid">
-							<input matInput placeholder="Which medication"
-								formControlName="female_birth_control_Which_medication" />
-						</mat-form-field>
-					</div>
-					<div class="col-md-2"   >
-						<mat-form-field class="mat-form-field-fluid">
-							<input matInput placeholder="Dose"
-								formControlName="female_birth_control_dose" />
-						</mat-form-field>
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-      </div>
-	  <div class="form-group  row">
-		<div class="row col-md-12">
-			<div class="col-md-4">
-				Do you have excessive body or facial hair?
-			</div>
-			<div class="col-md-8">
-				<mat-radio-group formControlName="female_facial_hair">
-					<mat-radio-button  value="yes">Yes</mat-radio-button>
-					<mat-radio-button  value="no">No</mat-radio-button>
-					<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
-					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
-				</mat-radio-group><br>
-				<mat-form-field class="mat-form-field-fluid">
-					<input matInput placeholder="FG scoring system points"
-						formControlName="female_fg_points" />
-				</mat-form-field>
-			</div>
-
-
-		</div>
-	  </div>
 </div>
     </form>
 </div>

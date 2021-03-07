@@ -72,7 +72,7 @@
             </div>
             <div class="col-md-8 form-group">
                 <div><br>
-                    <mat-radio-group formControlName="PMD_lastmonths_flu">
+                    <mat-radio-group formControlName="PMD_last12_months_flu">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
                         <mat-radio-button  value="no">No</mat-radio-button>
                         <mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
@@ -192,7 +192,7 @@
             <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_vaccination').value == 'yes'" >
                 <mat-form-field class="mat-form-field-fluid">
                     <input matInput placeholder="If yes, specify year"
-                        formControlName="med_Vaccination_year" />
+                        formControlName="PMD_vaccination_Year" />
 				</mat-form-field>
 				<mat-form-field class="mat-form-field-fluid">
                     <input matInput placeholder="Name"
@@ -239,7 +239,6 @@
 					<mat-radio-button  value="no">No</mat-radio-button>
 					<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
 				</mat-radio-group>
-
             </div>
             <div class="col-md-2 form-group" *ngIf="Mform.get('PMD_intolerance').value == 'yes'">
 				<mat-form-field class="mat-form-field-fluid">

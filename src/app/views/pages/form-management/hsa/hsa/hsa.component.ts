@@ -101,7 +101,7 @@ export class HsaComponent implements OnInit {
 
 		this.getTotalCount();
 		this.fetchList();
-		this.subheaderService.setTitle('Precision Medicine');
+		this.subheaderService.setTitle('Precision Medicine in Type 2 (Long)');
 		this.subheaderService.showPrintButton(false);
 	}
 

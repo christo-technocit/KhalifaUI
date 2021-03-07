@@ -26,6 +26,10 @@
 			font-weight: kt-get($item, link, text, font-weight);
 			font-size: kt-get($item, link, text, font-size);
 			text-transform: kt-get($item, link, text, font-transform);
+			display: block;
+								word-wrap:break-word;
+								width: 50px;
+								white-space: normal;
 		}
 
 		// menu item link's icon

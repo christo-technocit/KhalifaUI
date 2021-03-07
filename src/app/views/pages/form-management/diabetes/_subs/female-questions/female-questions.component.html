@@ -1,0 +1,186 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
+        <div class="kt-form__section kt-form__section--first">
+				<div class="form-group  row">
+					<div class="row col-md-12">
+						<strong>Questions for Female Participants only</strong><br><br>
+					</div>
+					<div class="row col-md-12">
+						<div class="col-md-4">
+						 How old were you when (if) you got the first period?
+						</div>
+						<div class="col-md-2">
+							<mat-form-field class="mat-form-field-fluid">
+								<input matInput placeholder="First period year"
+									formControlName="female_first_period_year" />
+							</mat-form-field>
+						</div>
+						<div class="col-md-6">
+							<mat-radio-group formControlName="female_first_period">
+								<mat-radio-button  value="never">I never had it </mat-radio-button>
+								<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+								<mat-radio-button  value="yes">Prefer not to disclose</mat-radio-button>
+							</mat-radio-group>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group  row">
+					<div class="row col-md-12">
+						<div class="col-md-4">
+					  Are you currently in menopause?
+						</div>
+						<div class="col-md-6">
+							<mat-radio-group formControlName="female_menopause">
+								<mat-radio-button  value="yes">Yes</mat-radio-button>
+								<mat-radio-button  value="no">No</mat-radio-button>
+								<mat-radio-button  value="dontknow">Don't Know</mat-radio-button>
+								<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+							</mat-radio-group>
+						</div>
+						<div class="col-md-2 form-group1" *ngIf="Mform.get('female_menopause').value == 'yes'" >
+							<mat-form-field class="mat-form-field-fluid">
+								<input matInput placeholder="If yes,since when "
+									formControlName="female_menopause_year" />
+							</mat-form-field>
+						</div>
+					</div>
+
+				</div>
+
+			<div class="form-group  row">
+				<div class="row col-md-12">
+					<div class="col-md-4">
+						How often do you have periods?
+					</div>
+					<div class="col-md-6">
+						<mat-radio-group formControlName="female_period_How_often">
+							<mat-radio-button  value="1pmonth">Once per month</mat-radio-button>
+							<mat-radio-button  value="more1month">More than once per month</mat-radio-button>
+							<mat-radio-button  value="every2-3month">Every 2-3 months</mat-radio-button>
+							<mat-radio-button  value="every6month">Every 6 months </mat-radio-button>
+							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+							<mat-radio-button  value="other">Other</mat-radio-button>
+						</mat-radio-group>
+					</div>
+					<div class="col-md-2 form-group1" *ngIf="Mform.get('female_period_How_often').value == 'other'" >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="If other, specify"
+								formControlName="female_period_How_often_others" />
+						</mat-form-field>
+					</div>
+				</div>
+		</div>
+		<div class="form-group  row">
+			<div class="row col-md-12">
+				<div class="col-md-4">
+					Do you still have your periods in regular time intervals?
+				</div>
+				<div class="col-md-8">
+					<mat-radio-group formControlName="female_period_regular_time_intervals">
+						<mat-radio-button  value="yes">Yes</mat-radio-button>
+						<mat-radio-button  value="no">No</mat-radio-button>
+						<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+						<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+					</mat-radio-group><br>
+					<div  *ngIf="Mform.get('female_period_regular_time_intervals').value == 'yes'" >
+						If yes, when did you have your last period <br>
+						<mat-radio-group formControlName="female_period_regular_time_intervals_yes">
+							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+						</mat-radio-group>
+					</div>
+					<div  *ngIf="Mform.get('female_period_regular_time_intervals').value == 'no'" >
+						If no, since when your periods are irregular?<br>
+						<mat-radio-group formControlName="female_period_regular_time_intervals_no">
+							<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+							<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+						</mat-radio-group>
+					</div>
+				</div>
+
+			</div>
+	</div>
+	<div class="form-group  row">
+		<div class="row col-md-12">
+			<div class="col-md-4">
+				Are you currently pregnant?
+			</div>
+			<div class="col-md-6">
+				<mat-radio-group formControlName="female_pregnant">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+				</mat-radio-group><br>
+			</div>
+			<div class="col-md-2"  *ngIf="Mform.get('female_pregnant').value == 'yes'" >
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="If yes, since when"
+						formControlName="female_pregnant_when" />
+				</mat-form-field>
+			</div>
+
+		</div>
+	  </div>
+	  <div class="form-group  row">
+		<div class="row col-md-12">
+			<div class="col-md-4">
+		 Are you currently taking birth control medications?
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="female_birth_control">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+				</mat-radio-group><br>
+				<div class="row col-md-12" *ngIf="Mform.get('female_birth_control').value == 'yes'">
+					<div class="col-md-4"   >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="If yes, since when"
+								formControlName="female_birth_control_when" />
+						</mat-form-field>
+					</div>
+					<div class="col-md-6"   >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Which medication"
+								formControlName="female_birth_control_Which_medication" />
+						</mat-form-field>
+					</div>
+					<div class="col-md-2"   >
+						<mat-form-field class="mat-form-field-fluid">
+							<input matInput placeholder="Dose"
+								formControlName="female_birth_control_dose" />
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+      </div>
+	  <div class="form-group  row">
+		<div class="row col-md-12">
+			<div class="col-md-4">
+				Do you have excessive body or facial hair?
+			</div>
+			<div class="col-md-8">
+				<mat-radio-group formControlName="female_facial_hair">
+					<mat-radio-button  value="yes">Yes</mat-radio-button>
+					<mat-radio-button  value="no">No</mat-radio-button>
+					<mat-radio-button  value="dontknow">Don't know</mat-radio-button>
+					<mat-radio-button  value="notdisclose">Prefer not to disclose</mat-radio-button>
+				</mat-radio-group><br>
+				<mat-form-field class="mat-form-field-fluid">
+					<input matInput placeholder="FG scoring system points"
+						formControlName="female_fg_points" />
+				</mat-form-field>
+			</div>
+
+
+		</div>
+	  </div>
+</div>
+    </form>
+</div>

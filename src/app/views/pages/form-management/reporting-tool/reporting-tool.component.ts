@@ -97,7 +97,7 @@ export class ReportingToolComponent {
     }
 
     initGrid(){
-        this.reportingToolChildComponent.FillGrid(this.parameterList, this.report.AttributeName);
+       // this.reportingToolChildComponent.FillGrid(this.parameterList, this.report.AttributeName);
 
         this.FillCountries();
         if(localStorage.getItem('ReportColumns') != null)
@@ -170,7 +170,7 @@ export class ReportingToolComponent {
 
        // console.log('attributes111',this.attributeName);
        // this.reportColumns.AttributeDisplayName = [];
-       
+
         this._vService.getFormAttributeReports(_val,this.sectionID).subscribe((res)=>{
             console.log('attributes',res.result);
             this.attributeNames = res.result;
@@ -211,6 +211,8 @@ export class ReportingToolComponent {
         if(this.reportColumns.Reports == 9){this.excelReportName ="Emirates_Family_Registry";}
         if(this.reportColumns.Reports == 10){this.excelReportName ="Precision_Medicine_1";}
         if(this.reportColumns.Reports == 11){this.excelReportName ="Covid-19";}
+        if(this.reportColumns.Reports == 12){this.excelReportName ="Covid-19V2";}
+
         if(this.reportColumns.Reports == 100){this.excelReportName ="Precision_Medicine_2";
         this.reportColumns.Reports = 10;this.sectionID=9;}
         this.reportingToolChildComponent.FillExcel(this.parameterList,this.reportColumns.Reports,this.attributeName,this.sectionID,this.reportColumns.Collected_by,this.reportColumns.Collected_point,this.reportColumns.BeginPeriod,this.reportColumns.EndPeriod,this.reportColumns.Nationality,this.reportColumns.Diabetes,this.reportColumns.Gender,this.reportColumns.Sample_id,this.reportColumns.Filter,this.excelReportName);
@@ -241,7 +243,7 @@ export class ReportingToolComponent {
         this.reportingToolChildComponent.FillGridByParms(this.parameterList,this.reportColumns.Reports,this.attributeName,this.sectionID,this.reportColumns.Collected_by,this.reportColumns.Collected_point,this.reportColumns.BeginPeriod,this.reportColumns.EndPeriod,this.reportColumns.Nationality,this.reportColumns.Diabetes,this.reportColumns.Gender,this.reportColumns.Sample_id,this.reportColumns.Filter);
         } else
         this.reportingToolChildComponent.FillGridByParms(this.parameterList,this.reportColumns.Reports,this.attributeName,0,this.reportColumns.Collected_by,this.reportColumns.Collected_point,this.reportColumns.BeginPeriod,this.reportColumns.EndPeriod,this.reportColumns.Nationality,this.reportColumns.Diabetes,this.reportColumns.Gender,this.reportColumns.Sample_id,this.reportColumns.Filter);
-        
+
         console.log('attributes11',this.reportColumns.AttributeDisplayName);
         localStorage.setItem('ReportColumns', JSON.stringify(this.reportColumns));
         this.checkAll = false;

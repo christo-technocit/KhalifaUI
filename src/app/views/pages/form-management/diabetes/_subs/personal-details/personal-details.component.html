@@ -180,9 +180,6 @@
 					<mat-form-field class="mat-form-field-fluid">
 						<input matInput placeholder="City"
 							   formControlName="city" />
-						<!--<mat-hint align="start">Please enter-->
-						<!--<strong>Number Of Wives</strong>-->
-						<!--</mat-hint>-->
 					</mat-form-field>
                 </div>
             <div class="col-md-4 kt-margin-bottom-20-mobile"></div>
@@ -244,7 +241,7 @@
                                 <mat-radio-button  matInput value="Seperated">Seperated</mat-radio-button>
                                 <mat-radio-button  matInput value="divorced">Divorced</mat-radio-button>
                                 <mat-radio-button  matInput value="widow">Widow</mat-radio-button>
-                                <mat-radio-button  matInput value="married">Prefer not to disclose</mat-radio-button>
+                                <mat-radio-button  matInput value="notdisclose">Prefer not to disclose</mat-radio-button>
                             </mat-radio-group>
 						</div>
 						<div *ngIf="form.get('maritalstatus').value == 'married' && form.get('gender').value=='male'" >

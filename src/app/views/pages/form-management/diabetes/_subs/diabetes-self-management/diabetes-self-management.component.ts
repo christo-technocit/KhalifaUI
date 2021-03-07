@@ -44,7 +44,7 @@ export class DiabetesDiabetesSelfManagementComponent implements OnInit {
       this.createForm();
       if (!this.formId)
       this._interactionService._Refid$.subscribe((id) => {
-        this.Mform.patchValue({ "savedFormID": id })
+        this.Mform.patchValue({ "SavedFormID": id })
 
       })
     else {
@@ -58,7 +58,7 @@ export class DiabetesDiabetesSelfManagementComponent implements OnInit {
       })
     }
 
-  //this.getFormAttributeValues();
+  this.getFormAttributeValues();
     }
 
 getFormAttributeValues() {
@@ -77,7 +77,7 @@ getFormAttributeValues() {
   }
   createForm() {
     this.Mform = this.eformFB.group({
- "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
+ "SavedFormID": new FormControl({value: 0, disabled: this.disableInput}),
  "DSM_long_term_diabetic": new FormControl({value: '', disabled: this.disableInput}),
  "DSM_long_term_diabetic_years": new FormControl({value: '', disabled: this.disableInput}),
  "DSM_kidney_problems": new FormControl({value: '', disabled: this.disableInput}),
@@ -127,25 +127,8 @@ getFormAttributeValues() {
  "DSM_morevisit": new FormControl({value: '', disabled: this.disableInput}),
  "DSM_less_physically_active": new FormControl({value: '', disabled: this.disableInput}),
  "DSM_self_care_poor": new FormControl({value: '', disabled: this.disableInput}),
- "female_first_period": new FormControl({value: '', disabled: this.disableInput}),
- "female_menopause": new FormControl({value: '', disabled: this.disableInput}),
- "female_menopause_year": new FormControl({value: '', disabled: this.disableInput}),
- "female_period_How_often": new FormControl({value: '', disabled: this.disableInput}),
- "female_period_How_often_others": new FormControl({value: '', disabled: this.disableInput}),
- "female_period_regular_time_intervals": new FormControl({value: '', disabled: this.disableInput}),
- "female_pregnant": new FormControl({value: '', disabled: this.disableInput}),
- "female_pregnant_when": new FormControl({value: '', disabled: this.disableInput}),
- "female_birth_control": new FormControl({value: '', disabled: this.disableInput}),
- "female_birth_control_when": new FormControl({value: '', disabled: this.disableInput}),
- "female_birth_control_Which_medication": new FormControl({value: '', disabled: this.disableInput}),
- "female_birth_control_dose": new FormControl({value: '', disabled: this.disableInput}),
- "female_facial_hair": new FormControl({value: '', disabled: this.disableInput}),
- "female_fg_points": new FormControl({value: '', disabled: this.disableInput}),
- "collection_point": new FormControl({value: '', disabled: this.disableInput}),
- "female_period_regular_time_intervals_yes": new FormControl({value: '', disabled: this.disableInput}),
- "female_period_regular_time_intervals_no": new FormControl({value: '', disabled: this.disableInput}),
- "female_first_period_year": new FormControl({value: '', disabled: this.disableInput}),
- "female_period_days": new FormControl({value: '', disabled: this.disableInput}),
+ "DSM_other_specify": new FormControl({value: '', disabled: this.disableInput}),
+
 });
 
     this.getFormAttributeValues();
@@ -166,15 +149,15 @@ getFormAttributeValues() {
   }
   onSubmit(){
 
-    if (!this.Mform.value["savedFormID"] && !this.saveFormId) {
+    if (!this.Mform.value["SavedFormID"] && !this.saveFormId) {
       this.createSampleId();
     }else {
-        this.Mform.patchValue({"savedFormID": this.Mform.value["savedFormID"] || this.saveFormId})
+        this.Mform.patchValue({"SavedFormID": this.Mform.value["SavedFormID"] || this.saveFormId})
         this.isSampleSubmit = false;
-        let data = this.finalFormValues.prepareAttibuteForm(this.Mform.value, this.formAttributes, "savedFormID",this.formId)
+        let data = this.finalFormValues.prepareAttibuteForm(this.Mform.value, this.formAttributes, "SavedFormID",this.formId)
         if (this.formId ||  this.isFormSubmit) {
             this.splashService.splashScreen({isLoading : true, message : "UPDATING" })
-            this._service.getFormAttributeValues(this.formId || this.Mform.controls["savedFormID"].value ).subscribe((res:any) => {
+            this._service.getFormAttributeValues(this.formId || this.Mform.controls["SavedFormID"].value ).subscribe((res:any) => {
 
                 if(res){
                     for(var i=0;i<data.length;i++) {

@@ -65,6 +65,10 @@ const routes: Routes = [
 				component: ReportingToolComponent
 			},
 			{
+				path: 'covid19V2',
+				loadChildren: () => import('app/views/pages/form-management/covid19V2/covid19V2.module').then(m => m.covid19V2Module)
+			 },
+			{
 			   path: 'covid19',
 			   loadChildren: () => import('app/views/pages/form-management/covid19/covid19.module').then(m => m.Covid19Module)
 			},

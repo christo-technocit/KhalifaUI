@@ -1,8 +1,13 @@
 <kt-portlet>
 	<!-- PORTLET LOADING | Binded to TABLE Datasource -->
 	<!-- See prop => '~/core/_crud/models/data-sources/_base.datasource.ts' (loading$) -->
-	<kt-portlet-header [title]="'Manage Precision Medicine'" [class]="'kt-portlet__head--lg'">
+	<kt-portlet-header [title]="'Manage Precision Medicine in Type 2 (Long)'" [class]="'kt-portlet__head--lg'">
 		<ng-container ktPortletTools>
+			<a  [routerLink]="[ '../../diabetes/types']"   class="btn btn-secondary kt-margin-r-10" mat-raised-button
+				matTooltip="Back to Precision Medicine in Type 2 Diabetes">
+				<i class="la la-arrow-left"></i>
+				<span class="kt-hidden-mobile">Back</span>
+			</a>
 			<button [routerLink]="['../add']" mat-raised-button color="primary" matTooltip="Create Precision Medicine">Add New</button>
 			<!-- Buttons (Material Angular) | See off.documenations 'https://material.angular.io/components/button/overview' -->
 			<!-- mat-raised-button | Rectangular contained button w/ elevation  -->

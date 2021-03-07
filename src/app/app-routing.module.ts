@@ -23,11 +23,11 @@ const routes: Routes = [
 				path: 'form-management',
 				loadChildren: () => import('app/views/pages/form-management/eforms.module').then(m => m.EFormsModule)
 			},
-	{
+/* 	{
 		path: 'osteoporosis',
 				loadChildren: () => import('app/views/pages/form-management/osteoporosis/osteoporosis.module').then(m => m.OsteoporosisModule)
 	},
-
+ */
 			// {
 			// 	path: 'substance-dependence',
 			// 	loadChildren: () => import('app/views/pages/substance-dependence/substance-dependence.module').then(m => m.SubstanceDependenceModule)

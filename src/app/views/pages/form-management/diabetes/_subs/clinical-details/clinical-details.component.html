@@ -1,40 +1,37 @@
 <div class="col-md-12">
     <form autocomplete="off" [formGroup]="Mform" class="kt-form kt-form--group-seperator-dashed">
-            <div class="col-md-12 form-group row">
+		<div class="form-group row">
+		<div class="col-md-12">
                 <h6>
                     Medical details (If Type 2 diabetic)
                 </h6>
         </div>
+		</div>
+		<div class="form-group row">
+
+            <div class="col-md-12 kt-margin-bottom-20-mobile">
+                <label> Please, mark all conditions that apply to this patient: </label>
+            </div>
+		</div>
 
         <div class="form-group row">
 
-            <div class="col-md-4 kt-margin-bottom-20-mobile">
-                <label> Please, mark all conditions that apply to this patient:
-                </label>
-            </div>
-                <div class="col-md-8 kt-margin-bottom-20-mobile">
-                <div class="mat-form-field-fluid">
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_gastrointestinal">Chronic gastrointestinal disease</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Inflammatory_bowel">Inflammatory bowel disease</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Gastrointestinal_ulcer">Gastrointestinal ulcer</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_liver">Chronic liver disease</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_pancreatitis">Chronic pancreatitis</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_kidney">Chronic kidney disease</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Cholelithiasis">Cholelithiasis (the presence of gallstones)</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Endocrine_disorders">Endocrine disorders (e.g., PCOS, Cushing syndrome, acromegaly, gigantism)</mat-checkbox>
-                    <mat-checkbox class="lab-mar-right-15"   formControlName="PMD_inflammation">Infection and/or inflammation</mat-checkbox>
+			<div class="col-md-12 kt-margin-bottom-20-mobile">
+			<div class="mat-form-field-fluid">
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_gastrointestinal">Chronic gastrointestinal disease</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Inflammatory_bowel">Inflammatory bowel disease</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Gastrointestinal_ulcer">Gastrointestinal ulcer</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_liver">Chronic liver disease</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_pancreatitis">Chronic pancreatitis</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Chronic_kidney">Chronic kidney disease</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Cholelithiasis">Cholelithiasis (the presence of gallstones)</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_Endocrine_disorders">Endocrine disorders (e.g., PCOS, Cushing syndrome, acromegaly, gigantism)</mat-checkbox>
+				<mat-checkbox class="lab-mar-right-15"   formControlName="PMD_inflammation">Infection and/or inflammation</mat-checkbox>
 
-                    <!-- <div *ngIf="Mform.get('health_advice_others').value"  class="dis-con">
-                        <div class="col-md-2 form-group">
-                            <mat-form-field class="mat-form-field-fluid">
-                                <input matInput placeholder=""
-                                       formControlName="health_advice_others_remarks" />
-                            </mat-form-field>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
+			</div>
+
+		</div>
+	</div>
 
         <div class="form-group row">
 
@@ -42,7 +39,8 @@
                 <label> Does this patient has any of the following conditions? (select as many as appropriate)
                 </label>
             </div>
-        </div>
+		</div>
+
         <div class="form-group row">
 
                 <div class="col-md-12 kt-margin-bottom-20-mobile">

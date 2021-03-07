@@ -1,0 +1,602 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>2.a Onset date of first symptoms:</h5>  
+                        </label>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Diagnostic Date: </label>
+                    </div>
+                 </div>
+
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="diaPicker"
+                        autocomplete="off"
+                        (click)="diaPicker.open()"
+                        placeholder="Diagnostic date" (click)="diaPicker.open()"
+                         formControlName="DiagnosticDate" />
+                    <mat-datepicker-toggle matSuffix [for]="diaPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #diaPicker></mat-datepicker>
+                    </mat-form-field>
+                </div> 
+            </div>
+            
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Did The Person Have Symptoms?</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">                     
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="PersonHaveSymptoms">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        <mat-radio-button  matInput value="unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+              <div class="col-md-4 form-group"  *ngIf="form.get('PersonHaveSymptoms').value == 'yes'">  
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="doaPicker"
+                        autocomplete="off"
+                        (click)="doaPicker.open()"
+                        placeholder="Onset date" (click)="doaPicker.open()" 
+                        formControlName="PersonHaveSymptomsDate" />
+                    <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #doaPicker></mat-datepicker>
+                    </mat-form-field>
+                </div> 
+            </div> 
+
+            <div class="form-group  row">
+                
+                    <div class="col-md-12 kt-margin-bottom-20-mobile form-group">
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="Duration of symptoms:(days) "
+                             autocomplete="off" 
+                            formControlName="PersonHaveSymptomsDuration" />
+                           </mat-form-field>
+                    </div>
+                </div>
+            
+                <div class="form-group  row">
+                    <div class="col-md-4 ">
+                        <div class="mat-form-field-fluid">
+                        <label id="example-radio-group-label">Did the person Travel? </label>
+                        </div>
+                     </div>
+                    <div class="col-md-2 form-group">
+                            <mat-radio-group aria-labelledby="example-radio-group-label" 
+                             formControlName="PersonTravel">
+                                <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                                <mat-radio-button  matInput value="no">No</mat-radio-button>
+                               <!--  <mat-radio-button  matInput value="DataNotAvailable">Data Not Available</mat-radio-button>
+                                <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button> -->
+                            </mat-radio-group>
+                    </div>
+    
+                    <!-- *ngIf="form.get('PersonTravel').value == 'yes'"  -->
+               <div class="col-md-2 form-group"  *ngIf="form.get('PersonTravel').value == 'yes'">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="doaPicker1"
+                        autocomplete="off"
+                        (click)="doaPicker1.open()"
+                        placeholder="Onset date: (dd/mm/yyyy): __/__/____" (click)="doaPicker1.open()" 
+                        formControlName="PersonTravelDate" />
+                    <mat-datepicker-toggle matSuffix [for]="doaPicker1"></mat-datepicker-toggle>
+                    <mat-datepicker #doaPicker1></mat-datepicker>
+                    </mat-form-field>
+                </div> 
+                 <div class="col-md-4  form-group"  *ngIf="form.get('PersonTravel').value == 'yes'">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Destination" autocomplete="off" 
+                        formControlName="PersonTravelDestination" />
+                       </mat-form-field>
+                </div> 
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>2.b Symptoms:</h5>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-2 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Acute Respiratory Distress Syndrome: </label>
+                    </div>
+                </div>
+                <div class="col-md-3 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label" 
+                    formControlName="ARDS">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                 <div class="col-md-2 form-group" *ngIf="form.get('ARDS').value == 'yes'">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="ARDSDate"
+                        autocomplete="off"
+                        (click)="ARDSDate.open()"
+                        placeholder="Onset date" (click)="ARDSDate.open()" 
+                        formControlName="ARDSDate" />
+                    <mat-datepicker-toggle matSuffix [for]="ARDSDate"></mat-datepicker-toggle>
+                    <mat-datepicker #ARDSDate></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Confirmed by X-ray?</label>
+                    </div>
+                </div>
+                <div class="col-md-3 form-group">
+                <div>
+                    <mat-radio-group aria-labelledby="example-radio-group-label" 
+                    formControlName="ARDS_Xray">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-2 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Pneumonia:</label>
+                    </div>
+                 </div>
+                <div class="col-md-3 form-group">                      
+                       <mat-radio-group aria-labelledby="example-radio-group-label" 
+                         formControlName="Pneumonia">
+                            <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="no">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                            </mat-radio-group>
+                </div>
+                <div class="col-md-2 form-group" *ngIf="form.get('Pneumonia').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="doaPicker3"
+                           autocomplete="off"
+                           (click)="doaPicker3.open()"
+                           placeholder="Onset date" (click)="doaPicker3.open()"
+                            formControlName="Pneumonia_date" />
+                    <mat-datepicker-toggle matSuffix [for]="doaPicker3"></mat-datepicker-toggle>
+                    <mat-datepicker #doaPicker3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Confirmed by X-ray?</label>
+                </div>
+                </div>
+                <div class="col-md-3 form-group">
+                <div>
+                    <mat-radio-group aria-labelledby="example-radio-group-label" 
+                    formControlName="Pneumonia_Xray">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                        <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h6>Other Symptoms:</h6>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Fever</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Fever">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Fever').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="doaPicker2"
+                        autocomplete="off"
+                        (click)="doaPicker2.open()"
+                        placeholder="Onset date" (click)="doaPicker2.open()" 
+                        formControlName="FeverDate" />
+                    <mat-datepicker-toggle matSuffix [for]="doaPicker2"></mat-datepicker-toggle>
+                    <mat-datepicker #doaPicker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Cough</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Cough">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Cough').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="CoughPicker"
+                        autocomplete="off"
+                        (click)="CoughPicker.open()"
+                        placeholder="Onset date" (click)="CoughPicker.open()" 
+                        formControlName="Cough_date" />
+                    <mat-datepicker-toggle matSuffix [for]="CoughPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #CoughPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">New Loss of Taste or Smell</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="NewLossOfTasteOrSmell">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('NewLossOfTasteOrSmell').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="NewLossOfTastePicker"
+                        autocomplete="off"
+                        (click)="NewLossOfTastePicker.open()"
+                        placeholder="Onset date" (click)="NewLossOfTastePicker.open()" 
+                        formControlName="NewLossOfTasteOrSmellDate" />
+                    <mat-datepicker-toggle matSuffix [for]="NewLossOfTastePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #NewLossOfTastePicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Fatigue</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Fatigue">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Fatigue').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="FatiguePicker"
+                        autocomplete="off"
+                        (click)="FatiguePicker.open()"
+                        placeholder="Onset date" (click)="FatiguePicker.open()" 
+                        formControlName="FatigueDate" />
+                    <mat-datepicker-toggle matSuffix [for]="FatiguePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #FatiguePicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Chills or Rigors</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="ChillsOrRigors">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('ChillsOrRigors').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="ChillsOrRigorsPicker"
+                        autocomplete="off"
+                        (click)="ChillsOrRigorsPicker.open()"
+                        placeholder="Onset date" (click)="ChillsOrRigorsPicker.open()" 
+                        formControlName="ChillsOrRigorsDate" />
+                    <mat-datepicker-toggle matSuffix [for]="ChillsOrRigorsPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #ChillsOrRigorsPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Headache</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Headache">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Headache').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="HeadachePicker"
+                        autocomplete="off"
+                        (click)="HeadachePicker.open()"
+                        placeholder="Onset date" (click)="HeadachePicker.open()" 
+                        formControlName="HeadacheDate" />
+                    <mat-datepicker-toggle matSuffix [for]="HeadachePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #HeadachePicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Diarrhea</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Diarrhea">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Diarrhea').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="DiarrheaPicker"
+                        autocomplete="off"
+                        (click)="DiarrheaPicker.open()"
+                        placeholder="Onset date" (click)="DiarrheaPicker.open()" 
+                        formControlName="DiarrheaDate" />
+                    <mat-datepicker-toggle matSuffix [for]="DiarrheaPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #DiarrheaPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Nausea</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Nausea">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Nausea').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="NauseaPicker"
+                        autocomplete="off"
+                        (click)="NauseaPicker.open()"
+                        placeholder="Onset date" (click)="NauseaPicker.open()" 
+                        formControlName="NauseaDate" />
+                    <mat-datepicker-toggle matSuffix [for]="NauseaPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #NauseaPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Shortness Of Breath</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="ShortnessOfBreath">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('ShortnessOfBreath').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="ShortnessOfBreathPicker"
+                        autocomplete="off"
+                        (click)="ShortnessOfBreathPicker.open()"
+                        placeholder="Onset date" (click)="ShortnessOfBreathPicker.open()" 
+                        formControlName="ShortnessOfBreathDate" />
+                    <mat-datepicker-toggle matSuffix [for]="ShortnessOfBreathPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #ShortnessOfBreathPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Sore Throat</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="SoreThroat">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('SoreThroat').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="SoreThroatPicker"
+                        autocomplete="off"
+                        (click)="SoreThroatPicker.open()"
+                        placeholder="Onset date" (click)="SoreThroatPicker.open()" 
+                        formControlName="SoreThroatDate" />
+                    <mat-datepicker-toggle matSuffix [for]="SoreThroatPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #SoreThroatPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Runny Or Stuffy Nose</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="RunnyOrStuffyNose">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('RunnyOrStuffyNose').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="RunnyOrStuffyNosePicker"
+                        autocomplete="off"
+                        (click)="RunnyOrStuffyNosePicker.open()"
+                        placeholder="Onset date" (click)="RunnyOrStuffyNosePicker.open()" 
+                        formControlName="RunnyOrStuffyNoseDate" />
+                    <mat-datepicker-toggle matSuffix [for]="RunnyOrStuffyNosePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #RunnyOrStuffyNosePicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Muscle Or Body Aches</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="MuscleOrBodyAches">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('MuscleOrBodyAches').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="MuscleOrBodyAchesPicker"
+                        autocomplete="off"
+                        (click)="MuscleOrBodyAchesPicker.open()"
+                        placeholder="Onset date" (click)="MuscleOrBodyAchesPicker.open()" 
+                        formControlName="MuscleOrBodyAchesDate" />
+                    <mat-datepicker-toggle matSuffix [for]="MuscleOrBodyAchesPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #MuscleOrBodyAchesPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Vomiting</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Vomiting">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Vomiting').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="VomitingPicker"
+                        autocomplete="off"
+                        (click)="VomitingPicker.open()"
+                        placeholder="Onset date" (click)="VomitingPicker.open()" 
+                        formControlName="VomitingDate" />
+                    <mat-datepicker-toggle matSuffix [for]="VomitingPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #VomitingPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Sneezing</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="Sneezing">
+                        <mat-radio-button matInput  value="yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="no">No</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="col-md-4 form-group" *ngIf="form.get('Sneezing').value == 'yes'" >
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="SneezingPicker"
+                        autocomplete="off"
+                        (click)="SneezingPicker.open()"
+                        placeholder="Onset date" (click)="SneezingPicker.open()" 
+                        formControlName="SneezingDate" />
+                    <mat-datepicker-toggle matSuffix [for]="SneezingPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #SneezingPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12 kt-margin-bottom-20-mobile form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Clinical Notes"
+                         autocomplete="off" 
+                        formControlName="ClinicalNotes" />
+                       </mat-form-field>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</div>

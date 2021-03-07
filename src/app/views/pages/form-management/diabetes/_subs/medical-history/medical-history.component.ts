@@ -88,13 +88,13 @@ export class DiabetesMedicalHistoryComponent implements OnInit {
 "med_Autoimmune_year": new FormControl({value: '', disabled: this.disableInput}),
 "med_other": new FormControl({value: '', disabled: this.disableInput}),
 "med_other_year": new FormControl({value: '', disabled: this.disableInput}),
-"med_liver": new FormControl({value: '', disabled: this.disableInput}),//
-"med_liver_year": new FormControl({value: '', disabled: this.disableInput}),//
+"med_liver_disease": new FormControl({value: '', disabled: this.disableInput}),
+"med_liver_disease_year": new FormControl({value: '', disabled: this.disableInput}),
 "med_arthritis": new FormControl({value: '', disabled: this.disableInput}),
 "med_arthritis_year": new FormControl({value: '', disabled: this.disableInput}),
 "med_hepatitis": new FormControl({value: '', disabled: this.disableInput}),
 "med_hepatitis_year": new FormControl({value: '', disabled: this.disableInput}),
-"med_hepatitis_type_b": new FormControl({value: '', disabled: this.disableInput}),//
+"med_hepatitis_type_b": new FormControl({value: '', disabled: this.disableInput}),
 "med_hepatitis_year_b": new FormControl({value: '', disabled: this.disableInput}),
 "med_hepatitis_type_c": new FormControl({value: '', disabled: this.disableInput}),
 "med_hepatitis_year_c": new FormControl({value: '', disabled: this.disableInput}),
@@ -177,12 +177,15 @@ export class DiabetesMedicalHistoryComponent implements OnInit {
 "PMD_ECG_Covid_19": new FormControl({value: '', disabled: this.disableInput}),
 "PMD_Ventilation_Covid_19": new FormControl({value: '', disabled: this.disableInput}),
 "PMD_ECMO_Covid_19": new FormControl({value: '', disabled: this.disableInput}),
+"complications_Retinopathy_other_other": new FormControl({value: '', disabled: this.disableInput}),
+"complications_Neuropathy_other_specify": new FormControl({value: '', disabled: this.disableInput}),
+"complications_Laser_other_other": new FormControl({value: '', disabled: this.disableInput}),
     })
     this.getFormAttributeValues();
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,3).subscribe((res)=> {
+    this._service.getFormAttribute(12,6).subscribe((res)=> {
       this.formAttributes = res;
     })
   }

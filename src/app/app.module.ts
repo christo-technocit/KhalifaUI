@@ -33,6 +33,8 @@ import { CoreModule } from './core/core.module';
 import { ThemeModule } from "./views/theme/theme.module";
 // Partials
 import { PartialsModule } from './views/partials/partials.module';
+
+
 // Layout Services
 import {
 	DataTableService,
@@ -63,6 +65,7 @@ import * as json from 'highlight.js/lib/languages/json';
 import { FormService } from './core/forms';
 import {VitaminDParticipationComponent} from "./views/pages/form-management/vitamin-d/_subs/vitamin-d-participation-details/vitamin-d-participation-details";
 import { LoaderComponent } from './src/app/loader/loader.component';
+
 
 // tslint:disable-next-line:class-name
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {

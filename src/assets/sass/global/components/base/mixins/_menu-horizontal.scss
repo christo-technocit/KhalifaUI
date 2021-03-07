@@ -35,7 +35,7 @@
 				@include kt-attr(width, kt-get($item, link, icon, svg-width));
 				margin-left: -2px;
 			}
-		}	
+		}
 
 		// link bullet
 		.kt-menu__link-bullet {
@@ -99,7 +99,7 @@
 				}
 			}
 		}
-		
+
 		// link border radius
 		@include kt-rounded {
 			@include kt-attr(border-radius, kt-get($item, link, self, border-radius));
@@ -109,7 +109,7 @@
 		.kt-menu__item-here {
 			display: none;
 		}
-	}	
+	}
 }
 
 @mixin kt-menu-hor-item-skin($item) {
@@ -125,7 +125,7 @@
 			svg {
 				@include kt-svg-icon-color(kt-get($item, link, icon, font-color, default));
 			}
-		}	
+		}
 
 		// link bullet
 		.kt-menu__link-bullet {
@@ -171,7 +171,7 @@
 				svg {
 					@include kt-svg-icon-color(kt-get($item, link, icon, font-color, active));
 				}
-			}	
+			}
 
 			// link bullet
 			.kt-menu__link-bullet {
@@ -213,7 +213,7 @@
 				svg {
 					@include kt-svg-icon-color(kt-get($item, link, icon, font-color, here));
 				}
-			}	
+			}
 
 			// link bullet
 			.kt-menu__link-bullet {
@@ -247,7 +247,7 @@
 		> .kt-menu__link {
 			// link bg color
 			background-color: kt-get($item, link, self, bg-color, hover);
-			
+
 			// link icon
 			.kt-menu__link-icon {
 				color: kt-get($item, link, icon, font-color, hover);
@@ -256,7 +256,7 @@
 				svg {
 					@include kt-svg-icon-color(kt-get($item, link, icon, font-color, hover));
 				}
-			}	
+			}
 
 			// link bullet
 			.kt-menu__link-bullet {
@@ -283,7 +283,7 @@
 				color: kt-get($item, link, arrow, font-color, hover);
 			}
 		}
-	}	
+	}
 }
 
 @mixin kt-menu-hor-item-heading-base($item) {
@@ -295,6 +295,11 @@
 		font-weight: kt-get($item, caption, text, font-weight);
 		font-size: kt-get($item, caption, text, font-size);
 		text-transform: kt-get($item, caption, text, font-transform);
+
+		display: block;
+		word-wrap:break-word;
+		width: 50px;
+		white-space: normal;
 	}
 
 	// icon
@@ -303,7 +308,7 @@
 		flex: 0 0 kt-get($item, caption, icon, width);
 		justify-content: kt-get($item, caption, icon, align);
 		padding: kt-get($item, caption, icon, padding);
-	}	
+	}
 
 	// badge
 	.kt-menu__link-badge {
@@ -373,7 +378,7 @@
 		align-items: stretch;
 		height: 100%;
 	    margin: kt-get($config, build, layout, self, margin);
-    
+
     	// general menu
 		.kt-menu__nav {
 			list-style: none;
@@ -393,8 +398,8 @@
 					align-items: stretch;
 					outline: none !important;
 					text-decoration: none;
-					cursor: pointer;  				
-					
+					cursor: pointer;
+
 					.kt-menu__link-text {
 						display: flex;
 						align-items: center;
@@ -405,15 +410,15 @@
 					.kt-menu__link-badge {
 						display: flex;
 						align-items: center;
-						line-height: 0;	
-						white-space: nowrap;				
+						line-height: 0;
+						white-space: nowrap;
 					}
 
 					// link icon
 					.kt-menu__link-icon {
 						display: flex;
 						align-items: center;
-					}	
+					}
 
 					// sub menu link arrow icon
 					.kt-menu__hor-arrow {
@@ -462,7 +467,7 @@
 					@include kt-rounded {
 						border-radius: kt-get($config, build, layout, item, submenu, self, border-radius);
 					}
-					
+
 					@include kt-attr(margin, kt-get($config, build, layout, item, submenu, self, margin));
 					@include kt-attr(padding, kt-get($config, build, layout, item, submenu, self, padding, classic));
 
@@ -470,11 +475,11 @@
 						position: relative;
 						overflow: hidden;
 						display: flex;
-						flex-direction: column; 
+						flex-direction: column;
 						flex-grow: 1;
 					}
 
-					.kt-menu__subnav {	
+					.kt-menu__subnav {
 						list-style: none !important;
 						padding: 0;
 						margin: 0;
@@ -501,7 +506,7 @@
 						left: auto;
 						right: auto;
 						width: auto;
-					}		
+					}
 
 					// alignment right
 					&.kt-menu__submenu--right {
@@ -548,8 +553,8 @@
 								}
 
 								&.kt-menu__submenu--right {
-									left: 100%;		
-									right: auto;			
+									left: 100%;
+									right: auto;
 								}
 							}
 						}
@@ -573,7 +578,7 @@
 					    		border-right: 0;
 					    	}
 						}
-					}			
+					}
 
 					// mega heading
 					.kt-menu__heading {
@@ -583,7 +588,7 @@
 						margin: 0;
 						text-decoration: none;
 						position: relative;
-								
+
 						.kt-menu__link-text {
 							display: flex;
 							align-items: center;
@@ -593,7 +598,7 @@
 						.kt-menu__link-badge {
 							display: flex;
 							align-items: center;
-							white-space: nowrap;				
+							white-space: nowrap;
 						}
 
 						// link icon
@@ -602,7 +607,7 @@
 							align-items: center;
 							font-size: 18px;
 							padding: 0 10px 0 0;
-						}	
+						}
 
 						// sub menu link arrow icon
 						.kt-menu__hor-arrow {
@@ -617,17 +622,17 @@
 						}
 					}
 				}
-				
+
 				.kt-menu__inner,
 				.kt-menu__subnav {
 					list-style: none;
 					margin: 0;
 					padding: 0;
-			 
+
 					> .kt-menu__item {
 						display: flex;
 						flex-grow: 1;
-						margin: 0; 
+						margin: 0;
 						padding: 10px 20px;
 
 						.kt-menu__link {
@@ -642,8 +647,8 @@
 							&:focus {
 								outline: none;
 								text-decoration: none;
-							}							
-								
+							}
+
 							.kt-menu__link-text {
 								display: flex;
 								align-items: center;
@@ -655,8 +660,8 @@
 
 							.kt-menu__link-badge {
 								display: flex;
-								align-items: center;	
-								white-space: nowrap;				
+								align-items: center;
+								white-space: nowrap;
 								padding: kt-get($config, build, layout, item, submenu, item, link, badge, padding);
 								text-align: kt-get($config, build, layout, item, submenu, item, link, badge, align);
 							}
@@ -670,7 +675,7 @@
 								color: kt-get($config, build, layout, item, submenu, item, link, icon, font-color, default);
 								font-size: kt-get($config, build, layout, item, submenu, item, link, icon, font-size);
 								text-align: kt-get($config, build, layout, item, submenu, item, link, icon, align);
-							}	
+							}
 
 							// menu item link's icon part
 							.kt-menu__link-bullet {
@@ -696,7 +701,7 @@
 
 				.kt-menu__inner {
 					padding: 0;
-				}	
+				}
 
 				// sub dropdown menu space
 				@if kt-has($config, build, layout, item, submenu, self, space) {
@@ -708,8 +713,8 @@
 								margin-right: kt-get($config, build, layout, item, submenu, self, space);
 							}
 						}
-					}	
-				}							
+					}
+				}
 
 				// tabs integration
 				&.kt-menu__item--submenu.kt-menu__item--tabs > .kt-menu__submenu > .kt-menu__subnav > .kt-menu__item.kt-menu__item--submenu {
@@ -722,12 +727,12 @@
 						}
 
 						&.kt-menu__submenu--right {
-							left: 100%;		
-							right: 0;			
+							left: 100%;
+							right: 0;
 						}
 					}
 				}
-			}	
+			}
 		}
 
 		// root menu
@@ -736,10 +741,10 @@
 				display: flex;
 				align-items: center;
 				padding: kt-get($config, build, layout, item, self, padding);
-				
+
 				// used for classic submenus
 				&.kt-menu__item--rel {
-					position: relative;			
+					position: relative;
 				}
 
 				@include kt-menu-hor-item-base( kt-get($config, build, layout, item) );
@@ -765,16 +770,16 @@
 								flex-basis: 0;
 
 								&:last-child {
-									border-right:0 !important;  
+									border-right:0 !important;
 								}
-							}	
+							}
 
 							// heading
 							.kt-menu__heading {
 								@include kt-menu-hor-item-heading-base(kt-get($config, build, layout, item, submenu, item, column, heading));
 							}
 
-							// mega menu 
+							// mega menu
 							.kt-menu__inner {
 								padding: kt-get($config, build, layout, item, submenu, item, column, self, padding);
 
@@ -784,11 +789,11 @@
 							}
 						}
 					}
-					
+
 					&.kt-menu__submenu--classic {
 						padding: kt-get($config, build, layout, item, submenu, self, padding, classic);
 						> .kt-menu__subnav {
-							
+
 						}
 					}
 
@@ -802,9 +807,9 @@
 								display: flex;
 								padding: 5px 0;
 							}
-						}						
-					}					
-				}		
+						}
+					}
+				}
 			}
 
 			// general submenu hover effect
@@ -820,7 +825,7 @@
 					.kt-menu__submenu {
 						display: block;
 						animation: #{kt-get($config, base, class)}-submenu-fade-in .3s ease 1, #{kt-get($config, base, class)}-submenu-move-down .3s ease-out 1;
-						
+
 						// ie8-11 versions hack
                     	@include kt-hack-ie {
                         	animation: none;
@@ -830,7 +835,7 @@
 							> .kt-menu__submenu {
 								display: block;
 								animation: #{kt-get($config, base, class)}-submenu-fade-in .3s ease 1, #{kt-get($config, base, class)}-submenu-move-up .3s ease-out 1;
-							
+
 								// ie8-11 versions hack
                     			@include kt-hack-ie {
                         			animation: none;
@@ -838,7 +843,7 @@
 							}
 						}
 					}
-				}			
+				}
 			}
 		}
 	}
@@ -870,7 +875,7 @@
 				}
 			}
 		}
-	
+
 		// submenu level items
 		.kt-menu__nav {
 			> .kt-menu__item {
@@ -890,14 +895,14 @@
 							// separator
 							> .kt-menu__item {
 								border-right: kt-get($config, item, submenu, item, column, separator, border);
-							}		
+							}
 
 							// heading
 							.kt-menu__heading {
 								@include kt-menu-hor-item-heading-skin(kt-get($config, item, submenu, item, column, heading));
 							}
 
-							// mega menu 
+							// mega menu
 							.kt-menu__inner {
 								> .kt-menu__item {
 									@include kt-menu-hor-item-skin(kt-get($config, item, submenu, item));
@@ -905,7 +910,7 @@
 							}
 						}
 					}
-				}				
+				}
 			}
 		}
 	}
@@ -921,10 +926,10 @@
 	} @else {
 		$skin-config: kt-get($config, build, skins, $skin);
 	}
-	
+
 	// Base vertical menu
 	@if (kt-get($config, base, mode) == general) {
-		
+
 		@include kt-menu-hor-skin(kt-get($config, base, class), $skin-config);
 
 	} @else if (kt-get($config, base, mode) == desktop) {
@@ -937,15 +942,15 @@
 
 		@include kt-desktop-and-tablet {
 			@include kt-menu-hor-skin(kt-get($config, base, class), $skin-config);
-		}			
-	}	
+		}
+	}
 }
 
 // Build Layout
 @mixin kt-menu-hor-build-layout($config) {
 	// Base vertical menu
 	@if (kt-get($config, base, mode) == general) {
-		
+
 		@include kt-menu-hor-base($config);
 
 	} @else if (kt-get($config, base, mode) == desktop) {
@@ -960,9 +965,9 @@
 
 		@include kt-desktop-and-tablet {
 			@include kt-menu-hor-base($config);
-		}			
-	}	
-	
+		}
+	}
+
 	// Horizontal Menu Hoverable Submenu Animations
 	@keyframes #{kt-get($config, base, class)}-submenu-fade-out {
 	    from   { opacity: 1; }

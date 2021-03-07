@@ -37,10 +37,13 @@ export class DiabetesBiochemicalComponent implements OnInit {
       this._interactionService._Refid$.subscribe((id)=> {
         if(id) {
           this.Mform.patchValue({"savedFormID": id})
+		  console.log('form2',this.formId,this.Mform.value["savedFormID"] ,this.saveFormId)
 
         }
       })
     else {
+		console.log('form3',this.Mform.value["savedFormID"] ,this.saveFormId)
+
        this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
       // this._service.getQuestionnaire(this.formId,12).subscribe((res:any[])=> {
       //   this.formData = res;
@@ -50,20 +53,22 @@ export class DiabetesBiochemicalComponent implements OnInit {
       //   this.prepareForm();
       // })
 
-      this._service.getQuestionnaire9(this.formId).subscribe((res: any[]) => {
+      this._service.getQuestionnaire(this.formId,12).subscribe((res: any[]) => {
+		  console.log('res',res)
         this.formData = res;
         this.saveFormId = this.formId;
             this.splashService.splashScreen({isLoading : false, message : "" })
-            if(res.length)
-        this.prepareForm();
+            if(res.length){
+		  console.log('res2',res)
+		  this.prepareForm();}
       })
     }
   }
 
   createForm() {
     this.Mform = this.eformFB.group({
-      "savedFormID": new FormControl({value: '', disabled: this.disableInput}),
-      "BIO_FastingGlucose_before_medication": new FormControl({value: '', disabled: this.disableInput}),
+	  "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
+"BIO_FastingGlucose_before_medication": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_FastingGlucose_Result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_FastingGlucose_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_FastingGlucose_result_after9": new FormControl({value: '', disabled: this.disableInput}),
@@ -93,6 +98,11 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_Fasting_insulin_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Fasting_insulin_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Fasting_insulin_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Blood_ketone_before_medication": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Blood_ketone_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Blood_ketone_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Blood_ketone_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Blood_ketone_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_TotalCholesterol_before_medication": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_TotalCholesterol_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_TotalCholesterol_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -138,11 +148,6 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_Creatinine_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Creatinine_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Creatinine_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Urea_before_medication": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Urea_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Urea_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Urea_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Urea_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_egfr_before_medication": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_egfr_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_egfr_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -173,11 +178,11 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_Phosphorus_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Phosphorus_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Phosphorus_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Bicarbonate_before": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Bicarbonate_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Bicarbonate_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Bicarbonate_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Bicarbonate_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_ABG_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_ABG_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_ABG_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_ABG_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_ABG_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_ALT_before": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_ALT_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_ALT_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -353,6 +358,11 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_MPVPlatelet_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_MPVPlatelet_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_MPVPlatelet_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_betaamyloid_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_betaamyloid_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_betaamyloid_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_betaamyloid_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_betaamyloid_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Abeta40_before": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Abeta40_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Abeta40_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -368,19 +378,16 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_tTau_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_tTau_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_tTau_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-
-"BIO_COVID-19_antibody_result_before": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_COVID-19_antibody_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_COVID-19_antibody_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_COVID-19_antibody_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_COVID-19_antibody_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-
-
 "BIO_UTSmacroscopic_before": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSmacroscopic_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSmacroscopic_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSmacroscopic_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSmacroscopic_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_COVID19_antibody_result_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_COVID19_antibody_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_COVID19_antibody_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_COVID19_antibody_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_COVID19_antibody_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSpH_before": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSpH_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSpH_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -391,11 +398,16 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_UTSGlucose_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSGlucose_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSGlucose_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_UTSGravity_before": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_UTSGravity_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_UTSGravity_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_UTSGravity_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_UTSGravity_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSKetones_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSKetones_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSKetones_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSKetones_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSKetones_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSgravity_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSgravity_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSgravity_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSgravity_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_UTSgravity_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSNitrite_before": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSNitrite_result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSNitrite_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -441,44 +453,38 @@ export class DiabetesBiochemicalComponent implements OnInit {
 "BIO_UTSMicroscopy_crystals_result_after6": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSMicroscopy_crystals_result_after9": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_UTSMicroscopy_crystals_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Blood_ketone_level_before_medication": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Blood_ketone_level_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Blood_ketone_level_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Blood_ketone_level_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Blood_ketone_level_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_beta_amyloid_before_medication": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_beta_amyloid_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_beta_amyloid_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_beta_amyloid_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_beta_amyloid_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ptau181_before_medication": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ptau181_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ptau181_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ptau181_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ptau181_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Ketones_before_medication": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Ketones_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Ketones_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Ketones_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_Ketones_result_after12": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ABG_before_medication": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ABG_result_after3": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ABG_result_after6": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ABG_result_after9": new FormControl({value: '', disabled: this.disableInput}),
-"BIO_ABG_result_after12": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_Comments": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_COVID-19_antibody_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Ketones_before_medication": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Blood_ketone_level_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Urea_before_medication": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Urea_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Urea_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Urea_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Urea_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Bicarbonate_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Bicarbonate_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Bicarbonate_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Bicarbonate_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_Bicarbonate_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_tTau181_before": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_tTau181_result_after3": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_tTau181_result_after6": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_tTau181_result_after9": new FormControl({value: '', disabled: this.disableInput}),
+"BIO_tTau181_result_after12": new FormControl({value: '', disabled: this.disableInput}),
+
     })
     this.getFormAttributeValues();
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,9).subscribe((res)=> {
+    this._service.getFormAttribute(12,11).subscribe((res)=> {
       this.formAttributes = res;
     })
   }
 
   prepareForm() {
-    this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
+    // this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
 
     Object.keys(this.formData[0]).forEach(name => {
       if (this.Mform.controls[name]) {
@@ -498,9 +504,12 @@ export class DiabetesBiochemicalComponent implements OnInit {
   }
 
   onSubmit() {
+		console.log('form21',this.formId+'0',this.Mform.value["savedFormID"]+'1' ,this.saveFormId+'2', this.isFormSubmit)
+
     if (!this.Mform.value["savedFormID"] && !this.saveFormId) {
       this.createSampleId();
     } else {
+		console.log('form2',this.formId+'0',this.Mform.value["savedFormID"]+'1' ,this.saveFormId+'2', this.isFormSubmit)
       this.Mform.patchValue({"savedFormID" : this.Mform.value["savedFormID"] || this.saveFormId })
 
       let data = this.finalFormValues.prepareAttibuteForm(this.Mform.value, this.formAttributes, "savedFormID",this.formId)
@@ -515,7 +524,8 @@ export class DiabetesBiochemicalComponent implements OnInit {
                 }
               }
             }
-            this._service.createSample8(data, true).subscribe((res)=> {
+		console.log('form2',data)
+		this._service.createSample8(data, true).subscribe((res)=> {
               if (res) {
                 this.splashService.splashScreen({isLoading : false, message : "" })
                 this._snackBar.open("Data has been updated successfully!", 'Ok', {

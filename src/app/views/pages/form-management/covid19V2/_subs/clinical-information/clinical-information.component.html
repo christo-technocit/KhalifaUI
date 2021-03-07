@@ -1,0 +1,60 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5> General Clinical Information:</h5>  
+                        </label>
+                </div>
+            </div>
+            
+            <div class="form-group  row">
+                <div class="col-md-4">
+                    <label align="start">
+                        Participants Blood Type: 
+                    </label>
+                 </div>
+                <div class="col-md-8 form-group" >
+
+                 
+                 <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="BloodType">
+                    <mat-radio-button matInput  value="A">A</mat-radio-button>
+                    <mat-radio-button  matInput value="B">B</mat-radio-button>
+                    <mat-radio-button  matInput value="AB">AB</mat-radio-button>
+                    <mat-radio-button  matInput value="O">O</mat-radio-button>
+                    <mat-radio-button  matInput value="NotSure">Not Sure</mat-radio-button>
+                </mat-radio-group>
+                 </div>   
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4">
+                        <label align="start">
+                        Participants weight (Kg) and height (cm): 
+                        </label>
+                </div>
+
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Weight: " autocomplete="off" 
+                     formControlName="ParticipantsWeight" />
+                          
+                 </mat-form-field>
+                 </div>   
+
+                <div class="col-md-4 form-group" >
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="Height:" autocomplete="off" 
+                     formControlName="ParticipantsHeight" />
+                          
+                 </mat-form-field>
+                 </div>   
+            </div>
+
+           
+        </div>
+    </form>
+</div>

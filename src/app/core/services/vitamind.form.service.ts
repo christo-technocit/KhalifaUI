@@ -31,6 +31,7 @@ export class VitamindService {
       "updatedBy": 0,
       "updateDate": new Date()
     }
+  /*   console.log(data); */
     // isEdit && (delete data.createdDate , delete data.createdBy);
     if (!isEdit)
       return this.httpClient.post(this.baseUrl + 'form/AddForms', data, options);
@@ -38,6 +39,7 @@ export class VitamindService {
       return this.httpClient.post(this.baseUrl + 'form/UpdateForms', data, options);
   }
   createSample3(data, isEdit: boolean) {
+   /*  console.log(data); */
     if (!isEdit)
       return this.httpClient.post(this.baseUrl + 'form/Addformattributevalue', data);
     else
@@ -87,8 +89,8 @@ export class VitamindService {
   getQuestionnaire(id: number, templateID: number) {
     return this.httpClient.get(this.baseUrl + `form/Questionnaire?SavedformID=${id}&TemplateID=${templateID}`);
   }
-  getQuestionnaire9(id: number) {
-    return this.httpClient.get(this.baseUrl + `form/Questionnaire9?SavedformID=${id}`);
+  getQuestionnaire9(id: number, templateID: number,sectionId : number) {
+    return this.httpClient.get(this.baseUrl + `form/Questionnaire?SavedformID=${id}&TemplateID=${templateID}&SectionID=${sectionId}`);
   }
   createSample(data, isEdit: boolean) {
     if (!isEdit)
@@ -237,7 +239,7 @@ export class VitamindService {
     if (sectionId != 0){
       sectionId=0;
     }
-    
+
     console.log('vitamin',_templateID,pageNumber,pageSize);
 
     return this.httpClient.get<any>(this.baseUrl+`Report/ReportTotal?TemplateID=${_templateID}&SectionID=${sectionId}&pagesize=${pageSize}&pagenumber=${pageNumber}`).pipe(map(res => {

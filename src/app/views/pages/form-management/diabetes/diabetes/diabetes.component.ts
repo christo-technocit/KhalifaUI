@@ -101,7 +101,7 @@ export class DiabetesComponent implements OnInit {
 
 		this.getTotalCount();
 		this.fetchList();
-		this.subheaderService.setTitle('Diabetes');
+		this.subheaderService.setTitle('Precision Medicine in Type 2 (Short)');
 		this.subheaderService.showPrintButton(false);
 	}
 

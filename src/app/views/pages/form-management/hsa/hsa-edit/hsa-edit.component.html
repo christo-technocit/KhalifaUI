@@ -1,5 +1,5 @@
 <kt-portlet>
-	<kt-portlet-header [title]="'Precision Medicine'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
+	<kt-portlet-header [title]="'Precision Medicine in Type 2 (Long)'" [class]="'kt-portlet__head--lg'" [viewLoading$]="loading$">
 		<ng-container ktPortletTools>
 			<a  [routerLink]="[ formId ? '../../' : '../']"   class="btn btn-secondary kt-margin-r-10" mat-raised-button
 				matTooltip="Back to the forms list">
@@ -16,7 +16,7 @@
 	</kt-portlet-header>
 
 	<kt-portlet-body>
-       
+
 		<mat-tab-group [(selectedIndex)]="selectedTab">
 			<mat-tab>
 				<ng-template mat-tab-label>
@@ -50,7 +50,7 @@
 
 			<mat-tab >
 				<ng-template mat-tab-label>
-					<i class="mat-tab-label-icon fa fa-pills"></i>Medical Details 
+					<i class="mat-tab-label-icon fa fa-pills"></i>Medical Details
 				</ng-template>
 					<kt-hsa-medical-details [disableInput]="isPrint"   [formData]="formId" #appHsaMedicalDetails></kt-hsa-medical-details>
 			</mat-tab>
@@ -61,7 +61,7 @@
                 </ng-template>
                     <kt-hsa-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appHsaDiabetesSelfManagement></kt-hsa-diabetes-self-management>
             </mat-tab>
-           
+
 			<mat-tab >
 				<ng-template mat-tab-label>
 					<i class="mat-tab-label-icon fa fa-user-md"></i>Physical Measurements
@@ -70,7 +70,7 @@
 			</mat-tab>
 			<mat-tab >
 				<ng-template mat-tab-label>
-					<i class="mat-tab-label-icon fa fa-pills"></i>Medical History 
+					<i class="mat-tab-label-icon fa fa-pills"></i>Medical History
 				</ng-template>
 					<kt-hsa-medical-history [disableInput]="isPrint"   [formData]="formId" #appHsaMedicalHistory></kt-hsa-medical-history>
 			</mat-tab>
@@ -80,14 +80,14 @@
                 </ng-template>
                     <kt-hsa-clinical-details [disableInput]="isPrint"   [formData]="formId" #appHsaClinicalDetails></kt-hsa-clinical-details>
 			</mat-tab>
-			--> 
-			
+			-->
+
 			<mat-tab >
 			<ng-template mat-tab-label>
 				<i class="mat-tab-label-icon fa fa-pills"></i>Medication(Type 2 Diabetes Patient)
 			</ng-template>
 				<kt-hsa-medication [disableInput]="isPrint"   [formData]="formId" #appHsaMedicationDetails></kt-hsa-medication>
-			</mat-tab> 
+			</mat-tab>
 
 			<mat-tab >
 				<ng-template mat-tab-label>
@@ -112,7 +112,7 @@
 					<i class="mat-tab-label-icon fa fa-file"></i>Document Upload
 				</ng-template>
 				<kt-doc-upload  #appDocUpload></kt-doc-upload>
-			</mat-tab> 
+			</mat-tab>
 
 		</mat-tab-group>
 	</kt-portlet-body>

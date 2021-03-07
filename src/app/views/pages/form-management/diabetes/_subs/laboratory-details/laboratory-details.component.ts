@@ -54,24 +54,24 @@ export class DiabetesLaboratoryDetailsComponent implements OnInit {
 
   createForm() {
     this.form = this.eformFB.group({
-      "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
-      "lab_blood": new FormControl({value: '', disabled: this.disableInput}),
-      "lab_other": new FormControl({value: '', disabled: this.disableInput}),
-      "lab_other_text": new FormControl({value: '', disabled: this.disableInput}),
+	  "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
+	  "lab_sample_type": new FormControl({value: '', disabled: this.disableInput}),
       "lab_sample_date": new FormControl({value: '', disabled: this.disableInput}),
-      "lab_storage": new FormControl({value: '', disabled: this.disableInput}),
+	  "lab_blood": new FormControl({value: '', disabled: this.disableInput}),
+      "lab_other": new FormControl({value: '', disabled: this.disableInput}),
+      "lab_sample_storage": new FormControl({value: '', disabled: this.disableInput}),
       "lab_sample_volume": new FormControl({value: '', disabled: this.disableInput}),
       "lab_project_code": new FormControl({value: '', disabled: this.disableInput}),
-      "lab_test_code": new FormControl({value: '', disabled: this.disableInput}),
+      "lab_Test_code": new FormControl({value: '', disabled: this.disableInput}),
       "lab_comments": new FormControl({value: '', disabled: this.disableInput}),
-      "LD_sample_time": new FormControl({value: '', disabled: this.disableInput}),
-      "LD_test_code": new FormControl({value: '', disabled: this.disableInput}),//
+      "lab_sample_collection_time": new FormControl({value: '', disabled: this.disableInput}),
+      //"LD_test_code": new FormControl({value: '', disabled: this.disableInput}),//
     })
     this.getFormAttributeValues();
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,7).subscribe((res)=> {
+    this._service.getFormAttribute(12,10).subscribe((res)=> {
       this.formAttributes = res;
     })
   }

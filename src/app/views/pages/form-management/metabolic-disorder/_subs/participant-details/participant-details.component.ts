@@ -263,8 +263,21 @@ export class ParticipantDetailsComponent implements OnInit {
 
     onSubmit(){
 
-        if(!this.form.value["savedFormID"] && !this.saveFormId ){
+      var savedFormID=0;
+      if (this.formId===undefined)
+      {
+        savedFormID=0;
+       /*  console.log("Saved Form ID"+savedFormID);
+        console.log("Form ID"+this.formId); */
+      }
+     
+      else
+      savedFormID=this.formId
+       /*  if(!this.form.value["savedFormID"] && !this.saveFormId ){  */
+          if(!this.saveFormId ){ 
+        /*   if(!this.form.value["savedFormID"]  ){ */
           this.createSampleId();
+      /*     console.log("Saved Form ID"+savedFormID); */
         }else {
             this.form.patchValue({"savedFormID": this.form.value["savedFormID"] || this.saveFormId})
                 if (this.fileToUpload && !this.fileUploadSuccess) {
@@ -313,6 +326,10 @@ export class ParticipantDetailsComponent implements OnInit {
                         });
                     }
                 })
+                this.saveFormId=0;
+                this.form.value["savedFormID"]=0;
+               /*  console.log("after Insert saveformid"+this.saveFormId);
+                console.log("after Insert savedFormID"+this.form.value["savedFormID"]); */
             }
         }
     }

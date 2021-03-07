@@ -6,7 +6,7 @@
 				<kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 				<kt-hsa-personal-details [disableInput]="isPrint"   [formData]="formId"  #appHsaPersonalDetails></kt-hsa-personal-details>
 				</kt-portlet-body>
 			</div>
@@ -14,21 +14,21 @@
 				<kt-portlet-header [title]="'Life Style Details'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 					<kt-hsa-lifestyle-details [disableInput]="isPrint"   [formData]="formId" #appHsaLifeStyleDetails></kt-hsa-lifestyle-details>
 				</kt-portlet-body> </div>
             <!-- <div class="">
 				<kt-portlet-header [title]="'Family History'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-                
+
                     <kt-hsa-family-history [disableInput]="isPrint"   [formData]="formId" #appHsaFamilyHistory></kt-hsa-family-history>
 				</kt-portlet-body> </div>
 			<div class="">
 				<kt-portlet-header [title]="'Family Pedigree" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 					<kt-hsa-family-pedigree  [disableInput]="isPrint"   [formData]="formId"   #appHsaFamilyPedigree></kt-hsa-family-pedigree>
 				</kt-portlet-body></div> -->
 
@@ -36,7 +36,7 @@
 				<kt-portlet-header [title]="'Medical Details'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 					<kt-hsa-medical-details [disableInput]="isPrint"   [formData]="formId" #appHsaMedicalDetails></kt-hsa-medical-details>
 				</kt-portlet-body></div>
 
@@ -44,15 +44,15 @@
 				<kt-portlet-header [title]="'Diabetes Self Management'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-                
+
                     <kt-hsa-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appHsaDiabetesSelfManagement></kt-hsa-diabetes-self-management>
 				</kt-portlet-body> </div>
-           
+
 			<div class="">
 				<kt-portlet-header [title]="'Physical Measurements'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 					<kt-hsa-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appHsaPhysicalMeasurements></kt-hsa-physical-measurements>
 				</kt-portlet-body>  </div>
 
@@ -60,7 +60,7 @@
 					<kt-portlet-header [title]="'Medical History'" [class]="'kt-portlet__head--lg'" >
 					</kt-portlet-header>
 					<kt-portlet-body  class="kt-portlet__body">
-					
+
 						<kt-hsa-medical-history [disableInput]="isPrint"   [formData]="formId" #appHsaMedicalHistory></kt-hsa-medical-history>
 					</kt-portlet-body></div>
 
@@ -68,40 +68,40 @@
 				<kt-portlet-header [title]="'Medical Details(If Type 2 Diabetic)'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-                
+
                     <kt-hsa-clinical-details [disableInput]="isPrint"   [formData]="formId" #appHsaClinicalDetails></kt-hsa-clinical-details>
 				</kt-portlet-body>	</div>-->
-			
+
 			<div class="">
 				<kt-portlet-header [title]="'Medication(Type 2 Diabetes Patient)'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-			
+
 				<kt-hsa-medication [disableInput]="isPrint"   [formData]="formId" #appHsaMedicationDetails></kt-hsa-medication>
-			</kt-portlet-body></div> 
+			</kt-portlet-body></div>
 
 			<div class="">
 				<kt-portlet-header [title]="'Cognitive Test Result'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 					<kt-hsa-cognitive-test-result [disableInput]="isPrint"   [formData]="formId" #appHsaCognitiveTestResult></kt-hsa-cognitive-test-result>
 				</kt-portlet-body></div>
             <div class="">
 				<kt-portlet-header [title]="'Laboratory Details'" [class]="'kt-portlet__head--lg'" >
 				</kt-portlet-header>
 				<kt-portlet-body  class="kt-portlet__body">
-				
+
 					<kt-hsa-laboratory-details  [disableInput]="isPrint"   [formData]="formId"   #appHsaLaboratoryDetails></kt-hsa-laboratory-details>
 				</kt-portlet-body></div>
-				
+
 				<div class="">
 					<kt-portlet-header [title]="'Biochemical'" [class]="'kt-portlet__head--lg'" >
 					</kt-portlet-header>
 					<kt-portlet-body  class="kt-portlet__body">
 					<ng-template mat-tab-label>
 						<i class="mat-tab-label-icon fa fa-procedures"></i>
-						
+
 					</ng-template>
 						<kt-hsa-biochemical [disableInput]="isPrint"   [formData]="formId" #appHsaBiochemical></kt-hsa-biochemical>
 					</kt-portlet-body></div>

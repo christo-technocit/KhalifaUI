@@ -29,7 +29,11 @@ import {DiabetesMedicalHistoryComponent } from '@components/diabetes/_subs/medic
 import { DiabetesMetforminComponent} from '@components/diabetes/_subs/metformin/metformin.component';
 import { DiabetesDietComponent} from '@components/diabetes/_subs/diet/diet.component';
 import { DiabetesMedication2Component} from '@components/diabetes/_subs/medication2/medication2.component';
+import { DiabetesFemaleQuestionsComponent} from '@components/diabetes/_subs/female-questions/female-questions.component';
+import { DiabetesPhysicalActivityComponent } from '@components/diabetes/_subs/physical-activity/physical-activity.component';
+import { DiabetesPatientAbsenceComponent } from '@components/diabetes/_subs/patient-absence/patient-absence.component';
 
+import { TypesComponent } from '@components/diabetes/types/types.component';
 
 import {
 MatInputModule,
@@ -63,6 +67,10 @@ const routes: Routes = [
       {
         path: '',
         component: DiabetesComponent,
+	  },
+	  {
+        path: 'types',
+        component: TypesComponent,
       }
       ,
       {
@@ -102,7 +110,12 @@ const routes: Routes = [
 	DiabetesMedicalHistoryComponent,
 	DiabetesMetforminComponent,
 	DiabetesDietComponent,
-	DiabetesMedication2Component
+	DiabetesFemaleQuestionsComponent,
+
+	DiabetesMedication2Component,
+	DiabetesPhysicalActivityComponent,
+	DiabetesPatientAbsenceComponent,
+	TypesComponent
   ],
   imports: [
     CommonModule,

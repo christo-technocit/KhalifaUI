@@ -89,7 +89,7 @@ export class DiabetesDietComponent implements OnInit {
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,6).subscribe((res)=> {
+    this._service.getFormAttribute(12,5).subscribe((res)=> {
       this.formAttributes = res;
     })
   }

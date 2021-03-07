@@ -21,15 +21,6 @@ import {
 	selectLastCreatedFormId,
 	selectFormsActionLoading
 } from '../../../../../core/forms';
-// import { HsaLifestyleDetailsComponent } from '@components/hsa/_subs/lifestyle-details/lifestyle-details.component';
-// import { HsaPersonalDetailsComponent } from '@components/hsa/_subs/personal-details/personal-details.component';
-//  import { HsaMedicalDetailsComponent } from '@components/hsa/_subs/medical-details/medical-details.component';
-// import { HsaFamilyHistoryComponent } from '@components/hsa/_subs/family-history/family-history.component';
-// import { HsaClinicalDetailsComponent } from '@components/hsa/_subs/clinical-details/clinical-details.component';
-// import { HsaDiabetesSelfManagementComponent } from '@components/hsa/_subs/diabetes-self-management/diabetes-self-management.component';
-// import { HsaBiochemicalComponent } from '@components/hsa/_subs/biochemical/biochemical.component';
-// import { HsaCognitiveTestResultComponent } from '@components/hsa/_subs/cognitive-test-result/cognitive-test-result.component';
-// import { HsaLaboratoryDetailsComponent } from '@components/hsa/_subs/laboratory-details/laboratory-details.component';
 
 import {DocUploadComponent} from "../_subs/doc-upload/doc-upload.component";
 import { DiabetesPersonalDetailsComponent } from '../_subs/personal-details/personal-details.component';
@@ -48,7 +39,10 @@ import { DiabetesPhysicalMeasurementsComponent } from '../_subs/physical-measure
 import { DiabetesMetforminComponent} from '../_subs/metformin/metformin.component';
 import { DiabetesMedicalHistoryComponent} from '../_subs/medical-history/medical-history.component';
 import { DiabetesDietComponent} from '../_subs/diet/diet.component';
-import { DiabetesMedication2Component} from '../_subs/medication2/medication2.component';
+
+import { DiabetesFemaleQuestionsComponent} from '../_subs/female-questions/female-questions.component';
+import { DiabetesPhysicalActivityComponent } from '../_subs/physical-activity/physical-activity.component';
+import { DiabetesPatientAbsenceComponent } from '../_subs/patient-absence/patient-absence.component';
 
 @Component({
   selector: 'kt-diabetes-edit',
@@ -73,6 +67,7 @@ export class DiabetesEditComponent implements OnInit, OnDestroy {
 	@ViewChild('appDiabetesFamilyPedigree',{ static: false })appDiabetesFamilyPedigree: DiabetesFamilyPedigreeComponent;
 	@ViewChild('appDiabetesMedicalDetails',{ static: false })appDiabetesMedicalDetails: DiabetesMedicalDetailsComponent;
 	@ViewChild('appDiabetesDiabetesSelfManagement',{ static: false })appDiabetesDiabetesSelfManagement: DiabetesDiabetesSelfManagementComponent;
+	@ViewChild('appDiabetesFemaleQuestionsComponent',{ static: false })appDiabetesFemaleQuestionsComponent: DiabetesFemaleQuestionsComponent;
 	@ViewChild('appDiabetesPhysicalMeasurements',{ static: false })appDiabetesPhysicalMeasurements: DiabetesPhysicalMeasurementsComponent;
 	@ViewChild('appDiabetesClinicalDetails',{ static: false })appDiabetesClinicalDetails: DiabetesClinicalDetailsComponent;
 	@ViewChild('appDiabetesMedicationDetails',{ static: false })appDiabetesMedicationDetails: DiabetesMedicationComponent;
@@ -83,7 +78,8 @@ export class DiabetesEditComponent implements OnInit, OnDestroy {
 	@ViewChild('appDiabetesMetforminComponent',{ static: false })appDiabetesMetforminComponent: DiabetesMetforminComponent;
     @ViewChild('appDiabetesMedicalHistoryComponent',{ static: false })appDiabetesMedicalHistoryComponent: DiabetesMedicalHistoryComponent;
 	@ViewChild('appDiabetesDietComponent',{ static: false })appDiabetesDietComponent: DiabetesDietComponent;
-    @ViewChild('appDiabetesMedication2Component',{ static: false })appDiabetesMedication2Component: DiabetesMedication2Component;
+    @ViewChild('appDiabetesPhysicalActivityComponent',{ static: false })appDiabetesPhysicalActivityComponent: DiabetesPhysicalActivityComponent;
+    @ViewChild('appDiabetesPatientAbsenceComponent',{ static: false })appDiabetesPatientAbsenceComponent: DiabetesPatientAbsenceComponent;
 
 
 
@@ -109,7 +105,7 @@ export class DiabetesEditComponent implements OnInit, OnDestroy {
 
 			}
 		});
-		this.subheaderService.setTitle('Diabetes');
+		this.subheaderService.setTitle('Precision Medicine in Type 2 (Short)');
 	}
 
 	ngOnDestroy() {
@@ -126,49 +122,49 @@ export class DiabetesEditComponent implements OnInit, OnDestroy {
       this.appDiabetesPersonalDetails.onSubmit();
     }
     else if(this.selectedTab == 1){
-			this.appDiabetesPersonalDetails.onSubmit();
+			this.appDiabetesMedicalDetails.onSubmit();
     }
     else if(this.selectedTab == 2){
-			this.appDiabetesFamilyHistory.onSubmit();
-    }
-    else if(this.selectedTab == 3){
-			this.appDiabetesFamilyPedigree.onSubmit();
-    }
-     else if(this.selectedTab == 4){
-		 	this.appDiabetesMedicalDetails.onSubmit();
-     }
-	else if (this.selectedTab == 5) {
 			this.appDiabetesDiabetesSelfManagement.onSubmit();
     }
-    else if(this.selectedTab == 6){
-			this.appDiabetesPhysicalMeasurements.onSubmit();
+	else if(this.selectedTab == 3){
+		this.appDiabetesFemaleQuestionsComponent.onSubmit();
+	}
+	else if(this.selectedTab == 4){
+		this.appDiabetesPhysicalActivityComponent.onSubmit();
+   }
+
+     else if(this.selectedTab == 5){
+		 	this.appDiabetesDietComponent.onSubmit();
+	 }
+	 else if(this.selectedTab == 6){
+		this.appDiabetesPatientAbsenceComponent.onSubmit();
+   }
+	 else if(this.selectedTab == 7){
+		this.appDiabetesPhysicalMeasurements.onSubmit();
     }
-    else if(this.selectedTab == 7){
-		 	this.appDiabetesMedication2Component.onSubmit();
-		 }
-		 else if (this.selectedTab == 8) {
-				 this.appDiabetesMedicationDetails.onSubmit();
-		 }
-    else if(this.selectedTab == 9){
-			this.appDiabetesBiochemical.onSubmit();
-		}
-	else if(this.selectedTab == 10){
-			this.appDiabetesCognitiveTestResult.onSubmit();
-    }
-    else if(this.selectedTab == 11){
-			this.appDiabetesLaboratoryDetails.onSubmit();
-    } else if(this.selectedTab == 12){
-			this.appDocUpload.onSubmit();
-		}
-		else if(this.selectedTab == 13){
-			this.appDiabetesMetforminComponent.onSubmit();
-		}
-		else if(this.selectedTab == 14){
+	else if (this.selectedTab == 8) {
 			this.appDiabetesMedicalHistoryComponent.onSubmit();
-		}
-		else if(this.selectedTab == 15){
+    }
+    else if(this.selectedTab == 9){
+			this.appDiabetesMedicationDetails.onSubmit();
+    }
+		 else if (this.selectedTab == 10) {
+				 this.appDiabetesMetforminComponent.onSubmit();
+		 }
+    else if(this.selectedTab == 11){
 			this.appDiabetesCognitiveTestResult.onSubmit();
 		}
+	else if(this.selectedTab == 12){
+			this.appDiabetesLaboratoryDetails.onSubmit();
+    }
+    else if(this.selectedTab == 13){
+			this.appDiabetesBiochemical.onSubmit();
+	}
+	else if(this.selectedTab == 14){
+		this.appDocUpload.onSubmit();
+}
+
 	}
 
 

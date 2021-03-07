@@ -1,0 +1,497 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>Clinical Outcome</h5>  
+                        </label>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label"> Was the person hospitalized?</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  
+                    formControlName="PersonHospitalized">
+                        <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                        <mat-radio-button  matInput value="No">No</mat-radio-button>
+                        <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+<!-- 
+                <div class="col-md-6 form-group" *ngIf="form.get('PC_6A_work_in_highrisk_occupations').value == 'other'">
+                    <mat-form-field class="mat-form-field-fluid">
+                     <input matInput placeholder="If other, specify:" autocomplete="off" formControlName="PC_6A_work_in_highrisk_occupations_others" />
+                          
+                 </mat-form-field>
+                 </div>  
+                <div class="col-md-6 form-group" *ngIf="form.get('PC_6A_work_in_highrisk_occupations').value == 'other'" >
+                    
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="doaPicker"
+                        autocomplete="off"
+                        (click)="doaPicker.open()"
+                        placeholder="Date last attended this work: (dd/mm/yyyy): ______/_______/____________" (click)="doaPicker.open()" formControlName="PC_6A_work_in_highrisk_occupations_Last_date" />
+                    <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #doaPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                --> 
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Oxygen Therapy is required? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="OxygenTherapyRequired">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Admitted to ICU/HDU? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="AdmittedICU">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Intubation is required? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="IntubationRequired">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Mechanical incubation is required? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="MechanicalIncubationRequired">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Hospital Medical Record/Chart Number: </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Hospital Medical Record/Chart Number" autocomplete="off" 
+                        formControlName="HospitalMedicalRecordChartNumber" />  
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>3.a: Medical Care:</h5>  
+                        </label>
+                </div>
+            </div> 
+
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Medication administered</label>
+                    </div>
+                 </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Medication administered 1" autocomplete="off" 
+                        formControlName="MedicationAdministered1" />  
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Dose 1" autocomplete="off" 
+                        formControlName="Dose1" />  
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Comments 1" autocomplete="off" 
+                        formControlName="Comments1" />  
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label"></label>
+                    </div>
+                 </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Medication administered 2" autocomplete="off" 
+                        formControlName="MedicationAdministered2" />  
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Dose 2" autocomplete="off" 
+                        formControlName="Dose2" />  
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 form-group">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput placeholder="Comments 2" autocomplete="off" 
+                        formControlName="Comments2" />  
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>3.b: Pre-existing Conditions and Medical History</h5>  
+                        </label>
+                </div>
+            </div> 
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">No Risk Medical Conditions: </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="NoRiskMedicalConditions">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Cardiac Disease (Not Simple Hypertension): </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="CardiacDisease">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Chronic Lung Disease: </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="ChronicLungDisease">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Haemoglobinopathies: </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="Haemoglobinopathies">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Type 2 Diabetes: </label>
+                    </div>
+                 </div>
+                <div class="col-md-3 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="Type2Diabetes">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+                    <div class="col-md-5 form-group" *ngIf="form.get('Type2Diabetes').value == 'Yes'" >
+                        <label id="example-radio-group-label">If yes, are they on dialysis? </label>
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="Dialysis">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Immunosuppressive Condition: </label>
+                    </div>
+                 </div>
+                <div class="col-md-3 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="ImmunosuppressiveCondition">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+                <div  class="col-md-5 form-group" *ngIf="form.get('ImmunosuppressiveCondition').value == 'Yes'" >
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="If yes, Please Specify" autocomplete="off" 
+                            formControlName="ImmunosuppressiveConditionSpecify" />  
+                        </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Liver Disease :</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="LiverDisease">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Metabolic Disease :</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="MetabolicDisease">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Neurological Disorder :</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="NeurologicalDisorder">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Obesity :</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="Obesity">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Renal Disease : </label>
+                    </div>
+                 </div>
+                <div class="col-md-3 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="RenalDisease">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+                    <div class="col-md-5 form-group" *ngIf="form.get('RenalDisease').value == 'Yes'" >
+                        <label id="example-radio-group-label">If yes, are they on dialysis? </label>
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="RenalDiseaseDialysis">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Other Risk Medical Condition? </label>
+                    </div>
+                 </div>
+                <div class="col-md-3 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="OtherRiskMedicalCondition">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+                <div  class="col-md-5 form-group" *ngIf="form.get('OtherRiskMedicalCondition').value == 'Yes'" >
+                        <mat-form-field class="mat-form-field-fluid">
+                            <input matInput placeholder="If yes, Please Specify" autocomplete="off" 
+                            formControlName="OtherRiskMedicalConditionSpecify" />  
+                        </mat-form-field>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Have You Received COVID-19 Vaccine ?</label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="ReceivedCOVID19Vaccine">
+                            <mat-radio-button matInput  value="YesReceived1stDose">Yes Received 1st Dose</mat-radio-button>
+                            <mat-radio-button  matInput value="YesReceived2ndDose">Yes received 2nd Dose</mat-radio-button>
+                            <mat-radio-button  matInput value="NotVaccinated">Not Vaccinated</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-12">
+                        <label align="start">
+                         <h5>3.c: Other Risk Factors:</h5>  
+                        </label>
+                </div>
+            </div> 
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Is The person Currently Pregnant or Pregnant During The Illness? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="CurrentlyPregnant">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Are they a current smoker? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="CurrentSmoker">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Do they Consume Alcohol? </label>
+                    </div>
+                 </div>
+                <div class="col-md-8 form-group">
+                        <mat-radio-group aria-labelledby="example-radio-group-label"  
+                        formControlName="ConsumeAlcohol">
+                            <mat-radio-button matInput  value="Yes">Yes</mat-radio-button>
+                            <mat-radio-button  matInput value="No">No</mat-radio-button>
+                            <mat-radio-button  matInput value="Unknown">Unknown</mat-radio-button>
+                        </mat-radio-group>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

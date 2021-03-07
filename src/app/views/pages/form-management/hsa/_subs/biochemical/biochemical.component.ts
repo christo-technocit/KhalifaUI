@@ -50,7 +50,7 @@ export class HsaBiochemicalComponent implements OnInit {
       //   this.prepareForm();
       // })
 
-      this._service.getQuestionnaire9(this.formId).subscribe((res: any[]) => {
+      this._service.getQuestionnaire(this.formId,10).subscribe((res: any[]) => {
         this.formData = res;
         this.saveFormId = this.formId;
             this.splashService.splashScreen({isLoading : false, message : "" })
@@ -62,7 +62,7 @@ export class HsaBiochemicalComponent implements OnInit {
 
   createForm() {
     this.Mform = this.eformFB.group({
-      "savedFormID": new FormControl({value: '', disabled: this.disableInput}),
+      "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
       "BIO_FastingGlucose_before_medication": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_FastingGlucose_Result_after3": new FormControl({value: '', disabled: this.disableInput}),
 "BIO_FastingGlucose_result_after6": new FormControl({value: '', disabled: this.disableInput}),
@@ -479,7 +479,7 @@ export class HsaBiochemicalComponent implements OnInit {
   }
 
   prepareForm() {
-    this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
+    // this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
 
     Object.keys(this.formData[0]).forEach(name => {
       if (this.Mform.controls[name]) {

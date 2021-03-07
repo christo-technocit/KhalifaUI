@@ -1,51 +1,110 @@
 
 <kt-portlet id="print_form">
-	<kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
-		<div class="kt-form kt-margin-b-30">
-			<div class="">
-				<kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
-				</kt-portlet-header>
-				<kt-portlet-body  class="kt-portlet__body">
-				<kt-diabetes-personal-details [disableInput]="isPrint"   [formData]="formId"  #appDiabetesPersonalDetails></kt-diabetes-personal-details>
-				</kt-portlet-body>
-			</div>
-			<div class="">
-				<kt-portlet-header [title]="'Medical Details'" [class]="'kt-portlet__head--lg'" >
-				</kt-portlet-header>
-				<kt-portlet-body  class="kt-portlet__body">
-					<kt-diabetes-medical-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalDetails></kt-diabetes-medical-details>
-				</kt-portlet-body> </div>
-            <!-- <div class="">
-				<kt-portlet-header [title]="'Family History'" [class]="'kt-portlet__head--lg'" >
-				</kt-portlet-header>
-				<kt-portlet-body  class="kt-portlet__body">
-
-                    <kt-hsa-family-history [disableInput]="isPrint"   [formData]="formId" #appHsaFamilyHistory></kt-hsa-family-history>
-				</kt-portlet-body> </div>
-			<div class="">
-				<kt-portlet-header [title]="'Family Pedigree" [class]="'kt-portlet__head--lg'" >
-				</kt-portlet-header>
-				<kt-portlet-body  class="kt-portlet__body">
-
-					<kt-hsa-family-pedigree  [disableInput]="isPrint"   [formData]="formId"   #appHsaFamilyPedigree></kt-hsa-family-pedigree>
-				</kt-portlet-body></div> -->
-
+    <kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+        <div class="kt-form kt-margin-b-30">
             <div class="">
-				<kt-portlet-header [title]="'Diabetes Self Management'" [class]="'kt-portlet__head--lg'" >
-				</kt-portlet-header>
-				<kt-portlet-body  class="kt-portlet__body">
+                <kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                <kt-diabetes-personal-details [disableInput]="isPrint"   [formData]="formId"  #appDiabetesPersonalDetails></kt-diabetes-personal-details>
+                </kt-portlet-body>
+            </div>
+            <div class="">
+                <kt-portlet-header [title]="'Medical Details'" [class]="'kt-portlet__head--lg'" >
+                </kt-portlet-header>
+                <kt-portlet-body  class="kt-portlet__body">
+                    <kt-diabetes-medical-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalDetails></kt-diabetes-medical-details>
+                </kt-portlet-body> </div>
+                <div class="">
+                    <kt-portlet-header [title]="'Diabetes Self Management'" [class]="'kt-portlet__head--lg'" >
+                    </kt-portlet-header>
+                    <kt-portlet-body  class="kt-portlet__body">
+                        <kt-diabetes-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appDiabetesDiabetesSelfManagement></kt-diabetes-diabetes-self-management>
+					</kt-portlet-body> </div>
+					<div class="">
+						<kt-portlet-header [title]="'Female Questions'" [class]="'kt-portlet__head--lg'" >
+						</kt-portlet-header>
+						<kt-portlet-body  class="kt-portlet__body">
+							<kt-diabetes-female-questions [disableInput]="isPrint"   [formData]="formId" #appDiabetesFemaleQuestionsComponent></kt-diabetes-female-questions >
+						</kt-portlet-body> </div>
 
-                    <kt-diabetes-diabetes-self-management [disableInput]="isPrint"   [formData]="formId" #appDiabetesSelfManagement></kt-diabetes-diabetes-self-management>
-				</kt-portlet-body> </div>
+                    <div class="">
+                        <kt-portlet-header [title]="'Participants Physical Activity'" [class]="'kt-portlet__head--lg'" >
+                        </kt-portlet-header>
+                        <kt-portlet-body  class="kt-portlet__body">
+							<kt-diabetes-physical-activity [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalActivityComponent></kt-diabetes-physical-activity>
+                        </kt-portlet-body> </div>
 
-			<div class="">
-				<kt-portlet-header [title]="'Physical Measurements'" [class]="'kt-portlet__head--lg'" >
-				</kt-portlet-header>
-				<kt-portlet-body  class="kt-portlet__body">
-					<kt-diabetes-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalMeasurements></kt-diabetes-physical-measurements>
-				</kt-portlet-body>  </div>
+                        <div class="">
+                            <kt-portlet-header [title]="'Participants Diet'" [class]="'kt-portlet__head--lg'" >
+                            </kt-portlet-header>
+                            <kt-portlet-body  class="kt-portlet__body">
+                                <kt-diabetes-diet [disableInput]="isPrint"   [formData]="formId" #appDiabetesDietComponent></kt-diabetes-diet>
+							</kt-portlet-body> </div>
+
+							<div class="">
+								<kt-portlet-header [title]="'Participants Absence'" [class]="'kt-portlet__head--lg'" >
+								</kt-portlet-header>
+								<kt-portlet-body  class="kt-portlet__body">
+									<kt-diabetes-patient-absence [disableInput]="isPrint"   [formData]="formId" #appDiabetesPatientAbsenceComponent></kt-diabetes-patient-absence>
+								</kt-portlet-body> </div>
+
+								<div class="">
+									<kt-portlet-header [title]="'Participants Anthropometric Measurements'" [class]="'kt-portlet__head--lg'" >
+									</kt-portlet-header>
+									<kt-portlet-body  class="kt-portlet__body">
+										<kt-diabetes-physical-measurements [disableInput]="isPrint"   [formData]="formId" #appDiabetesPhysicalMeasurements></kt-diabetes-physical-measurements>
+									</kt-portlet-body> </div>
+
+                            <div class="">
+                                <kt-portlet-header [title]="'Medical History'" [class]="'kt-portlet__head--lg'" >
+                                </kt-portlet-header>
+                                <kt-portlet-body  class="kt-portlet__body">
+                                    <kt-diabetes-medical-history [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicalHistoryComponent></kt-diabetes-medical-history>
+                                </kt-portlet-body> </div>
+
+                                    <div class="">
+                                        <kt-portlet-header [title]="'Medication(Type 2 Diabetes Patient)'" [class]="'kt-portlet__head--lg'" >
+                                        </kt-portlet-header>
+                                        <kt-portlet-body  class="kt-portlet__body">
+                                            <kt-diabetes-medication [disableInput]="isPrint"   [formData]="formId" #appDiabetesMedicationDetails></kt-diabetes-medication>
+                                        </kt-portlet-body> </div>
+
+                                        <div class="">
+                                            <kt-portlet-header [title]="'Metformin'" [class]="'kt-portlet__head--lg'" >
+                                            </kt-portlet-header>
+                                            <kt-portlet-body  class="kt-portlet__body">
+                                                <kt-diabetes-metformin [disableInput]="isPrint"   [formData]="formId" #appDiabetesMetformin></kt-diabetes-metformin>
+                                            </kt-portlet-body> </div>
+                                            <div class="">
+                                                <kt-portlet-header [title]="'Cognitive Test Result'" [class]="'kt-portlet__head--lg'" >
+                                                </kt-portlet-header>
+                                                <kt-portlet-body  class="kt-portlet__body">
+                                                    <kt-diabetes-cognitive-test-result [disableInput]="isPrint"   [formData]="formId" #appDiabetesCognitiveTestResult></kt-diabetes-cognitive-test-result>
+                                                </kt-portlet-body> </div>
+                                                <div class="">
+                                                    <kt-portlet-header [title]="'Laboratory Details'" [class]="'kt-portlet__head--lg'" >
+                                                    </kt-portlet-header>
+                                                    <kt-portlet-body  class="kt-portlet__body">
+                                                        <kt-diabetes-laboratory-details [disableInput]="isPrint"   [formData]="formId" #appDiabetesClinicalDetails></kt-diabetes-laboratory-details>
+                                                    </kt-portlet-body> </div>
+                                                    <div class="">
+                                                        <kt-portlet-header [title]="'Biochemical Parameters'" [class]="'kt-portlet__head--lg'" >
+                                                        </kt-portlet-header>
+                                                        <kt-portlet-body  class="kt-portlet__body">
+                                                            <kt-diabetes-biochemical [disableInput]="isPrint"   [formData]="formId" #appDiabetesBiochemical></kt-diabetes-biochemical>
+                                                        </kt-portlet-body> </div>
 
 
-		</div>
-	</kt-portlet-body>
+
+
+        </div>
+    </kt-portlet-body>
 </kt-portlet>
+
+
+
+
+
+
+

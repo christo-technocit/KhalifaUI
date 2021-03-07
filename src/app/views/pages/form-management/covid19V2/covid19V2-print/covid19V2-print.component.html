@@ -1,0 +1,60 @@
+
+
+
+<kt-portlet id="print_form">
+
+	<kt-portlet-body style="padding:15px 0px 15px 0px !important; ">
+		<div class="kt-form kt-margin-b-30">
+			<div class="">
+				<kt-portlet-header [title]="'Personal Details'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				<kt-covid19V2-personal-details [disableInput]="isPrint"   [formData]="formId"  #appcovid19V2PersonalDetails></kt-covid19V2-personal-details>
+				</kt-portlet-body>
+			</div>
+            
+			<div class="">
+				<kt-portlet-header [title]="'Clinical Presentation'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				<kt-covid19V2-clinical-details [disableInput]="isPrint"   [formData]="formId" #appcovid19V2ClinicalDetails></kt-covid19V2-clinical-details>
+				</kt-portlet-body>
+			</div>
+			<div class="">
+                
+				<kt-portlet-header [title]="'Clinical Outcome'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+                    <kt-covid19V2-ClinicalOutcome [disableInput]="isPrint"   [formData]="formId" #appcovid19V2ClinicalOutcome></kt-covid19V2-ClinicalOutcome>
+				</kt-portlet-body>
+				</div>
+            <div class="">
+				<kt-portlet-header [title]="'Clinical Information'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+                    <kt-covid19V2-clinical-information [disableInput]="isPrint"   [formData]="formId" #appcovid19V2ClinicalInformation></kt-covid19V2-clinical-information>
+				</kt-portlet-body>
+				</div>
+
+
+           
+            <div class="">
+				<kt-portlet-header [title]="'Dietary Fiber Intake Short Food Frequency Questionnaire (DFI-FFQ)'" [class]="'kt-portlet__head--lg'" >
+				</kt-portlet-header>
+				<kt-portlet-body  class="kt-portlet__body">
+				
+					<kt-covid19V2-DFIFFQ  [disableInput]="isPrint"   [formData]="formId"   #appcovid19V2DFIFFQ></kt-covid19V2-DFIFFQ>
+				</kt-portlet-body>
+				</div>
+
+				<div class="">
+					<kt-portlet-header [title]="'Treatment Regimen'" [class]="'kt-portlet__head--lg'" >
+					</kt-portlet-header>
+					<kt-portlet-body  class="kt-portlet__body">
+						<kt-covid19V2-Treatmentregimen [disableInput]="isPrint"   [formData]="formId" #appcovid19V2Treatmentregimen></kt-covid19V2-Treatmentregimen>
+					</kt-portlet-body>
+					</div> 
+				
+		</div>
+	</kt-portlet-body>
+</kt-portlet>

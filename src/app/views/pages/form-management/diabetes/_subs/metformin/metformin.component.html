@@ -144,13 +144,13 @@
                     <mat-radio-group formControlName="Metformin_Medication3_stop">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
                         <mat-radio-button  value="no">No</mat-radio-button>
-                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                        <mat-radio-button  value="notapply">Does not apply</mat-radio-button>
                     </mat-radio-group>
 				</div>
 
 					<div *ngIf="form.get('Metformin_Medication3_stop').value == 'yes'" >
 						<mat-form-field class="mat-form-field-fluid">
-							<input matInput placeholder="If yes, which medication(s) did you stop taking?"
+							<input matInput placeholder="If yes, which medication(s) did patient stop taking?"
 							   formControlName="Metformin_Medication_Name_Stop" />
 						</mat-form-field><br>
 						<mat-form-field class="mat-form-field-fluid">
@@ -255,7 +255,7 @@
                     <mat-radio-group formControlName="Metformin_medication_yesterday">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
                         <mat-radio-button  value="no">No</mat-radio-button>
-                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                        <mat-radio-button  value="notapply">Does not apply</mat-radio-button>
                     </mat-radio-group>
                 </div>
             </div>
@@ -276,7 +276,7 @@
                     <mat-radio-group formControlName="Metformin_prescribed">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
                         <mat-radio-button  value="no">No</mat-radio-button>
-                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+                        <mat-radio-button  value="notappy">Does not apply</mat-radio-button>
                     </mat-radio-group>
                 </div>
             </div>
@@ -296,8 +296,8 @@
                 <div>
                     <mat-radio-group formControlName="Metformin_prescribed_doctor">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
-                        <mat-radio-button  value="no">No</mat-radio-button>
-                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+						<mat-radio-button  value="no">No</mat-radio-button>
+                        <mat-radio-button  value="notapply">Does not apply</mat-radio-button>
                     </mat-radio-group>
                 </div>
             </div>
@@ -306,7 +306,7 @@
 		</div>
 		<div class="form-group  row">
 			<div class="row col-md-12">
-				The following questions ask about your use of metformin medication(s) in the PAST WEEK.  For each question, please circle the answer that best describes your experience
+				The following questions ask about patient use of metformin medication(s) in the PAST WEEK.  For each question, please circle the answer that best describes patient experience
 			</div>
 		</div>
             <div class="form-group  row">
@@ -323,8 +323,8 @@
                     <mat-radio-group formControlName="Metformin_how_often">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
 						<mat-radio-button  value="no">No</mat-radio-button>
-						<mat-radio-button  value="no">I dont know</mat-radio-button>
-                        <mat-radio-button  value="not">Does not apply to me</mat-radio-button>
+						<mat-radio-button  value="dontknow">I dont know</mat-radio-button>
+                        <mat-radio-button  value="notapply">Does not apply</mat-radio-button>
                     </mat-radio-group>
                 </div>
             </div>
@@ -345,7 +345,7 @@
                     <mat-radio-group formControlName="Metformin_past_week">
                         <mat-radio-button  value="yes">Yes</mat-radio-button>
 						<mat-radio-button  value="no">No</mat-radio-button>
-                        <mat-radio-button  value="not">It is not applicable to me</mat-radio-button>
+                        <mat-radio-button  value="not">It is not applicable</mat-radio-button>
                     </mat-radio-group>
                 </div>
             </div>
@@ -594,7 +594,7 @@
 
         <div class="form-group  row">
             <div class="row col-md-12">
-                In the past 2 weeks did she/he experience any of the below-mentioned symptoms of abdominal discomfort after
+                In the past 2 weeks did patient experience any of the below-mentioned symptoms of abdominal discomfort after
                 taking the metformin tablets? Please, tick appropriate option for each symptom.
             </div>
         </div>
@@ -609,11 +609,11 @@
             </div>
             <div class="col-md-8 form-group">
                 <div>
-                    <mat-radio-group formControlName="MetforminNausea">
+                    <mat-radio-group formControlName="Metformin_Nausea">
                         <mat-radio-button  value="no">No</mat-radio-button>
                         <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-                        <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-                        <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+						<mat-radio-button  value="4-6times">4-6 Times</mat-radio-button>
+						<mat-radio-button  value="6-9times">6-9 Times</mat-radio-button>
                         <mat-radio-button  value="most">Most of the time</mat-radio-button>
                     </mat-radio-group>
                 </div>
@@ -632,11 +632,11 @@
         </div>
         <div class="col-md-8 form-group">
             <div>
-                <mat-radio-group formControlName="MetforminVomiting">
+                <mat-radio-group formControlName="Metformin_Vomiting">
                     <mat-radio-button  value="no">No</mat-radio-button>
                     <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-                    <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-                    <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+					<mat-radio-button  value="4-6times">4-6 Times</mat-radio-button>
+					<mat-radio-button  value="6-9times">6-9 Times</mat-radio-button>
                     <mat-radio-button  value="most">Most of the time</mat-radio-button>
                 </mat-radio-group>
             </div>
@@ -656,11 +656,11 @@
     </div>
     <div class="col-md-8 form-group">
         <div>
-            <mat-radio-group formControlName="MetforminDiarrhea">
+            <mat-radio-group formControlName="Metformin_Diarrhea">
                 <mat-radio-button  value="no">No</mat-radio-button>
                 <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-                <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-                <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+				<mat-radio-button  value="4-6times">4-6 Times</mat-radio-button>
+				<mat-radio-button  value="6-9times">6-9 Times</mat-radio-button>
                 <mat-radio-button  value="most">Most of the time</mat-radio-button>
             </mat-radio-group>
         </div>
@@ -679,11 +679,11 @@
 </div>
 <div class="col-md-8 form-group">
     <div>
-        <mat-radio-group formControlName="MetforminAbdominal_pain">
+        <mat-radio-group formControlName="Metformin_Abdominal_pain">
             <mat-radio-button  value="no">No</mat-radio-button>
             <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="4-6times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="6-9times">6-9 Times</mat-radio-button>
             <mat-radio-button  value="most">Most of the time</mat-radio-button>
         </mat-radio-group>
     </div>
@@ -703,11 +703,11 @@
 </div>
 <div class="col-md-8 form-group">
     <div>
-        <mat-radio-group formControlName="MetforminBloating">
+        <mat-radio-group formControlName="Metformin_Bloating">
             <mat-radio-button  value="no">No</mat-radio-button>
             <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="4-6times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="6-9times">6-9 Times</mat-radio-button>
             <mat-radio-button  value="most">Most of the time</mat-radio-button>
         </mat-radio-group>
     </div>
@@ -727,11 +727,11 @@
 </div>
 <div class="col-md-8 form-group">
     <div>
-        <mat-radio-group formControlName="MetforminLoss_appetite">
+        <mat-radio-group formControlName="Metformin_Loss_appetite">
             <mat-radio-button  value="no">No</mat-radio-button>
             <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
+            <mat-radio-button  value="4-6times">4-6 Times</mat-radio-button>
+            <mat-radio-button  value="6-9times">6-9 Times</mat-radio-button>
             <mat-radio-button  value="most">Most of the time</mat-radio-button>
         </mat-radio-group>
     </div>
@@ -745,13 +745,15 @@
 <div class="col-md-4">
     <div class="kt-section">
         <label align="start">
-            Other (please, specify)
+            Other
         </label>
     </div>
 </div>
 <div class="col-md-8 form-group">
     <div>
-
+		<mat-form-field class="mat-form-field-fluid">
+			<input matInput placeholder="please, specify" autocomplete="off" formControlName="Metformin_Other_symptoms" />
+		</mat-form-field>
     </div>
 </div>
 </div>
@@ -770,11 +772,9 @@
 <div class="col-md-8 form-group">
     <div>
         <mat-radio-group formControlName="MetforminOther_anorexia">
+            <mat-radio-button  value="yes">Yes</mat-radio-button>
             <mat-radio-button  value="no">No</mat-radio-button>
-            <mat-radio-button  value="1-3times">1-3 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">4-6 Times</mat-radio-button>
-            <mat-radio-button  value="1-3times">6-9 Times</mat-radio-button>
-            <mat-radio-button  value="most">Most of the time</mat-radio-button>
+            <mat-radio-button  value="notapply">Does not apply </mat-radio-button>
         </mat-radio-group>
     </div>
 </div>
@@ -782,27 +782,7 @@
 
 </div>
 
-            <!-- <div class="form-group  row">
-                <div class="row col-md-12">
-            <div class="col-md-4">
-                <div class="kt-section">
-                    <label align="start">
-                        Have you quit smoking since 1 year ago?
-                    </label>
-                </div>
-            </div>
-            <div class="col-md-8 form-group">
-                <div>
-                    <mat-radio-group formControlName="PSS_quit_smoking_since1year">
-                        <mat-radio-button  value="yes">Yes</mat-radio-button>
-                        <mat-radio-button  value="no">No</mat-radio-button>
-                        <mat-radio-button  value="idonotknow">I don’t know</mat-radio-button>
-                        <mat-radio-button  value="prefernottodisclose">Prefer not to disclose</mat-radio-button>
-                   </mat-radio-group>
-                </div>
-            </div>
-        </div>
-        </div> -->
+
 
 
 

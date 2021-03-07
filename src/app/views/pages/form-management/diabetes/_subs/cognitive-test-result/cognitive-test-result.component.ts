@@ -64,7 +64,7 @@ export class DiabetesCognitiveTestResultComponent implements OnInit {
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,7).subscribe((res)=> {
+    this._service.getFormAttribute(12,9).subscribe((res)=> {
       this.formAttributes = res;
     })
   }

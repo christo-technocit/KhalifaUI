@@ -17,8 +17,8 @@ export class PrepareFinalForm {
         let _result = [];
         for (let prop in formValue) {
             for(let i=0;i<formAttributes.length;i++){
-                console.log(this.imageAttriubute.indexOf(formAttributes[i].FormAttributeID) < 0);
-                console.log('prepare',formAttributes[i]);
+                // console.log(this.imageAttriubute.indexOf(formAttributes[i].FormAttributeID) < 0);
+                // console.log('prepare',formAttributes[i]);
                 if(prop == formAttributes[i].AttributeName && (isFormId || formValue[prop] != ""  ) && this.imageAttriubute.indexOf(formAttributes[i].FormAttributeID) < 0 ){
                     _result.push({
                         "savedFormID": formValue[idField],

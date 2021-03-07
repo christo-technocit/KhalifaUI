@@ -1,0 +1,236 @@
+<div class="col-md-12">
+    <form autocomplete="off" [formGroup]="form" class="kt-form kt-form--group-seperator-dashed">
+
+        <!--<kt-alert *ngIf="hasFormErrors" type="warn" [showCloseButton]="true" [duration]="10000"-->
+                  <!--(close)="onAlertClose($event)">-->
+            <!--Oh snap! Change a few things up and try submitting again.-->
+        <!--</kt-alert>-->
+        <div class="kt-form__section kt-form__section--first">
+               
+            <div class="form-group  row">
+                <div class="col-md-4">
+                        <label align="start">
+                         <h5>Treatment regimen</h5>  
+                        </label>
+                </div>
+                <div class="col-md-8 form-group">
+                    <mat-radio-group aria-labelledby="example-radio-group-label"  formControlName="TreatmentRegimen">
+                        <mat-radio-button matInput  value="Water">Water</mat-radio-button>
+                        <mat-radio-button  matInput value="Saline">Saline</mat-radio-button>
+                        <mat-radio-button  matInput value="None">None</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <!--Day 0 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 0</label>
+                    </div>
+                 </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day0Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day0NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker"
+                               (click)="dobPicker.open()"
+                               [max]="maxDate"
+                               autocomplete="off"
+                               placeholder="Date" formControlName="Day0Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 0 end-->
+            <!--Day 2 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 2</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day2Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day2NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker2"
+                                (click)="dobPicker2.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day2Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker2"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 2 end-->
+            <!--Day 4 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 4</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day4Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day4NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker4"
+                                (click)="dobPicker4.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day4Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker4"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker4></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 4 end-->
+            <!--Day 6 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 6</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day6Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day6NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker6"
+                                (click)="dobPicker6.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day6Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker6"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker6></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 6 end-->
+            <!--Day 8 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 8</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day8Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day8NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker8"
+                                (click)="dobPicker8.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day8Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker8"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker8></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 8 end-->
+            <!--Day 10 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 10</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day10Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day10NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker10"
+                                (click)="dobPicker10.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day10Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker10"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker10></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 10 end-->
+            <!--Day 12 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 12</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day12Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day12NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker12"
+                                (click)="dobPicker12.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day12Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker12"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker12></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 12 end-->
+            <!--Day 14 Begin-->
+            <div class="form-group  row">
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <div class="mat-form-field-fluid">
+                    <label id="example-radio-group-label">Day 14</label>
+                    </div>
+                    </div>
+                <div class="col-md-4 form-group">
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day14Saliva">Saliva</mat-checkbox>
+                    <mat-checkbox class="lab-mar-right-15"  formControlName="Day14NasalSwab">Nasal Swab</mat-checkbox>
+                </div>
+
+                <div class="col-md-4 kt-margin-bottom-20-mobile">
+                    <mat-form-field class="mat-form-field-fluid">
+                        <input matInput [matDatepicker]="dobPicker14"
+                                (click)="dobPicker14.open()"
+                                [max]="maxDate"
+                                autocomplete="off"
+                                placeholder="Date" formControlName="Day14Date" />
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker14"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker14></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--Day 14 end-->
+            
+            
+            
+            
+            
+            
+            
+
+
+        </div>
+    </form>
+</div>

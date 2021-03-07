@@ -113,7 +113,7 @@ export class Covid19Component implements OnInit {
 	}
 
 	editForm(id) {
-		this.router.navigate(['/form-management/new-form/edit', id], { relativeTo: this.activatedRoute });
+		this.router.navigate(['/form-management/covid19/edit', id], { relativeTo: this.activatedRoute });
 	}
 
 }

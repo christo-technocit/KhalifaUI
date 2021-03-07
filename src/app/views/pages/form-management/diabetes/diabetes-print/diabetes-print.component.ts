@@ -32,6 +32,14 @@ import { DiabetesBiochemicalComponent } from '../_subs/biochemical/biochemical.c
 import { DiabetesMedicationComponent } from '../_subs/medication/medication.component';
 import { DiabetesFamilyPedigreeComponent } from '../_subs/family-pedigree/family-pedigree.component';
 import { DiabetesPhysicalMeasurementsComponent } from '../_subs/physical-measurements/physical-measurements.component';
+import { DiabetesMedicalHistoryComponent} from '../_subs/medical-history/medical-history.component';
+import { DiabetesDietComponent} from '../_subs/diet/diet.component';
+import { DiabetesMedication2Component} from '../_subs/medication2/medication2.component';
+import { DiabetesFemaleQuestionsComponent} from '../_subs/female-questions/female-questions.component';
+import { DiabetesMetforminComponent} from '../_subs/metformin/metformin.component';
+import { DiabetesPhysicalActivityComponent } from '../_subs/physical-activity/physical-activity.component';
+import { DiabetesPatientAbsenceComponent } from '../_subs/patient-absence/patient-absence.component';
+
 @Component({
   selector: 'kt-diabetes-print',
   templateUrl: './diabetes-print.component.html',
@@ -50,9 +58,10 @@ export class DiabetesPrintComponent implements OnInit {
 	isPrint : boolean = false;
 	private subscriptions: Subscription[] = [];
 
-  @ViewChild('appDiabetesPersonalDetails',{ static: false })appDiabetesPersonalDetails: DiabetesPersonalDetailsComponent;
+    @ViewChild('appDiabetesPersonalDetails',{ static: false })appDiabetesPersonalDetails: DiabetesPersonalDetailsComponent;
 	@ViewChild('appDiabetesLifeStyleDetails',{ static: false })appDiabetesLifeStyleDetails: DiabetesLifestyleDetailsComponent;
 	@ViewChild('appDiabetesFamilyHistory',{ static: false })appDiabetesFamilyHistory: DiabetesFamilyHistoryComponent;
+	@ViewChild('appDiabetesFemaleQuestionsComponent',{ static: false })appDiabetesFemaleQuestionsComponent: DiabetesFemaleQuestionsComponent;
 	@ViewChild('appDiabetesFamilyPedigree',{ static: false })appDiabetesFamilyPedigree: DiabetesFamilyPedigreeComponent;
 	@ViewChild('appDiabetesMedicalDetails',{ static: false })appDiabetesMedicalDetails: DiabetesMedicalDetailsComponent;
 	@ViewChild('appDiabetesDiabetesSelfManagement',{ static: false })appDiabetesDiabetesSelfManagement: DiabetesDiabetesSelfManagementComponent;
@@ -62,6 +71,13 @@ export class DiabetesPrintComponent implements OnInit {
 	@ViewChild('appDiabetesBiochemical',{ static: false })appDiabetesBiochemical: DiabetesBiochemicalComponent;
 	@ViewChild('appDiabetesCognitiveTestResult',{ static: false })appDiabetesCognitiveTestResult: DiabetesCognitiveTestResultComponent;
     @ViewChild('appDiabetesLaboratoryDetails',{ static: false })appDiabetesLaboratoryDetails: DiabetesLaboratoryDetailsComponent;
+	@ViewChild('appDiabetesMedicalHistoryComponent',{ static: false })appDiabetesMedicalHistoryComponent: DiabetesMedicalHistoryComponent;
+	@ViewChild('appDiabetesDietComponent',{ static: false })appDiabetesDietComponent: DiabetesDietComponent;
+    @ViewChild('appDiabetesMedication2Component',{ static: false })appDiabetesMedication2Component: DiabetesMedication2Component;
+    @ViewChild('appDiabetesMetforminComponent',{ static: false })appDiabetesMetforminComponent: DiabetesMetforminComponent;
+	@ViewChild('appDiabetesPhysicalActivityComponent',{ static: false })appDiabetesPhysicalActivityComponent: DiabetesPhysicalActivityComponent;
+    @ViewChild('appDiabetesPatientAbsenceComponent',{ static: false })appDiabetesPatientAbsenceComponent: DiabetesPatientAbsenceComponent;
+
 
 
 
@@ -101,7 +117,7 @@ export class DiabetesPrintComponent implements OnInit {
 	}
 
 	initTitle() {
-		this.subheaderService.setTitle('Diabetes');
+		this.subheaderService.setTitle('Precision Medicine in Type 2 (Short)');
 		this.subheaderService.showPrintButton(true);
 	}
 
@@ -111,38 +127,47 @@ export class DiabetesPrintComponent implements OnInit {
       this.appDiabetesPersonalDetails.onSubmit();
     }
     else if(this.selectedTab == 1){
-			this.appDiabetesLifeStyleDetails.onSubmit();
+			this.appDiabetesMedicalDetails.onSubmit();
     }
     else if(this.selectedTab == 2){
-			this.appDiabetesFamilyHistory.onSubmit();
-    }
-    else if(this.selectedTab == 3){
-			this.appDiabetesFamilyPedigree.onSubmit();
-    }
-     else if(this.selectedTab == 4){
-		 	this.appDiabetesMedicalDetails.onSubmit();
-     }
-	else if (this.selectedTab == 5) {
 			this.appDiabetesDiabetesSelfManagement.onSubmit();
     }
-    else if(this.selectedTab == 6){
-			this.appDiabetesPhysicalMeasurements.onSubmit();
+	else if(this.selectedTab == 3){
+		this.appDiabetesFemaleQuestionsComponent.onSubmit();
+	}
+	else if(this.selectedTab == 4){
+		this.appDiabetesPhysicalActivityComponent.onSubmit();
+   }
+
+     else if(this.selectedTab == 5){
+		 	this.appDiabetesDietComponent.onSubmit();
+	 }
+	 else if(this.selectedTab == 6){
+		this.appDiabetesPatientAbsenceComponent.onSubmit();
+   }
+	 else if(this.selectedTab == 7){
+		this.appDiabetesPhysicalMeasurements.onSubmit();
     }
-    else if(this.selectedTab == 7){
-		 	this.appDiabetesClinicalDetails.onSubmit();
-		 }
-		 else if (this.selectedTab == 8) {
-				 this.appDiabetesMedicationDetails.onSubmit();
-		 }
+	else if (this.selectedTab == 8) {
+			this.appDiabetesMedicalHistoryComponent.onSubmit();
+    }
     else if(this.selectedTab == 9){
-			this.appDiabetesBiochemical.onSubmit();
-		}
-	else if(this.selectedTab == 10){
-			this.appDiabetesCognitiveTestResult.onSubmit();
+			this.appDiabetesMedicationDetails.onSubmit();
     }
+		 else if (this.selectedTab == 10) {
+				 this.appDiabetesMetforminComponent.onSubmit();
+		 }
     else if(this.selectedTab == 11){
+			this.appDiabetesCognitiveTestResult.onSubmit();
+		}
+	else if(this.selectedTab == 12){
 			this.appDiabetesLaboratoryDetails.onSubmit();
     }
+    else if(this.selectedTab == 13){
+			this.appDiabetesBiochemical.onSubmit();
+	}
+
+
 	}
 
     //

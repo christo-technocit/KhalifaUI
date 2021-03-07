@@ -35,7 +35,7 @@ export class DiabetesMedicationComponent implements OnInit {
     if (!this.formId)
       this._interactionService._Refid$.subscribe((id)=> {
         if(id) {
-          this.Mform.patchValue({"savedFormID": id})
+          this.Mform.patchValue({"SavedFormID": id})
 
         }
       })
@@ -53,7 +53,7 @@ export class DiabetesMedicationComponent implements OnInit {
 
   createForm() {
     this.Mform = this.eformFB.group({
-      "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
+      "SavedFormID": new FormControl({value: 0, disabled: this.disableInput}),
 	  "Anti_Hypertensive_ACE_inhibitors": new FormControl({value: '', disabled: this.disableInput}),
 	  "Anti_Hypertensive_ACE_inhibitors_Perindopril": new FormControl({value: '', disabled: this.disableInput}),
 	  "Anti_Hypertensive_ACE_inhibitors_Captopril": new FormControl({value: '', disabled: this.disableInput}),
@@ -100,7 +100,7 @@ export class DiabetesMedicationComponent implements OnInit {
 	  "Oral_agents_Sulphonyureas_GliclazideMR": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Sulphonyureas_Glipizide1": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Sulphonyureas_Glimepride": new FormControl({value: '', disabled: this.disableInput}),
-	  "Oral_agents_Sulphonyuras_other": new FormControl({value: '', disabled: this.disableInput}),//
+	  "Oral_agents_Sulphonyuras_other": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Thiazolidinediones": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Thiazolidinediones_Pioglitazone": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Thiazolidinediones_other": new FormControl({value: '', disabled: this.disableInput}),
@@ -130,7 +130,7 @@ export class DiabetesMedicationComponent implements OnInit {
 	  "Oral_agents_Amylin": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Amylin_Pramlintide": new FormControl({value: '', disabled: this.disableInput}),
 	  "Oral_agents_Amylin_other": new FormControl({value: '', disabled: this.disableInput}),
-	  "Oral_agents_other": new FormControl({value: '', disabled: this.disableInput}),
+	  //"Oral_agents_other": new FormControl({value: '', disabled: this.disableInput}),// not in db
 	  "Injections_Insulin": new FormControl({value: '', disabled: this.disableInput}),
 	  "Injections_Insulin_Lispro": new FormControl({value: '', disabled: this.disableInput}),
 	  "Injections_Insulin_Aspart": new FormControl({value: '', disabled: this.disableInput}),
@@ -140,21 +140,20 @@ export class DiabetesMedicationComponent implements OnInit {
 	  "Injections_Insulin_Detemir": new FormControl({value: '', disabled: this.disableInput}),
 	  "Injections_Insulin_Glargine": new FormControl({value: '', disabled: this.disableInput}),
 	  "Injections_Insulin_Combination": new FormControl({value: '', disabled: this.disableInput}),
-	  "Injections_Insulin_Other": new FormControl({value: '', disabled: this.disableInput}),
-	  "Injections_Insulin_Other_Doze": new FormControl({value: '', disabled: this.disableInput}),
+	  //"Injections_Insulin_Other": new FormControl({value: '', disabled: this.disableInput}),
+	  //"Injections_Insulin_Other_Doze": new FormControl({value: '', disabled: this.disableInput}),
 	  "Supplements_VitaminD3": new FormControl({value: '', disabled: this.disableInput}),
 	  "Supplements_others": new FormControl({value: '', disabled: this.disableInput}),
 	  "Supplements_others_Doze": new FormControl({value: '', disabled: this.disableInput}),
 	  "Supplements_Erythropoietin": new FormControl({value: '', disabled: this.disableInput}),
 	  "Supplements_Erythropoietin_others": new FormControl({value: '', disabled: this.disableInput}),
-	  "Supplements_Erythropoietin_others_Doze": new FormControl({value: '', disabled: this.disableInput}),
 	  "Antidepressants_Prozac": new FormControl({value: '', disabled: this.disableInput}),
 	  "Antidepressants_other": new FormControl({value: '', disabled: this.disableInput}),
 	  "Antianxiety_Diazepam": new FormControl({value: '', disabled: this.disableInput}),
 	  "Antianxiety_Alprazolam": new FormControl({value: '', disabled: this.disableInput}),
 	  "Antianxiety_other": new FormControl({value: '', disabled: this.disableInput}),
 	  "othermedication_other": new FormControl({value: '', disabled: this.disableInput}),
-	  "othermedication_other_specify": new FormControl({value: '', disabled: this.disableInput}),
+	  //"othermedication_other_specify": new FormControl({value: '', disabled: this.disableInput}),
 	  "traditional_chinese": new FormControl({value: '', disabled: this.disableInput}),
 	  "traditional_chinese_specify": new FormControl({value: '', disabled: this.disableInput}),
 	  "Antidiabetic_Medications_Other": new FormControl({value: '', disabled: this.disableInput}),
@@ -212,7 +211,7 @@ export class DiabetesMedicationComponent implements OnInit {
 	  "DT_OAD_side_4_6month": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_OAD_side_4_9month": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_OAD_side_4_12month": new FormControl({value: '', disabled: this.disableInput}),
-	  "[DT_Metformin ]": new FormControl({value: '', disabled: this.disableInput}),
+	  "DT_Metformin": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_Metformin_start": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_Metformin_3month": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_Metformin_6month": new FormControl({value: '', disabled: this.disableInput}),
@@ -254,20 +253,27 @@ export class DiabetesMedicationComponent implements OnInit {
 	  "DT_Metformin_Anorexia_6month": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_Metformin_Anorexia_9month": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_Metformin_Anorexia_12month": new FormControl({value: '', disabled: this.disableInput}),
-	  "DT_Metformin_Other": new FormControl({value: '', disabled: this.disableInput}),
-	  "DT_Metformin_Other_start": new FormControl({value: '', disabled: this.disableInput}),
-	  "DT_Metformin_Other_3month": new FormControl({value: '', disabled: this.disableInput}),
-	  "DT_Metformin_Other_6month": new FormControl({value: '', disabled: this.disableInput}),
-	  "DT_Metformin_Other_9month": new FormControl({value: '', disabled: this.disableInput}),
-	  "DT_Metformin_Other_12month": new FormControl({value: '', disabled: this.disableInput}),
+	  "DT_Metformin_other": new FormControl({value: '', disabled: this.disableInput}),
+	 "DT_Metformin_other_3month": new FormControl({value: '', disabled: this.disableInput}),
+	  "DT_Metformin_other_6month": new FormControl({value: '', disabled: this.disableInput}),
+	  "DT_Metformin_other_9month": new FormControl({value: '', disabled: this.disableInput}),
+	  "DT_Metformin_other_12month": new FormControl({value: '', disabled: this.disableInput}),
 	  "DT_Comments": new FormControl({value: '', disabled: this.disableInput}),
 	  "following_medications_other": new FormControl({value: '', disabled: this.disableInput}),
+	  "Anti_Dyslipidemia_Fibrate_other": new FormControl({value: '', disabled: this.disableInput}),
+	  "Oral_agents_SGLTLT2_Empagliflozin": new FormControl({value: '', disabled: this.disableInput}),
+	  "Oral_agents_SGLTLT2_other": new FormControl({value: '', disabled: this.disableInput}),
+	  "Oral_agents_Pramlintide": new FormControl({value: '', disabled: this.disableInput}),
+	  "Injections_Insulin_other": new FormControl({value: '', disabled: this.disableInput}),
+	 "Oral_agents_Sulphonyureas_other": new FormControl({value: '', disabled: this.disableInput}),
+
+
     })
     this.getFormAttributeValues();
   }
 
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,6).subscribe((res)=> {
+    this._service.getFormAttribute(12,7).subscribe((res)=> {
       this.formAttributes = res;
     })
   }
@@ -291,15 +297,15 @@ export class DiabetesMedicationComponent implements OnInit {
   }
 
   onSubmit() {
-    if (!this.Mform.value["savedFormID"] && !this.saveFormId) {
+    if (!this.Mform.value["SavedFormID"] && !this.saveFormId) {
       this.createSampleId();
     } else {
-      this.Mform.patchValue({"savedFormID" : this.Mform.value["savedFormID"] || this.saveFormId })
+      this.Mform.patchValue({"SavedFormID" : this.Mform.value["SavedFormID"] || this.saveFormId })
 
-      let data = this.finalFormValues.prepareAttibuteForm(this.Mform.value, this.formAttributes, "savedFormID",this.formId)
+      let data = this.finalFormValues.prepareAttibuteForm(this.Mform.value, this.formAttributes, "SavedFormID",this.formId)
       if (this.formId || this.isFormSubmit) {
         this.splashService.splashScreen({isLoading : true, message : "UPDATING" })
-        this._service.getFormAttributeValues(this.formId || this.Mform.controls["savedFormID"].value).subscribe((res:any) => {
+        this._service.getFormAttributeValues(this.formId || this.Mform.controls["SavedFormID"].value).subscribe((res:any) => {
           if(res){
             for(var i=0;i<data.length;i++) {
               for (var j = 0; j < res.length; j++) {

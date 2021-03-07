@@ -42,7 +42,8 @@ export class DiabetesMetforminComponent implements OnInit {
     private finalFormValues: PrepareFinalForm) { }
 
   ngOnInit() {
-    this.createForm();
+	this.createForm();
+	console.log('formId',this.formId)
     if (!this.formId)
     this._interactionService._Refid$.subscribe((id) => {
       this.form.patchValue({ "savedFormID": id })
@@ -63,7 +64,7 @@ export class DiabetesMetforminComponent implements OnInit {
   }
 
 getFormAttributeValues() {
-  this._service.getFormAttribute(12, 2).subscribe((res) => {
+  this._service.getFormAttribute(12,12).subscribe((res) => {
   this.formAttributes = res;
   })
 
@@ -79,7 +80,7 @@ getFormAttributeValues() {
   createForm() {
     this.form = this.eformFB.group({
 	  "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
-	  "Metformin_antidiabetic_medications": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_antidiabetic_medications": new FormControl({value: '', disabled: this.disableInput}),
 "Metformin_nof_medications": new FormControl({value: '', disabled: this.disableInput}),
 "Metformin_Medication1_name": new FormControl({value: '', disabled: this.disableInput}),
 "Metformin_Medication1_date": new FormControl({value: '', disabled: this.disableInput}),
@@ -115,13 +116,13 @@ getFormAttributeValues() {
 "Metformin_hard_pay": new FormControl({value: '', disabled: this.disableInput}),
 "Metformin_side_effects": new FormControl({value: '', disabled: this.disableInput}),
 "Metformin_other_concerns": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminNausea": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminVomiting": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminDiarrhea": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminAbdominal_pain": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminBloating": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminLoss_appetite": new FormControl({value: '', disabled: this.disableInput}),
-"MetforminOther_symptoms": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Nausea": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Vomiting": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Diarrhea": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Abdominal_pain": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Bloating": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Loss_appetite": new FormControl({value: '', disabled: this.disableInput}),
+"Metformin_Other_symptoms": new FormControl({value: '', disabled: this.disableInput}),
 "MetforminOther_anorexia": new FormControl({value: '', disabled: this.disableInput}),
 });
 
@@ -142,7 +143,9 @@ this.onSubmit();
 }
 
 onSubmit() {
+	console.log("submit-metformin")
   if (!this.form.value["savedFormID"] && !this.saveFormId) {
+
     this.createSampleId();
   } else {
     this.form.patchValue({"savedFormID" : this.form.value["savedFormID"] || this.saveFormId })

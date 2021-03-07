@@ -67,31 +67,11 @@ export class DiabetesPhysicalMeasurementsComponent implements OnInit {
       "PCD_BloodPressure": new FormControl({value: '', disabled: this.disableInput}),
       "PCD_BloodPressureSystolic": new FormControl({value: '', disabled: this.disableInput}),
       "PCD_BloodPressureDiastolic": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_walk_From_Home": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_walk_At_Home": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Drive": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_watch_TV": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_sit": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_walk_For_exercise": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Running": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Bicycling": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Lap_Swimming": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Tennis": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Aerobic": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_ PPA_Yoga": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Other_vigorous": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_Arm_Weights": new FormControl({value: '', disabled: this.disableInput}),
-	  "PPA_leg_Weights": new FormControl({value: '', disabled: this.disableInput}),
-	  "Note_Death": new FormControl({value: '', disabled: this.disableInput}),
-	  "Note_Date": new FormControl({value: '', disabled: this.disableInput}),
-	  "Note_Cause_of_Death": new FormControl({value: '', disabled: this.disableInput}),
-	  "Note_Other": new FormControl({value: '', disabled: this.disableInput}),
-	  "Note_Unknown": new FormControl({value: '', disabled: this.disableInput}),
    });
     this.getFormAttributeValues();
   }
   getFormAttributeValues() {
-    this._service.getFormAttribute(12,5).subscribe((res)=> {
+    this._service.getFormAttribute(12,14).subscribe((res)=> {
       this.formAttributes = res;
     })
   }
@@ -163,8 +143,8 @@ export class DiabetesPhysicalMeasurementsComponent implements OnInit {
 
 
   calculateBodyMass(){
-    if(this.form.controls["BodyWeight"].value && this.form.controls["Height"].value){
-      this.form.patchValue({"bmi" : (this.form.controls["BodyWeight"].value/(this.form.controls["Height"].value*this.form.controls["Height"].value)).toFixed(2) })
+    if(this.form.controls["PCD_BodyWeight"].value && this.form.controls["PCD_Height"].value){
+      this.form.patchValue({"PCD_bmi" : (this.form.controls["PCD_BodyWeight"].value/(this.form.controls["PCD_Height"].value*this.form.controls["PCD_Height"].value)).toFixed(2) })
     }
   }
 

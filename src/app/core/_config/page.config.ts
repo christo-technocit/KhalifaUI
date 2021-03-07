@@ -15,32 +15,11 @@ export class PageConfig {
 			}
 		},
 		'form-management':{
-			'metabolic-disorder': { // <= add page URL
-				page: { title: 'Metabolic Disorder', desc: 'description of metabolic disorder' } // <= Page name and description
-			},
-			'substance-dependence': {
-				page: { title: 'Substance Dependence', desc: 'description of substance dependence' }
-			},
-			'vitamin-d': {
-				page: { title: 'Vitamin-D', desc: 'description of vitamin-d' }
-			},
+
 			'new-form': {
-				page: { title: 'Emirates Family Registry', desc: 'description of Emirates Family Registry' }
+				page: { title: 'Sample Collection', desc: 'description of sample collection' }
 			},
-			'hsa': {
-				page: { title: 'Precision Medicine', desc: 'description of precision medicine' }
-			},
-			'covid19': {
-				page: { title: 'Covid-19', desc: 'description of Covid-19' }
-			},
-			'reporting-tool': {
-				page: { title: 'Reporting Tool',  },
-			},
-			'osteoporosis': {
-				page: { title: 'osteoporosis', desc: 'description of vitamin-d' }
-			},'k1000-arab-genone': {
-				page: { title: '1000 Arab genone', desc: 'description 1000 Arab genone' }
-			},
+
 		},
 		header: {
 			actions: {

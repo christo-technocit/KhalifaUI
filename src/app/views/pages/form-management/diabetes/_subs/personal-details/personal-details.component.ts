@@ -47,13 +47,13 @@ export class DiabetesPersonalDetailsComponent implements OnInit {
               private finalFormValues: PrepareFinalForm) { }
 
   ngOnInit() {
-    this.createForm();
-    if (!this.formId)
+	this.createForm();
+	if (!this.formId)
       this._interactionService._Refid$.subscribe((id) => {
         this.form.patchValue({ "savedFormID": id })
-
-      })
+	  })
     else {
+		//this.updateForm();
         this.splashService.splashScreen({ isLoading : true, message : "LOADING" })
         this._service.getQuestionnaire(this.formId,12).subscribe((res: any[]) => {
         this.formData = res;
@@ -73,7 +73,9 @@ export class DiabetesPersonalDetailsComponent implements OnInit {
   }
 
   createForm() {
+	console.log('add user='+localStorage.getItem('username'));
     this.form = this.eformFB.group({
+
 	  "savedFormID": new FormControl({value: 0, disabled: this.disableInput}),
 	  "sample": new FormControl({value: '', disabled: this.disableInput}),
       "projecttitle": new FormControl({value: '', disabled: this.disableInput}),
@@ -102,7 +104,7 @@ export class DiabetesPersonalDetailsComponent implements OnInit {
       "ownresidence": new FormControl({value: '', disabled: this.disableInput}),
       "employment_status": new FormControl({value: '', disabled: this.disableInput}),
       "employment_work": new FormControl({value: '', disabled: this.disableInput}),
-      "employment_work_other": new FormControl({value: '', disabled: this.disableInput}),
+	  "employment_work_other": new FormControl({value: '', disabled: this.disableInput}),
     });
 
 
@@ -125,6 +127,9 @@ export class DiabetesPersonalDetailsComponent implements OnInit {
 
 this.getFormAttributeValues();
 }
+
+
+
 getFormAttributeValues() {
 this._service.getFormAttribute(12, 1).subscribe((res) => {
 this.formAttributes = res;
@@ -215,8 +220,22 @@ createSampleId(){
 
   onSubmit(){
 
-      if(!this.form.value["savedFormID"] && !this.saveFormId ){
+    var savedFormID=0;
+    if (this.formId===undefined)
+    {
+      savedFormID=0;
+     /*  console.log("Saved Form ID"+savedFormID);
+      console.log("Form ID"+this.formId); */
+    }
+   
+    else
+    savedFormID=this.formId
+     /*  if(!this.form.value["savedFormID"] && !this.saveFormId ){  */
+        if(!this.saveFormId ){ 
+      /*   if(!this.form.value["savedFormID"]  ){ */
         this.createSampleId();
+    /*     console.log("Saved Form ID"+savedFormID); */
+
       }else {
           this.form.patchValue({"savedFormID": this.form.value["savedFormID"] || this.saveFormId})
           let data = this.finalFormValues.prepareAttibuteForm(this.form.value, this.formAttributes, "savedFormID",this.formId)
@@ -258,6 +277,10 @@ createSampleId(){
                       });
                   }
               })
+              this.saveFormId=0;
+              this.form.value["savedFormID"]=0;
+             /*  console.log("after Insert saveformid"+this.saveFormId);
+              console.log("after Insert savedFormID"+this.form.value["savedFormID"]); */
           }
       }
   }
