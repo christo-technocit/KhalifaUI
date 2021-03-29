@@ -10,7 +10,9 @@
 			</div>
 
 		</div>
-		<form class="kt-form" [formGroup]="loginForm" autocomplete="off">
+	 <form class="kt-form" [formGroup]="loginForm" autocomplete="off"> 
+			<!-- <form class="kt-form" [formGroup]="loginForm" autocomplete="off"
+			(ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm"> -->
 			<div class="form-group" style="margin-bottom: 25px !important;">
 				<mat-form-field>
 					<mat-label>Username</mat-label>
@@ -29,6 +31,17 @@ Login
 				</button>
 			</div>
 			<!--end::Action-->
+
+
+	
+		<!-- 	<div class="kt-login__actions " > -->
+				<div  class="form-group" style="margin-bottom: 25px !important;" >
+<!-- 				<button (click)="mailsubmit()" [ngClass]="{'loader-bar': loading}" id="kt_login_signin_submit" class="btn loader-bar btn-primary btn-block btn-elevate kt-login__btn-primary">
+Reset/Change Password
+				</button> -->
+				<a [routerLink]="" (click)="mailsubmit()">Forgot / Change Password</a>
+			</div>
+
 		</form>
 	</div>
 	<!--end::Signin-->

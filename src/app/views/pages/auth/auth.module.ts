@@ -17,6 +17,7 @@ import { InterceptService } from '../../../core/_base/crud/';
 // Module components
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AuthNoticeComponent } from './auth-notice/auth-notice.component';
@@ -36,6 +37,11 @@ const routes: Routes = [
 			{
 				path: 'login',
 				component: LoginComponent,
+				data: {returnUrl: window.location.pathname}
+			},
+			{
+				path: 'change-password',
+				component: ChangePasswordComponent,
 				data: {returnUrl: window.location.pathname}
 			},
 			{
@@ -78,6 +84,7 @@ const routes: Routes = [
 	declarations: [
 		AuthComponent,
 		LoginComponent,
+		ChangePasswordComponent,
 		RegisterComponent,
 		ForgotPasswordComponent,
 		AuthNoticeComponent

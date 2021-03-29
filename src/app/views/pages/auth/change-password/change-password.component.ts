@@ -15,13 +15,12 @@ import {MatSnackBar} from "@angular/material/snack-bar";
  * ! Just example => Should be removed in development
  */
 
-
 @Component({
-	selector: 'kt-login',
-	templateUrl: './login.component.html',
+	selector: 'kt-change-password',
+	templateUrl: './change-password.component.html',
 	//encapsulation: ViewEncapsulation.None
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class ChangePasswordComponent implements OnInit, OnDestroy {
 	// Public params
 	loginForm: FormGroup;
 	login:any = [];
@@ -53,8 +52,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 	 */
 	ngOnInit(): void {
 
+	
+
 		if(localStorage.getItem("Token") != null){
-			this.router.navigate(['/dashboard']);
+		//	this.router.navigate(['/dashboard']);
+	
+			this.router.navigate(['/change-password']);
 		}
 
 		this.initLoginForm();
@@ -62,6 +65,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 		// redirect back to the returnUrl before login
 		this.route.queryParams.subscribe(params => {
 			this.returnUrl = params['returnUrl'] || '/';
+		//	this.userName = params['email'] || '';
+			localStorage.setItem("username",params['UserName'])
+			localStorage.setItem("Token",params['Token'])
+			//console.log('User Name :'+this.userName);
+			//console.log('Local Storage :'+localStorage.getItem("username"));
+		
 		});
 
 	}
@@ -83,14 +92,19 @@ export class LoginComponent implements OnInit, OnDestroy {
 	 */
 	initLoginForm() {
 		this.loginForm = this.fb.group({
-			email: ["", Validators.compose([
+			/* email: ["", Validators.compose([ */
+			email: [localStorage.getItem("username"), Validators.compose([
 				Validators.required,
 				// https://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address
 			])
-			] ,
+			],
 			password: ["", Validators.compose([
 				Validators.required,
-			]) 
+			])
+			],
+			repassword: ["", Validators.compose([
+				Validators.required,
+			])
 			]
 		});
 	}
@@ -105,11 +119,11 @@ setLoadingOff(){
 		let data = [];
 		data["username"] = this.loginForm.controls['email'].value;
 		data["password"] = this.loginForm.controls['password'].value;
+		data["repassword"] = this.loginForm.controls['repassword'].value;
 
 		this.loading = true;
-
-		if (data["username"] =='' && data["password"]==''){
-			this._snackBar.open("Please enter User Name & Password", 'Ok', {
+		if (data["password"] != data["repassword"]){
+			this._snackBar.open("Password & Re Enter Password Not matching !!!", 'Ok', {
 				duration: 5000,
 				verticalPosition: 'bottom',
 				horizontalPosition: 'center'
@@ -118,30 +132,50 @@ setLoadingOff(){
 			this.userName.nativeElement.click();
 
 		}
-		
-		this.subscriptions.push(this.auth.loginToApp(data).subscribe((res)=>{
+
+		this.subscriptions.push(this.auth.changePassword(data).subscribe((res)=>{
 			Promise.resolve(null).then(() => {
 
-			if(res[0].UserId != -1){
-				this.subscriptions.push(this.auth.getMenus(data).subscribe((res2) => {
-					Promise.resolve(null).then(() => {
+			/* if(res[0].UserId != -1){ */
+				if(res[0].Result != ''){
+
+					this._snackBar.open("Password Updated Successfully !", 'Ok', {
+						duration: 5000,
+						verticalPosition: 'bottom',
+						horizontalPosition: 'center'
+
+
+
+					});
+					this.loading= false;
+
+		 	this.subscriptions.push(this.auth.getMenus(data).subscribe((res2) => 
+			{
+					Promise.resolve(null).then(() => 
+					{
 					
-					if (res2) {
+						if (res2) 
+						{
 						const propertyValues = Object.values(res2);
 						var menus = JSON.stringify(propertyValues);
 						
-				localStorage.setItem("Token",res[0].UserId);
+						localStorage.setItem("Token",res[0].UserId);
 						localStorage.setItem("menus",menus);
 						localStorage.setItem("username",data["username"])
 						this.cdr.detectChanges();
 
-		this.router.navigate(['/dashboard']);
+						this.router.navigate(['/dashboard']); 
 
-					}
-					else{
+						}
+						else
+						{
 						 this.cdr.detectChanges();
+						}
 					}
-				})}))
+				)
+			} 
+				)
+				)
 			}else{
 
 				this._snackBar.open("Invalid username and password!", 'Ok', {
@@ -156,51 +190,5 @@ setLoadingOff(){
 		})}))
 
 	}
-
-
-
-	mailsubmit() {
-
-		let data = [];
-		data["username"] = this.loginForm.controls['email'].value;
-		data["email"] = this.loginForm.controls['email'].value;
-		//data["subject"] = 'Reset Password';
-		//data["message"] = '\change-password';
-		//return this.httpClient.get(this.baseUrl+`Mail?Name=${data.username}&Email=${data.email}&Subject=${data.subject}&Message=${data.message}`);
-
-		this.loading = true;
-
-
-		this.loading = true;
-		if (data["username"] == ''){
-			this._snackBar.open("Please Enter the User Name", 'Ok', {
-				duration: 5000,
-				verticalPosition: 'bottom',
-				horizontalPosition: 'center'
-			});
-			this.loading= false;
-			this.userName.nativeElement.click();
-
-		}
-		
-		this.subscriptions.push(this.auth.resetPassword(data["username"]).subscribe((res)=>{
-			console.log(res);
-			Promise.resolve(null).then(() => {
-
-
-this._snackBar.open("Password Sent to your Mail ID!", 'Ok', {
-	duration: 5000,
-	verticalPosition: 'bottom',
-	horizontalPosition: 'center'
-});
-this.loading= false;
-this.userName.nativeElement.click();
-
-	
-
-		})}))
-
-	}
-
 	
 }
